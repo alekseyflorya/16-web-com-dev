@@ -1,0 +1,36 @@
+.Header{
+  position: relative;
+  min-height: 850px;
+  border: 1px solid #000;
+}
+.HeaddingTitle {
+  color: rebeccapurple;
+}
+.Fab{
+  display: flex;
+  flex-direction: column;
+}
+.fabGridRoot {
+  max-Width: 100%;
+  max-Height: 100%;
+  display: flex;
+  flex-Direction: column;
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+}
+.fabRoot.fab {
+  background-color: #000;
+  color: #fff;
+  &:hover {
+    background-color: #fff;
+    color: #000;
+    transform: rotate(45deg);
+  }
+}
+.fabTelegram{
+  display: inline-flex;
+}
+.hideFab{
+  display: none;
+}
