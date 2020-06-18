@@ -1,10 +1,76 @@
+$violet: #4C1C89;
+$white: #FFFFFF;
+$blue: #0DF0FF;
+
 .Header{
   position: relative;
-  min-height: 850px;
-  border: 1px solid #000;
+  min-height: 740px;
+
+  .ColumnLeft{
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    max-width: 78%;
+  }
+  .columnRight{
+    max-width: 22%;
+    padding-top: 40px;
+    padding-right: 60px;
+  }
 }
+
 .HeaddingTitle {
-  color: rebeccapurple;
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 65px;
+  line-height: 65px;
+  color: #FFFFFF;
+  margin-bottom: 25px;
+}
+.HeaddingDescription{
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 21px;
+  line-height: 29px;
+  color: #FFFFFF;
+  opacity: 0.8;
+  padding-left: 10px;
+}
+.SocialButtons{
+
+  .SocialButton{
+    border: none;
+  }
+}
+.OrderProjectRoot.OrderProjectText{
+  width: 100%;
+  height: 80px;
+  background-color: $violet;
+  border: 2px solid $violet;
+  border-radius: 0;
+  transition: all .5s;
+  .OrderProjectLabel{
+    color: #fff;
+    text-transform: none;
+    transition: all .5s;
+    &:before{
+      content: '';
+      display: block;
+      background: $blue;
+      width: 2px;
+      height: 28px;
+      margin-right: 40px;
+    }
+  }
+  &:hover{
+    background-color: $white;
+    border: 2px solid $violet;
+
+    & .OrderProjectLabel{
+      color: $violet;
+    }
+  }
 }
 .Fab{
   display: flex;
@@ -16,12 +82,14 @@
   display: flex;
   flex-Direction: column;
   position: absolute;
-  right: 50px;
-  bottom: 50px;
+  right: 60px;
+  bottom: 0;
 }
 .fabRoot.fab {
   background-color: #000;
   color: #fff;
+  width: 65px;
+  height: 65px;
   &:hover {
     background-color: #fff;
     color: #000;
@@ -33,4 +101,12 @@
 }
 .hideFab{
   display: none;
+}
+.LogoRoot{
+  width: 76px;
+  height: 48px;
+  .LogoIcon{
+    width: 76px;
+    height: 48px;
+  }
 }

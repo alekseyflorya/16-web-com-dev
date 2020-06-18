@@ -15,8 +15,8 @@ const useStyles = makeStyles({
     width: '100%',
   },
   paper: {
-    width: '75%',
-    height: 800,
+    width: '78%',
+    height: 660,
     background: `url(${menuBg})`,
   },
   backdrop: {
@@ -26,8 +26,8 @@ const useStyles = makeStyles({
 
 function Navigation({toggleDrawer, isOpen}) {
 
-  const newLinks = DataArray.map(({id, label, path, parent, children, headdingtitle}) => {
-    return {id, label, path, parent, children, headdingtitle};
+  const newLinks = DataArray.map(({id, name, label, path, parent, children, headdingtitle}) => {
+    return {id, name, label, path, parent, children, headdingtitle};
   });
 
   const classesnames = useStyles();
@@ -51,12 +51,12 @@ function Navigation({toggleDrawer, isOpen}) {
         >
           <Grid item xs={12} sm={4}>
             <List className={classes.LinksTop}>
-              {newLinks.map(({id, label, path, parent, children, headdingtitle}, index) => {
+              {newLinks.map(({id, name, label, path, parent, children, headdingtitle}, index) => {
                 if (id <= 4) {
                   return (
                     <ListItem key={index}>
-                      <Link to={path} label={label} className={`${classes.Link} LinkTo${label}`}>
-                        {headdingtitle}
+                      <Link to={path} label={label} className={`${classes.Link} link-to-${name}`}>
+                        {label}
                       </Link>
                     </ListItem>
                   );

@@ -26,53 +26,62 @@ import LandingPage from "../pages/LandingPage";
 import CorporateSite from "../pages/CorporateSite";
 import PortfolioSite from "../pages/PortfolioSite";
 
+import homeBgImage from '../assets/img/main.jpg';
+import portfolioBgImage from '../assets/img/portfolio.jpg';
+import servicesBgImage from '../assets/img/uslugi.jpg';
+
+
+
+
+
 const DataArray = [
   {
     id: 0,
     name: 'home',
-    label: 'Home',
+    label: 'Главная',
     path: '/',
     component: () => <Home />,
-    headdingtitle:'Главная',
-    description: '',
-    bgimage: '',
+    headdingtitle:'Веб-студия эффективных решений',
+    description: 'Студия 16.web использует реальные кейсы, помогающие бренду или товару стать более востребованным.',
+    bgimage: homeBgImage,
     exact: true
   },
   {
     id: 1,
     name: 'about',
-    label: 'About',
+    label: 'О нас',
     path: '/about',
     component: () => <About />,
     headdingtitle:'О нас',
     description: '',
-    bgimage: '' },
+    bgimage: ''
+  },
   {
     id: 2,
     name: 'portfolio',
-    label: 'Portfolio',
+    label: 'Портфолио',
     path: '/portfolio',
     children: true,
     component: () => <Portfolio />,
     headdingtitle:'Портфолио',
-    description: '',
-    bgimage: ''
+    description: '16.web studio специализируется на веб-дизайне, создании адаптивных интернет-проектов, брендинге и рекламной фотографии.',
+    bgimage: portfolioBgImage
   },
   {
     id: 3,
     name: 'services',
-    label: 'Services',
+    label: 'Услуги',
     path: '/services',
     children: true,
     component: () => <Services />,
     headdingtitle:'Услуги',
-    description: '',
-    bgimage: ''
+    description: 'Веб-студия 16.web предоставляет услуги своим клиентам, как комплексно, так и по отдельности – выбирайте, как вам удобнее и выгоднее.',
+    bgimage: servicesBgImage
   },
   {
     id: 4,
     name: 'prices',
-    label: 'Prices',
+    label: 'Цены',
     path: '/prices',
     component: () => <Prices />,
     headdingtitle:'Цены',
@@ -82,7 +91,7 @@ const DataArray = [
   {
     id: 5,
     name: 'contact',
-    label: 'Contact',
+    label: 'Контакты',
     path: '/contact',
     component: () => <Contact />,
     headdingtitle:'Контакты',
@@ -92,7 +101,7 @@ const DataArray = [
   {
     id: 6,
     name: 'vacancies',
-    label: 'Vacancies',
+    label: 'Вакансии',
     path: '/vacancies',
     component: () => <Vacancies />,
     headdingtitle:'Вакансии',
@@ -102,7 +111,7 @@ const DataArray = [
   {
     id: 7,
     name: 'news',
-    label: 'News',
+    label: 'Новости',
     path: '/news',
     component: () => <News />,
     headdingtitle:'Новости',
@@ -112,7 +121,7 @@ const DataArray = [
   {
     id: 8,
     name: 'faq',
-    label: 'Faq',
+    label: 'FAQ',
     path: '/faq',
     component: () => <Faq />,
     headdingtitle: 'FAQ',
@@ -122,7 +131,7 @@ const DataArray = [
   {
     id: 9,
     name: 'siteCreating',
-    label: 'SiteCreating',
+    label: 'Создание сайтов',
     path: '/sitecreating',
     parent: 'services',
     component: () => <SiteCreating />,
@@ -133,7 +142,7 @@ const DataArray = [
   {
     id: 10,
     name: 'photography',
-    label: 'Photography',
+    label: 'Фотосьемка',
     path: '/photography',
     parent: 'services',
     component: () => <Photography />,
@@ -144,7 +153,7 @@ const DataArray = [
   {
     id: 11,
     name: 'branding',
-    label: 'Branding',
+    label: 'Брендинг',
     path: '/branding',
     parent: 'services',
     component: () => <Branding />,
@@ -155,7 +164,7 @@ const DataArray = [
   {
     id: 12,
     name: 'seo',
-    label: 'Seo',
+    label: 'SEO',
     path: '/seo',
     parent: 'services',
     component: () => <Seo />,
@@ -166,7 +175,7 @@ const DataArray = [
   {
     id: 13,
     name: 'smm',
-    label: 'Smm',
+    label: 'SMM',
     path: '/smm',
     parent: 'services',
     component: () => <Smm />,
@@ -177,7 +186,7 @@ const DataArray = [
   {
     id: 14,
     name: 'qaTesting',
-    label: 'QaTesting',
+    label: 'QA',
     path: '/qatesting',
     parent: 'services',
     component: () => <QaTesting />,
@@ -188,7 +197,7 @@ const DataArray = [
   {
     id: 15,
     name: 'appsDevelop',
-    label: 'AppsDevelop',
+    label: 'Разработка приложений',
     path: '/appsdevelop',
     parent: 'services',
     component: () => <AppsDevelop />,
@@ -199,7 +208,7 @@ const DataArray = [
   {
     id: 16,
     name: 'ppc',
-    label: 'Ppc',
+    label: 'Контекстная реклама',
     path: '/ppc',
     parent: 'services',
     component: () => <Ppc />,
@@ -210,7 +219,7 @@ const DataArray = [
   {
     id: 17,
     name: 'othersrevices',
-    label: 'OtherSrevices',
+    label: 'Добавочные сервисы',
     path: '/othersrevices',
     parent: 'services',
     component: () => <OtherSrevices />,
@@ -221,7 +230,7 @@ const DataArray = [
   {
     id: 18,
     name: 'catalogsite',
-    label: 'CatalogSite',
+    label: 'Сайт-каталог',
     path: '/catalogsite',
     parent: 'portfolio',
     component: () => <CatalogSite />,
@@ -232,7 +241,7 @@ const DataArray = [
   {
     id: 19,
     name: 'businesscardsite',
-    label: 'BusinessCardSite',
+    label: 'Сайт-визитка',
     path: '/businesscardsite',
     parent: 'portfolio',
     component: () => <BusinessCardSite />,
@@ -243,7 +252,7 @@ const DataArray = [
   {
     id: 20,
     name: 'onlinestore',
-    label: 'OnlineStore',
+    label: 'Интернет-магазин',
     path: '/onlinestore',
     parent: 'portfolio',
     component: () => <OnlineStore />,
@@ -254,7 +263,7 @@ const DataArray = [
   {
     id: 21,
     name: 'landingpage',
-    label: 'LandingPage',
+    label: 'Лендинг-пейдж',
     path: '/landingpage',
     parent: 'portfolio',
     component: () => <LandingPage />,
@@ -265,7 +274,7 @@ const DataArray = [
   {
     id: 22,
     name: 'corporatesite',
-    label: 'CorporateSite',
+    label: 'Корпоративный сайт',
     path: '/corporatesite',
     parent: 'portfolio',
     component: () => <CorporateSite />,
@@ -276,7 +285,7 @@ const DataArray = [
   {
     id: 23,
     name: 'portfoliosite',
-    label: 'PortfolioSite',
+    label: 'Сайт портфолио',
     path: '/portfoliosite',
     parent: 'portfolio',
     component: () => <PortfolioSite />,
