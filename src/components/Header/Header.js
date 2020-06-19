@@ -25,7 +25,7 @@ import Box from "@material-ui/core/Box";
 
 export default function Header() {
 
-  const {headdingtitle, description,bgimage } = DataArray.find(page => page.path == window.location.pathname);
+  const {headdingtitle, description,bgimage } = DataArray.find(page => page.path === window.location.pathname);
 
   const [state, setState] = React.useState({
     navOpen: false,
@@ -57,20 +57,21 @@ export default function Header() {
         <Grid
           item
           container
-
           direction="row"
           justify="flex-end"
           classes={{root: classes.ColumnLeft}}
-          style={{background: `url(${bgimage})`, paddingTop: 120}}
+          style={{background: `url(${bgimage})`, paddingTop: 120, backgroundSize: '100% 100%',
+            backgroundRepeat: 'no-repeat',}}
         >
           <Grid item container sm={11} style={{marginBottom: -80}}>
-            <Grid item container sm={9} justify="center" alignItems="center"
+            <Grid item container sm={9} justify="flex-start" alignItems="center"
                   style={{
                     border: '5px solid #0DF0FF',
                     height: 540,
                     borderBottom: 0,
                     background: 'rgba(41,37,37,.4)',
-                    backdropFilter: 'blur(4px)'
+                    backdropFilter: 'blur(4px)',
+                    paddingLeft: '14%',
                   }}>
               <Box style={{maxWidth: 510}}>
                 <h1 className={classes.HeaddingTitle}>{headdingtitle}</h1>
@@ -78,7 +79,7 @@ export default function Header() {
               </Box>
             </Grid>
             <Grid item sm={3} />
-            <Grid item sm={9} container alignItems="center" style={{backgroundColor: '#0DF0FF'}}>
+            <Grid item sm={9} container alignItems="center" style={{backgroundColor: '#0DF0FF', paddingLeft: '14%',}}>
               <ButtonGroup classes={{root: classes.SocialButtons}}>
                 <Button classes={{root: classes.SocialButton}}>
                   <InstagramIcon width="24" height="24" viewBox="0 0 24 24" />
@@ -107,13 +108,15 @@ export default function Header() {
           </Grid>
 
           <Grid item>
-            <Button onClick={toggleDrawer(state.navOpen)}>
               {state.navOpen ? (
-                <MenuCloseIcon width="28" height="28" viewBox="0 0 28 28" />
+                <Button onClick={toggleDrawer(false)} style={{zIndex: 2000,}}>
+                  <MenuCloseIcon width="28" height="28" viewBox="0 0 28 28" />
+                </Button>
                 ) : (
-                <BurgerIcon width="40" height="38" viewBox="0 0 40 38" />
+                <Button onClick={toggleDrawer(true)}>
+                  <BurgerIcon width="40" height="38" viewBox="0 0 40 38" />
+                </Button>
               )}
-            </Button>
           </Grid>
 
           <Grid item style={{width: 66, height: 0, }}>
@@ -124,10 +127,13 @@ export default function Header() {
               {state.fabOpen ? (
                 <>
                   <Fab color="primary">
-                    <TelegramIcon />
+                    <MessengerIcon width="23" height="23" viewBox="0 0 23 23" />
                   </Fab>
                   <Fab color="primary">
-                    <TelegramIcon />
+                    <ViberIcon width="23" height="23" viewBox="0 0 23 23" />
+                  </Fab>
+                  <Fab color="primary">
+                    <TelegramIcon width="23" height="23" viewBox="0 0 23 23" />
                   </Fab>
                 </>
               ) : null}

@@ -1,3 +1,56 @@
-.HeaddingTitle {
-  color: darkgreen;
+$black: #000000;
+$white: #FFFFFF;
+$violet: #4C1C89;
+$blue: #0DF0FF;
+
+
+.Footer{
+  background-color: $black;
+  border: 1px solid transparent;
+  margin-top: 79px;
+  padding-bottom: 70px;
+}
+
+.ContainerRoot{
+  margin-top: -80px;
+}
+.ContainerItemZero1Root{
+  height: 80px;
+  background-color: #4C1C89;
+}
+.ContainerItemZero2Root{
+  height: 80px;
+  background-color: #0DF0FF;
+}
+.SocialLinksGrid{
+  border: 5px solid #0DF0FF;
+  border-top: none;
+}
+.LinksList{
+
+}
+.LinksListItem{
+
+  .SocialLink{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 35px;
+    letter-spacing: 0.05em;
+    color: $white;
+    text-transform: uppercase;
+  }
+}
+.Link{
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: $white;
+  text-decoration: none;
+  &:hover{
+    color: $blue;
+  }
 }

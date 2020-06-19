@@ -15,9 +15,11 @@ const useStyles = makeStyles({
     width: '100%',
   },
   paper: {
-    width: '78%',
+    maxWidth: '77%',
     height: 660,
     background: `url(${menuBg})`,
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
   },
   backdrop: {
     backgroundColor: 'transparent',

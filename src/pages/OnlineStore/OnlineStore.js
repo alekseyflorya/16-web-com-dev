@@ -1,14 +1,17 @@
 import React from 'react';
 import classes from './OnlineStore.module.scss';
 import Header from "../../components/Header";
-import Navigation from "../../components/Navigation";
 import Footer from "../../components/Footer";
+import Interested from "../../components/Interested";
+import PortfilioShort from "../../components/PortfilioShort";
 
 export default function OnlineStore(){
 
   return (
     <div className={classes.OnlineStorePage}>
-      <Header rightLinks={<Navigation />} />
+      <Header />
+      <Interested />
+      <PortfilioShort />
       <Footer />
     </div>
   )

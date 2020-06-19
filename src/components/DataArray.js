@@ -29,9 +29,9 @@ import PortfolioSite from "../pages/PortfolioSite";
 import homeBgImage from '../assets/img/main.jpg';
 import portfolioBgImage from '../assets/img/portfolio.jpg';
 import servicesBgImage from '../assets/img/uslugi.jpg';
-
-
-
+import vacanciesImage from  '../assets/img/career.jpg';
+import newsImage from  '../assets/img/news.jpg';
+import faqImage from '../assets/img/FAQ.jpg';
 
 
 const DataArray = [
@@ -53,8 +53,8 @@ const DataArray = [
     path: '/about',
     component: () => <About />,
     headdingtitle:'О нас',
-    description: '',
-    bgimage: ''
+    description: '16.web studio специализируется на веб-дизайне, создании адаптивных интернет-проектов, брендинге и рекламной фотографии.',
+    bgimage: homeBgImage
   },
   {
     id: 2,
@@ -85,8 +85,8 @@ const DataArray = [
     path: '/prices',
     component: () => <Prices />,
     headdingtitle:'Цены',
-    description: '',
-    bgimage: ''
+    description: '16.web studio специализируется на веб-дизайне, создании адаптивных интернет-проектов, брендинге и рекламной фотографии.',
+    bgimage: homeBgImage
   },
   {
     id: 5,
@@ -95,8 +95,8 @@ const DataArray = [
     path: '/contact',
     component: () => <Contact />,
     headdingtitle:'Контакты',
-    description: '',
-    bgimage: ''
+    description: '16.web studio специализируется на веб-дизайне, создании адаптивных интернет-проектов, брендинге и рекламной фотографии.',
+    bgimage: homeBgImage
   },
   {
     id: 6,
@@ -104,9 +104,9 @@ const DataArray = [
     label: 'Вакансии',
     path: '/vacancies',
     component: () => <Vacancies />,
-    headdingtitle:'Вакансии',
-    description: '',
-    bgimage: ''
+    headdingtitle:'Карьера',
+    description: '16.web studio специализируется на веб-дизайне, создании адаптивных интернет-проектов, брендинге и рекламной фотографии.',
+    bgimage: vacanciesImage
   },
   {
     id: 7,
@@ -115,8 +115,8 @@ const DataArray = [
     path: '/news',
     component: () => <News />,
     headdingtitle:'Новости',
-    description: '',
-    bgimage: ''
+    description: '16.web studio специализируется на веб-дизайне, создании адаптивных интернет-проектов, брендинге и рекламной фотографии.',
+    bgimage: newsImage
   },
   {
     id: 8,
@@ -125,8 +125,8 @@ const DataArray = [
     path: '/faq',
     component: () => <Faq />,
     headdingtitle: 'FAQ',
-    description: '',
-    bgimage: ''
+    description: '16.web studio специализируется на веб-дизайне, создании адаптивных интернет-проектов, брендинге и рекламной фотографии.',
+    bgimage: faqImage
   },
   {
     id: 9,

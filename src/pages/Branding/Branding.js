@@ -8,7 +8,8 @@ export default function Branding(){
 
   return (
     <div className={classes.BrandingPage}>
-      <Header rightLinks={<Navigation />} />
+      <Header />
+
       <Footer />
     </div>
   )
