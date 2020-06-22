@@ -1,0 +1,124 @@
+.PortfolioShort{
+  margin-bottom: 120px;
+  .Headding{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 43px;
+    line-height: 52px;
+    color: #393939;
+    margin-bottom: 120px;
+  }
+  .DescriptionBlock{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 80px;
+  }
+  .Description{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #8B8B8B;
+    max-width: 50%;
+  }
+  .PricesButton{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: #292525;
+    width: 160px;
+    height: 30px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: all .5s;
+    z-index: 2;
+    &:before{
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      width: 2px;
+      height: 30px;
+      background: #0DF0FF;
+      transition: all .5s;
+      z-index: -1;
+    }
+    &:hover{
+      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+      &:before{
+        width: 160px;
+      }
+    }
+  }
+  .ProjectsGrid{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+  }
+  .gridContainer {
+    display: grid;
+    grid-template-areas: "gridItem1 gridItem2"
+                       "gridItem1 gridItem3";
+    grid-template-rows: 260px 260px;
+    grid-template-columns: 480px 480px;
+    grid-gap: 50px;
+  }
+  .gridItem{
+    overflow: hidden;
+    &:hover{
+
+      .gridImg{
+        transition: all .5s;
+        transform: scale(1.2);
+      }
+    }
+    .gridImg{
+      transition: all .5s;
+    }
+    .HoveredBlock{
+
+    }
+  }
+  .gridItem1 {
+    grid-area: gridItem1;
+  }
+  .gridItem2 {
+    grid-area: gridItem2;
+  }
+  .gridItem3 {
+    grid-area: gridItem3;
+  }
+
+  .PortfolioShortBtn{
+    display: flex;
+    justify-content: center;
+  }
+  .ButtonLink{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 265px;
+    height: 65px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none;
+    background: #000000;
+    border: 1px solid #000000;
+    color: #FFFFFF;
+    transition: .3s;
+    &:hover{
+      background: #FFFFFF;
+      color: #000000;
+    }
+  }
+}

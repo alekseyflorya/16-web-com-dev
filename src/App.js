@@ -4,8 +4,6 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import './App.scss';
 import DataArray from './components/DataArray';
 
-// import Navigation from './components/Navigation';
-
 export default function App() {
 
     const Routes = DataArray.map(({id, path, component, exact}, index) => {
@@ -14,9 +12,9 @@ export default function App() {
 
   return (
     <Router>
-        <Switch>
-            {Routes}
-        </Switch>
+      <Switch>
+        {Routes}
+      </Switch>
     </Router>
   );
 }

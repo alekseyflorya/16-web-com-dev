@@ -3,7 +3,7 @@ import classes from './LandingPage.module.scss';
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Interested from "../../components/Interested";
-import PortfilioShort from "../../components/PortfilioShort";
+import PortfolioShort from "../../components/PortfilioShort";
 
 export default function LandingPage(){
 
@@ -11,7 +11,7 @@ export default function LandingPage(){
     <div className={classes.LandingPage}>
       <Header />
       <Interested />
-      <PortfilioShort />
+      <PortfolioShort />
       <Footer />
     </div>
   )

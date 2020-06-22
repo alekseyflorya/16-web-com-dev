@@ -1,3 +1,3 @@
-import PortfilioShort from "./PortfilioShort";
+import PortfolioShort from "./PortfolioShort";
 
-export default PortfilioShort
+export default PortfolioShort

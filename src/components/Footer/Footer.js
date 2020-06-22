@@ -6,7 +6,6 @@ import {Link as SocialLink} from '@material-ui/core/';
 import List from '@material-ui/core/List';
 import ListItem from "@material-ui/core/ListItem";
 import Grid from "@material-ui/core/Grid";
-import {Box} from "@material-ui/core";
 
 export default function Footer() {
 

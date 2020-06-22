@@ -1,0 +1,95 @@
+$btnBg: #000000;
+$btnColor: #ffffff;
+
+.ServiceListSort{
+  margin-bottom: 120px;
+  .Headding{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 43px;
+    line-height: 52px;
+    color: #393939;
+    margin-bottom: 120px;
+  }
+  .Cards{
+    margin-bottom: 120px;
+  }
+  .CardBox{
+
+  }
+  .CardName{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 36px;
+    color: #393939;
+    position: relative;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    &:after{
+      content: '';
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      display: inline-block;
+      border-top: 2px solid black;
+      border-right: 2px solid black;
+      right: 0;
+      transform: rotate(45deg);
+      top: calc(50% - 6px)
+    }
+  }
+  .CardText{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #8B8B8B;
+    margin-bottom: 20px;
+  }
+  .CardLink{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #292525;
+    text-decoration: none;
+    &:after{
+      content: '+';
+      color: #D5D5D5;
+      font-size: 18px;
+      font-weight: bold;
+      margin-left: 10px;
+    }
+  }
+  .ServiceListBtn{
+    display: flex;
+    justify-content: center;
+  }
+  .ButtonLink{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 265px;
+    height: 65px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none;
+    background: $btnBg;
+    border: 1px solid $btnBg;
+    color: $btnColor;
+    transition: .3s;
+    &:hover{
+      background: $btnColor;
+      color: $btnBg;
+    }
+  }
+}

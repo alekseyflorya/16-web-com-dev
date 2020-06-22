@@ -33,7 +33,6 @@ import vacanciesImage from  '../assets/img/career.jpg';
 import newsImage from  '../assets/img/news.jpg';
 import faqImage from '../assets/img/FAQ.jpg';
 
-
 const DataArray = [
   {
     id: 0,

@@ -3,7 +3,7 @@ import classes from './OnlineStore.module.scss';
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Interested from "../../components/Interested";
-import PortfilioShort from "../../components/PortfilioShort";
+import PortfolioShort from "../../components/PortfilioShort";
 
 export default function OnlineStore(){
 
@@ -11,7 +11,7 @@ export default function OnlineStore(){
     <div className={classes.OnlineStorePage}>
       <Header />
       <Interested />
-      <PortfilioShort />
+      <PortfolioShort />
       <Footer />
     </div>
   )
