@@ -19,8 +19,11 @@ function PortfolioShort(){
               {PortfolioData.map(({img, title, type, position}) => (
                 <div className={`${classes.gridItem} ${position}`}>
                   <div className={classes.HoveredBlock}>
-                    <h3>{title}</h3>
-                    <p>{type}</p>
+                    <Link to='/portfolio'>
+                      <h3 className={classes.HoveredTitle}>{title}</h3>
+                      <p className={classes.HoveredType}>{type}</p>
+                      <div className={classes.HoveredArrow}></div>
+                    </Link>
                   </div>
                   <img className={classes.gridImg} src={img} alt={type} title={title}/>
                 </div>

@@ -9,18 +9,21 @@ const PortfolioData = [
     title: 'Портфолио 1',
     type: 'Интернет-магазин',
     position: classes.gridItem1,
+    path: '/portfolio'
   },
   {
     img: portfolioImage2,
     title: 'Портфолио 2',
     type: 'Лендинг-пейдж',
     position: classes.gridItem2,
+    path: '/portfolio'
   },
   {
     img: portfolioImage3,
     title: 'Портфолио 3',
     type: 'Корпоративный сайт',
     position: classes.gridItem3,
+    path: '/portfolio'
   },
 ];
 

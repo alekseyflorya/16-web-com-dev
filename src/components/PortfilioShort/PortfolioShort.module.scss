@@ -1,5 +1,5 @@
 .PortfolioShort{
-  margin-bottom: 120px;
+  margin-bottom: 200px;
   .Headding{
     font-family: Ubuntu;
     font-style: normal;
@@ -72,8 +72,20 @@
     grid-gap: 50px;
   }
   .gridItem{
+    position: relative;
     overflow: hidden;
+    transition: all .5s;
     &:hover{
+      transition: all .5s;
+      .HoveredBlock{
+        opacity: .9;
+        transition: all .5s;
+        .HoveredArrow{
+          transition: all .7s;
+          transform: rotateY(0);
+          transform-origin: 0 100%;
+        }
+      }
 
       .gridImg{
         transition: all .5s;
@@ -84,7 +96,73 @@
       transition: all .5s;
     }
     .HoveredBlock{
-
+      background: #292525;
+      backdrop-filter: blur(2px);
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 20%;
+      transition: all .5s;
+      opacity: 0;
+      a{
+        text-decoration: none;
+      }
+      .HoveredTitle{
+        font-family: Ubuntu;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 36px;
+        color: #FFFFFF;
+        margin-bottom: 5px;
+      }
+      .HoveredType{
+        font-family: Inter;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 22px;
+        color: #FFFFFF;
+        opacity: 0.6;
+        margin-bottom: 40px;
+      }
+      .HoveredArrow{
+        width: 85%;
+        height: 2px;
+        background: #FFFFFF;
+        position: relative;
+        ransition: all .5s;
+        transform: rotateY(-90deg);
+        transform-origin: 0 100%;
+        &:before{
+          content: '';
+          display: block;
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          border-top: 2px solid #FFFFFF;
+          border-right: 2px solid #FFFFFF;
+          transform: rotate(45deg);
+          right: 0;
+          top: -5px;
+        }
+        &:after{
+          content: '';
+          display: block;
+          position: absolute;
+          width: 44px;
+          height: 44px;
+          border: 2px solid #0DF0FF;
+          border-radius: 50%;
+          right: -20px;
+          top: -23px;
+        }
+      }
     }
   }
   .gridItem1 {
