@@ -1,0 +1,117 @@
+.LastNews{
+  margin-bottom: 220px;
+  .Container{
+
+  }
+  .Headding{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 43px;
+    line-height: 52px;
+    color: #393939;
+    margin-bottom: 120px;
+  }
+  .News{
+    margin-bottom: 120px;
+  }
+  .NewsBox{
+
+  }
+  .NewsItem{
+    .Image{
+      margin-bottom: 30px;
+    }
+    .LinkToPost{
+      text-decoration: none;
+    }
+    .PostTitle{
+      font-family: Ubuntu;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 28px;
+      color: #292525;
+      margin-bottom: 10px;
+    }
+    .CategoryDate{
+      font-family: Ubuntu;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 20px;
+      color: #DADADA;
+      margin-bottom: 20px;
+    }
+    .Description{
+      font-family: Inter;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 22px;
+      color: #8B8B8B;
+      margin-bottom: 35px;
+    }
+    .ViewsAndGo{
+      display: flex;
+      justify-content: space-between;
+      .Views{
+        font-family: Ubuntu;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 20px;
+        color: #DADADA;
+        display: inline-flex;
+        align-items: center;
+        span{
+          margin-right: 10px;
+        }
+      }
+      .Go{
+        display: inline-block;
+        width: 28px;
+        height: 2px;
+        background: #292525;
+        position: relative;
+        &:after{
+          content: '';
+          display: inline-block;
+          width: 8px;
+          height: 8px;
+          border-top: 2px solid #292525;
+          border-right: 2px solid #292525;
+          position: absolute;
+          right: 4px;
+          top: -2px;
+          transform: rotate(45deg);
+          transform-origin: 100% 100%;
+        }
+      }
+    }
+  }
+  .LastNewsBtn{
+    display: flex;
+    justify-content: center;
+  }
+  .ButtonLink{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 265px;
+    height: 65px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none;
+    background: #000000;
+    border: 1px solid #000000;
+    color: #FFFFFF;
+    transition: .3s;
+    &:hover{
+      background: #FFFFFF;
+      color: #000000;
+    }
+  }
+}

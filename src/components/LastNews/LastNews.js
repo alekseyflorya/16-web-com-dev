@@ -1,36 +1,47 @@
 import React from "react";
-import classes from './LastNews.module.scss'
-import imageNews1 from '../../assets/img/news1.jpg'
+import classes from './LastNews.module.scss';
+import Container from "@material-ui/core/Container";
+import Grid from "@material-ui/core/Grid";
+import Icon from '@material-ui/core/Icon';
+import {Link} from 'react-router-dom';
+import NewsData from '../NewsArray';
 
 function LastNews() {
+  const Posts = NewsData.map(({id, postPath, image, title, blogCategory, dateAdded, description, views}, index) => {
+    return (
+      <Grid item container sm direction="column" key={index} className={classes.NewsItem}>
+          <img className={classes.Image} src={image} alt=""/>
+          <Link to={`/post${id}`} className={classes.LinkToPost}>
+            <h3 className={classes.PostTitle}>{title}</h3>
+          </Link>
+          <p className={classes.CategoryDate}>{blogCategory} | {dateAdded}</p>
+          <p className={classes.Description}>{
+            description.length > 100 ? description.slice(0,100) + ' ...' : description
+          }</p>
+          <div className={classes.ViewsAndGo}>
+            <p className={classes.Views}><Icon>visibility</Icon>{views}</p>
+            <Link to={`/post${id}`}>
+              <span className={classes.Go}></span>
+            </Link>
+          </div>
+      </Grid>
+    )
+  });
+
   return (
-    <div>
-      <h2>Популярные статьи</h2>
-      <div>
-        <div>
-          <img src={imageNews1} alt=""/>
-          <h3>6 главных шагов к успеху SEO в 2020 году</h3>
-          <p><span>Новости SEO</span> | <span>01.04.2020</span></p>
-          <p>А ещё сторонники тоталитаризма в науке, которые представляют собой яркий пример собой яркий ...</p>
-          <div>203<span></span><span>--></span></div>
+    <section className={classes.LastNews}>
+      <Container fixed className={classes.Container}>
+        <h2 className={classes.Headding}>Популярные статьи</h2>
+        <div className={classes.News}>
+          <Grid container spacing={10} className={classes.NewsBox}>
+            {Posts}
+          </Grid>
         </div>
-        <div>
-          <img src={imageNews1} alt=""/>
-          <h3>6 главных шагов к успеху SEO в 2020 году</h3>
-          <p><span>Новости SEO</span> | <span>01.04.2020</span></p>
-          <p>А ещё сторонники тоталитаризма в науке, которые представляют собой яркий пример собой яркий ...</p>
-          <div>203<span></span><span>--></span></div>
+        <div className={classes.LastNewsBtn}>
+          <Link className={classes.ButtonLink} to="/blog">Все статьи</Link>
         </div>
-        <div>
-          <img src={imageNews1} alt=""/>
-          <h3>6 главных шагов к успеху SEO в 2020 году</h3>
-          <p><span>Новости SEO</span> | <span>01.04.2020</span></p>
-          <p>А ещё сторонники тоталитаризма в науке, которые представляют собой яркий пример собой яркий ...</p>
-          <div>203<span></span><span>--></span></div>
-        </div>
-      </div>
-      <button>Все статьи</button>
-    </div>
+      </Container>
+    </section>
   )
 }
 

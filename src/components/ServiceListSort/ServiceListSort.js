@@ -8,7 +8,7 @@ function ServiceListSort() {
   return (
     <section className={classes.ServiceListSort}>
       <Container fixed className={classes.Container}>
-        <h2 className={classes.Headding}>{window.location.pathname === '/' ? 'Услуги веб-студии' : 'Вас может заинтересовать'}</h2>
+        <h2 className={classes.Headidng}>{window.location.pathname === '/' ? 'Услуги веб-студии' : 'Вас может заинтересовать'}</h2>
         <div className={classes.Cards}>
           <Grid container justify="space-between">
             <Grid item sm={3} className={classes.CardBox}>

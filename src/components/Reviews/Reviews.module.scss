@@ -1,3 +1,114 @@
 .Reviews{
-
+  margin-bottom: 220px;
+  .Headding{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 43px;
+    line-height: 52px;
+    color: #393939;
+    margin-bottom: 120px;
+  }
+  .ReviewsBox{
+    height: 480px;
+    position: relative;
+    max-width: 1140px;
+  }
+  .TabPanel{
+    height: 100%;
+    background: rgba(41,37,37,0.5);
+    .TabPanelItem{
+      width: 100%;
+    }
+    .AvatarBox{
+      width: 100%;
+      height: 480px;
+      max-width: 360px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .Avatar{
+        box-sizing: border-box;
+        margin-bottom: 25px;
+        border: 4px solid #0DF0FF;
+        border-radius: 50%;
+        width: 115px;
+        height: 115px;
+      }
+      .AvatarName{
+        font-family: Inter;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 22px;
+        color: #FFFFFF;
+      }
+    }
+    .TextBox{
+      box-sizing: border-box;
+      max-width: 780px;
+      height: 350px;
+      border: 4px solid #0DF0FF;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-right: none;
+      position: absolute;
+      top: 65px;
+      right: 0;
+      padding: 50px 120px;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(4px);
+    }
+    .Text{
+      font-family: Inter;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 22px;
+      color: #DADADA;
+      max-width: 560px;
+      margin-bottom: 20px;
+    }
+    .DateAdded{
+      font-family: Inter;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 22px;
+      color: #DADADA;
+      opacity: 0.4;
+      max-width: 560px;
+    }
+  }
+  .Tabs{
+    width: 80px;
+    height: 350px;
+    background: #0DF0FF;
+    position: absolute;
+    right: -80px;
+    top: 65px;
+    .indicator{
+      display: none;
+    }
+    .scrollButtons{
+      color: #FFFFFF;
+      svg{
+        font-size: 3em;
+      }
+    }
+    .scroller{
+      max-height: 140px;
+    }
+    .Tab{
+      min-width: auto;
+      font-family: Ubuntu;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 34px;
+      color: #FFFFFF;
+    }
+  }
 }

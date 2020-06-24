@@ -1,0 +1,86 @@
+.JoinUs{
+  margin-bottom: 300px;
+  .Container{
+
+  }
+  .Headding{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 43px;
+    line-height: 52px;
+    color: #393939;
+    margin-bottom: 45px;
+  }
+  .Description{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #8B8B8B;
+    margin-bottom: 90px;
+    max-width: 550px;
+  }
+  .ButtonLink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 265px;
+    height: 65px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none;
+    background: #000000;
+    border: 1px solid #000000;
+    color: #FFFFFF;
+    transition: .3s;
+
+    &:hover {
+      background: #FFFFFF;
+      color: #000000;
+    }
+  }
+  .Vacancies{
+
+  }
+  .Vacancy{
+    border: 2px solid #E9E9E9;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 30px;
+    margin-bottom: 40px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+    .Title{
+      font-family: Inter;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 31px;
+      color: #292525;
+    }
+    .CityTime{
+      font-family: Ubuntu;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 28px;
+      color: #D5D5D5;
+      position: relative;
+      &:after{
+        content: '';
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        border-top: 2px solid #D5D5D5;
+        border-right: 2px solid #D5D5D5;
+        transform: rotate(45deg);
+        margin-left: 35px;
+      }
+    }
+  }
+}

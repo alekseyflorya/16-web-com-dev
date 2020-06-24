@@ -1,13 +1,11 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
-import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import classesNames from './Reviews.module.scss';
+import classes from './Reviews.module.scss';
 import ReviewsData from '../ReviewsArray';
 import Container from "@material-ui/core/Container";
-import Grid from "@material-ui/core/Grid";
+import tabPanelBg from '../../assets/img/tabpanel-bg.jpg';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -21,45 +19,35 @@ function TabPanel(props) {
       {...other}
     >
       {value === index && (
-        <Box p={3}>
-          <Typography>{children}</Typography>
+        <Box>
+          {children}
         </Box>
       )}
     </div>
   );
 }
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-    backgroundColor: theme.palette.background.paper,
-    display: 'flex',
-    height: 224,
-  },
-  tabs: {
-    borderRight: `1px solid ${theme.palette.divider}`,
-  },
-}));
-
 export default function Reviews() {
-  const classes = useStyles();
   const [value, setValue] = React.useState(0);
 
   const TabPanels = ReviewsData.map(({review_id, label, title, avatar, reviewText, dateAdded}, index) => {
     return (
-      <TabPanel key={index} value={value} index={index}>
-          <div>
-            <img src={avatar} alt={title} />
-            <p>{title}</p>
+      <TabPanel
+        key={index}
+        value={value}
+        index={index}
+        className={classes.TabPanel}
+      >
+        <div className={classes.TabPanelItem}>
+          <div className={classes.AvatarBox}>
+            <img className={classes.Avatar} src={avatar} alt={title} />
+            <p className={classes.AvatarName}>{title}</p>
           </div>
-          <div>
-            <div>
-              <div>
-                <p>{reviewText}</p>
-                <span>{dateAdded}</span>
-              </div>
-            </div>
+          <div className={classes.TextBox}>
+            <p className={classes.Text}>{reviewText}</p>
+            <span className={classes.DateAdded}>{dateAdded}</span>
           </div>
+        </div>
       </TabPanel>
     )
   });
@@ -71,30 +59,31 @@ export default function Reviews() {
         label={label}
         id={`vertical-tab-${review_id}`}
         aria-controls={`vertical-tabpanel-${review_id}`}
+        className={classes.Tab}
       />
     )
   });
-
-    console.log('TABS', TabPanels);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 
   return (
-    <Container fixed className={classesNames.Reviews}>
-      <div className={classes.root}>
+    <Container fixed className={classes.Reviews}>
+      <h2 className={classes.Headding}>Отзывы</h2>
+      <div className={classes.ReviewsBox} style={{background: `url(${tabPanelBg}) no-repeat 100% 100%`}}>
+        {TabPanels}
         <Tabs
           orientation="vertical"
           variant="scrollable"
           value={value}
           onChange={handleChange}
           aria-label="Vertical tabs example"
-          className={classes.tabs}
+          className={classes.Tabs}
+          classes={{indicator: classes.indicator, scroller: classes.scroller, scrollButtons: classes.scrollButtons}}
         >
           {TabItems}
         </Tabs>
-        {TabPanels}
       </div>
     </Container>
 
