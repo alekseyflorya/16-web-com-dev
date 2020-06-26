@@ -11,7 +11,7 @@ export default function Services(){
     <div className={classes.ServicesPage}>
       <Header />
       <ServiceListFull />
-      <Interested />
+      <Interested className={classes.Interested} />
       <Footer />
     </div>
   )

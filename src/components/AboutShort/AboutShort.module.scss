@@ -75,24 +75,8 @@ $btnColor: #ffffff;
       }
     }
   }
-  .ButtonLink{
+  .AboutShortBtn{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 265px;
-    height: 65px;
-    font-family: Inter;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    text-decoration: none;
-    background: $btnBg;
-    border: 1px solid $btnBg;
-    color: $btnColor;
-    transition: .3s;
-    &:hover{
-      background: $btnColor;
-      color: $btnBg;
-    }
+    justify-content: flex-start;
   }
 }

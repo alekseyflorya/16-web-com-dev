@@ -19,7 +19,7 @@ function ClientsSlider() {
   };
   return (
     <Slider {...settings} className="ClientsSlider" >
-      <div style={{height: '100%'}}>
+      <div>
         <img src={LogoColorit} alt="LogoColorit" style={{maxWidth: '100%'}}/>
       </div>
       <div>

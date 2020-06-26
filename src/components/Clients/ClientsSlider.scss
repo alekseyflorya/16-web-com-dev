@@ -1,6 +1,13 @@
 .ClientsSlider{
+
   .slick-track{
     display: flex;
+    justify-content: center;
     align-items: center;
+  }
+  .slick-slide{
+    & img{
+      margin: auto;
+    }
   }
 }

@@ -5,6 +5,7 @@ import Grid from "@material-ui/core/Grid";
 import Icon from '@material-ui/core/Icon';
 import {Link} from 'react-router-dom';
 import NewsData from '../NewsArray';
+import {ButtonLink} from "../UI/ButtonLink";
 
 function LastNews() {
   const Posts = NewsData.map(({id, postPath, image, title, blogCategory, dateAdded, description, views}, index) => {
@@ -38,7 +39,7 @@ function LastNews() {
           </Grid>
         </div>
         <div className={classes.LastNewsBtn}>
-          <Link className={classes.ButtonLink} to="/blog">Все статьи</Link>
+          <ButtonLink path={'/blog'} title={'Все статьи'}/>
         </div>
       </Container>
     </section>

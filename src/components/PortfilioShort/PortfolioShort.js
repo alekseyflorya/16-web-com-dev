@@ -3,6 +3,7 @@ import classes from './PortfolioShort.module.scss';
 import PortfolioData from '../PortfolioArray';
 import Container from "@material-ui/core/Container";
 import {Link} from "react-router-dom";
+import {ButtonLink, PricesButton} from '../../components/UI/ButtonLink'
 
 function PortfolioShort(){
   return (
@@ -12,7 +13,7 @@ function PortfolioShort(){
           <h2 className={classes.Headding}>Наше портфолио</h2>
           <div className={classes.DescriptionBlock}>
             <p className={classes.Description}>У нас немало выполненных проектов – отзывы клиентов красноречиво говорят о том, что мы умеем эффективно и быстро решать самые сложные задачи.</p>
-            <Link className={classes.PricesButton} to="/prices">Узнать цены</Link>
+            <PricesButton path={'/prices'} title={'Узнать цены'} />
           </div>
           <div className={classes.ProjectsGrid}>
             <div className={classes.gridContainer}>
@@ -31,12 +32,11 @@ function PortfolioShort(){
             </div>
           </div>
           <div className={classes.PortfolioShortBtn}>
-            <Link className={classes.ButtonLink} to="/portfolio">Все услуги</Link>
+            <ButtonLink path={'/portfolio'} title={'Все услуги'}/>
           </div>
         </div>
       </Container>
     </section>
-
   )
 }
 

@@ -5,12 +5,14 @@ import Footer from "../../components/Footer";
 import Reviews from "../../components/Reviews";
 import Clients from "../../components/Clients";
 import Interested from "../../components/Interested";
+import PortfolioFull from "../../components/PortfilioFull";
 
 export default function Portfolio(){
 
   return (
     <div className={classes.PortfolioPage}>
       <Header />
+      <PortfolioFull />
       <Interested />
       <Reviews />
       <Clients />

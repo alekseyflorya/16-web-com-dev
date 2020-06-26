@@ -1,15 +1,15 @@
 
 const VacanciesData = [
   {
-    id: 0,
+    id: 1,
     label: '01',
     title: 'UI/UX Designer',
-    postPath: '',
+    path: '',
     city: 'Oдесса',
     time: 'Full time'
   },
   {
-    id: 1,
+    id: 2,
     label: '02',
     title: 'Frontend Developer',
     postPath: '',
@@ -17,7 +17,7 @@ const VacanciesData = [
     time: 'Full time'
   },
   {
-    id: 2,
+    id: 3,
     label: '03',
     title: 'SMM',
     postPath: '',

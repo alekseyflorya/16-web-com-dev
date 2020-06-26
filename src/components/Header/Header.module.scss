@@ -45,10 +45,13 @@ $blue: #0DF0FF;
   width: 100%;
   height: 80px;
   background-color: $violet;
-  border: 2px solid $violet;
   border-radius: 0;
   transition: all .5s;
   .OrderProjectLabel{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
     color: #fff;
     text-transform: none;
     transition: all .5s;
@@ -63,10 +66,12 @@ $blue: #0DF0FF;
   }
   &:hover{
     background-color: $white;
-    border: 2px solid $violet;
+    transform: translateY(-5px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 
     & .OrderProjectLabel{
-      color: $violet;
+      color: #292525;
+      font-size: 17px;
     }
   }
 }

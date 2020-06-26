@@ -1,8 +1,8 @@
 import React from "react";
 import classes from './AboutShort.module.scss';
-import {Link} from 'react-router-dom';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
+import {ButtonLink} from "../UI/ButtonLink";
 
 function AboutShort() {
   return (
@@ -17,18 +17,16 @@ function AboutShort() {
           <Grid item container sm={3} className={classes.RightColumn}>
             <div className={classes.Advantages}>
               <div className={classes.Item}>
-                {/*<span className={classes.Numbers}>01</span>*/}
                 <p className={`${classes.Text} ${classes.Number1}`}>Быстрое и эффективное продвижение бренда в интернете.</p>
               </div>
               <div className={classes.Item}>
-                {/*<div className={classes.Numbers}>02</div>*/}
                 <p className={`${classes.Text} ${classes.Number2}`}>Инструменты для раскрутки - контекстная реклама, SEO и SMM и другие.</p>
               </div>
             </div>
           </Grid>
         </Grid>
-        <div>
-          <Link to='/about' className={classes.ButtonLink}>Подробнее о нас</Link>
+        <div className={classes.AboutShortBtn}>
+          <ButtonLink path={'/about'} title={'Подробнее о нас'}/>
         </div>
       </Container>
     </section>

@@ -1,5 +1,6 @@
-.PortfolioShort{
+.PortfolioFull{
   margin-bottom: 200px;
+  padding-top: 120px;
   .Headding{
     font-family: Ubuntu;
     font-style: normal;
@@ -31,11 +32,9 @@
   }
   .gridContainer {
     display: grid;
-    grid-template-areas: "gridItem1 gridItem2"
-                       "gridItem1 gridItem3";
-    grid-template-rows: 260px 260px;
-    grid-template-columns: 480px 480px;
+    grid-template-columns: repeat(2, 2fr);
     grid-gap: 50px;
+    grid-auto-rows: 260px;
   }
   .gridItem{
     position: relative;
@@ -102,10 +101,10 @@
       }
       .HoveredArrow{
         width: 85%;
-        height: 1px;
+        height: 2px;
         background: #FFFFFF;
         position: relative;
-        transition: all .5s;
+        ransition: all .5s;
         transform: rotateY(-90deg);
         transform-origin: 0 100%;
         &:before{
@@ -114,8 +113,8 @@
           position: absolute;
           width: 10px;
           height: 10px;
-          border-top: 1px solid #FFFFFF;
-          border-right: 1px solid #FFFFFF;
+          border-top: 2px solid #FFFFFF;
+          border-right: 2px solid #FFFFFF;
           transform: rotate(45deg);
           right: 0;
           top: -5px;
@@ -126,7 +125,7 @@
           position: absolute;
           width: 44px;
           height: 44px;
-          border: 1px solid #0DF0FF;
+          border: 2px solid #0DF0FF;
           border-radius: 50%;
           right: -20px;
           top: -23px;
@@ -134,18 +133,12 @@
       }
     }
   }
-  .gridItem1 {
-    grid-area: gridItem1;
-  }
-  .gridItem2 {
-    grid-area: gridItem2;
-  }
-  .gridItem3 {
-    grid-area: gridItem3;
-  }
 
-  .PortfolioShortBtn{
+  .PortfolioFullBtn{
     display: flex;
     justify-content: center;
+  }
+  .PortfolioFullPaggination{
+    display: none;
   }
 }

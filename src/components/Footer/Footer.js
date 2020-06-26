@@ -8,15 +8,12 @@ import ListItem from "@material-ui/core/ListItem";
 import Grid from "@material-ui/core/Grid";
 
 export default function Footer() {
-
   return (
     <footer className={classes.Footer}>
       <Container fixed disableGutters classes={{root: classes.ContainerRoot}}>
         <Grid container spacing={0}>
           <Grid item sm={9} classes={{root: classes.ContainerItemZero1Root}} />
-
           <Grid item sm={3} classes={{root: classes.ContainerItemZero2Root}} />
-
           <Grid item sm={9} container>
             <Grid item sm={4}>
               <List className={classes.LinksList}>
@@ -112,7 +109,6 @@ export default function Footer() {
               </Grid>
             </Grid>
           </Grid>
-
           <Grid item sm={3} container justify="center" alignItems="center" classes={{root: classes.SocialLinksGrid}}>
             <Grid item>
               <List className={classes.LinksList}>
@@ -139,10 +135,8 @@ export default function Footer() {
               </List>
             </Grid>
           </Grid>
-
         </Grid>
       </Container>
     </footer>
-
   )
 }

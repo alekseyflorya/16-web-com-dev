@@ -19,6 +19,11 @@
 
   }
   .NewsItem{
+    transition: all .5s;
+    &:hover{
+      transform: translateY(-5px);
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    }
     .Image{
       margin-bottom: 30px;
     }
@@ -93,25 +98,5 @@
   .LastNewsBtn{
     display: flex;
     justify-content: center;
-  }
-  .ButtonLink{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 265px;
-    height: 65px;
-    font-family: Inter;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    text-decoration: none;
-    background: #000000;
-    border: 1px solid #000000;
-    color: #FFFFFF;
-    transition: .3s;
-    &:hover{
-      background: #FFFFFF;
-      color: #000000;
-    }
   }
 }
