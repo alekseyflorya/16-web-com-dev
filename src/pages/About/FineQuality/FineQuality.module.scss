@@ -1,3 +1,53 @@
 .FineQuality{
+  margin-bottom: 220px;
+  .Headding{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 43px;
+    line-height: 52px;
+    color: #393939;
+    margin-bottom: 120px;
+  }
+  .Advantages{
+    counter-reset: numbers;
+    .Item{
+      margin: 20px;
+      margin-bottom: 80px;
+    }
+  }
+  .Text{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #8B8B8B;
+    padding-bottom: 20px;
+  }
+  .Numbers{
+    position: relative;
+    padding-left: 70px;
 
+    &:before{
+      counter-increment: numbers;
+      content: '0' counter(numbers) '+';
+      width: 90px;
+      height: 50px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Ubuntu;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 25px;
+      line-height: 30px;
+      color: #393939;
+      border: 1px solid #E9E9E9;
+      position: absolute;
+      left: -20px;
+      top: 10px;
+      transform: rotate(-90deg);
+    }
+  }
 }

@@ -1,4 +1,4 @@
-import classes from '../../components/PortfilioFull/PortfolioFull.module.scss';
+import classes from '../../pages/Portfolio/PortfilioFull/PortfolioFull.module.scss';
 import portfolioImage1 from '../../assets/img/portfolio-image1.png';
 import portfolioImage2 from '../../assets/img/portfolio-image2.png';
 import portfolioImage3 from '../../assets/img/portfolio-image3.png';

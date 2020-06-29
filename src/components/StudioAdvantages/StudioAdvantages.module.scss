@@ -1,4 +1,4 @@
-.Philosophy{
+.StudioAdvantages{
   margin-top: 120px;
   margin-bottom: 220px;
   .Container{
@@ -8,7 +8,7 @@
 
   }
   .RightColumn{
-
+    justify-content: flex-end;
   }
   .Headding{
     font-family: Ubuntu;
@@ -17,7 +17,7 @@
     font-size: 43px;
     line-height: 52px;
     color: #393939;
-    margin-bottom: 45px;
+    margin-bottom: 60px;
   }
   .Text{
     font-family: Inter;
@@ -45,56 +45,10 @@
         position: absolute;
         width: 10px;
         height: 10px;
-        background: #4C1C89;
+        background: #0DF0FF;
         left: 0;
         top: 6px;
       }
     }
-  }
-  .PhilosophyTabsBox{
-
-  }
-  .TabPanel{
-    width: 100%;
-  }
-  .TabPanelItem{
-
-  }
-  .PhilosophyImage{
-
-  }
-  .Tabs{
-    background: #4C1C89;
-    height: 80px;
-    margin-left: 100px;
-    align-items: center;
-    .indicator{
-      display: none;
-    }
-    .scrollButtons{
-      color: #FFFFFF;
-      position: absolute;
-      bottom: 10px;
-    }
-    .flexContainer{
-      padding-left: 5%;
-      padding-right: 5%;
-      justify-content: space-around;
-    }
-    .selected{
-      color: #FFFFFF;
-      opacity: 1;
-    }
-  }
-  .Tab{
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 140%;
-    color: #FFFFFF;
-    opacity: 0.5;
-    min-width: auto;
-
   }
 }

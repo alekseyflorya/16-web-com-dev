@@ -6,14 +6,14 @@ import Grid from "@material-ui/core/Grid";
 import {ButtonLink} from "../UI/ButtonLink";
 
 
-function Interested() {
+function Interested({title, interestedDescription}) {
   return (
     <section className={classes.Interested}>
       <Container fixed className={classes.Container}>
         <Grid container>
           <Grid item sm>
-            <h2 className={classes.Headding}>Заинтересовало?</h2>
-            <p className={classes.Description}>Ясность нашей позиции очевидна: выбранный нами инновационный путь способствует повышению качества переосмысления внешне экономических политик. С учётом сложившейся международной обстановки</p>
+            <h2 className={classes.Headding}>{title ? title: 'Заинтересовало?'}</h2>
+            <p className={classes.Description}>{interestedDescription ? interestedDescription : 'Ясность нашей позиции очевидна: выбранный нами инновационный путь способствует повышению качества переосмысления внешне экономических политик. С учётом сложившейся международной обстановки'}</p>
             <ButtonLink path={'/vacancies'} title={'Заказать проект'}/>
           </Grid>
           <Grid item sm className={classes.Vacancies}>

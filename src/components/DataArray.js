@@ -33,6 +33,8 @@ import vacanciesImage from  '../assets/img/career.jpg';
 import newsImage from  '../assets/img/news.jpg';
 import faqImage from '../assets/img/FAQ.jpg';
 
+import siteCreatingImage from '../assets/img/sozdanie-saitov.jpg';
+
 const DataArray = [
   {
     id: 0,
@@ -135,8 +137,8 @@ const DataArray = [
     parent: 'services',
     component: () => <SiteCreating />,
     headdingtitle:'Создание сайтов',
-    description: '',
-    bgimage: ''
+    description: 'При разработке сайта специалисты студии 16.web создают ресурс, полностью соответствующий целям и задачам, сформулированным заказчиком.',
+    bgimage: siteCreatingImage
   },
   {
     id: 10,

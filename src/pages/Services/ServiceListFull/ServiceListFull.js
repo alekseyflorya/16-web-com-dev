@@ -3,7 +3,7 @@ import classes from './ServiceListFull.module.scss';
 import {Link} from 'react-router-dom';
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
-import {ButtonLink} from "../UI/ButtonLink";
+import {ButtonLink} from "../../../components/UI/ButtonLink";
 
 function ServiceListFull() {
   return (

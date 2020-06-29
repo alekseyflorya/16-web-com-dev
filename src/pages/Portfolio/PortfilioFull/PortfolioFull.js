@@ -2,8 +2,8 @@ import React from "react";
 import classes from './PortfolioFull.module.scss';
 import Container from "@material-ui/core/Container";
 import {Link} from "react-router-dom";
-import {ButtonLoadMore} from '../UI/ButtonLink';
-import FullPortfolioData from "../../pages/Portfolio/FullPortfolioArray";
+import {ButtonLoadMore} from '../../../components/UI/ButtonLink';
+import FullPortfolioData from "../FullPortfolioArray";
 import Pagination from "@material-ui/lab/Pagination";
 
 function PortfolioFull() {

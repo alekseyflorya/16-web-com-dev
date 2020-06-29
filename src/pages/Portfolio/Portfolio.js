@@ -5,7 +5,7 @@ import Footer from "../../components/Footer";
 import Reviews from "../../components/Reviews";
 import Clients from "../../components/Clients";
 import Interested from "../../components/Interested";
-import PortfolioFull from "../../components/PortfilioFull";
+import PortfolioFull from "./PortfilioFull/PortfolioFull";
 
 export default function Portfolio(){
 
