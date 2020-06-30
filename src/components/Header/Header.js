@@ -125,7 +125,6 @@ export default function Header() {
             <button onClick={toggleDrawer(!(state.navOpen))} className={classes.BurgerBtn}>
               <span className={state.navOpen ? classes.BurgerActive : classes.Burger}></span>
             </button>
-
           </Grid>
 
           <Grid item style={{width: 66, height: 0, }}>

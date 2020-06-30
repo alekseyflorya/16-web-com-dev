@@ -112,14 +112,7 @@ function Navigation({toggleDrawer, isOpen, togglePortfolioSubmenu, toggleService
                       </Link>
                     </Grid>
                   );
-                }
-                return null
-              })}
-            </Grid>
-            <Grid item xs={12} sm={6} container spacing={2} className={classes.LinksChildren}>
-              {newLinks.map(({id, label, path, parent, children, headdingtitle}, index) => {
-                let activeLink = (window.location.pathname === path) ? classes.active : '';
-                if(id > 8 && parent === 'services') {
+                } else if (id > 8 && parent === 'services') {
 
                   let opened = servicesOpen ? classes.opened: classes.closed;
 
@@ -130,8 +123,9 @@ function Navigation({toggleDrawer, isOpen, togglePortfolioSubmenu, toggleService
                       </Link>
                     </Grid>
                   );
+                } else {
+                  return null
                 }
-                return null
               })}
             </Grid>
           </Grid>
