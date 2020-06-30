@@ -14,30 +14,30 @@ export default function Footer() {
         <Grid container spacing={0}>
           <Grid item sm={9} classes={{root: classes.ContainerItemZero1Root}} />
           <Grid item sm={3} classes={{root: classes.ContainerItemZero2Root}} />
-          <Grid item sm={9} container>
+          <Grid item sm={9} container classes={{root: classes.LeftColumn}}>
             <Grid item sm={4}>
               <List className={classes.LinksList}>
-                <ListItem key={Math.random()} className={classes.LinksListItem}>
+                <ListItem className={classes.LinksListItem}>
                   <Link to="/" className={classes.Link}>
                     {'Главная'}
                   </Link>
                 </ListItem>
-                <ListItem key={Math.random()} className={classes.LinksListItem}>
+                <ListItem className={classes.LinksListItem}>
                   <Link to="/about" className={classes.Link}>
                     {'О нас'}
                   </Link>
                 </ListItem>
-                <ListItem key={Math.random()} className={classes.LinksListItem}>
+                <ListItem className={classes.LinksListItem}>
                   <Link to="/portfolio" className={classes.Link}>
                     {'Портфолио'}
                   </Link>
                 </ListItem>
-                <ListItem key={Math.random()} className={classes.LinksListItem}>
+                <ListItem className={classes.LinksListItem}>
                   <Link to="/services" className={classes.Link}>
                     {'Услуги'}
                   </Link>
                 </ListItem>
-                <ListItem key={Math.random()} className={classes.LinksListItem}>
+                <ListItem className={classes.LinksListItem}>
                   <Link to="/prices" className={classes.Link}>
                     {'Цены'}
                   </Link>
@@ -46,27 +46,27 @@ export default function Footer() {
             </Grid>
             <Grid item sm={4}>
               <List className={classes.LinksList}>
-                <ListItem key={Math.random()} className={classes.LinksListItem}>
+                <ListItem className={classes.LinksListItem}>
                   <Link to="/contact" className={classes.Link}>
                     {'Контакты'}
                   </Link>
                 </ListItem>
-                <ListItem key={Math.random()} className={classes.LinksListItem}>
+                <ListItem className={classes.LinksListItem}>
                   <Link to="/vacancies" className={classes.Link}>
                     {'Вакансии'}
                   </Link>
                 </ListItem>
-                <ListItem key={Math.random()} className={classes.LinksListItem}>
+                <ListItem className={classes.LinksListItem}>
                   <Link to="/news" className={classes.Link}>
                     {'Новости'}
                   </Link>
                 </ListItem>
-                <ListItem key={Math.random()} className={classes.LinksListItem}>
+                <ListItem className={classes.LinksListItem}>
                   <Link to="/faq" className={classes.Link}>
                     {'FAQ'}
                   </Link>
                 </ListItem>
-                <ListItem key={Math.random()} className={classes.LinksListItem}>
+                <ListItem className={classes.LinksListItem}>
                   <Link to="/sitemap" className={classes.Link}>
                     {'Карта сайта'}
                   </Link>
@@ -75,33 +75,33 @@ export default function Footer() {
             </Grid>
             <Grid item sm={4}>
               <List className={classes.LinksList}>
-                <ListItem key={Math.random()} className={classes.LinksListItem}>
+                <ListItem className={classes.LinksListItem}>
                   <Link to="/contact" className={classes.Link}>
                     {'Контакты'}
                   </Link>
                 </ListItem>
-                <ListItem key={Math.random()} className={classes.LinksListItem}>
+                <ListItem className={classes.LinksListItem}>
                   <Link to="/contact" className={classes.Link}>
                     {'+38 (099) 999 99 99'}
                   </Link>
                 </ListItem>
-                <ListItem key={Math.random()} className={classes.LinksListItem}>
+                <ListItem className={classes.LinksListItem}>
                   <Link to="/contact" className={classes.Link}>
                     {'г.Одесса, ул.Балковская 130'}
                   </Link>
                 </ListItem>
               </List>
             </Grid>
-            <Grid item sm={12} container>
+            <Grid item sm={12} container classes={{root: classes.LinksListBottomBox}}>
               <Grid item sm={8}>
-                <ListItem key={Math.random()} className={classes.LinksListItem}>
+                <ListItem className={classes.LinksListItem}>
                   <Link to="/contact" className={classes.Link}>
                     {'Правила конфиденциальности'}
                   </Link>
                 </ListItem>
               </Grid>
               <Grid item sm={4}>
-                <ListItem key={Math.random()} className={classes.LinksListItem}>
+                <ListItem className={classes.LinksListItem}>
                   <Link to="/contact" className={classes.Link}>
                     {'All right reserved @16.web'}
                   </Link>

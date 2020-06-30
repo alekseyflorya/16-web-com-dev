@@ -30,6 +30,8 @@ export default function Header() {
   const [state, setState] = React.useState({
     navOpen: false,
     fabOpen: false,
+    servicesOpen: false,
+    portfolioOpen: false,
   });
 
   const toggleDrawer = (open) => (event) => {
@@ -50,6 +52,17 @@ export default function Header() {
     setState({ ...state, fabOpen: false });
   }
 
+  const toggleServicesSubmenu = () => {
+    let opened = state.servicesOpen;
+    setState({ ...state, servicesOpen: !opened});
+    console.log(state.servicesOpen);
+  }
+  const togglePortfolioSubmenu = () => {
+    let opened = state.portfolioOpen;
+    setState({ ...state, portfolioOpen: !opened});
+    console.log(state.portfolioOpen);
+  }
+
   return (
     <header className={classes.Header}>
       <Grid container>
@@ -60,20 +73,21 @@ export default function Header() {
           direction="row"
           justify="flex-end"
           classes={{root: classes.ColumnLeft}}
-          style={{background: `url(${bgimage})`, paddingTop: 120, backgroundSize: '100% 100%',
+          style={{background: `url(${bgimage})`, paddingTop: 120, backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',}}
         >
           <Grid item container sm={11} style={{marginBottom: -80}}>
             <Grid item container sm={9} justify="flex-start" alignItems="center"
                   style={{
                     border: '5px solid #0DF0FF',
-                    height: 540,
+                    paddingTop: 100,
+                    paddingBottom: 100,
                     borderBottom: 0,
                     background: 'rgba(41,37,37,.4)',
                     backdropFilter: 'blur(4px)',
                     paddingLeft: '14%',
                   }}>
-              <Box style={{maxWidth: 510}}>
+              <Box style={{maxWidth: 510}} className={classes.TitleDescriptionBox}>
                 <h1 className={classes.HeaddingTitle}>{headdingtitle}</h1>
                 <p className={classes.HeaddingDescription}>{description}</p>
               </Box>
@@ -100,23 +114,18 @@ export default function Header() {
           </Grid>
         </Grid>
 
-        <Grid item container direction="column" justify="space-between" alignItems="flex-end" classes={{root: classes.columnRight}}>
+        <Grid item container classes={{root: classes.columnRight}}>
 
           <Grid item classes={{root: classes.LogoRoot}}>
             <LogoIcon classes={{root: classes.LogoIcon}} width="85" height="54" viewBox="0 0 85 54"
             />
           </Grid>
 
-          <Grid item>
-              {state.navOpen ? (
-                <Button onClick={toggleDrawer(false)} style={{zIndex: 2000,}}>
-                  <MenuCloseIcon width="28" height="28" viewBox="0 0 28 28" />
-                </Button>
-                ) : (
-                <Button onClick={toggleDrawer(true)}>
-                  <BurgerIcon width="40" height="38" viewBox="0 0 40 38" />
-                </Button>
-              )}
+          <Grid item className={classes.MenuButton}>
+            <button onClick={toggleDrawer(!(state.navOpen))} className={classes.BurgerBtn}>
+              <span className={state.navOpen ? classes.BurgerActive : classes.Burger}></span>
+            </button>
+
           </Grid>
 
           <Grid item style={{width: 66, height: 0, }}>
@@ -147,7 +156,14 @@ export default function Header() {
           </ClickAwayListener>
         </Grid>
       </Grid>
-      <Navigation toggleDrawer={toggleDrawer} isOpen={state.navOpen}/>
+      <Navigation
+        toggleDrawer={toggleDrawer}
+        isOpen={state.navOpen}
+        toggleServicesSubmenu={toggleServicesSubmenu}
+        togglePortfolioSubmenu={togglePortfolioSubmenu}
+        servicesOpen={state.servicesOpen}
+        portfolioOpen={state.portfolioOpen}
+      />
     </header>
   )
 }

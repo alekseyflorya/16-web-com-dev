@@ -2,15 +2,17 @@
   background: url("../../assets/img/menu-bg.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  max-width: 78%;
-  height: 660px;
 }
 .MenuList{
   background: transparent;
   border: none;
 }
 .LinksTop{
-
+  min-height: 415px;
+  .LinkItem{
+    display: flex;
+    align-items: baseline;
+  }
 }
 .LinksBottom{
   .Link{
@@ -40,4 +42,24 @@
   &:hover,&:active{
     color: #0DF0FF;
   }
+  &.active,&.active + .ButtonPlus{
+    color: #0DF0FF;
+  }
+}
+.ButtonPlus{
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 30px;
+  color: #FFFFFF;
+  background: transparent;
+  border: none;
+  margin-left: 10px;
+}
+
+.opened{
+  display: flex;
+}
+.closed{
+  display: none;
 }

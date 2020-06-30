@@ -11,10 +11,27 @@ $blue: #0DF0FF;
 }
 .ContainerRoot{
   margin-top: -80px;
+  .LeftColumn{
+    padding-top: 100px;
+    .LinksListBottomBox{
+      margin-top: 60px;
+    }
+  }
 }
 .ContainerItemZero1Root{
   height: 80px;
   background-color: #4C1C89;
+  position: relative;
+  &:before{
+    content: '';
+    display: block;
+    width: 60px;
+    height: 60px;
+    background: #0DF0FF;
+    position: absolute;
+    left: -60px;
+    bottom: -59px;
+  }
 }
 .ContainerItemZero2Root{
   height: 80px;
