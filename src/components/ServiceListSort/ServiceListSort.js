@@ -21,14 +21,14 @@ function ServiceListSort() {
             </Grid>
             <Grid item sm={4} className={classes.CardBox}>
               <div className={classes.Card}>
-                <Link to="/sitecreating" className={classes.CardName}>Веб-дизайн</Link>
+                <Link to="/webdesign" className={classes.CardName}>Веб-дизайн</Link>
                 <p className={classes.CardText}>Современные и эффективные решения в плане композиции, типографики, цветоведения и юзабилити.</p>
                 <Link className={classes.CardLink} to="/sitecreating">Все услуги</Link>
               </div>
             </Grid>
             <Grid item sm={4} className={classes.CardBox}>
               <div className={classes.Card}>
-                <Link to="/sitecreating" className={classes.CardName}>Интернет - маркетинг</Link>
+                <Link to="/internetmarketing" className={classes.CardName}>Интернет - маркетинг</Link>
                 <p className={classes.CardText}>Максимальная востребованость бренда и вывод в топ результатов поисковых систем.</p>
                 <Link className={classes.CardLink} to="/sitecreating">Все услуги</Link>
               </div>

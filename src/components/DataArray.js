@@ -10,6 +10,8 @@ import Faq from '../pages/Faq';
 import News from '../pages/News'
 
 import SiteCreating from "../pages/SiteCreating";
+import WebDesign from "../pages/WebDesign";
+import InternetMarketing from "../pages/InternetMarketing";
 import Photography from "../pages/Photography";
 import Branding from "../pages/Branding";
 import Seo from "../pages/Seo";
@@ -32,6 +34,8 @@ import servicesBgImage from '../assets/img/uslugi.jpg';
 import vacanciesImage from  '../assets/img/career.jpg';
 import newsImage from  '../assets/img/news.jpg';
 import faqImage from '../assets/img/FAQ.jpg';
+import webDesignImage from '../assets/img/webdesign.jpg';
+import internetMarketingImage from '../assets/img/internet-marketing.jpg';
 
 import siteCreatingImage from '../assets/img/sozdanie-saitov.jpg';
 
@@ -142,6 +146,28 @@ const DataArray = [
   },
   {
     id: 10,
+    name: 'webDesign',
+    label: 'Веб-дизайн',
+    path: '/webdesign',
+    parent: 'services',
+    component: () => <WebDesign />,
+    headdingtitle:'Веб-дизайн',
+    description: 'Мы передадим идею вашего бренда посредством подбора оптимальной цветовой гаммы, креативной композиции и грамотной типографики.',
+    bgimage: webDesignImage
+  },
+  {
+    id: 11,
+    name: 'internetMarketing',
+    label: 'Интернет - маркетинг',
+    path: '/internetmarketing',
+    parent: 'services',
+    component: () => <InternetMarketing />,
+    headdingtitle:'Интернет-маркетинг',
+    description: 'Студия 16.web для продвижения в сети использует комплексный интернет-маркетинг, предполагающий применение всех онлайн-технологий.',
+    bgimage: internetMarketingImage
+  },
+  {
+    id: 11,
     name: 'photography',
     label: 'Фотосьемка',
     path: '/photography',
@@ -152,7 +178,7 @@ const DataArray = [
     bgimage: ''
   },
   {
-    id: 11,
+    id: 12,
     name: 'branding',
     label: 'Брендинг',
     path: '/branding',
@@ -163,7 +189,7 @@ const DataArray = [
     bgimage: ''
   },
   {
-    id: 12,
+    id: 13,
     name: 'seo',
     label: 'SEO',
     path: '/seo',
@@ -174,7 +200,7 @@ const DataArray = [
     bgimage: ''
   },
   {
-    id: 13,
+    id: 14,
     name: 'smm',
     label: 'SMM',
     path: '/smm',
@@ -185,7 +211,7 @@ const DataArray = [
     bgimage: ''
   },
   {
-    id: 14,
+    id: 15,
     name: 'qaTesting',
     label: 'QA',
     path: '/qatesting',
@@ -196,7 +222,7 @@ const DataArray = [
     bgimage: ''
   },
   {
-    id: 15,
+    id: 16,
     name: 'appsDevelop',
     label: 'Разработка приложений',
     path: '/appsdevelop',
@@ -207,7 +233,7 @@ const DataArray = [
     bgimage: ''
   },
   {
-    id: 16,
+    id: 17,
     name: 'ppc',
     label: 'Контекстная реклама',
     path: '/ppc',
@@ -218,18 +244,29 @@ const DataArray = [
     bgimage: ''
   },
   {
-    id: 17,
-    name: 'othersrevices',
-    label: 'Добавочные сервисы',
-    path: '/othersrevices',
+    id: 18,
+    name: 'portal',
+    label: 'Портал',
+    path: '/portal',
     parent: 'services',
     component: () => <OtherSrevices />,
-    headdingtitle: 'Добавочные сервисы',
+    headdingtitle: 'Портал',
     description: '',
     bgimage: ''
   },
   {
-    id: 18,
+    id: 19,
+    name: 'uniquesrevices',
+    label: 'Уникальные решения',
+    path: '/uniquesrevices',
+    parent: 'services',
+    component: () => <OtherSrevices />,
+    headdingtitle: 'Уникальные решения',
+    description: '',
+    bgimage: ''
+  },
+  {
+    id: 20,
     name: 'catalogsite',
     label: 'Сайт-каталог',
     path: '/catalogsite',
@@ -240,7 +277,7 @@ const DataArray = [
     bgimage: ''
   },
   {
-    id: 19,
+    id: 21,
     name: 'businesscardsite',
     label: 'Сайт-визитка',
     path: '/businesscardsite',
@@ -251,7 +288,7 @@ const DataArray = [
     bgimage: ''
   },
   {
-    id: 20,
+    id: 22,
     name: 'onlinestore',
     label: 'Интернет-магазин',
     path: '/onlinestore',
@@ -262,7 +299,7 @@ const DataArray = [
     bgimage: ''
   },
   {
-    id: 21,
+    id: 23,
     name: 'landingpage',
     label: 'Лендинг-пейдж',
     path: '/landingpage',
@@ -273,7 +310,7 @@ const DataArray = [
     bgimage: ''
   },
   {
-    id: 22,
+    id: 24,
     name: 'corporatesite',
     label: 'Корпоративный сайт',
     path: '/corporatesite',
@@ -284,7 +321,7 @@ const DataArray = [
     bgimage: ''
   },
   {
-    id: 23,
+    id: 25,
     name: 'portfoliosite',
     label: 'Сайт портфолио',
     path: '/portfoliosite',

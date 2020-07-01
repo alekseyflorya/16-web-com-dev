@@ -1,0 +1,65 @@
+.DesignTypes{
+  margin-bottom: 220px;
+  .Container{
+
+  }
+  .Headding{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 43px;
+    line-height: 52px;
+    color: #393939;
+    margin-bottom: 120px;
+  }
+  .Cards{
+    margin-bottom: 120px;
+  }
+  .CardBox{
+
+  }
+  .Card{
+    padding: 45px;
+    transition: all .5s;
+    &:hover{
+      border-color: transparent;
+      transform: translateY(-5px);
+      box-shadow: 5px 20px 30px rgba(128, 128, 128, 0.15);
+    }
+  }
+  .CardName{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 36px;
+    color: #393939;
+    position: relative;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    text-decoration: none;
+    &:after{
+      content: '';
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      display: inline-block;
+      border-top: 2px solid black;
+      border-right: 2px solid black;
+      right: 0;
+      transform: rotate(45deg);
+      top: calc(50% - 6px)
+    }
+  }
+  .CardText{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #8B8B8B;
+    margin-bottom: 20px;
+  }
+}

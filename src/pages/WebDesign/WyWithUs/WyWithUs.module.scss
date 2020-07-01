@@ -1,0 +1,86 @@
+.WyWithUs{
+  margin-bottom: 100px;
+  .HeaddingBox{
+    margin-bottom: 160px;
+  }
+  .Headding{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 43px;
+    line-height: 52px;
+    color: #393939;
+  }
+  .WyWithUsList{
+    counter-reset: numbers1;
+    .Item{
+      position: relative;
+      padding-top: 10px;
+      margin: 0 85px 120px 85px;
+      z-index: 3;
+      &:before{
+        counter-increment: numbers1;
+        content: '0' counter(numbers1);
+        width: 105px;
+        height: 80px;
+        display: inline-flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 80px;
+        line-height: 80px;
+        letter-spacing: 0.04em;
+        color: #E9E9E9;
+        position: absolute;
+        left: 0;
+        top: -48px;
+        z-index: -2;
+        transition: all .5s ease;
+      }
+      &:after{
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: #FFFFFF;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+      }
+      &:hover{
+        cursor: pointer;
+        &:before{
+          top: -70px;
+          color: #0DF0FF;
+        }
+      }
+    }
+  }
+  .Title{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 36px;
+    color: #393939;
+    padding-bottom: 25px;
+    max-width: 245px;
+  }
+  .HeaddingText,.Text{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #8B8B8B;
+  }
+  .HeaddingText{
+    padding-left: 40px;
+  }
+  .Text{
+    max-width: 440px;
+  }
+}

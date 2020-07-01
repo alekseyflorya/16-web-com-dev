@@ -13,32 +13,37 @@ function SiteCreatingList() {
           <Grid container spacing={10}>
             <Grid item sm={4} className={classes.CardBox}>
               <div className={classes.Card}>
-                <Link to="/sitecreating" className={classes.CardName}>Лендинг</Link>
+                <Link to="/landingpage" className={classes.CardName}>Лендинг</Link>
                 <p className={classes.CardText}>Разработка landing page – одностраничного сайта, позволит быстро и легко показать покупателям суть предлагаемого товара или услуги.</p>
               </div>
             </Grid>
             <Grid item sm={4} className={classes.CardBox}>
               <div className={classes.Card}>
-                <Link to="/sitecreating" className={classes.CardName}>Сайт-визитка</Link>
+                <Link to="/businesscardsite" className={classes.CardName}>Сайт-визитка</Link>
                 <p className={classes.CardText}>Сайт-визитка донесёт до целевой аудитории основную информацию о вашем бизнесе, не тратя на это много времени и средств.</p>
               </div>
             </Grid>
             <Grid item sm={4} className={classes.CardBox}>
               <div className={classes.Card}>
-                <Link to="/sitecreating" className={classes.CardName}>Интернет - магазин</Link>
+                <Link to="/onlinestore" className={classes.CardName}>Интернет - магазин</Link>
                 <p className={classes.CardText}>Создание интернет-магазина – это возможность получить эффективную и удобную платформу, как для продающего бренда, так и для покупателей.</p>
               </div>
             </Grid>
-
             <Grid item sm={4} className={classes.CardBox}>
               <div className={classes.Card}>
-                <Link to="/sitecreating" className={classes.CardName}>Корпоративный сайт</Link>
+                <Link to="/corporatesite" className={classes.CardName}>Корпоративный сайт</Link>
                 <p className={classes.CardText}>Корпоративный сайт под ключ - это мощный ресурс, представляющий ваш бренд, а так же взаимодействие для сотрудников, партнёров и клиентов.</p>
               </div>
             </Grid>
             <Grid item sm={4} className={classes.CardBox}>
               <div className={classes.Card}>
-                <Link to="/sitecreating" className={classes.CardName}>Уникальные решения</Link>
+                <Link to="/portal" className={classes.CardName}>Портал</Link>
+                <p className={classes.CardText}>Корпоративный сайт под ключ - это мощный ресурс, представляющий ваш бренд, а так же взаимодействие для сотрудников, партнёров и клиентов.</p>
+              </div>
+            </Grid>
+            <Grid item sm={4} className={classes.CardBox}>
+              <div className={classes.Card}>
+                <Link to="/uniquesrevices" className={classes.CardName}>Уникальные решения</Link>
                 <p className={classes.CardText}>Создания собственного сайта – это значит, что мы готовы подготовить предложение, которое учитывает ваши пожелания и поставленные задачи.</p>
               </div>
             </Grid>

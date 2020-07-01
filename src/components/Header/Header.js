@@ -32,6 +32,7 @@ export default function Header() {
     fabOpen: false,
     servicesOpen: false,
     portfolioOpen: false,
+    scrollTop: 0
   });
 
   const toggleDrawer = (open) => (event) => {
@@ -53,13 +54,21 @@ export default function Header() {
   }
 
   const toggleServicesSubmenu = () => {
+    let portfolioOpened;
+    if (state.portfolioOpen) {
+      portfolioOpened = false;
+    }
     let opened = state.servicesOpen;
-    setState({ ...state, servicesOpen: !opened});
+    setState({ ...state, portfolioOpen: portfolioOpened, servicesOpen: !opened});
     console.log(state.servicesOpen);
   }
   const togglePortfolioSubmenu = () => {
+    let servicesOpened;
+    if (state.servicesOpen) {
+      servicesOpened = false;
+    }
     let opened = state.portfolioOpen;
-    setState({ ...state, portfolioOpen: !opened});
+    setState({ ...state, servicesOpen: servicesOpened, portfolioOpen: !opened});
     console.log(state.portfolioOpen);
   }
 

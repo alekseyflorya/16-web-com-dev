@@ -17,10 +17,12 @@ const useStyles = makeStyles({
   paper: {
     width: '100vw',
     height: '100vh',
+    boxSizing: 'border-box',
     background: `url(${menuBg})`,
     backgroundRepeat: 'no-repeat',
     backgroundSize: '100vw 100vh',
     display: "flex",
+    justifyContent: "center",
     alignItems: "center",
     padding: 100
   },
@@ -31,32 +33,129 @@ const useStyles = makeStyles({
 
 function Navigation({toggleDrawer, isOpen, togglePortfolioSubmenu, toggleServicesSubmenu, servicesOpen, portfolioOpen}) {
 
+  // const newLinks = DataArray.map(({id, name, label, path, parent, children, headdingtitle}) => {
+  //   return {id, name, label, path, parent, children, headdingtitle};
+  // });
+  //
+  // const classesnames = useStyles();
+  //
+  // const ButtonPlus = (path) => {
+  //   switch (path) {
+  //     case '/portfolio':
+  //       return (
+  //         <button className={classes.ButtonPlus} onClick={togglePortfolioSubmenu}>
+  //           {portfolioOpen ? '-' : '+'}
+  //         </button>
+  //       )
+  //       break;
+  //     case '/services':
+  //       return (
+  //         <button className={classes.ButtonPlus} onClick={toggleServicesSubmenu}>
+  //           {servicesOpen ? '-' : '+'}
+  //       </button>
+  //       )
+  //       break;
+  //     default:
+  //       return null
+  //   }
+  // }
+  //
+  // return (
+  //   <React.Fragment key="left">
+  //     <Drawer
+  //       open={isOpen}
+  //       elevation={1}
+  //       onClose={toggleDrawer(false)}
+  //       classes={{paper: classesnames.paper, root: classesnames.backdrop,}}
+  //       ModalProps={{hideBackdrop: true}}
+  //     >
+  //       <Grid
+  //         container
+  //         spacing={10}
+  //         className={classesnames.list}
+  //         role="presentation"
+  //         // onClick={toggleDrawer(false)}
+  //         onKeyDown={toggleDrawer(false)}
+  //       >
+  //         <Grid item xs={12} sm={3}>
+  //           <List className={classes.LinksTop}>
+  //             {newLinks.map(({id, name, label, path, parent, children, headdingtitle}, index) => {
+  //               let activeLink = (window.location.pathname === path) ? classes.active : '';
+  //               if (id <= 4) {
+  //                 return (
+  //                   <ListItem key={index} className={classes.LinkItem}>
+  //                     <Link
+  //                       to={path}
+  //                       label={label}
+  //                       className={`${classes.Link} link-to-${name} ${activeLink}`}
+  //                     >
+  //                       {label}
+  //                     </Link>
+  //                     {ButtonPlus(path)}
+  //                   </ListItem>
+  //                 );
+  //               }
+  //               return null
+  //             })}
+  //           </List>
+  //         </Grid>
+  //         <Grid item xs={12} sm={8} container spacing={2} direction="row" >
+  //           <Grid item xs={12} sm={6} container className={classes.LinksChildren}>
+  //             {newLinks.map(({id, label, path, parent, children, headdingtitle}, index) => {
+  //               let activeLink = (window.location.pathname === path) ? classes.active : '';
+  //               if(id > 8 && parent === 'portfolio') {
+  //
+  //                 let opened = portfolioOpen ? classes.opened: classes.closed;
+  //
+  //                 return (
+  //                   <Grid item key={index} xs={12} className={opened}>
+  //                     <Link to={path} label={label} className={`${classes.Link} LinkTo${label} ${activeLink}`}>
+  //                       {headdingtitle}
+  //                     </Link>
+  //                   </Grid>
+  //                 );
+  //               } else if (id > 8 && parent === 'services') {
+  //
+  //                 let opened = servicesOpen ? classes.opened: classes.closed;
+  //
+  //                 return (
+  //                   <Grid item key={index} xs={12} className={opened}>
+  //                     <Link to={path} label={label} className={`${classes.Link} LinkTo${label} ${activeLink}`}>
+  //                       {headdingtitle}
+  //                     </Link>
+  //                   </Grid>
+  //                 );
+  //               } else {
+  //                 return null
+  //               }
+  //             })}
+  //           </Grid>
+  //         </Grid>
+  //         <Grid container item xs={12} sm={6} spacing={2} className={classes.LinksBottom}>
+  //           {newLinks.map(({id, label, path, parent, children, headdingtitle}, index) => {
+  //             let activeLink = (window.location.pathname === path) ? classes.active : '';
+  //             if(id > 4 && id <= 8) {
+  //               return (
+  //                 <Grid item key={index} xs={12} sm={6}>
+  //                   <Link to={path} label={label} className={`${classes.Link} LinkTo${label} ${activeLink}`}>
+  //                     {headdingtitle}
+  //                   </Link>
+  //                 </Grid>
+  //               );
+  //             }
+  //             return null
+  //           })}
+  //         </Grid>
+  //       </Grid>
+  //     </Drawer>
+  //   </React.Fragment>
+  // );
+
   const newLinks = DataArray.map(({id, name, label, path, parent, children, headdingtitle}) => {
     return {id, name, label, path, parent, children, headdingtitle};
   });
 
   const classesnames = useStyles();
-
-  const ButtonPlus = (path) => {
-    switch (path) {
-      case '/portfolio':
-        return (
-          <button className={classes.ButtonPlus} onClick={togglePortfolioSubmenu}>
-            {portfolioOpen ? '-' : '+'}
-          </button>
-        )
-        break;
-      case '/services':
-        return (
-          <button className={classes.ButtonPlus} onClick={toggleServicesSubmenu}>
-            {servicesOpen ? '-' : '+'}
-        </button>
-        )
-        break;
-      default:
-        return null
-    }
-  }
 
   return (
     <React.Fragment key="left">
@@ -69,85 +168,38 @@ function Navigation({toggleDrawer, isOpen, togglePortfolioSubmenu, toggleService
       >
         <Grid
           container
-          spacing={2}
+          spacing={10}
           className={classesnames.list}
           role="presentation"
           // onClick={toggleDrawer(false)}
           onKeyDown={toggleDrawer(false)}
         >
-          <Grid item xs={12} sm={3}>
-            <List className={classes.LinksTop}>
+          <Grid item container sm={12}>
+            <Grid item container sm={12} xs={12} className={classes.LinksTop}>
               {newLinks.map(({id, name, label, path, parent, children, headdingtitle}, index) => {
                 let activeLink = (window.location.pathname === path) ? classes.active : '';
-                if (id <= 4) {
+                if (id <= 8) {
                   return (
-                    <ListItem key={index} className={classes.LinkItem}>
+                    <Grid item sm={4} xs={12}>
                       <Link
+                        key={index}
                         to={path}
                         label={label}
                         className={`${classes.Link} link-to-${name} ${activeLink}`}
                       >
-                        {label}
-                      </Link>
-                      {ButtonPlus(path)}
-                    </ListItem>
-                  );
-                }
-                return null
-              })}
-            </List>
-          </Grid>
-          <Grid item xs={12} sm={8} container spacing={2} direction="row" >
-            <Grid item xs={12} sm={6} container className={classes.LinksChildren}>
-              {newLinks.map(({id, label, path, parent, children, headdingtitle}, index) => {
-                let activeLink = (window.location.pathname === path) ? classes.active : '';
-                if(id > 8 && parent === 'portfolio') {
-
-                  let opened = portfolioOpen ? classes.opened: classes.closed;
-
-                  return (
-                    <Grid item key={index} xs={12} className={opened}>
-                      <Link to={path} label={label} className={`${classes.Link} LinkTo${label} ${activeLink}`}>
-                        {headdingtitle}
+                        <span>{label}</span>
                       </Link>
                     </Grid>
                   );
-                } else if (id > 8 && parent === 'services') {
-
-                  let opened = servicesOpen ? classes.opened: classes.closed;
-
-                  return (
-                    <Grid item key={index} xs={12} className={opened}>
-                      <Link to={path} label={label} className={`${classes.Link} LinkTo${label} ${activeLink}`}>
-                        {headdingtitle}
-                      </Link>
-                    </Grid>
-                  );
-                } else {
-                  return null
                 }
               })}
             </Grid>
-          </Grid>
-          <Grid container item xs={12} sm={6} spacing={2} className={classes.LinksBottom}>
-            {newLinks.map(({id, label, path, parent, children, headdingtitle}, index) => {
-              let activeLink = (window.location.pathname === path) ? classes.active : '';
-              if(id > 4 && id <= 8) {
-                return (
-                  <Grid item key={index} xs={12} sm={6}>
-                    <Link to={path} label={label} className={`${classes.Link} LinkTo${label} ${activeLink}`}>
-                      {headdingtitle}
-                    </Link>
-                  </Grid>
-                );
-              }
-              return null
-            })}
           </Grid>
         </Grid>
       </Drawer>
     </React.Fragment>
   );
+
 }
 
 export default Navigation

@@ -8,29 +8,6 @@
   border: none;
 }
 .LinksTop{
-  min-height: 415px;
-  .LinkItem{
-    display: flex;
-    align-items: baseline;
-  }
-}
-.LinksBottom{
-  .Link{
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 34px;
-    color: #E9E9E9;
-  }
-}
-.LinksChildren{
-  .Link{
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 28px;
-    color: #ffffff;
-  }
 }
 .Link {
   color: #ffffff;
@@ -39,22 +16,25 @@
   font-weight: bold;
   font-size: 30px;
   line-height: 36px;
+  display: inline-flex;
+  position: relative;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px 25px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  span {
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: transparent;
+  }
   &:hover,&:active{
     color: #0DF0FF;
   }
-  &.active,&.active + .ButtonPlus{
-    color: #0DF0FF;
-  }
-}
-.ButtonPlus{
-  font-style: normal;
-  font-weight: bold;
-  font-size: 30px;
-  line-height: 30px;
-  color: #FFFFFF;
-  background: transparent;
-  border: none;
-  margin-left: 10px;
+  //&.active{
+  //  color: #0DF0FF;
+  //}
 }
 
 .opened{
@@ -63,3 +43,153 @@
 .closed{
   display: none;
 }
+
+.Link.active{
+  padding: 20px 25px;
+  color: #0DF0FF;
+  z-index: 2;
+  span{
+    &:before{
+      content: '';
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 20px;
+      height: 20px;
+      border-right: 2px solid #0DF0FF;
+      border-top: 2px solid #0DF0FF;
+      transition: all .4s ease;
+      z-index: -1;
+    }
+    &:after{
+      content: '';
+      display: block;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 20px;
+      height: 20px;
+      border-right: 2px solid #0DF0FF;
+      border-bottom: 2px solid #0DF0FF;
+      transition: all .4s ease;
+      z-index: -1;
+    }
+    &:hover{
+      &:before{
+        width: 100%;
+        height: 100%;
+        transition: all .4s ease;
+      }
+      &:after{
+        width: 100%;
+        height: 100%;
+        transition: all .4s ease;
+      }
+    }
+  }
+  &:before{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border-left: 2px solid #0DF0FF;
+    border-top: 2px solid #0DF0FF;
+    z-index: -1;
+  }
+  &:after{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 20px;
+    height: 20px;
+    border-left: 2px solid #0DF0FF;
+    border-bottom: 2px solid #0DF0FF;
+    transition: all .4s ease;
+    z-index: -1;
+  }
+  &:hover{
+    &:before{
+      width: 100%;
+      height: 100%;
+      transition: all .4s ease;
+    }
+    &:after{
+      width: 100%;
+      height: 100%;
+      transition: all .4s ease;
+    }
+  }
+}
+
+
+//.Navigation {
+//  background: url("../../assets/img/menu-bg.jpg");
+//  background-repeat: no-repeat;
+//  background-size: 100% 100%;
+//}
+//.MenuList{
+//  background: transparent;
+//  border: none;
+//}
+//.LinksTop{
+//  min-height: 415px;
+//  .LinkItem{
+//    display: flex;
+//    align-items: baseline;
+//  }
+//}
+//.LinksBottom{
+//  .Link{
+//    font-style: normal;
+//    font-weight: bold;
+//    font-size: 24px;
+//    line-height: 34px;
+//    color: #E9E9E9;
+//  }
+//}
+//.LinksChildren{
+//  .Link{
+//    font-style: normal;
+//    font-weight: normal;
+//    font-size: 20px;
+//    line-height: 28px;
+//    color: #ffffff;
+//  }
+//}
+//.Link {
+//  color: #ffffff;
+//  text-decoration: none;
+//  font-style: normal;
+//  font-weight: bold;
+//  font-size: 30px;
+//  line-height: 36px;
+//  &:hover,&:active{
+//    color: #0DF0FF;
+//  }
+//  &.active,&.active + .ButtonPlus{
+//    color: #0DF0FF;
+//  }
+//}
+//.ButtonPlus{
+//  font-style: normal;
+//  font-weight: bold;
+//  font-size: 30px;
+//  line-height: 30px;
+//  color: #FFFFFF;
+//  background: transparent;
+//  border: none;
+//  margin-left: 10px;
+//}
+//
+//.opened{
+//  display: flex;
+//}
+//.closed{
+//  display: none;
+//}

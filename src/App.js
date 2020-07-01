@@ -1,5 +1,6 @@
 import React from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import CustomScroll from 'react-custom-scroll';
 
 import './App.scss';
 import DataArray from './components/DataArray';
