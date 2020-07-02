@@ -5,11 +5,15 @@ import Footer from "../../components/Footer";
 import Interested from "../../components/Interested";
 import PortfolioShort from "../../components/PortfilioShort";
 import ServiceListSort from "../../components/ServiceListSort";
+import MarketingServices from "./MarketingServices";
+import MarketingFeatures from "./MarketingFeatures"
 
 function InternetMarketing() {
   return (
     <div className={classes.InternetMarketingPage}>
       <Header />
+      <MarketingServices />
+      <MarketingFeatures />
       <Interested />
       <PortfolioShort />
       <ServiceListSort />

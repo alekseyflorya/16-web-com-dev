@@ -1,0 +1,48 @@
+.CorporateFeatures{
+  margin-bottom: 220px;
+  .HeaddingBox{
+    margin-bottom: 100px;
+  }
+  .Headding{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 43px;
+    line-height: 52px;
+    color: #393939;
+  }
+  .Text{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #8B8B8B;
+  }
+  .GridList{
+    padding-left: 80px;
+    .GridListItem{
+      font-family: Inter;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 140%;
+      color: #292525;
+      position: relative;
+      padding-left: 30px;
+      margin-top: 30px;
+      padding-right: 180px;
+      &:before{
+        content: '';
+        display: inline-block;
+        box-sizing: border-box;
+        position: absolute;
+        width: 10px;
+        height: 100%;
+        border: 1px solid #0DF0FF;
+        left: 0;
+        top: 0;
+      }
+    }
+  }
+}

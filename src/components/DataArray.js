@@ -26,7 +26,7 @@ import BusinessCardSite from "../pages/BusinessCardSite";
 import OnlineStore from "../pages/OnlineStore";
 import LandingPage from "../pages/LandingPage";
 import CorporateSite from "../pages/CorporateSite";
-import PortfolioSite from "../pages/PortfolioSite";
+import SitePrototype from "../pages/SitePrototype";
 
 import homeBgImage from '../assets/img/main.jpg';
 import portfolioBgImage from '../assets/img/portfolio.jpg';
@@ -36,11 +36,16 @@ import newsImage from  '../assets/img/news.jpg';
 import faqImage from '../assets/img/FAQ.jpg';
 import webDesignImage from '../assets/img/webdesign.jpg';
 import internetMarketingImage from '../assets/img/internet-marketing.jpg';
-
+import qaTestingImg from "../assets/img/qa-testing.jpg";
 import siteCreatingImage from '../assets/img/sozdanie-saitov.jpg';
+import landingPageImg from "../assets/img/landing-page.jpg";
+import businessCardImg from "../assets/img/business-card.jpg";
+import corporateSiteImg from "../assets/img/corporate-site.jpg";
+import SitePrototypeImg from "../assets/img/site-prototype.jpg"
 
 const DataArray = [
-  {
+
+  {//Главная
     id: 0,
     name: 'home',
     label: 'Главная',
@@ -51,7 +56,8 @@ const DataArray = [
     bgimage: homeBgImage,
     exact: true
   },
-  {
+
+  {//О нас
     id: 1,
     name: 'about',
     label: 'О нас',
@@ -61,7 +67,8 @@ const DataArray = [
     description: '16.web studio специализируется на веб-дизайне, создании адаптивных интернет-проектов, брендинге и рекламной фотографии.',
     bgimage: homeBgImage
   },
-  {
+
+  {//Портфолио
     id: 2,
     name: 'portfolio',
     label: 'Портфолио',
@@ -72,7 +79,8 @@ const DataArray = [
     description: '16.web studio специализируется на веб-дизайне, создании адаптивных интернет-проектов, брендинге и рекламной фотографии.',
     bgimage: portfolioBgImage
   },
-  {
+
+  {//Услуги
     id: 3,
     name: 'services',
     label: 'Услуги',
@@ -83,7 +91,8 @@ const DataArray = [
     description: 'Веб-студия 16.web предоставляет услуги своим клиентам, как комплексно, так и по отдельности – выбирайте, как вам удобнее и выгоднее.',
     bgimage: servicesBgImage
   },
-  {
+
+  {//Цены
     id: 4,
     name: 'prices',
     label: 'Цены',
@@ -93,7 +102,8 @@ const DataArray = [
     description: '16.web studio специализируется на веб-дизайне, создании адаптивных интернет-проектов, брендинге и рекламной фотографии.',
     bgimage: homeBgImage
   },
-  {
+
+  {//Контакты
     id: 5,
     name: 'contact',
     label: 'Контакты',
@@ -103,7 +113,8 @@ const DataArray = [
     description: '16.web studio специализируется на веб-дизайне, создании адаптивных интернет-проектов, брендинге и рекламной фотографии.',
     bgimage: homeBgImage
   },
-  {
+
+  {//Вакансии
     id: 6,
     name: 'vacancies',
     label: 'Вакансии',
@@ -113,7 +124,8 @@ const DataArray = [
     description: '16.web studio специализируется на веб-дизайне, создании адаптивных интернет-проектов, брендинге и рекламной фотографии.',
     bgimage: vacanciesImage
   },
-  {
+
+  {//Новости
     id: 7,
     name: 'news',
     label: 'Новости',
@@ -123,7 +135,8 @@ const DataArray = [
     description: '16.web studio специализируется на веб-дизайне, создании адаптивных интернет-проектов, брендинге и рекламной фотографии.',
     bgimage: newsImage
   },
-  {
+
+  {//FAQ
     id: 8,
     name: 'faq',
     label: 'FAQ',
@@ -133,7 +146,8 @@ const DataArray = [
     description: '16.web studio специализируется на веб-дизайне, создании адаптивных интернет-проектов, брендинге и рекламной фотографии.',
     bgimage: faqImage
   },
-  {
+
+  {//Создание сайтов
     id: 9,
     name: 'siteCreating',
     label: 'Создание сайтов',
@@ -144,7 +158,8 @@ const DataArray = [
     description: 'При разработке сайта специалисты студии 16.web создают ресурс, полностью соответствующий целям и задачам, сформулированным заказчиком.',
     bgimage: siteCreatingImage
   },
-  {
+
+  {//Веб-дизайн
     id: 10,
     name: 'webDesign',
     label: 'Веб-дизайн',
@@ -155,7 +170,8 @@ const DataArray = [
     description: 'Мы передадим идею вашего бренда посредством подбора оптимальной цветовой гаммы, креативной композиции и грамотной типографики.',
     bgimage: webDesignImage
   },
-  {
+
+  {//Интернет - маркетинг
     id: 11,
     name: 'internetMarketing',
     label: 'Интернет - маркетинг',
@@ -166,7 +182,8 @@ const DataArray = [
     description: 'Студия 16.web для продвижения в сети использует комплексный интернет-маркетинг, предполагающий применение всех онлайн-технологий.',
     bgimage: internetMarketingImage
   },
-  {
+
+  {//Фотосьемка
     id: 11,
     name: 'photography',
     label: 'Фотосьемка',
@@ -177,7 +194,8 @@ const DataArray = [
     description: '',
     bgimage: ''
   },
-  {
+
+  {//Брендинг
     id: 12,
     name: 'branding',
     label: 'Брендинг',
@@ -188,7 +206,8 @@ const DataArray = [
     description: '',
     bgimage: ''
   },
-  {
+
+  {//SEO
     id: 13,
     name: 'seo',
     label: 'SEO',
@@ -199,7 +218,8 @@ const DataArray = [
     description: '',
     bgimage: ''
   },
-  {
+
+  {//SMM
     id: 14,
     name: 'smm',
     label: 'SMM',
@@ -210,18 +230,20 @@ const DataArray = [
     description: '',
     bgimage: ''
   },
-  {
+
+  {//QA-тестирование
     id: 15,
     name: 'qaTesting',
-    label: 'QA',
+    label: 'QA-тестирование',
     path: '/qatesting',
     parent: 'services',
     component: () => <QaTesting />,
-    headdingtitle:'QA',
-    description: '',
-    bgimage: ''
+    headdingtitle:'QA-тестирование',
+    description: 'Студия 16.web определит, насколько эффективна ваша онлайн-платформа, корректно ли работают все её службы и отвечает ли она требованиям и стандартам.',
+    bgimage: qaTestingImg
   },
-  {
+
+  {//Разработка приложений
     id: 16,
     name: 'appsDevelop',
     label: 'Разработка приложений',
@@ -232,7 +254,8 @@ const DataArray = [
     description: '',
     bgimage: ''
   },
-  {
+
+  {//Контекстная реклама
     id: 17,
     name: 'ppc',
     label: 'Контекстная реклама',
@@ -243,7 +266,8 @@ const DataArray = [
     description: '',
     bgimage: ''
   },
-  {
+
+  {//Портал
     id: 18,
     name: 'portal',
     label: 'Портал',
@@ -254,7 +278,8 @@ const DataArray = [
     description: '',
     bgimage: ''
   },
-  {
+
+  {//Уникальные решения
     id: 19,
     name: 'uniquesrevices',
     label: 'Уникальные решения',
@@ -265,7 +290,8 @@ const DataArray = [
     description: '',
     bgimage: ''
   },
-  {
+
+  {//Сайт-каталог
     id: 20,
     name: 'catalogsite',
     label: 'Сайт-каталог',
@@ -276,60 +302,65 @@ const DataArray = [
     description: '',
     bgimage: ''
   },
-  {
+
+  {//Сайт-визитка
     id: 21,
     name: 'businesscardsite',
     label: 'Сайт-визитка',
     path: '/businesscardsite',
-    parent: 'portfolio',
+    parent: 'services',
     component: () => <BusinessCardSite />,
     headdingtitle:'Сайт-визитка',
-    description: '',
-    bgimage: ''
+    description: 'Наша студия предлагает свои услуги по изготовлению сайта-визитки – это отличный вариант рекламы для представителей малого бизнеса.',
+    bgimage: businessCardImg
   },
-  {
+
+  {//Интернет-магазин
     id: 22,
     name: 'onlinestore',
     label: 'Интернет-магазин',
     path: '/onlinestore',
-    parent: 'portfolio',
+    parent: 'services',
     component: () => <OnlineStore />,
     headdingtitle:'Интернет-магазин',
     description: '',
     bgimage: ''
   },
-  {
+
+  {//Лендинг
     id: 23,
     name: 'landingpage',
-    label: 'Лендинг-пейдж',
+    label: 'Лендинг',
     path: '/landingpage',
-    parent: 'portfolio',
+    parent: 'services',
     component: () => <LandingPage />,
-    headdingtitle:'Лендинг-пейдж',
-    description: '',
-    bgimage: ''
+    headdingtitle:'Лендинг',
+    description: 'Студия 16.web предлагает услуги своих специалистов, готовых создать одностраничный сайт, на котором будут информативно и лаконично представлена ваша компания.',
+    bgimage: landingPageImg
   },
-  {
+
+  {//Корпоративный сайт
     id: 24,
     name: 'corporatesite',
     label: 'Корпоративный сайт',
     path: '/corporatesite',
-    parent: 'portfolio',
+    parent: 'services',
     component: () => <CorporateSite />,
     headdingtitle:'Корпоративный сайт',
-    description: '',
-    bgimage: ''
+    description: 'Предлагаем разработку корпоративного сайта под ключ – это позволит вам комуницировать с целевой аудиторией и взаимодействовать с сотрудниками.',
+    bgimage: corporateSiteImg
   },
-  {
+
+  {//Макет сайта
     id: 25,
-    name: 'portfoliosite',
-    label: 'Сайт портфолио',
-    path: '/portfoliosite',
-    parent: 'portfolio',
-    component: () => <PortfolioSite />,
-    headdingtitle:'Сайт портфолио',
-    description: '',
-    bgimage: ''
+    name: 'siteprototype',
+    label: 'Макет сайта',
+    path: '/siteprototype',
+    parent: 'services',
+    component: () => <SitePrototype />,
+    headdingtitle:'Макет сайта',
+    description: 'В ходе разработки концепции сайта создаётся прототип, по которому заказчик может себе представить общий вид будущего интернет-ресурса.',
+    bgimage: SitePrototypeImg
   }
 ];
 

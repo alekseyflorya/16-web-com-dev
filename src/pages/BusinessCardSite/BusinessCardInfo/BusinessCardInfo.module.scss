@@ -1,0 +1,76 @@
+.BusinessCardInfo{
+  margin-top: 120px;
+  margin-bottom: 220px;
+  .Container{
+
+  }
+  .LeftColumn{
+    justify-content: flex-start;
+  }
+  .RightColumn{
+    padding-left: 120px;
+  }
+  .InfoBox{
+    margin-bottom: 220px;
+  }
+  .Headding{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 43px;
+    line-height: 52px;
+    color: #393939;
+    margin-bottom: 120px;
+  }
+  .Text{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #8B8B8B;
+  }
+  .GridList{
+    margin-bottom: 30px;
+    .GridListItem{
+      font-family: Inter;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 22px;
+      color: #8B8B8B;
+      position: relative;
+      padding-left: 30px;
+      margin-top: 20px;
+      &:before{
+        content: '';
+        display: inline-block;
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        background: #0DF0FF;
+        left: 0;
+        top: 6px;
+      }
+    }
+  }
+  .InfoBox{
+    .GridList{
+      margin-bottom: 60px;
+    }
+  }
+  .BusinessCardFunctionsBox{
+    margin-bottom: 220px;
+    .Headding{
+      margin-bottom: 0;
+    }
+    .Text{
+      padding-left: 120px;
+    }
+  }
+  .BusinessCardCoastBox{
+    .RightColumn{
+      padding-left: 0;
+    }
+  }
+}

@@ -25,7 +25,7 @@ function DesignTypes() {
             </Grid>
             <Grid item sm={4} xs={12} className={classes.CardBox}>
               <div className={classes.Card}>
-                <Link to="/sitecreating" className={classes.CardName}>Создание макета сайта</Link>
+                <Link to="/siteprototype" className={classes.CardName}>Создание макета сайта</Link>
                 <p className={classes.CardText}>Дизайн-макет создаётся после разработки прототипа сайта – упрощённой схемы, составленной с учётом сформулированных заказчиком целей и задач ресурса.</p>
               </div>
             </Grid>

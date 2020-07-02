@@ -1,4 +1,4 @@
-.CompetentDesign{
+.MarketingFeatures{
   margin-bottom: 220px;
   .Container{
 
@@ -12,11 +12,22 @@
     color: #393939;
     margin-bottom: 120px;
   }
-  .CompetentDesignBox{
+  .MarketingFeaturesBox{
     margin-bottom: 220px;
   }
   .Image{
 
+  }
+  .SubTitle{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 140%;
+    color: #292525;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 120px;
   }
   .Text{
     font-family: Inter;
@@ -26,7 +37,7 @@
     line-height: 140%;
     color: #8B8B8B;
     margin-bottom: 20px;
-    margin-left: 100px;
+    margin-left: 120px;
   }
   .ActionText{
     font-family: Ubuntu;

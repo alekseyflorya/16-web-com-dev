@@ -86,7 +86,7 @@ export default function Header() {
             backgroundRepeat: 'no-repeat',}}
         >
           <Grid item container sm={11} style={{marginBottom: -80}}>
-            <Grid item container sm={9} justify="flex-start" alignItems="center"
+            <Grid item container sm={9} justify="center" alignItems="center"
                   style={{
                     border: '5px solid #0DF0FF',
                     paddingTop: 100,
@@ -94,9 +94,9 @@ export default function Header() {
                     borderBottom: 0,
                     background: 'rgba(41,37,37,.4)',
                     backdropFilter: 'blur(4px)',
-                    paddingLeft: '14%',
-                  }}>
-              <Box style={{maxWidth: 510}} className={classes.TitleDescriptionBox}>
+                  }}
+            >
+              <Box style={{maxWidth: 575}} className={classes.TitleDescriptionBox}>
                 <h1 className={classes.HeaddingTitle}>{headdingtitle}</h1>
                 <p className={classes.HeaddingDescription}>{description}</p>
               </Box>
