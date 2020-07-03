@@ -1,25 +1,6 @@
 import React from 'react';
 import SvgIcon from '@material-ui/core/SvgIcon';
 
-function BurgerIcon(props) {
-  return (
-    <SvgIcon {...props}>
-      <path fillRule="evenodd" clipRule="evenodd" d="M40 0H0V6.18605H40V0ZM0 15.907H40V22.093H0V15.907ZM0 31.814H40V38H0V31.814Z" fill="#292525"/>
-    </SvgIcon>
-  );
-}
-
-function MenuCloseIcon(props) {
-
-  // <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"></svg>
-
-  return (
-    <SvgIcon {...props}>
-      <path fillRule="evenodd" clipRule="evenodd" d="M14 10.1871L24.1555 0L27.913 3.76923L17.7575 13.9564L28 24.2308L24.2425 28L14 17.7256L3.75752 28L0 24.2308L10.2425 13.9564L0.0870043 3.76923L3.84452 0L14 10.1871Z" fill="#292525"/>
-    </SvgIcon>
-  );
-}
-
 function LogoIcon(props) {
 
   // <svg width="85" height="54" viewBox="0 0 85 54" fill="none" xmlns="http://www.w3.org/2000/svg"></svg>
@@ -104,8 +85,6 @@ function TelegramIcon(props) {
 }
 
 export {
-  BurgerIcon,
-  MenuCloseIcon,
   LogoIcon,
   InstagramIcon,
   FacebookIcon,

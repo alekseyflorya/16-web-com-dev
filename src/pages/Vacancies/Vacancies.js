@@ -1,15 +1,21 @@
 import React from 'react';
 import classes from './Vacancies.module.scss';
 import Header from "../../components/Header";
-import Navigation from "../../components/Navigation";
 import Footer from "../../components/Footer";
+import OpenedVacancies from "./OpenedVacancies";
+import VacancieForm from "./VacancieForm";
+import VacancieFeatures from "./VacancieFeaures";
 
-export default function Vacancies(){
-
+function Vacancies(){
   return (
     <div className={classes.VacanciesPage}>
-      <Header rightLinks={<Navigation />} />
+      <Header />
+      <OpenedVacancies />
+      <VacancieForm />
+      <VacancieFeatures />
       <Footer />
     </div>
   )
 }
+
+export default Vacancies

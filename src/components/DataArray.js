@@ -41,7 +41,8 @@ import siteCreatingImage from '../assets/img/sozdanie-saitov.jpg';
 import landingPageImg from "../assets/img/landing-page.jpg";
 import businessCardImg from "../assets/img/business-card.jpg";
 import corporateSiteImg from "../assets/img/corporate-site.jpg";
-import SitePrototypeImg from "../assets/img/site-prototype.jpg"
+import SitePrototypeImg from "../assets/img/site-prototype.jpg";
+import onlineStoreImg from "../assets/img/online-store.jpg";
 
 const DataArray = [
 
@@ -323,8 +324,8 @@ const DataArray = [
     parent: 'services',
     component: () => <OnlineStore />,
     headdingtitle:'Интернет-магазин',
-    description: '',
-    bgimage: ''
+    description: 'Заказывая у нас создание интернет-магазина под ключ, вы получаете удобную и функциональную онлайн-платформу, на которой можно продавать любые товары.',
+    bgimage: onlineStoreImg
   },
 
   {//Лендинг

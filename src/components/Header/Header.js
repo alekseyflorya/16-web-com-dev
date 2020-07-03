@@ -4,14 +4,13 @@ import Navigation from "../Navigation";
 import ButtonGroup from "@material-ui/core/ButtonGroup";
 import Button from "@material-ui/core/Button";
 import Fab from "@material-ui/core/Fab";
+import FabComponent from "../FabComponent";
 import AddIcon from '@material-ui/icons/Add';
 import Grid from "@material-ui/core/Grid";
 import ClickAwayListener from '@material-ui/core/ClickAwayListener';
 import DataArray from "../DataArray";
 
 import {
-  BurgerIcon,
-  MenuCloseIcon,
   LogoIcon,
   InstagramIcon,
   FacebookIcon,
@@ -82,9 +81,49 @@ export default function Header() {
           direction="row"
           justify="flex-end"
           classes={{root: classes.ColumnLeft}}
-          style={{background: `url(${bgimage})`, paddingTop: 120, backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat',}}
+          style={{
+            background: `url(${bgimage})`,
+            paddingTop: (window.location.pathname === '/contact') ? 0 : 120,
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+          }}
         >
+          { (window.location.pathname === '/contact') ?
+            (
+              <>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1374.269215992399!2d30.704888958276687!3d46.45784194252399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c6323a1dba5ba5%3A0x6bf07c1e3d4e0854!2z0YPQuy4g0JHQsNC70LrQvtCy0YHQutCw0Y8sIDEzMCwg0J7QtNC10YHRgdCwLCDQntC00LXRgdGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA2NTAwMA!5e0!3m2!1sru!2sua!4v1593761397146!5m2!1sru!2sua"
+                  allowFullScreen=""
+                  aria-hidden="false"
+                  tabIndex="0"
+                  className={classes.GoogleMapFrame}
+                ></iframe>
+                <Grid container className={classes.ContactsBlock} direction="column" justify="space-between">
+                  <Grid item container justify="center">
+                    <Grid item className={classes.ContactsItems}>
+                      <h3 className={classes.ContactsTitle}>16-web.com</h3>
+                      <div className={classes.ContactsItem}>
+                        <h4 className={classes.ContactsLabel}>Email</h4>
+                        <a className={classes.ContactsText} href="mailto:16webmail@gmail.com">16webmail@gmail.com</a>
+                      </div>
+                      <div className={classes.ContactsItem}>
+                        <h4 className={classes.ContactsLabel}>Телефон</h4>
+                        <a className={classes.ContactsText} href="tel:+380951001616">+38 095 100 16 16</a>
+                      </div>
+                      <div className={classes.ContactsItem}>
+                        <h4 className={classes.ContactsLabel}>Адрес</h4>
+                        <address className={classes.ContactsText}>г.Одесса, ул.Балковская 130</address>
+                      </div>
+                    </Grid>
+                  </Grid>
+                  <Grid item className={classes.ContactsBtnBlock}>
+                    <button className={classes.ContactsBtn}>
+                      <span>Написать нам</span>
+                    </button>
+                  </Grid>
+                </Grid>
+              </>
+            ) : (
           <Grid item container sm={11} style={{marginBottom: -80}}>
             <Grid item container sm={9} justify="center" alignItems="center"
                   style={{
@@ -121,6 +160,7 @@ export default function Header() {
               </Button>
             </Grid>
           </Grid>
+            )}
         </Grid>
 
         <Grid item container classes={{root: classes.columnRight}}>
@@ -141,25 +181,26 @@ export default function Header() {
 
           <ClickAwayListener onClickAway={handleClickAway}>
             <Grid className={classes.Fab} classes={{root: classes.fabGridRoot}}>
-              {state.fabOpen ? (
-                <>
-                  <Fab color="primary">
-                    <MessengerIcon width="23" height="23" viewBox="0 0 23 23" />
-                  </Fab>
-                  <Fab color="primary">
-                    <ViberIcon width="23" height="23" viewBox="0 0 23 23" />
-                  </Fab>
-                  <Fab color="primary">
-                    <TelegramIcon width="23" height="23" viewBox="0 0 23 23" />
-                  </Fab>
-                </>
-              ) : null}
-              <Fab className={`${classes.fabRoot} ${classes.fab}`}
-                   classes={{root: classes.fabRoot}}
-                   onClick={toggleFab(state.fabOpen)}
-              >
-                <AddIcon />
-              </Fab>
+              {/*{state.fabOpen ? (*/}
+              {/*  <>*/}
+              {/*    <Fab color="primary">*/}
+              {/*      <MessengerIcon width="23" height="23" viewBox="0 0 23 23" />*/}
+              {/*    </Fab>*/}
+              {/*    <Fab color="primary">*/}
+              {/*      <ViberIcon width="23" height="23" viewBox="0 0 23 23" />*/}
+              {/*    </Fab>*/}
+              {/*    <Fab color="primary">*/}
+              {/*      <TelegramIcon width="23" height="23" viewBox="0 0 23 23" />*/}
+              {/*    </Fab>*/}
+              {/*  </>*/}
+              {/*) : null}*/}
+              {/*<Fab className={`${classes.fabRoot} ${classes.fab}`}*/}
+              {/*     classes={{root: classes.fabRoot}}*/}
+              {/*     onClick={toggleFab(state.fabOpen)}*/}
+              {/*>*/}
+              {/*  <AddIcon />*/}
+              {/*</Fab>*/}
+              <FabComponent />
             </Grid>
           </ClickAwayListener>
         </Grid>

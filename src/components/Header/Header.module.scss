@@ -6,6 +6,7 @@ $blue: #0DF0FF;
   position: relative;
   margin-bottom: 220px;
   .ColumnLeft{
+    position: relative;
     max-width: 78%;
     &:before{
       content: '';
@@ -22,6 +23,79 @@ $blue: #0DF0FF;
     max-width: 22%;
     padding-top: 40px;
     padding-right: 60px;
+  }
+  .GoogleMapFrame{
+    width: 100%;
+    height: 100vh;
+  }
+  .ContactsBlock{
+    position: absolute;
+    width: 350px;
+    height: 480px;
+    top: calc(50% - 240px);
+    right: 40px;
+    background: rgba(0,0,0,.9);
+    .ContactsItems{
+      margin-top: 35px;
+    }
+    .ContactsItem{
+      margin-bottom: 35px;
+    }
+    .ContactsTitle{
+      font-family: Ubuntu;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 140%;
+      color: #FFFFFF;
+      margin-bottom: 20px;
+    }
+    .ContactsLabel{
+      font-family: Ubuntu;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 140%;
+      color: #0DF0FF;
+      margin-bottom: 15px;
+    }
+    .ContactsText{
+      font-family: Inter;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 140%;
+      color: #FFFFFF;
+      text-decoration: none;
+    }
+    .ContactsBtnBlock{
+
+    }
+    .ContactsBtn{
+      width: 100%;
+      height: 80px;
+      border: none;
+      background: #4C1C89;
+      border: 1px solid #4C1C89;
+      font-family: Inter;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 140%;
+      color: #FFFFFF;
+      padding: 0;
+      transition: all .5s ease;
+      &:hover{
+        background: #FFFFFF;
+        color: #292525;
+        border: 1px solid #0df0ff;
+      }
+      span {
+        padding: 2.5px;
+        padding-left: 30px;
+        border-left: 2px solid #0df0ff;
+      }
+    }
   }
   .MenuButton{
     position: fixed;

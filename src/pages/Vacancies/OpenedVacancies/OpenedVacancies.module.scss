@@ -1,0 +1,76 @@
+.OpenedVacancies{
+  margin-bottom: 300px;
+  .Container{
+
+  }
+  .Headding{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 43px;
+    line-height: 52px;
+    color: #393939;
+    margin-bottom: 45px;
+  }
+  .Description{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #8B8B8B;
+    margin-bottom: 90px;
+    max-width: 550px;
+  }
+  .Vacancies{
+    padding-right: 60px;
+  }
+  .VacanciesImg{
+    padding-left: 60px;
+  }
+  .Vacancy{
+    border: 2px solid #E9E9E9;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 30px;
+    margin-bottom: 40px;
+    text-decoration: none;
+    transition: all .5s;
+    &:last-child{
+      margin-bottom: 0;
+    }
+    &:hover{
+      border-color: transparent;
+      transform: translateY(-5px);
+      box-shadow: 5px 20px 30px rgba(128, 128, 128, 0.15);
+    }
+    .Title{
+      font-family: Inter;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 31px;
+      color: #292525;
+
+    }
+    .CityTime{
+      font-family: Ubuntu;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 28px;
+      color: #D5D5D5;
+      position: relative;
+      &:after{
+        content: '';
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        border-top: 2px solid #D5D5D5;
+        border-right: 2px solid #D5D5D5;
+        transform: rotate(45deg);
+        margin-left: 35px;
+      }
+    }
+  }
+}
