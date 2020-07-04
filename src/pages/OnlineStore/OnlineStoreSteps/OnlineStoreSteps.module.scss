@@ -1,0 +1,112 @@
+.OnlineStoreSteps{
+  margin-bottom: 220px;
+  .Container{
+
+  }
+  .HeaddingBlock{
+    margin-bottom: 120px;
+  }
+  .Headding{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 43px;
+    line-height: 52px;
+    color: #393939;
+  }
+  .Text{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #8B8B8B;
+  }
+  .GridList{
+    margin-bottom: 30px;
+
+    .GridListItem{
+      font-family: Inter;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 22px;
+      color: #8B8B8B;
+      position: relative;
+      padding-left: 30px;
+      margin-top: 20px;
+      .Text{
+        padding-left: 40px;
+        padding-right: 40px;
+      }
+      .RoundNumber{
+        width: 50px;
+        height: 50px;
+        background: #0df0ff;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Ubuntu;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 140%;
+        color: #FFFFFF;
+        margin-bottom: 40px;
+        border: 10px solid #FFFFFF;
+        transition: all .3s ease;
+        &:after,&:before{
+          content: '';
+          display: inline-block;
+          position: absolute;
+          width: 50%;
+          height: 1px;
+          background: #0df0ff;
+        }
+        &:hover{
+          border: 10px solid #D1FCFF;
+          transition: all .3s ease;
+          &:after,&:before{
+            z-index: -1;
+          }
+        }
+      }
+      &:nth-child(1){
+        .RoundNumber{
+          &:before{
+            right: 0;
+            width: calc(50% - 40px);
+          }
+          &:after{
+            background: transparent;
+          }
+        }
+      }
+      &:nth-child(2){
+        .RoundNumber{
+          &:before{
+            left: 0;
+            width: calc(50% - 10px);
+          }
+          &:after{
+            right: 0;
+            width: calc(50% - 40px);
+          }
+        }
+      }
+      &:nth-child(3){
+        .RoundNumber{
+          &:before{
+            left: 0;
+            width: calc(50% - 10px);
+          }
+          &:after{
+            background: transparent;
+          }
+        }
+      }
+    }
+  }
+
+}

@@ -1,0 +1,61 @@
+.SitePrototypeFeatures{
+  margin-bottom: 220px;
+  .HeaddingBox{
+
+  }
+  .Headding{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 43px;
+    line-height: 52px;
+    color: #393939;
+    margin-bottom: 80px;
+  }
+  .Text{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #8B8B8B;
+  }
+  .GridList{
+    .GridListItem{
+      font-family: Inter;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 140%;
+      color: #292525;
+      position: relative;
+      padding-left: 30px;
+      margin-top: 80px;
+      padding-right: 50px;
+      &:before,&:after{
+        content: '';
+        display: inline-block;
+        box-sizing: border-box;
+        position: absolute;
+        width: 10px;
+        border: 1px solid #0DF0FF;
+        left: 0;
+        top: 0;
+      }
+      &:before{
+        height: 100%;
+      }
+      &:after{
+        background: #0df0ff;
+        height: 0;
+        transition: height .3s ease;
+      }
+      &:hover{
+        cursor: pointer;
+        &:after{
+          height: 100%;
+        }
+      }
+    }
+  }
+}

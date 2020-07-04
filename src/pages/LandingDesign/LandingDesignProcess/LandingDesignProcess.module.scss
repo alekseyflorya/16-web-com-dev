@@ -1,0 +1,101 @@
+.LandingDesignProcess{
+  margin-bottom: 120px;
+  .HeaddingBlock{
+    margin-bottom: 100px;
+  }
+  .Headding{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 43px;
+    line-height: 52px;
+    color: #393939;
+    margin-bottom: 120px;
+  }
+  .HeaddingText{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 140%;
+    color: #8B8B8B;
+    padding-right: 100px;
+  }
+  .LandingDesignList{
+    counter-reset: numbers;
+    .Item{
+      position: relative;
+      border: 1px solid #E9E9E9;
+      padding: 35px;
+      margin: 0 25px 50px;
+      z-index: 3;
+      overflow: hidden;
+      transition: all .5s ease;
+      &:before{
+        counter-increment: numbers;
+        content: '0' counter(numbers);
+        width: 105px;
+        height: 80px;
+        display: inline-flex;
+        justify-content: flex-end;
+        align-items: center;
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 80px;
+        line-height: 80px;
+        letter-spacing: 0.04em;
+        color: #E9E9E9;
+        position: absolute;
+        right: 20px;
+        bottom: -30px;
+        z-index: -2;
+        transition: all .5s ease;
+      }
+      &:hover{
+        cursor: pointer;
+        border: 1px solid #4C1C89;
+        .Title{
+          //transform: rotateX(90deg);
+          //transition: all .4s ease;
+        }
+        .Text{
+          //transform: rotateX(0deg);
+          //transition: all .4s .2s ease;
+        }
+        &:before{
+          color: #4C1C89;
+          bottom: -10px;
+        }
+      }
+    }
+  }
+  .Title{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 36px;
+    color: #393939;
+    min-height: 115px;
+    transform-origin: top;
+    transform: rotateX(0deg);
+    transition: all .4s .2s ease;
+  }
+  .Text{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #8B8B8B;
+    max-width: 100%;
+    padding: 35px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: bottom;
+    transform: rotateX(90deg);
+    transition: all .4s ease;
+  }
+}

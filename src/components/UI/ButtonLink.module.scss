@@ -17,6 +17,26 @@
     box-shadow: 5px 20px 30px rgba(72, 75, 246, 0.15);
   }
 }
+.OrderButton{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 265px;
+  height: 65px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration: none;
+  background: #000000;
+  border: none;
+  color: #FFFFFF;
+  transition: .5s;
+  &:hover{
+    transform: translateY(-5px);
+    box-shadow: 5px 20px 30px rgba(72, 75, 246, 0.15);
+  }
+}
 .PricesButton{
   font-family: Inter;
   font-style: normal;

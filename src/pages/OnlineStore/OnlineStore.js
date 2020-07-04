@@ -6,6 +6,7 @@ import Interested from "../../components/Interested";
 import PortfolioShort from "../../components/PortfilioShort";
 import OnlineStoreProcess from "./OnlineStoreProcess";
 import OnlineStoreCoast from "./OnlineStoreCoast";
+import OnlineStoreSteps from "./OnlineStoreSteps";
 
 export default function OnlineStore(){
 
@@ -14,6 +15,7 @@ export default function OnlineStore(){
       <Header />
       <OnlineStoreProcess />
       <OnlineStoreCoast />
+      <OnlineStoreSteps />
       <Interested />
       <PortfolioShort />
       <Footer />

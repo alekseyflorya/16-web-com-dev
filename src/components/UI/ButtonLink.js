@@ -9,6 +9,12 @@ const ButtonLink = ({path, title}) => {
   )
 }
 
+const OrderButton = ({title}) => {
+  return (
+    <button className={classes.OrderButton}>{title}</button>
+  )
+}
+
 const PricesButton = ({path, title}) => {
   return (
     <Link className={classes.PricesButton} to={path}><span>{title}</span></Link>
@@ -20,4 +26,4 @@ const ButtonLoadMore = ({title, handleClick}) => {
     <button className={classes.ButtonLoadMore} onClick={handleClick}><RefreshIcon className={classes.RefreshIcon} /> {title}</button>
   )
 }
-export {ButtonLink, PricesButton, ButtonLoadMore}
+export {ButtonLink, OrderButton, PricesButton, ButtonLoadMore}

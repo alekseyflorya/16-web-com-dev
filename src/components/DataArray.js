@@ -17,7 +17,6 @@ import Branding from "../pages/Branding";
 import Seo from "../pages/Seo";
 import Smm from "../pages/Smm";
 import QaTesting from "../pages/QaTesting";
-import AppsDevelop from "../pages/AppsDevelop";
 import Ppc from "../pages/Ppc";
 import OtherSrevices from "../pages/OtherSrevices";
 
@@ -27,6 +26,8 @@ import OnlineStore from "../pages/OnlineStore";
 import LandingPage from "../pages/LandingPage";
 import CorporateSite from "../pages/CorporateSite";
 import SitePrototype from "../pages/SitePrototype";
+import LandingDesign from "../pages/LandingDesign";
+import SiteDesign from "../pages/SiteDesign";
 
 import homeBgImage from '../assets/img/main.jpg';
 import portfolioBgImage from '../assets/img/portfolio.jpg';
@@ -43,6 +44,11 @@ import businessCardImg from "../assets/img/business-card.jpg";
 import corporateSiteImg from "../assets/img/corporate-site.jpg";
 import SitePrototypeImg from "../assets/img/site-prototype.jpg";
 import onlineStoreImg from "../assets/img/online-store.jpg";
+import landingDesignImg from "../assets/img/landing-design.jpg";
+import siteDesignImg from "../assets/img/site-design.jpg";
+import seoImg from "../assets/img/SEO.jpg";
+import ppcImg from "../assets/img/ppc.jpg";
+import smmImg from "../assets/img/smm.jpg"
 
 const DataArray = [
 
@@ -216,8 +222,8 @@ const DataArray = [
     parent: 'services',
     component: () => <Seo />,
     headdingtitle:'SEO',
-    description: '',
-    bgimage: ''
+    description: 'Наша студия предлагает свои услуги по раскрутке сайтов при помощи SEO – это хорошая возможность продвинуть ваш ресурс в топы поисковых рейтингов.',
+    bgimage: seoImg
   },
 
   {//SMM
@@ -228,8 +234,8 @@ const DataArray = [
     parent: 'services',
     component: () => <Smm />,
     headdingtitle:'SMM',
-    description: '',
-    bgimage: ''
+    description: 'Продвижение в социальных сетях является частью любой рекламной кампании – это возможность рассказать целевой аудитории о продукте.',
+    bgimage: smmImg
   },
 
   {//QA-тестирование
@@ -244,16 +250,16 @@ const DataArray = [
     bgimage: qaTestingImg
   },
 
-  {//Разработка приложений
+  {//Дизайн лендинга
     id: 16,
-    name: 'appsDevelop',
-    label: 'Разработка приложений',
-    path: '/appsdevelop',
+    name: 'landingDesign',
+    label: 'Дизайн лендинга',
+    path: '/landingdesign',
     parent: 'services',
-    component: () => <AppsDevelop />,
-    headdingtitle:'Разработка приложений',
-    description: '',
-    bgimage: ''
+    component: () => <LandingDesign />,
+    headdingtitle:'Дизайн лендинга',
+    description: 'Наша студия предлагает свои услуги по разработке дизайна лендинг-пейдж – одностраничного сайта, представляющего ваш бизнес в лаконичной форме.',
+    bgimage: landingDesignImg
   },
 
   {//Контекстная реклама
@@ -263,21 +269,21 @@ const DataArray = [
     path: '/ppc',
     parent: 'services',
     component: () => <Ppc />,
-    headdingtitle: 'Контекстная реклама',
-    description: '',
-    bgimage: ''
+    headdingtitle: 'PPC',
+    description: 'Настройка контекстной рекламы позволит привлечь на сайт заинтересованных посетителей, которые с высокой вероятностью могут стать вашими клиентами.',
+    bgimage: ppcImg
   },
 
-  {//Портал
+  {//Дизайн сайта
     id: 18,
-    name: 'portal',
-    label: 'Портал',
-    path: '/portal',
+    name: 'siteDesign',
+    label: 'Дизайн сайта',
+    path: '/sitedesign',
     parent: 'services',
-    component: () => <OtherSrevices />,
-    headdingtitle: 'Портал',
-    description: '',
-    bgimage: ''
+    component: () => <SiteDesign />,
+    headdingtitle: 'Дизайн сайта',
+    description: 'Наша студия предлагает свои услуги по разработке дизайна сайта – мы позаботимся о том, чтобы ваша онлайн-площадка стильно выглядела и была удобной.',
+    bgimage: siteDesignImg
   },
 
   {//Уникальные решения
@@ -292,7 +298,7 @@ const DataArray = [
     bgimage: ''
   },
 
-  {//Сайт-каталог
+  {//Сайт-каталог *
     id: 20,
     name: 'catalogsite',
     label: 'Сайт-каталог',
@@ -352,14 +358,14 @@ const DataArray = [
     bgimage: corporateSiteImg
   },
 
-  {//Макет сайта
+  {//Прототип сайта
     id: 25,
     name: 'siteprototype',
-    label: 'Макет сайта',
+    label: 'Прототип сайта',
     path: '/siteprototype',
     parent: 'services',
     component: () => <SitePrototype />,
-    headdingtitle:'Макет сайта',
+    headdingtitle:'Прототип сайта',
     description: 'В ходе разработки концепции сайта создаётся прототип, по которому заказчик может себе представить общий вид будущего интернет-ресурса.',
     bgimage: SitePrototypeImg
   }
