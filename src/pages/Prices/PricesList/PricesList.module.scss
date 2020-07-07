@@ -1,0 +1,99 @@
+.PricesList{
+  .Container{
+
+  }
+  .SiteCreatingPrices{
+    margin-bottom: 160px;
+  }
+  .SeoPrices{
+
+  }
+  .Headding{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 43px;
+    line-height: 120%;
+    color: #393939;
+    margin-bottom: 50px;
+  }
+  .CardBox{
+    padding-bottom: 60px;
+    &:nth-child(3n-1) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    &:nth-child(3n-2) {
+      padding-right: 10px;
+    }
+    &:nth-child(3n) {
+      padding-left: 10px;
+    }
+  }
+  .Card{
+    padding: 25px;
+    border: 1px solid #DADADA;
+  }
+  .CardHead{
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  .CardBody{
+    margin-bottom: 40px;
+  }
+  .CardFooter{
+    margin-bottom: 20px;
+  }
+  .PriceLogo{
+
+  }
+  .Title{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 140%;
+    color: #292525;
+    margin-bottom: 10px;
+  }
+  .Price{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 100%;
+    color: #4C1C89;
+  }
+  .CardBodyTitle{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 140%;
+    color: #292525;
+    margin-bottom: 10px;
+  }
+  .CardBodyText{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 140%;
+    color: #000000;
+    margin-bottom: 20px;
+  }
+  .CardButton{
+
+  }
+}
+.WhatYouNotGet{
+  .Headding{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 43px;
+    line-height: 120%;
+    color: #393939;
+    margin-bottom: 120px;
+  }
+}

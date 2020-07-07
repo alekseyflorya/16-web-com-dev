@@ -3,9 +3,7 @@ import classes from './Header.module.scss';
 import Navigation from "../Navigation";
 import ButtonGroup from "@material-ui/core/ButtonGroup";
 import Button from "@material-ui/core/Button";
-import Fab from "@material-ui/core/Fab";
 import FabComponent from "../FabComponent";
-import AddIcon from '@material-ui/icons/Add';
 import Grid from "@material-ui/core/Grid";
 import ClickAwayListener from '@material-ui/core/ClickAwayListener';
 import DataArray from "../DataArray";
@@ -14,13 +12,13 @@ import {
   LogoIcon,
   InstagramIcon,
   FacebookIcon,
-  LinkedInIcon,
-  ViberIcon,
-  MessengerIcon,
-  TelegramIcon
+  LinkedInIcon
 } from '../Icons';
 import Box from "@material-ui/core/Box";
-
+import Dialog from "@material-ui/core/Dialog";
+import IconButton from "@material-ui/core/IconButton";
+import CloseIcon from "@material-ui/icons/Close";
+import TextField from '@material-ui/core/TextField';
 
 export default function Header() {
 
@@ -71,6 +69,15 @@ export default function Header() {
     console.log(state.portfolioOpen);
   }
 
+  const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+  const handleClose = () => {
+    setOpen(false);
+  };
+
   return (
     <header className={classes.Header}>
       <Grid container>
@@ -117,9 +124,51 @@ export default function Header() {
                     </Grid>
                   </Grid>
                   <Grid item className={classes.ContactsBtnBlock}>
-                    <button className={classes.ContactsBtn}>
+                    <button className={classes.ContactsBtn} onClick={handleClickOpen}>
                       <span>Написать нам</span>
                     </button>
+                    <Dialog onClose={handleClose}
+                            aria-labelledby="customized-dialog-title"
+                            open={open}
+                            PaperProps={{square: true, classes: {root: classes.CallBackBox}}}
+                    >
+                      <Grid container style={{padding: 35}}>
+                        <Grid item container justify="flex-end">
+                          {open ? (
+                            <Grid item>
+                              <IconButton aria-label="close" onClick={handleClose} style={{padding: 0}}>
+                                <CloseIcon />
+                              </IconButton>
+                            </Grid>
+                          ) : null}
+                        </Grid>
+                        <Grid item container>
+                          <p className={classes.CallBackText}>Оставьте свои контакты и мы с вами обязательно свяжемся!</p>
+                          <TextField
+                            autoFocus
+                            margin="dense"
+                            id="name"
+                            label="Имя"
+                            type="text"
+                            fullWidth
+                            autoComplete="off"
+                          />
+                          <TextField
+                            margin="dense"
+                            id="phone"
+                            label="Телефон"
+                            type="tel"
+                            fullWidth
+                            autoComplete="off"
+                          />
+                        </Grid>
+                        <Grid item container>
+                          <Button autoFocus onClick={handleClose} color="primary">
+                            Свяжитесь со мной
+                          </Button>
+                        </Grid>
+                      </Grid>
+                    </Dialog>
                   </Grid>
                 </Grid>
               </>

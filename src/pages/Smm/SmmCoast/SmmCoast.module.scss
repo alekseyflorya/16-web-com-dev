@@ -54,3 +54,75 @@
     }
   }
 }
+.SmmAction{
+  margin-bottom: 220px;
+  .Headding{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 43px;
+    line-height: 52px;
+    color: #393939;
+    margin-bottom: 60px;
+  }
+  .Text{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #8B8B8B;
+  }
+}
+.ComplexSmm{
+  margin-bottom: 220px;
+  .Headding{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 43px;
+    line-height: 52px;
+    color: #393939;
+    margin-bottom: 60px;
+  }
+  .Text{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #8B8B8B;
+    padding-left: 70px;
+  }
+  .GridList{
+    .GridListItem{
+      font-family: Inter;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 140%;
+      color: #292525;
+      position: relative;
+      padding-left: 30px;
+      margin-top: 30px;
+      padding-right: 120px;
+      &:before{
+        content: '';
+        display: inline-block;
+        box-sizing: border-box;
+        position: absolute;
+        width: 10px;
+        height: 100%;
+        border: 1px solid #0DF0FF;
+        left: 0;
+        top: 0;
+      }
+      &:nth-child(even){
+        padding-left: 100px;
+        &:before{
+          left: 70px;
+        }
+      }
+    }
+  }
+}

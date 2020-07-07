@@ -48,7 +48,8 @@ import landingDesignImg from "../assets/img/landing-design.jpg";
 import siteDesignImg from "../assets/img/site-design.jpg";
 import seoImg from "../assets/img/SEO.jpg";
 import ppcImg from "../assets/img/ppc.jpg";
-import smmImg from "../assets/img/smm.jpg"
+import smmImg from "../assets/img/smm.jpg";
+import pricesImg from "../assets/img/prices.jpg"
 
 const DataArray = [
 
