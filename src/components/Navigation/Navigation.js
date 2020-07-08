@@ -5,8 +5,6 @@ import DataArray from "../DataArray";
 
 import { makeStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
 import Grid from "@material-ui/core/Grid";
 import menuBg from '../../assets/img/menu-bg.jpg';
 

@@ -1,26 +1,16 @@
 import React from 'react';
+import classes from './FabComponent.module.scss'
 import SpeedDial from '@material-ui/lab/SpeedDial';
 import SpeedDialIcon from '@material-ui/lab/SpeedDialIcon';
 import SpeedDialAction from '@material-ui/lab/SpeedDialAction';
-import FileCopyIcon from '@material-ui/icons/FileCopyOutlined';
-import SaveIcon from '@material-ui/icons/Save';
-import PrintIcon from '@material-ui/icons/Print';
-import ShareIcon from '@material-ui/icons/Share';
-import FavoriteIcon from '@material-ui/icons/Favorite';
 import CloseIcon from '@material-ui/icons/Close'
 import {MessengerIcon, TelegramIcon, ViberIcon} from "../Icons";
 
-
 const actions = [
-  { icon: <FileCopyIcon />, name: 'Copy' },
-  { icon: <SaveIcon />, name: 'Save' },
-  { icon: <PrintIcon />, name: 'Print' },
-  { icon: <ShareIcon />, name: 'Share' },
-  { icon: <FavoriteIcon />, name: 'Like' },
 
-  { icon: <MessengerIcon />, name: 'Messenger' },
-  { icon: <ViberIcon />, name: 'Viber' },
-  { icon: <TelegramIcon />, name: 'Telegram' },
+  { icon: <MessengerIcon width="36" height="16" viewBox="0 0 36 16" />, name: 'Messenger', classname: classes.Telegram },
+  { icon: <ViberIcon width="23" height="23" viewBox="0 0 23 23" />, name: 'Viber', classname: classes.Viber },
+  { icon: <TelegramIcon width="27" height="23" viewBox="0 0 27 23" />, name: 'Telegram', classname: classes.Messenger },
 ];
 
 export default function FabComponent() {
@@ -42,6 +32,7 @@ export default function FabComponent() {
         onClose={handleClose}
         onOpen={handleOpen}
         open={open}
+        classes={{fab: classes.SpeedDialFab}}
       >
         {actions.map((action) => (
           <SpeedDialAction
@@ -49,6 +40,7 @@ export default function FabComponent() {
             icon={action.icon}
             tooltipTitle={action.name}
             onClick={handleClose}
+            className={action.classname}
           />
         ))}
       </SpeedDial>

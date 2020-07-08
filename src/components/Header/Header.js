@@ -19,6 +19,7 @@ import Dialog from "@material-ui/core/Dialog";
 import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/icons/Close";
 import TextField from '@material-ui/core/TextField';
+import Breef from '../Breef'
 
 export default function Header() {
 
@@ -204,9 +205,7 @@ export default function Header() {
               </ButtonGroup>
             </Grid>
             <Grid item sm={3}>
-              <Button classes={{root: classes.OrderProjectRoot, label :classes.OrderProjectLabel, text :classes.OrderProjectText}}>
-                {'Заказать проект'}
-              </Button>
+              <Breef />
             </Grid>
           </Grid>
             )}
