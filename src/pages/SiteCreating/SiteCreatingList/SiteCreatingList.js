@@ -43,7 +43,7 @@ function SiteCreatingList() {
             </Grid>
             <Grid item sm={4} className={classes.CardBox}>
               <div className={classes.Card}>
-                <Link to="/uniquesrevices" className={classes.CardName}>Уникальные решения</Link>
+                <Link to="/uniqueservices" className={classes.CardName}>Уникальные решения</Link>
                 <p className={classes.CardText}>Создания собственного сайта – это значит, что мы готовы подготовить предложение, которое учитывает ваши пожелания и поставленные задачи.</p>
               </div>
             </Grid>

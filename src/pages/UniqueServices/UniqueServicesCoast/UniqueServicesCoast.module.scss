@@ -1,0 +1,56 @@
+.UniqueServicesCoast{
+  margin-bottom: 220px;
+  .Container{
+
+  }
+  .LeftColumn{
+
+  }
+  .RightColumn{
+
+  }
+  .Headding{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 43px;
+    line-height: 52px;
+    color: #393939;
+    margin-bottom: 80px;
+    max-width: 65%;
+  }
+  .Text{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #8B8B8B;
+    margin-bottom: 100px;
+    padding-right: 60px;
+  }
+  .GridList{
+    margin-bottom: 30px;
+    .GridListItem{
+      font-family: Inter;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 22px;
+      color: #8B8B8B;
+      position: relative;
+      padding-left: 30px;
+      margin-top: 20px;
+      &:before{
+        content: '';
+        display: inline-block;
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        background: #0DF0FF;
+        left: 0;
+        top: 6px;
+      }
+    }
+  }
+}

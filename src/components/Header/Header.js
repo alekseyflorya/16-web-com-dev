@@ -12,7 +12,7 @@ import {
   LogoIcon,
   InstagramIcon,
   FacebookIcon,
-  LinkedInIcon
+  LinkedInIcon, LogoMobileIcon
 } from '../Icons';
 import Box from "@material-ui/core/Box";
 import Dialog from "@material-ui/core/Dialog";
@@ -21,9 +21,8 @@ import CloseIcon from "@material-ui/icons/Close";
 import TextField from '@material-ui/core/TextField';
 import Breef from '../Breef'
 
-export default function Header() {
-
-  const {headdingtitle, description,bgimage } = DataArray.find(page => page.path === window.location.pathname);
+export default function Header({notFound}) {
+  const {headdingtitle, description, bgimage } = DataArray.find(page => page.path === window.location.pathname);
 
   const [state, setState] = React.useState({
     navOpen: false,
@@ -82,22 +81,21 @@ export default function Header() {
   return (
     <header className={classes.Header}>
       <Grid container>
-
         <Grid
           item
           container
           direction="row"
           justify="flex-end"
+          className={classes.ColumnLeftBox}
           classes={{root: classes.ColumnLeft}}
           style={{
             background: `url(${bgimage})`,
             paddingTop: (window.location.pathname === '/contact') ? 0 : 120,
-            backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat',
+            // backgroundSize: 'cover',
+            // backgroundRepeat: 'no-repeat',
           }}
         >
-          { (window.location.pathname === '/contact') ?
-            (
+          { (window.location.pathname === '/contact') ? (
               <>
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1374.269215992399!2d30.704888958276687!3d46.45784194252399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c6323a1dba5ba5%3A0x6bf07c1e3d4e0854!2z0YPQuy4g0JHQsNC70LrQvtCy0YHQutCw0Y8sIDEzMCwg0J7QtNC10YHRgdCwLCDQntC00LXRgdGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA2NTAwMA!5e0!3m2!1sru!2sua!4v1593761397146!5m2!1sru!2sua"
@@ -173,25 +171,21 @@ export default function Header() {
                   </Grid>
                 </Grid>
               </>
-            ) : (
-          <Grid item container sm={11} style={{marginBottom: -80}}>
-            <Grid item container sm={9} justify="center" alignItems="center"
-                  style={{
-                    border: '5px solid #0DF0FF',
-                    paddingTop: 100,
-                    paddingBottom: 100,
-                    borderBottom: 0,
-                    background: 'rgba(41,37,37,.4)',
-                    backdropFilter: 'blur(4px)',
-                  }}
+            ):''}
+            {(window.location.pathname === '/404') ? (
+              notFound
+            ) : '' }
+            {(window.location.pathname !== '/404' && window.location.pathname !== '/contact') ? (
+          <Grid item container sm={11} xs={12} style={{marginBottom: -80}}>
+            <Grid item container sm={9} sx={12} justify="center" alignItems="center" className={classes.HeaddingBox}
             >
               <Box style={{maxWidth: 575}} className={classes.TitleDescriptionBox}>
                 <h1 className={classes.HeaddingTitle}>{headdingtitle}</h1>
                 <p className={classes.HeaddingDescription}>{description}</p>
               </Box>
             </Grid>
-            <Grid item sm={3} />
-            <Grid item sm={9} container alignItems="center" style={{backgroundColor: '#0DF0FF', paddingLeft: '14%',}}>
+            <Grid item sm={3} xs={0}/>
+            <Grid item sm={9} xs={4} container alignItems="center" style={{backgroundColor: '#0DF0FF', paddingLeft: '14%',}}>
               <ButtonGroup classes={{root: classes.SocialButtons}}>
                 <Button classes={{root: classes.SocialButton}}>
                   <InstagramIcon width="24" height="24" viewBox="0 0 24 24" />
@@ -204,50 +198,26 @@ export default function Header() {
                 </Button>
               </ButtonGroup>
             </Grid>
-            <Grid item sm={3}>
+            <Grid item sm={3} xs={8}>
               <Breef />
             </Grid>
           </Grid>
-            )}
+            ):''}
         </Grid>
-
         <Grid item container classes={{root: classes.columnRight}}>
-
           <Grid item classes={{root: classes.LogoRoot}}>
-            <LogoIcon classes={{root: classes.LogoIcon}} width="85" height="54" viewBox="0 0 85 54"
-            />
+            <LogoIcon classes={{root: classes.LogoIcon}} width="85" height="54" viewBox="0 0 85 54" />
+            <LogoMobileIcon classes={{root: classes.LogoMobileIcon}} width="55" height="32" viewBox="0 0 55 32"/>
           </Grid>
-
           <Grid item className={classes.MenuButton}>
             <button onClick={toggleDrawer(!(state.navOpen))} className={classes.BurgerBtn}>
               <span className={state.navOpen ? classes.BurgerActive : classes.Burger}></span>
             </button>
           </Grid>
-
           <Grid item style={{width: 66, height: 0, }}>
           </Grid>
-
           <ClickAwayListener onClickAway={handleClickAway}>
             <Grid className={classes.Fab} classes={{root: classes.fabGridRoot}}>
-              {/*{state.fabOpen ? (*/}
-              {/*  <>*/}
-              {/*    <Fab color="primary">*/}
-              {/*      <MessengerIcon width="23" height="23" viewBox="0 0 23 23" />*/}
-              {/*    </Fab>*/}
-              {/*    <Fab color="primary">*/}
-              {/*      <ViberIcon width="23" height="23" viewBox="0 0 23 23" />*/}
-              {/*    </Fab>*/}
-              {/*    <Fab color="primary">*/}
-              {/*      <TelegramIcon width="23" height="23" viewBox="0 0 23 23" />*/}
-              {/*    </Fab>*/}
-              {/*  </>*/}
-              {/*) : null}*/}
-              {/*<Fab className={`${classes.fabRoot} ${classes.fab}`}*/}
-              {/*     classes={{root: classes.fabRoot}}*/}
-              {/*     onClick={toggleFab(state.fabOpen)}*/}
-              {/*>*/}
-              {/*  <AddIcon />*/}
-              {/*</Fab>*/}
               <FabComponent />
             </Grid>
           </ClickAwayListener>

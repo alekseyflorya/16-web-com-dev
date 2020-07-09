@@ -7,10 +7,11 @@
     font-family: Ubuntu;
     font-style: normal;
     font-weight: bold;
-    font-size: 43px;
-    line-height: 52px;
+    font-size: 30px;
+    line-height: 120%;
     color: #393939;
     margin-bottom: 45px;
+    max-width: 450px;
   }
   .Description{
     font-family: Inter;
@@ -20,6 +21,6 @@
     line-height: 22px;
     color: #8B8B8B;
     margin-bottom: 90px;
-    max-width: 550px;
+    max-width: 500px;
   }
 }

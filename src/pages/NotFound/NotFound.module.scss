@@ -1,0 +1,34 @@
+.NotFound{
+
+  .HeaddingBox{
+    margin-bottom: 100px;
+  }
+  .NotFoundLeft{
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  .NotFoundRight{
+    max-width: 600px;
+  }
+  .Headding{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 100px;
+    line-height: 140%;
+    color: #292525;
+    margin-bottom: 40px;
+  }
+  .Text{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 140%;
+    color: #8B8B8B;
+  }
+  .NotFoundImg{
+    max-width: 100%;
+    height: auto;
+  }
+}

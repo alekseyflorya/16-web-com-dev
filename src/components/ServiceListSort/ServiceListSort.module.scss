@@ -11,6 +11,10 @@ $btnColor: #ffffff;
     line-height: 52px;
     color: #393939;
     margin-bottom: 120px;
+    @media(max-width: 768px){
+      font-size: 28px;
+      line-height: 120%;
+    }
   }
   .Cards{
     margin-bottom: 120px;
@@ -21,6 +25,10 @@ $btnColor: #ffffff;
   .Card{
     padding: 80px;
     transition: all .5s;
+    @media(max-width: 768px){
+      padding: 0;
+      margin-bottom: 60px;
+    }
     &:hover{
       border-color: transparent;
       transform: translateY(-5px);
@@ -41,6 +49,11 @@ $btnColor: #ffffff;
     align-items: center;
     margin-bottom: 20px;
     text-decoration: none;
+    @media(max-width: 768px){
+      padding-right: 20px;
+      font-size: 22px;
+      line-height: 140%;
+    }
     &:after{
       content: '';
       position: absolute;
@@ -51,7 +64,10 @@ $btnColor: #ffffff;
       border-right: 2px solid black;
       right: 0;
       transform: rotate(45deg);
-      top: calc(50% - 6px)
+      top: calc(50% - 6px);
+      @media(max-width: 768px){
+        right: 20px;
+      }
     }
   }
   .CardText{
@@ -59,7 +75,7 @@ $btnColor: #ffffff;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
-    line-height: 22px;
+    line-height: 140%;
     color: #8B8B8B;
     margin-bottom: 20px;
   }
@@ -68,9 +84,10 @@ $btnColor: #ffffff;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
-    line-height: 22px;
+    line-height: 140%;
     color: #292525;
     text-decoration: none;
+
     &:after{
       content: '+';
       color: #D5D5D5;

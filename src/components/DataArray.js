@@ -18,7 +18,7 @@ import Seo from "../pages/Seo";
 import Smm from "../pages/Smm";
 import QaTesting from "../pages/QaTesting";
 import Ppc from "../pages/Ppc";
-import OtherSrevices from "../pages/OtherSrevices";
+import UniqueServices from "../pages/UniqueServices";
 
 import CatalogSite from "../pages/CatalogSite/CatalogSite";
 import BusinessCardSite from "../pages/BusinessCardSite";
@@ -49,7 +49,10 @@ import siteDesignImg from "../assets/img/site-design.jpg";
 import seoImg from "../assets/img/SEO.jpg";
 import ppcImg from "../assets/img/ppc.jpg";
 import smmImg from "../assets/img/smm.jpg";
-import pricesImg from "../assets/img/prices.jpg"
+import pricesImg from "../assets/img/prices.jpg";
+import uniqueServicesImg from "../assets/img/unique-services.jpg"
+import brandingImg from "../assets/img/branding.jpg"
+import NotFound from "../pages/NotFound";
 
 const DataArray = [
 
@@ -210,9 +213,9 @@ const DataArray = [
     path: '/branding',
     parent: 'services',
     component: () => <Branding />,
-    headdingtitle:'Брендинг',
-    description: '',
-    bgimage: ''
+    headdingtitle: 'Брендинг',
+    description: 'Студия 16.web в процессе разработки бренда создаёт все необходимые атрибуты, необходимые товарному знаку с уникальным имиджем.',
+    bgimage: brandingImg
   },
 
   {//SEO
@@ -289,14 +292,14 @@ const DataArray = [
 
   {//Уникальные решения
     id: 19,
-    name: 'uniquesrevices',
+    name: 'uniqueservices',
     label: 'Уникальные решения',
-    path: '/uniquesrevices',
+    path: '/uniqueservices',
     parent: 'services',
-    component: () => <OtherSrevices />,
+    component: () => <UniqueServices />,
     headdingtitle: 'Уникальные решения',
-    description: '',
-    bgimage: ''
+    description: 'При создании индивидуального сайта мы готовы разработать для вас полностью уникальный ресурс с учётом поставленных задач и высказанных пожеланий.',
+    bgimage: uniqueServicesImg
   },
 
   {//Сайт-каталог *
@@ -369,6 +372,16 @@ const DataArray = [
     headdingtitle:'Прототип сайта',
     description: 'В ходе разработки концепции сайта создаётся прототип, по которому заказчик может себе представить общий вид будущего интернет-ресурса.',
     bgimage: SitePrototypeImg
+  },
+  {//404
+    id: 404,
+    name: 'notFound',
+    label: '404',
+    path: '/404',
+    component: () => <NotFound />,
+    headdingtitle:'404',
+    description: 'Страница отсутствует или не найдена',
+
   }
 ];
 

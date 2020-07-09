@@ -3,14 +3,24 @@ $btnColor: #ffffff;
 
 .AboutShort{
   margin-bottom: 120px;
+  .AboutShortBox{
+    @media(max-width: 768px){
+      flex-direction: column-reverse;
+    }
+  }
   .Container{
-    padding-top: 120px;
     padding-bottom: 100px;
     .LeftColumn{
       padding-right: 100px;
       padding-bottom: 60px;
+      @media(max-width: 768px){
+        padding-right: 0;
+      }
     }
     .RightColumn{
+      @media(max-width: 768px){
+        margin-bottom: 60px;
+      }
       .Advantages{
         display: flex;
         flex-direction: column;
@@ -78,5 +88,8 @@ $btnColor: #ffffff;
   .AboutShortBtn{
     display: flex;
     justify-content: flex-start;
+    @media(max-width: 768px){
+      justify-content: center;
+    }
   }
 }

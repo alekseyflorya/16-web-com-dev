@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch, Redirect} from 'react-router-dom';
 
 import './App.scss';
 import DataArray from './components/DataArray';
@@ -14,6 +14,7 @@ export default function App() {
     <Router>
       <Switch>
         {Routes}
+        <Redirect to="/404" />
       </Switch>
     </Router>
   );

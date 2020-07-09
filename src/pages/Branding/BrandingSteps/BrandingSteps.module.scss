@@ -1,0 +1,90 @@
+.BrandingSteps{
+  margin-bottom: 220px;
+  .Container{
+    counter-reset: number3;
+  }
+  .Headding{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 43px;
+    line-height: 52px;
+    color: #393939;
+    margin-bottom: 80px;
+  }
+  .SubHeadding{
+    margin-bottom: 60px;
+  }
+  .Cards{
+    margin-bottom: 150px;
+    margin-left: -30px;
+    margin-right: -30px;
+  }
+  .Card{
+    padding: 30px;
+    position: relative;
+    transition: all .5s ease;
+    &:hover{
+      transform: translateY(-5px);
+      box-shadow: 5px 20px 30px rgba(128, 128, 128, 0.15);
+      .Title{
+        &:after{
+          color: #0DF0FF;
+        }
+      }
+    }
+    &:last-child{
+      .Text{
+        max-width: 380px;
+        padding: 55px 85px;
+        border: 1px solid #0df0ff;
+      }
+      &:hover{
+        transform: none;
+        box-shadow: none;
+      }
+    }
+  }
+  .Title{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 140%;
+    color: #292525;
+    margin-bottom: 40px;
+    &:after{
+      counter-increment: number3;
+      content: '0' counter(number3);
+      display: block;
+      position: absolute;
+      right: 40px;
+      top: 40px;
+      font-family: Ubuntu;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 140%;
+      color: #DADADA;
+      transform: rotate(-90deg);
+      transition: all .4s ease;
+    }
+  }
+  .Text{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 140%;
+    color: #8B8B8B;
+    margin-bottom: 20px;
+  }
+  .ActionText{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 140%;
+    color: #292525;
+  }
+}

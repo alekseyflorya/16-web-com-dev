@@ -23,18 +23,18 @@ function SiteDesignCost() {
         </Container>
       </section>
       <section className={classes.SiteDesignOrder}>
-      <Container fixed className={classes.Container}>
-        <Grid container>
-          <Grid item container sm={7}>
-            <h2 className={classes.Headding}>Дизайн сайта под ключ – выгодное решение</h2>
-            <p className={classes.Text}>Веб-студия 16.web создаёт дизайн сайтов на заказ и берётся, как за реализацию отдельных этапов, так и за проекты под ключ. Последнее решение является наиболее выгодным и эффективным – комплексный подход позволяет решать очень сложные задачи в короткие сроки и добиваться при этом максимальной эффективности.</p>
+        <Container fixed className={classes.Container}>
+          <Grid container>
+            <Grid item container sm={7}>
+              <h2 className={classes.Headding}>Дизайн сайта под ключ – выгодное решение</h2>
+              <p className={classes.Text}>Веб-студия 16.web создаёт дизайн сайтов на заказ и берётся, как за реализацию отдельных этапов, так и за проекты под ключ. Последнее решение является наиболее выгодным и эффективным – комплексный подход позволяет решать очень сложные задачи в короткие сроки и добиваться при этом максимальной эффективности.</p>
+            </Grid>
+            <Grid item container sm={5} justify="flex-end">
+              <OrderButton title={'Заказать дизайн'} />
+            </Grid>
           </Grid>
-          <Grid item container sm={5} justify="flex-end">
-            <OrderButton title={'Заказать дизайн'} />
-          </Grid>
-        </Grid>
-      </Container>
-    </section>
+        </Container>
+      </section>
     </>
   )
 }
