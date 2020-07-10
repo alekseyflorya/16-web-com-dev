@@ -1,5 +1,8 @@
 .LastNews{
   margin-bottom: 220px;
+  @media(max-width: 768px){
+    margin-bottom: 120px;
+  }
   .Container{
 
   }
@@ -11,6 +14,18 @@
     line-height: 52px;
     color: #393939;
     margin-bottom: 120px;
+    @media(max-width: 768px){
+      font-size: 28px;
+      line-height: 120%;
+      margin-bottom: 60px;
+
+    }
+  }
+  .LastNewsButton{
+    @media(max-width: 768px){
+      width: 100%;
+      margin-top: 60px;
+    }
   }
   .News{
     margin-bottom: 120px;
@@ -19,12 +34,18 @@
 
   }
   .NewsItem{
+    padding: 30px;
     transition: all .5s;
+    @media(max-width: 768px){
+      padding: 0;
+      margin-bottom: 60px;
+    }
     &:hover{
       transform: translateY(-5px);
       box-shadow: 5px 20px 30px rgba(128, 128, 128, 0.15);
     }
     .Image{
+      max-width: 100%;
       margin-bottom: 30px;
     }
     .LinkToPost{

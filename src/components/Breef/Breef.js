@@ -5,7 +5,7 @@ import Dialog from "@material-ui/core/Dialog";
 import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/icons/Close";
 import Slide from "@material-ui/core/Slide";
-import {LogoInvertIcon} from '../Icons';
+import {LogoInvertIcon, LogoMobileIcon} from '../Icons';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import FormLabel from '@material-ui/core/FormLabel';
 import FormControl from '@material-ui/core/FormControl';
@@ -18,6 +18,7 @@ import Input from "@material-ui/core/Input";
 import Grid from "@material-ui/core/Grid";
 import {Link} from "react-router-dom";
 import {ButtonLink} from "../UI/ButtonLink";
+import {Hidden} from "@material-ui/core";
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="right" ref={ref} {...props} />;
@@ -76,7 +77,13 @@ export default function Breef() {
         PaperProps={{classes: {root: classes.BreefDialog}}}
         classes={{root: classes.Breef, paper: classes.BreefModal}}
       >
-        <LogoInvertIcon width="95" height="60" viewBox="0 0 95 60" classes={{root: classes.LogoIcon}}/>
+        <Hidden smUp>
+          <LogoMobileIcon width="55" height="32" viewBox="0 0 55 32" classes={{root: classes.LogoIcon}}/>
+        </Hidden>
+        <Hidden only="xs">
+          <LogoInvertIcon width="95" height="60" viewBox="0 0 95 60" classes={{root: classes.LogoIcon}}/>
+        </Hidden>
+
         <IconButton
           edge="start"
           color="inherit"
@@ -89,7 +96,7 @@ export default function Breef() {
         <form className={classes.BreefForm}>
           <Grid container justify="center" alignItems="center" className={classes.BreefFormContainer}>
             <Grid item container>
-            <Grid item container sm={6}>
+            <Grid item container sm={6} xs={12}>
             <Grid item container>
               <FormControl component="fieldset" classes={{root: classes.FormControl}}>
                 <FormLabel component="legend" classes={{root: classes.FormLabel, focused: classes.FormLabelFocused}}>Какая услуга вас интересует?</FormLabel>
@@ -187,7 +194,7 @@ export default function Breef() {
               </FormControl>
             </Grid>
               </Grid>
-            <Grid item container sm={6}>
+            <Grid item container sm={6} xs={12}>
             <Grid item container>
               <FormControl required component="fieldset" classes={{root: classes.FormControl}}>
                 <FormLabel

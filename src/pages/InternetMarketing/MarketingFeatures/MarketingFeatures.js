@@ -3,7 +3,6 @@ import classes from "./MarketingFeatures.module.scss"
 import Container from "@material-ui/core/Container";
 import MarketingFeaturesImg from "../../../assets/img/marketingfeatures.jpg"
 import Grid from "@material-ui/core/Grid";
-import {ButtonLink} from "../../../components/UI/ButtonLink";
 
 function MarketingFeatures() {
   return (

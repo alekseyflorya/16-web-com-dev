@@ -39,12 +39,12 @@ export default function Header({notFound}) {
     setState({ ...state, navOpen: open });
   };
 
-  const toggleFab = (open) => (event) => {
-    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
-      return;
-    }
-    setState({ ...state, fabOpen: !open });
-  }
+  // const toggleFab = (open) => (event) => {
+  //   if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+  //     return;
+  //   }
+  //   setState({ ...state, fabOpen: !open });
+  // }
 
   const handleClickAway = () => {
     setState({ ...state, fabOpen: false });
@@ -103,6 +103,7 @@ export default function Header({notFound}) {
                   aria-hidden="false"
                   tabIndex="0"
                   className={classes.GoogleMapFrame}
+                  title="GoogleMap"
                 ></iframe>
                 <Grid container className={classes.ContactsBlock} direction="column" justify="space-between">
                   <Grid item container justify="center">
@@ -184,7 +185,7 @@ export default function Header({notFound}) {
                 <p className={classes.HeaddingDescription}>{description}</p>
               </Box>
             </Grid>
-            <Grid item sm={3} xs={0}/>
+            <Grid item sm={3} xs={false}/>
             <Grid item sm={9} xs={4} container alignItems="center" style={{backgroundColor: '#0DF0FF', paddingLeft: '14%',}}>
               <ButtonGroup classes={{root: classes.SocialButtons}}>
                 <Button classes={{root: classes.SocialButton}}>

@@ -5,6 +5,7 @@ import Grid from "@material-ui/core/Grid";
 import {Link} from "react-router-dom";
 import VacanciesData from '../VacanciesArray';
 import {ButtonLink} from "../UI/ButtonLink";
+import Hidden from '@material-ui/core/Hidden';
 
 function JoinUs() {
 
@@ -21,13 +22,18 @@ function JoinUs() {
     <section className={classes.JoinUs}>
       <Container fixed className={classes.Container}>
         <Grid container>
-          <Grid item sm>
+          <Grid item sm={6} xs={12} >
             <h2 className={classes.Headding}>Присоединяйся к нам!</h2>
             <p className={classes.Description}>Мы всегда рады когда к нашей команде присоединяется специалист, преданный своему делу. Возможно, именно ты нужен нам сейчас.</p>
-            <ButtonLink path={'/vacancies'} title={'Все вакансии'}/>
+            <Hidden xsDown>
+              <ButtonLink path={'/vacancies'} title={'Все вакансии'}/>
+            </Hidden>
           </Grid>
-          <Grid item sm className={classes.Vacancies}>
+          <Grid item sm={6} xs={12} className={classes.Vacancies}>
             {Vacancies}
+            <Hidden smUp>
+              <ButtonLink classNames={classes.JoinUsBtn} path={'/vacancies'} title={'Все вакансии'}/>
+            </Hidden>
           </Grid>
         </Grid>
       </Container>

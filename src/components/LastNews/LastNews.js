@@ -10,7 +10,7 @@ import {ButtonLink} from "../UI/ButtonLink";
 function LastNews() {
   const Posts = NewsData.map(({id, postPath, image, title, blogCategory, dateAdded, description, views}, index) => {
     return (
-      <Grid item container sm direction="column" key={index} className={classes.NewsItem}>
+      <Grid item container sm={4} xs={12} direction="column" key={index} className={classes.NewsItem}>
           <img className={classes.Image} src={image} alt=""/>
           <Link to={`/post${id}`} className={classes.LinkToPost}>
             <h3 className={classes.PostTitle}>{title}</h3>
@@ -34,12 +34,12 @@ function LastNews() {
       <Container fixed className={classes.Container}>
         <h2 className={classes.Headding}>Популярные статьи</h2>
         <div className={classes.News}>
-          <Grid container spacing={10} className={classes.NewsBox}>
+          <Grid container className={classes.NewsBox}>
             {Posts}
           </Grid>
         </div>
         <div className={classes.LastNewsBtn}>
-          <ButtonLink path={'/blog'} title={'Все статьи'}/>
+          <ButtonLink classNames={classes.LastNewsButton} path={'/blog'} title={'Все статьи'}/>
         </div>
       </Container>
     </section>

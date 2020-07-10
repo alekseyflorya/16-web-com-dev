@@ -71,7 +71,7 @@ export default function Reviews() {
   return (
     <Container fixed className={classes.Reviews}>
       <h2 className={classes.Headding}>Отзывы</h2>
-      <div className={classes.ReviewsBox} style={{background: `url(${tabPanelBg}) no-repeat 100% 100%`}}>
+      <div className={classes.ReviewsBox} style={{backgroundImage: `url(${tabPanelBg})`}}>
         {TabPanels}
         <Tabs
           orientation="vertical"
@@ -80,7 +80,12 @@ export default function Reviews() {
           onChange={handleChange}
           aria-label="Vertical tabs example"
           className={classes.Tabs}
-          classes={{indicator: classes.indicator, scroller: classes.scroller, scrollButtons: classes.scrollButtons}}
+          classes={{
+            indicator: classes.indicator,
+            scroller: classes.scroller,
+            scrollButtons: classes.scrollButtons,
+            flexContainerVertical: classes.flexContainerVertical
+          }}
         >
           {TabItems}
         </Tabs>

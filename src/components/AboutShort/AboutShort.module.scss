@@ -92,4 +92,9 @@ $btnColor: #ffffff;
       justify-content: center;
     }
   }
+  .AboutShortButton{
+    @media(max-width: 768px){
+      width: 100%;
+    }
+  }
 }

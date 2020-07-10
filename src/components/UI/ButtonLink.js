@@ -3,9 +3,9 @@ import classes from "./ButtonLink.module.scss";
 import {Link} from "react-router-dom";
 import RefreshIcon from '@material-ui/icons/Refresh';
 
-const ButtonLink = ({path, title}) => {
+const ButtonLink = ({path, title, classNames}) => {
   return (
-    <Link className={classes.ButtonLink} to={path}>{title}</Link>
+    <Link className={`${classes.ButtonLink} ${classNames}`} to={path}>{title}</Link>
   )
 }
 
@@ -15,9 +15,9 @@ const OrderButton = ({title}) => {
   )
 }
 
-const PricesButton = ({path, title}) => {
+const PricesButton = ({path, title, classNames}) => {
   return (
-    <Link className={classes.PricesButton} to={path}><span>{title}</span></Link>
+    <Link className={`${classes.PricesButton} ${classNames}`} to={path}><span>{title}</span></Link>
   )
 }
 

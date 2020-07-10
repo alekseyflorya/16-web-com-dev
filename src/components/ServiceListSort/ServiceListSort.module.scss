@@ -16,6 +16,11 @@ $btnColor: #ffffff;
       line-height: 120%;
     }
   }
+  .ServiceListSortButton{
+    @media(max-width: 768px){
+      width: 100%;
+    }
+  }
   .Cards{
     margin-bottom: 120px;
   }

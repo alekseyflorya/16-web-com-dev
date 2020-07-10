@@ -28,7 +28,7 @@ $blue: #0DF0FF;
         top: 0;
         background: #292525;
         opacity: 0.4;
-        z-index: 1998;
+        z-index: 1300;
       }
     }
     &:before{
@@ -308,17 +308,20 @@ $blue: #0DF0FF;
   position: fixed;
   right: 20px;
   bottom: 40px;
+  z-index: 100;
 }
 .LogoRoot{
   width: 76px;
   height: 48px;
   position: fixed;
   right: 20px;
-  top: 40px;z-index: 1999;
+  top: 40px;
+  z-index: 1300;
   @media (max-width: 768px){
     right: auto;
     left: 16px;
     top: 25px;
+    z-index: 1999;
   }
   .LogoIcon{
     display: block;

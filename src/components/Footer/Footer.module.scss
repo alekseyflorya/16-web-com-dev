@@ -8,9 +8,30 @@ $blue: #0DF0FF;
   border-top: 1px solid transparent;
   margin-top: 299px;
   padding-bottom: 70px;
+  @media(max-width: 768px){
+    border-top: none;
+    margin-top: 119px;
+    padding-bottom: 0;
+  }
 }
 .ContainerRoot{
   margin-top: -80px;
+  @media(max-width: 768px){
+    margin-top: 0;
+    padding-bottom: 25px;
+    padding-top: 90px;
+    position: relative;
+    &:after{
+      content: '';
+      display: block;
+      width: 40px;
+      height: 40px;
+      background: #4C1C89;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
   .LeftColumn{
     padding-top: 100px;
     .LinksListBottomBox{
@@ -67,5 +88,67 @@ $blue: #0DF0FF;
   text-decoration: none;
   &:hover{
     color: $blue;
+  }
+}
+.MobileFooterGrid{
+  padding-left: 40px;
+  padding-right: 40px;
+  .MobileGridItem{
+    margin-bottom: 35px;
+    flex-direction: column;
+  }
+  .MobileGridTitle{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 140%;
+    color: #0DF0FF;
+    margin-bottom: 15px;
+  }
+  .MobileGridLink{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 140%;
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+  .Address{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 140%;
+    color: #FFFFFF;
+  }
+  .MobileSocialGrid{
+    margin-top: 80px;
+    margin-bottom: 35px;
+    justify-content: space-between;
+  }
+  .MobileSocialLink{
+
+  }
+  .MobileBottomGrid{
+    justify-content: space-between;
+  }
+  .Copyright{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 140%;
+    color: #DADADA;
+  }
+  .BottomLink{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 140%;
+    color: #DADADA;
+    text-decoration: none;
   }
 }

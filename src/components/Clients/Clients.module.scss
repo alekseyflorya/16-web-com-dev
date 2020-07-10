@@ -1,5 +1,8 @@
 .Clients{
   margin-bottom: 220px;
+  @media(max-width: 768px){
+    margin-bottom: 120px;
+  }
   .Headding{
     font-family: Ubuntu;
     font-style: normal;
@@ -8,5 +11,26 @@
     line-height: 52px;
     color: #393939;
     margin-bottom: 100px;
+    @media(max-width: 768px){
+      font-size: 28px;
+      line-height: 120%;
+      margin-bottom: 50px;
+    }
+  }
+  .ClientsGrid{
+    justify-content: space-between;
+    align-items: center;
+    .ClientsGridItem{
+      display: flex;
+      justify-content: center;
+      & img{
+        display: block;
+        max-width: 100%;
+        max-height: 100%;
+      }
+      @media (max-width: 768px) {
+        padding: 30px;
+      }
+    }
   }
 }

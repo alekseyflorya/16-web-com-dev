@@ -2,7 +2,6 @@ import React from "react";
 import classes from "./UniqueServicesCoast.module.scss";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
-import LandingCoastImg from "../../../assets/img/landing-coast.jpg";
 
 function UniqueServicesCoast() {
   return (

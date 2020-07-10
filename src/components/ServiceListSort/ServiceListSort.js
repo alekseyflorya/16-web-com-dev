@@ -36,7 +36,7 @@ function ServiceListSort() {
           </Grid>
         </div>
         <div className={classes.ServiceListBtn}>
-          <ButtonLink path={'/services'} title={'Все услуги'}/>
+          <ButtonLink classNames={classes.ServiceListSortButton} path={'/services'} title={'Все услуги'}/>
         </div>
       </Container>
     </section>

@@ -13,12 +13,12 @@ function PortfolioShort(){
           <h2 className={classes.Headding}>Наше портфолио</h2>
           <div className={classes.DescriptionBlock}>
             <p className={classes.Description}>У нас немало выполненных проектов – отзывы клиентов красноречиво говорят о том, что мы умеем эффективно и быстро решать самые сложные задачи.</p>
-            <PricesButton path={'/prices'} title={'Узнать цены'} />
+            <PricesButton classNames={classes.PricesButton} path={'/prices'} title={'Узнать цены'} />
           </div>
           <div className={classes.ProjectsGrid}>
             <div className={classes.gridContainer}>
-              {PortfolioData.map(({img, title, type, position}) => (
-                <div className={`${classes.gridItem} ${position}`}>
+              {PortfolioData.map(({img, title, type, position}, index) => (
+                <div className={`${classes.gridItem} ${position}`} key={index}>
                   <div className={classes.HoveredBlock}>
                     <Link to='/portfolio'>
                       <h3 className={classes.HoveredTitle}>{title}</h3>
@@ -32,7 +32,7 @@ function PortfolioShort(){
             </div>
           </div>
           <div className={classes.PortfolioShortBtn}>
-            <ButtonLink path={'/portfolio'} title={'Все услуги'}/>
+            <ButtonLink classNames={classes.PortfolioShortButton} path={'/portfolio'} title={'Все проекты'}/>
           </div>
         </div>
       </Container>

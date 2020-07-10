@@ -26,7 +26,7 @@ function AboutShort() {
           </Grid>
         </Grid>
         <div className={classes.AboutShortBtn}>
-          <ButtonLink path={'/about'} title={'Подробнее о нас'}/>
+          <ButtonLink classNames={classes.AboutShortButton} path={'/about'} title={'Подробнее о нас'}/>
         </div>
       </Container>
     </section>

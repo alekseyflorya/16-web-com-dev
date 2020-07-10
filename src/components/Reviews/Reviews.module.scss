@@ -1,5 +1,8 @@
 .Reviews{
   margin-bottom: 220px;
+  @media(max-width: 768px){
+    margin-bottom: 120px;
+  }
   .Headding{
     font-family: Ubuntu;
     font-style: normal;
@@ -8,11 +11,26 @@
     line-height: 52px;
     color: #393939;
     margin-bottom: 120px;
+    @media(max-width: 768px){
+      font-size: 28px;
+      line-height: 120%;
+      margin-bottom: 60px;
+    }
   }
   .ReviewsBox{
     height: 480px;
     position: relative;
     max-width: 1140px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    @media(max-width: 768px){
+      width: calc(100% + 32px);
+      margin-left: -16px;
+      margin-right: -16px;
+      height: auto;
+      padding-top: 60px;
+      background-size: cover;
+    }
   }
   .TabPanel{
     height: 100%;
@@ -28,12 +46,22 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      @media(max-width: 768px){
+        height: auto;
+        flex-direction: row;
+        justify-content: flex-start;
+      }
       .Avatar{
         box-sizing: border-box;
         margin-bottom: 25px;
         border-radius: 50%;
-        width: 115px;
-        height: 115px;
+        width: 85px;
+        height: 85px;
+        @media(max-width: 768px){
+          margin-bottom: 0;
+          margin-left: 50px;
+          margin-right: 40px;
+        }
       }
       .AvatarName{
         font-family: Inter;
@@ -59,6 +87,15 @@
       padding: 50px 120px;
       background: rgba(0, 0, 0, 0.6);
       backdrop-filter: blur(4px);
+      @media(max-width: 768px){
+        position: inherit;
+        max-width: 100%;
+        padding: 50px;
+        border: none;
+        padding-bottom: 130px;
+        height: auto;
+        background: transparent;
+      }
     }
     .Text{
       font-family: Inter;
@@ -88,17 +125,46 @@
     position: absolute;
     right: -80px;
     top: 65px;
+    @media(max-width: 768px){
+      width: calc(100% - 32px);
+      height: 80px;
+      right: auto;
+      left: 16px;
+      top: auto;
+      bottom: 0;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
     .indicator{
       display: none;
     }
     .scrollButtons{
       color: #FFFFFF;
+      @media (max-width: 768px) {
+        display: inline-flex;
+        width: 40px;
+        height: 40px;
+        opacity: 1;
+        svg{
+          transform: rotate(0deg);
+        }
+      }
       svg{
         font-size: 3em;
       }
     }
     .scroller{
-      max-height: 140px;
+      max-height: 150px;
+      @media (max-width: 768px) {
+        max-height: 80px;
+        max-width: 100%;
+      }
+    }
+    .flexContainerVertical{
+      @media (max-width: 768px){
+        flex-direction: row;
+      }
     }
     .Tab{
       min-width: auto;

@@ -1,5 +1,8 @@
 .PortfolioShort{
   margin-bottom: 200px;
+  @media(max-width: 768px){
+    margin-bottom: 100px;
+  }
   .Headding{
     font-family: Ubuntu;
     font-style: normal;
@@ -8,12 +11,20 @@
     line-height: 52px;
     color: #393939;
     margin-bottom: 120px;
+    @media(max-width: 768px){
+      font-size: 28px;
+      line-height: 120%;
+      margin-bottom: 50px;
+    }
   }
   .DescriptionBlock{
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     margin-bottom: 80px;
+    @media(max-width: 768px){
+      margin-bottom: 40px;
+    }
   }
   .Description{
     font-family: Inter;
@@ -23,11 +34,29 @@
     line-height: 22px;
     color: #8B8B8B;
     max-width: 50%;
+    @media(max-width: 768px){
+      max-width: 100%;
+    }
+  }
+  .PricesButton{
+    display: flex;
+    @media(max-width: 768px){
+      display: none;
+    }
+  }
+  .PortfolioShortButton{
+    @media(max-width: 768px){
+      width: 100%;
+      margin-top: 60px;
+    }
   }
   .ProjectsGrid{
     display: flex;
     justify-content: center;
     margin-bottom: 100px;
+    @media(max-width: 768px){
+      margin-bottom: 60px;
+    }
   }
   .gridContainer {
     display: grid;
@@ -36,6 +65,18 @@
     grid-template-rows: 260px 260px;
     grid-template-columns: 480px 480px;
     grid-gap: 50px;
+    @media(max-width: 768px) {
+      grid-template-areas: "gridItem1" "gridItem1" "gridItem2"
+      "gridItem3";
+      grid-template-rows: 220px 220px 220px 220px;
+      grid-template-columns: 4fr;
+      grid-gap: 30px;
+      & .gridItem:first-child{
+        & .HoveredBlock{
+          justify-content: flex-start;
+        }
+      }
+    }
   }
   .gridItem{
     position: relative;
@@ -78,6 +119,12 @@
       padding-left: 20%;
       transition: all .5s;
       opacity: 0;
+      @media(max-width: 768px) {
+        opacity: 1;
+        background: transparent;
+        justify-content: flex-end;
+        padding: 20px;
+      }
       a{
         text-decoration: none;
       }
@@ -89,6 +136,10 @@
         line-height: 36px;
         color: #FFFFFF;
         margin-bottom: 5px;
+        @media(max-width: 768px){
+          font-size: 24px;
+          line-height: 140%;
+        }
       }
       .HoveredType{
         font-family: Inter;
@@ -99,6 +150,11 @@
         color: #FFFFFF;
         opacity: 0.6;
         margin-bottom: 40px;
+        @media(max-width: 768px){
+          margin-bottom: 0;
+          font-size: 14px;
+          line-height: 140%;
+        }
       }
       .HoveredArrow{
         width: 85%;

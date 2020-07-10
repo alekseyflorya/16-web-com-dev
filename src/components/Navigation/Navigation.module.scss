@@ -8,6 +8,20 @@
   border: none;
 }
 .LinksTop{
+  justify-content: space-between;
+  .MobileSocialGrid{
+    width: calc(100% - 32px);
+    position: absolute;
+    margin-top: 80px;
+    margin-bottom: 0;
+    bottom: 10vh;
+    justify-content: space-around;
+  }
+}
+.MenuLinks{
+  &:nth-child(5){
+    margin-bottom: 40px;
+  }
 }
 .Link {
   color: #ffffff;
@@ -23,6 +37,10 @@
   padding: 20px 25px;
   margin-top: 20px;
   margin-bottom: 20px;
+  @media(max-width: 768px){
+    padding: 0;
+    margin-top: 0;
+  }
   span {
     display: inline-flex;
     justify-content: flex-start;
@@ -36,6 +54,14 @@
   //  color: #0DF0FF;
   //}
 }
+.InfoLinks{
+  @media(max-width: 768px){
+    font-size: 20px;
+    line-height: 140%;
+    color: #E9E9E9;
+    margin-bottom: 10px;
+  }
+}
 
 .opened{
   display: flex;
@@ -43,11 +69,13 @@
 .closed{
   display: none;
 }
-
 .Link.active{
   padding: 20px 25px;
   color: #0DF0FF;
   z-index: 2;
+  @media(max-width: 768px){
+    padding: 0;
+  }
   span{
     &:before{
       content: '';
@@ -61,6 +89,9 @@
       border-top: 2px solid #0DF0FF;
       transition: all .4s ease;
       z-index: -1;
+      @media(max-width: 768px){
+        display: none;
+      }
     }
     &:after{
       content: '';
@@ -74,6 +105,9 @@
       border-bottom: 2px solid #0DF0FF;
       transition: all .4s ease;
       z-index: -1;
+      @media(max-width: 768px){
+        display: none;
+      }
     }
     &:hover{
       &:before{
@@ -99,6 +133,9 @@
     border-left: 2px solid #0DF0FF;
     border-top: 2px solid #0DF0FF;
     z-index: -1;
+    @media(max-width: 768px){
+      display: none;
+    }
   }
   &:after{
     content: '';
@@ -112,6 +149,9 @@
     border-bottom: 2px solid #0DF0FF;
     transition: all .4s ease;
     z-index: -1;
+    @media(max-width: 768px){
+      display: none;
+    }
   }
   &:hover{
     &:before{

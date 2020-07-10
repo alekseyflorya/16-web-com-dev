@@ -2,7 +2,6 @@ import React from "react";
 import classes from "./LandingSteps.module.scss";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
-import {ButtonLink} from "../../../components/UI/ButtonLink";
 
 function LandingSteps() {
   return (

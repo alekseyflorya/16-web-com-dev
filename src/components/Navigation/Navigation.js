@@ -1,16 +1,21 @@
 import React from 'react';
 import classes from './Navigation.module.scss';
-import {Link} from "react-router-dom";
+import {Link as SocialLink, Link} from "react-router-dom";
 import DataArray from "../DataArray";
 
 import { makeStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import Grid from "@material-ui/core/Grid";
 import menuBg from '../../assets/img/menu-bg.jpg';
+import {MobileBehanceIcon, MobileDribbleIcon, MobileFbIcon, MobileInstaIcon, MobileLinkedIcon} from "../Icons";
 
 const useStyles = makeStyles({
   list: {
     width: '100%',
+    padding: 40,
+    '@media (max-width: 768px)': {
+      padding: 0
+    }
   },
   paper: {
     width: '100vw',
@@ -22,7 +27,11 @@ const useStyles = makeStyles({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    padding: 100
+    padding: 100,
+    '@media (max-width: 768px)': {
+      padding: '120px 16px 16px 16px',
+      justifyContent: "flex-start"
+    }
   },
   backdrop: {
     backgroundColor: 'transparent',
@@ -166,7 +175,6 @@ function Navigation({toggleDrawer, isOpen, togglePortfolioSubmenu, toggleService
       >
         <Grid
           container
-          spacing={10}
           className={classesnames.list}
           role="presentation"
           // onClick={toggleDrawer(false)}
@@ -178,12 +186,11 @@ function Navigation({toggleDrawer, isOpen, togglePortfolioSubmenu, toggleService
                 let activeLink = (window.location.pathname === path) ? classes.active : '';
                 if (id <= 8) {
                   return (
-                    <Grid item sm={4} xs={12}>
+                    <Grid item sm={4} xs={12} key={index} className={classes.MenuLinks}>
                       <Link
-                        key={index}
                         to={path}
                         label={label}
-                        className={`${classes.Link} link-to-${name} ${activeLink}`}
+                        className={`${classes.Link} ${id > 4 ? classes.InfoLinks: ''} ${activeLink}`}
                       >
                         <span>{label}</span>
                       </Link>
@@ -191,6 +198,23 @@ function Navigation({toggleDrawer, isOpen, togglePortfolioSubmenu, toggleService
                   );
                 }
               })}
+              <Grid item container xs={12} className={classes.MobileSocialGrid}>
+                <SocialLink className={classes.MobileSocialLink} href="#">
+                  <MobileInstaIcon width="23" height="23" viewBox="0 0 23 23" />
+                </SocialLink>
+                <SocialLink className={classes.MobileSocialLink} href="#">
+                  <MobileFbIcon width="11" height="23" viewBox="0 0 11 23" />
+                </SocialLink>
+                <SocialLink className={classes.MobileSocialLink} href="#">
+                  <MobileLinkedIcon width="23" height="23" viewBox="0 0 23 23" />
+                </SocialLink>
+                <SocialLink className={classes.MobileSocialLink} href="#">
+                  <MobileBehanceIcon width="31" height="19" viewBox="0 0 31 19" />
+                </SocialLink>
+                <SocialLink className={classes.MobileSocialLink} href="#">
+                  <MobileDribbleIcon width="27" height="27" viewBox="0 0 27 27" />
+                </SocialLink>
+              </Grid>
             </Grid>
           </Grid>
         </Grid>

@@ -3,11 +3,16 @@
   .BreefForm{
     width: 100%;
     height: 100%;
+    padding-bottom: 100px;
   }
   .BreefFormContainer{
     width: 100%;
     height: 100%;
     padding: 120px;
+    @media(max-width: 768px) {
+      padding: 140px 16px 16px 16px;
+      height: auto;
+    }
   }
   .LogoIcon{
     position: absolute;
@@ -15,11 +20,22 @@
     top: 85px;
     width: 95px;
     height: 60px;
+    @media(max-width: 768px){
+      right: auto;
+      left: 16px;
+      top: 25px;
+      width: 55px;
+      height: 32px;
+    }
   }
   .CloseBtn{
     position: absolute;
     right: 100px;
     top: calc(50% - 24px);
+    @media(max-width: 768px){
+      top: 10px;
+      right: 16px;
+    }
     .CloseBtnIcon{
       width: 2em;
       height: 2em;
@@ -32,6 +48,13 @@
     position: absolute;
     right: 100px;
     bottom: 0;
+    @media(max-width: 768px){
+      width: 70px;
+      height: 70px;
+      position: relative;
+      right: auto;
+      left: calc(100% - 70px);
+    }
   }
   .sendBreefLabel{
     width: 100%;
@@ -47,8 +70,12 @@
       position: absolute;
       top: -11px;
       left: -26px;
-
-
+      @media(max-width: 768px){
+        width: 20px;
+        height: 20px;
+        top: -9px;
+        left: -20px;
+      }
     }
   }
   .sendBreefText{
@@ -61,6 +88,10 @@
     font-size: 24px;
     line-height: 140%;
     color: #0DF0FF;
+    @media(max-width: 768px){
+      font-size: 20px;
+      line-height: 140%;
+    }
     &.FormLabelFocused{
       color: #0DF0FF;
     }
