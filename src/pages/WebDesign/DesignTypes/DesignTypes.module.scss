@@ -1,5 +1,8 @@
 .DesignTypes{
   margin-bottom: 220px;
+  @media(max-width: 768px){
+    margin-bottom: 120px;
+  }
   .Container{
 
   }
@@ -11,9 +14,17 @@
     line-height: 52px;
     color: #393939;
     margin-bottom: 120px;
+    @media(max-width: 768px){
+      font-size: 28px;
+      line-height: 140%;
+      margin-bottom: 50px;
+    }
   }
   .Cards{
     margin-bottom: 120px;
+    @media(max-width: 768px){
+      margin-bottom: 100px;
+    }
   }
   .CardBox{
 
@@ -21,6 +32,9 @@
   .Card{
     padding: 45px;
     transition: all .5s;
+    @media(max-width: 768px){
+      padding: 25px 0;
+    }
     &:hover{
       border-color: transparent;
       transform: translateY(-5px);
@@ -40,6 +54,10 @@
     align-items: center;
     margin-bottom: 20px;
     text-decoration: none;
+    @media(max-width: 768px){
+      font-size: 22px;
+      line-height: 140%;
+    }
     &:after{
       content: '';
       position: absolute;
@@ -50,7 +68,12 @@
       border-right: 2px solid black;
       right: 0;
       transform: rotate(45deg);
-      top: calc(50% - 6px)
+      top: calc(50% - 6px);
+      @media(max-width: 768px){
+        width: 8px;
+        height: 8px;
+        right: 10px;
+      }
     }
   }
   .CardText{
@@ -61,5 +84,8 @@
     line-height: 22px;
     color: #8B8B8B;
     margin-bottom: 20px;
+    @media(max-width: 768px){
+
+    }
   }
 }

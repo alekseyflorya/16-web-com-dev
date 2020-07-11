@@ -10,7 +10,7 @@ function MarketingServices() {
       <Container fixed className={classes.Container}>
         <h2 className={classes.Headding}>Услуги по интернет-маркетингу</h2>
         <div className={classes.Cards}>
-          <Grid container spacing={3}>
+          <Grid container>
             <Grid item sm={4} xs={12} className={classes.CardBox}>
               <div className={classes.Card}>
                 <Link to="/seo" className={classes.CardName}>SEO</Link>

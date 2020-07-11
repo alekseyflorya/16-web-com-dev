@@ -9,7 +9,7 @@ function MarketingFeatures() {
     <section className={classes.MarketingFeatures}>
       <Container fixed className={classes.Container}>
         <h2 className={classes.Headding}>Грамотный веб-дизайн для вашего сайта</h2>
-        <Grid container sm={12} className={classes.MarketingFeaturesBox}>
+        <Grid container sm={12} xs={12} className={classes.MarketingFeaturesBox}>
           <Grid item container sm={6} xs={12}>
             <img className={classes.Image} src={MarketingFeaturesImg} alt="CompetentDesignImg"/>
           </Grid>

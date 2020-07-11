@@ -1,17 +1,24 @@
 .SeoServices{
   margin-top: 120px;
   margin-bottom: 220px;
+  @media(max-width: 768px){
+    margin-top: 60px;
+    margin-bottom: 120px;
+  }
   .Container{
 
   }
   .TopRow{
     margin-bottom: 120px;
+    @media(max-width: 768px){
+      margin-bottom: 60px;
+    }
   }
   .BottomRow{
     justify-content: flex-end;
   }
   .Item{
-
+    margin-bottom: 60px;
   }
   .Headding{
     font-family: Ubuntu;
@@ -20,6 +27,11 @@
     font-size: 43px;
     line-height: 52px;
     color: #393939;
+    @media(max-width: 768px){
+      font-size: 28px;
+      line-height: 120%;
+      margin-bottom: 40px;
+    }
   }
   .Title{
     font-family: Ubuntu;

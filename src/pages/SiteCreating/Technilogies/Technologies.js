@@ -15,7 +15,7 @@ function Technologies() {
       <Container fixed className={classes.Container}>
         <h2 className={classes.Headding}>Технологии</h2>
         <Grid container className={classes.TechnologiesList}>
-          <Grid item container sm={6} className={classes.TechnologiesItem}>
+          <Grid item container sm={6} xs={6} className={classes.TechnologiesItem}>
             <Grid item sm={4} className={classes.LogoImgBox}>
               <img className={classes.LogoImg} src={OpenCartLogo} alt="OpenCart"/>
             </Grid>
@@ -24,7 +24,7 @@ function Technologies() {
               <p className={classes.Description} >Платформа, ориентированная на создание интернет-магазинов.</p>
             </Grid>
           </Grid>
-          <Grid item container sm={6} className={classes.TechnologiesItem}>
+          <Grid item container sm={6} xs={6} className={classes.TechnologiesItem}>
             <Grid item sm={4} className={classes.LogoImgBox}>
               <img className={classes.LogoImg} src={WordPressLogo} alt=""/>
             </Grid>
@@ -33,7 +33,7 @@ function Technologies() {
               <p className={classes.Description}>Платформа, используемая для разработки различных web-приложений.</p>
             </Grid>
           </Grid>
-          <Grid item container sm={6} className={classes.TechnologiesItem}>
+          <Grid item container sm={6} xs={6} className={classes.TechnologiesItem}>
             <Grid item sm={4} className={classes.LogoImgBox}>
               <img className={classes.LogoImg} src={PhpLogo} alt=""/>
             </Grid>
@@ -42,7 +42,7 @@ function Technologies() {
               <p className={classes.Description}>Язык программирования, разработан для написания web-приложений.</p>
             </Grid>
           </Grid>
-          <Grid item container sm={6} className={classes.TechnologiesItem}>
+          <Grid item container sm={6} xs={6} className={classes.TechnologiesItem}>
             <Grid item sm={4} className={classes.LogoImgBox}>
               <img className={classes.LogoImg} src={JsLogo} alt=""/>
             </Grid>
@@ -51,7 +51,7 @@ function Technologies() {
               <p className={classes.Description}>Кросс-платформенный, объектно-ориентированный, скриптовый язык.</p>
             </Grid>
           </Grid>
-          <Grid item container sm={6} className={classes.TechnologiesItem}>
+          <Grid item container sm={6} xs={6} className={classes.TechnologiesItem}>
             <Grid item sm={4} className={classes.LogoImgBox}>
               <img className={classes.LogoImg} src={AnalyticsLogo} alt=""/>
             </Grid>
@@ -60,7 +60,7 @@ function Technologies() {
               <p className={classes.Description}>Сервис, предназначенный для анализиза поведение пользователей на сайте.</p>
             </Grid>
           </Grid>
-          <Grid item container sm={6} className={classes.TechnologiesItem}>
+          <Grid item container sm={6} xs={6} className={classes.TechnologiesItem}>
             <Grid item sm={4} className={classes.LogoImgBox}>
               <img className={classes.LogoImg} src={OneCLogo} alt=""/>
             </Grid>

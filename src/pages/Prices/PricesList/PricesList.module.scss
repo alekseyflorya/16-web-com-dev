@@ -4,6 +4,9 @@
   }
   .SiteCreatingPrices{
     margin-bottom: 160px;
+    @media(max-width: 768px){
+      margin-bottom: 60px;
+    }
   }
   .SeoPrices{
 
@@ -16,30 +19,63 @@
     line-height: 120%;
     color: #393939;
     margin-bottom: 50px;
+    @media(max-width: 768px){
+      font-size: 28px;
+      line-height: 120%;
+      margin-bottom: 40px;
+    }
   }
   .CardBox{
     padding-bottom: 60px;
+    @media(max-width: 768px){
+      padding-bottom: 30px;
+
+    }
     &:nth-child(3n-1) {
       padding-left: 10px;
       padding-right: 10px;
+      @media(max-width: 768px){
+        padding-left: 0;
+        padding-right: 0;
+      }
     }
     &:nth-child(3n-2) {
       padding-right: 10px;
+      @media(max-width: 768px){
+        padding-right: 0;
+      }
     }
     &:nth-child(3n) {
       padding-left: 10px;
+      @media(max-width: 768px){
+        padding-left: 0;
+      }
     }
   }
   .Card{
     padding: 25px;
     border: 1px solid #DADADA;
+    @media(max-width: 768px){
+      padding: 20px;
+    }
   }
   .CardHead{
     align-items: center;
     margin-bottom: 40px;
+    @media(max-width: 768px){
+      margin-bottom: 20px;
+    }
+  }
+  .TitlePriceBox{
+    @media(max-width: 768px){
+      padding-left: 30px;
+    }
   }
   .CardBody{
     margin-bottom: 40px;
+    @media(max-width: 768px){
+      margin-bottom: 20px;
+    }
   }
   .CardFooter{
     margin-bottom: 20px;
@@ -55,6 +91,10 @@
     line-height: 140%;
     color: #292525;
     margin-bottom: 10px;
+    @media(max-width: 768px) {
+      font-size: 20px;
+      line-height: 140%;
+    }
   }
   .Price{
     font-family: Ubuntu;
@@ -63,6 +103,10 @@
     font-size: 50px;
     line-height: 100%;
     color: #4C1C89;
+    @media(max-width: 768px) {
+      font-size: 45px;
+      line-height: 100%;
+    }
   }
   .CardBodyTitle{
     font-family: Ubuntu;

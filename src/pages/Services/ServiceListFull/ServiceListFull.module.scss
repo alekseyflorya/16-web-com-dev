@@ -16,7 +16,13 @@ $btnColor: #ffffff;
     &:hover{
       border-color: transparent;
       transform: translateY(-5px);
-      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+      box-shadow: 5px 20px 30px rgba(128, 128, 128, 0.15);
+    }
+    @media(max-width: 768px){
+      padding: 15px 10px;
+      margin-left: -10px;
+      margin-right: -10px;
+      margin-bottom: 45px;
     }
   }
   .CardName{
@@ -32,6 +38,10 @@ $btnColor: #ffffff;
     align-items: center;
     margin-bottom: 20px;
     text-decoration: none;
+    @media(max-width: 768px){
+      font-size: 22px;
+      line-height: 140%;
+    }
     &:after{
       content: '';
       position: absolute;
@@ -42,7 +52,10 @@ $btnColor: #ffffff;
       border-right: 2px solid black;
       right: 0;
       transform: rotate(45deg);
-      top: calc(50% - 6px)
+      top: calc(50% - 6px);
+      @media(max-width: 768px){
+        right: 20px;
+      }
     }
   }
   .CardText{
@@ -69,10 +82,6 @@ $btnColor: #ffffff;
       font-weight: bold;
       margin-left: 10px;
     }
-  }
-  .ServiceListBtn{
-    display: flex;
-    justify-content: center;
   }
 }
 

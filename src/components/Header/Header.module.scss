@@ -5,10 +5,16 @@ $blue: #0DF0FF;
 .Header{
   position: relative;
   margin-bottom: 220px;
+  @media (max-width: 768px){
+    margin-bottom: 160px;
+
+  }
   .ColumnLeftBox{
     @media (max-width: 768px){
-      background-position: -92% 94%!important;
-      background-size: auto 140%!important;
+      //background-position: -92% 94%!important;
+      //background-size: auto 140%!important;
+      background-position: 100% 100%!important;
+      margin-top: -40px;
     }
   }
   .ColumnLeft{
@@ -65,11 +71,27 @@ $blue: #0DF0FF;
     top: calc(50% - 240px);
     right: 40px;
     background: rgba(0,0,0,.9);
+    @media(max-width: 768px){
+      width: 210px;
+      height: 275px;
+      right: auto;
+      top: auto;
+      left: 0px;
+      bottom: 10px;
+
+    }
     .ContactsItems{
       margin-top: 35px;
+      @media(max-width: 768px){
+        padding: 16px 16px 0 16px;
+        margin-top: 0;
+      }
     }
     .ContactsItem{
       margin-bottom: 35px;
+      @media(max-width: 768px){
+        margin-bottom: 10px;
+      }
     }
     .ContactsTitle{
       font-family: Ubuntu;
@@ -79,6 +101,11 @@ $blue: #0DF0FF;
       line-height: 140%;
       color: #FFFFFF;
       margin-bottom: 20px;
+      @media(max-width: 768px){
+        font-size: 14px;
+        line-height: 140%;
+        margin-bottom: 10px;
+      }
     }
     .ContactsLabel{
       font-family: Ubuntu;
@@ -88,6 +115,11 @@ $blue: #0DF0FF;
       line-height: 140%;
       color: #0DF0FF;
       margin-bottom: 15px;
+      @media(max-width: 768px){
+        font-size: 13px;
+        line-height: 140%;
+        margin-bottom: 10px;
+      }
     }
     .ContactsText{
       font-family: Inter;
@@ -97,13 +129,20 @@ $blue: #0DF0FF;
       line-height: 140%;
       color: #FFFFFF;
       text-decoration: none;
+      @media(max-width: 768px){
+        font-size: 12px;
+        line-height: 140%;
+      }
     }
     .ContactsBtnBlock{
 
     }
-    //.CallBackBox{
-    //  padding: 35px!important;
-    //}
+    .CallBackBox{
+      padding: 35px!important;
+    }
+    .ContactFormBlock{
+      z-index: 2000!important;
+    }
     .CallBackText{
       font-family: Inter;
       font-style: normal;
@@ -116,7 +155,6 @@ $blue: #0DF0FF;
     .ContactsBtn{
       width: 100%;
       height: 80px;
-      border: none;
       background: #4C1C89;
       border: 1px solid #4C1C89;
       font-family: Inter;
@@ -127,6 +165,11 @@ $blue: #0DF0FF;
       color: #FFFFFF;
       padding: 0;
       transition: all .5s ease;
+      @media(max-width: 768px){
+        height: 57px;
+        font-size: 14px;
+        line-height: 140%;
+      }
       &:hover{
         background: #FFFFFF;
         color: #292525;
@@ -138,6 +181,9 @@ $blue: #0DF0FF;
         border-left: 2px solid #0df0ff;
       }
     }
+  }
+  .CallBackBtn{
+    background-color: #000;
   }
   .MenuButton{
     position: fixed;
@@ -269,7 +315,6 @@ $blue: #0DF0FF;
     border: none;
     padding-left: 20px;
     padding-right: 20px;
-    background: transparent;
     backdrop-filter: blur(0);
   }
 }
@@ -307,7 +352,7 @@ $blue: #0DF0FF;
   flex-Direction: column;
   position: fixed;
   right: 20px;
-  bottom: 40px;
+  bottom: 50px;
   z-index: 100;
 }
 .LogoRoot{

@@ -2,6 +2,11 @@
   .Container{
 
   }
+  .HeaddingBox{
+    @media(max-width: 768px) {
+      margin-bottom: 60px;
+    }
+  }
   .Headding{
     font-family: Ubuntu;
     font-style: normal;
@@ -10,6 +15,10 @@
     line-height: 120%;
     color: #4C1C89;
     margin-bottom: 40px;
+    @media(max-width: 768px){
+      font-size: 28px;
+      line-height: 120%;
+    }
   }
   .Accordion{
     margin-bottom: 30px;
@@ -17,6 +26,10 @@
     border: 1px solid #E9E9E9;
     border-radius: 0;
     padding: 12.5px 34px;
+    @media(max-width: 768px){
+      padding: 8px 0;
+
+    }
   }
   .AccordionDetails{
     flex-direction: column;

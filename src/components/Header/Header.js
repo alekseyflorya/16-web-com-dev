@@ -91,8 +91,7 @@ export default function Header({notFound}) {
           style={{
             background: `url(${bgimage})`,
             paddingTop: (window.location.pathname === '/contact') ? 0 : 120,
-            // backgroundSize: 'cover',
-            // backgroundRepeat: 'no-repeat',
+
           }}
         >
           { (window.location.pathname === '/contact') ? (
@@ -123,14 +122,15 @@ export default function Header({notFound}) {
                       </div>
                     </Grid>
                   </Grid>
-                  <Grid item className={classes.ContactsBtnBlock}>
+                  <Grid item container className={classes.ContactsBtnBlock}>
                     <button className={classes.ContactsBtn} onClick={handleClickOpen}>
                       <span>Написать нам</span>
                     </button>
                     <Dialog onClose={handleClose}
                             aria-labelledby="customized-dialog-title"
                             open={open}
-                            PaperProps={{square: true, classes: {root: classes.CallBackBox}}}
+                            classes={{root: classes.ContactFormBlock,paper: classes.CallBackBox}}
+                            PaperProps={{square: true}}
                     >
                       <Grid container style={{padding: 35}}>
                         <Grid item container justify="flex-end">
@@ -163,9 +163,9 @@ export default function Header({notFound}) {
                           />
                         </Grid>
                         <Grid item container>
-                          <Button autoFocus onClick={handleClose} color="primary">
+                          <button className={classes.CallBackBtn} onClick={handleClose}>
                             Свяжитесь со мной
-                          </Button>
+                          </button>
                         </Grid>
                       </Grid>
                     </Dialog>

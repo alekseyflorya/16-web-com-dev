@@ -1,5 +1,8 @@
 .SitePrototypeFeatures{
   margin-bottom: 220px;
+  @media(max-width: 768px){
+    margin-bottom: 120px;
+  }
   .HeaddingBox{
 
   }
@@ -11,6 +14,11 @@
     line-height: 52px;
     color: #393939;
     margin-bottom: 80px;
+    @media(max-width: 768px) {
+      font-size: 28px;
+      line-height: 120%;
+      margin-bottom: 60px;
+    }
   }
   .Text{
     font-family: Inter;
@@ -19,6 +27,7 @@
     font-size: 16px;
     line-height: 22px;
     color: #8B8B8B;
+    margin-bottom: 60px;
   }
   .GridList{
     .GridListItem{
@@ -32,6 +41,9 @@
       padding-left: 30px;
       margin-top: 80px;
       padding-right: 50px;
+      @media(max-width: 768px){
+        margin-top: 40px;
+      }
       &:before,&:after{
         content: '';
         display: inline-block;

@@ -1,5 +1,8 @@
 .Interested{
   margin-bottom: 220px;
+  @media(max-width: 768px){
+    margin-bottom: 120px;
+  }
   .Container{
 
   }
@@ -22,5 +25,22 @@
     color: #8B8B8B;
     margin-bottom: 90px;
     max-width: 500px;
+    @media(max-width: 768px) {
+      margin-bottom: 40px;
+    }
+  }
+  .InterestedImgBlock{
+
+  }
+  .InterestedImg{
+    max-width: 100%;
+    @media(max-width: 768px) {
+      margin-bottom: 40px;
+    }
+  }
+  .InterestedBtn{
+    @media(max-width: 768px){
+      width: 100%;
+    }
   }
 }

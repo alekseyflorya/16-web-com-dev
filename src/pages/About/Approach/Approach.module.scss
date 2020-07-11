@@ -7,6 +7,9 @@
     line-height: 52px;
     color: #393939;
     margin-bottom: 120px;
+    @media(max-width: 768px){
+      margin-bottom: 80px;
+    }
   }
   .ApproachList{
     counter-reset: numbers;
@@ -15,6 +18,10 @@
       padding-left: 30px;
       margin: 0 85px 120px 85px;
       z-index: 3;
+      @media(max-width: 768px){
+        margin: 0 0 80px 36px;
+
+      }
       &:before{
         counter-increment: numbers;
         content: '0' counter(numbers);
@@ -36,6 +43,9 @@
         transform: rotate(-90deg);
         z-index: -2;
         transition: all .5s ease;
+        @media(max-width: 768px){
+
+        }
       }
       &:after{
         content: '';
@@ -48,6 +58,9 @@
         left: 0;
         top: 0;
         z-index: -1;
+        @media(max-width: 768px){
+          left: 7px;
+        }
       }
       &:hover{
         cursor: pointer;
@@ -55,6 +68,9 @@
           bottom: 8px;
           left: -85px;
           color: #0DF0FF;
+          @media(max-width: 768px){
+            left: -75px;
+          }
         }
         &:after{
           border-left-color: #0DF0FF;
@@ -71,6 +87,11 @@
     color: #393939;
     padding-bottom: 25px;
     max-width: 245px;
+    @media(max-width: 768px){
+      font-size: 22px;
+      line-height: 140%;
+      max-width: none;
+    }
   }
   .Text{
     font-family: Inter;

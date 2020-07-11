@@ -16,7 +16,7 @@ function LandingDesignCoast() {
               <p className={classes.Text}>Веб-студия 16.web формирует цены на услуги по разработке дизайна лендингов, учитывая следующие факторы:</p>
             </Grid>
           </Grid>
-          <Grid item container className={classes.BottomRow} spacing={10}>
+          <Grid item container className={classes.BottomRow}>
             <Grid item container sm={4} className={classes.Item}>
               <h3 className={classes.Title}>Наличие уникальных решений</h3>
               <p className={classes.Text}>Уникальная разработка всегда стоит намного дороже, чем дизайн, созданный на основе стандартного шаблона</p>

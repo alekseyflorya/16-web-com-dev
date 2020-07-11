@@ -1,6 +1,10 @@
 .PortfolioFull{
   margin-bottom: 200px;
   padding-top: 120px;
+  @media(max-width: 768px){
+    margin-bottom: 120px;
+    padding-top: 60px;
+  }
   .Headding{
     font-family: Ubuntu;
     font-style: normal;
@@ -29,12 +33,20 @@
     display: flex;
     justify-content: center;
     margin-bottom: 100px;
+    @media(max-width: 768px){
+      margin-bottom: 40px;
+    }
   }
   .gridContainer {
     display: grid;
     grid-template-columns: repeat(2, 2fr);
     grid-gap: 50px;
     grid-auto-rows: 260px;
+    @media(max-width: 768px) {
+      grid-template-columns: 4fr;
+      grid-auto-rows: 220px;
+      grid-gap: 30px;
+    }
   }
   .gridItem{
     position: relative;
@@ -46,7 +58,8 @@
       transform: translateY(-5px);
       box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
       .HoveredBlock{
-        opacity: .9;
+        opacity: 1;
+        backdrop-filter: blur(0);
         transition: all .5s;
         .HoveredArrow{
           transition: all .7s;
@@ -77,6 +90,13 @@
       padding-left: 20%;
       transition: all .5s;
       opacity: 0;
+      @media(max-width: 768px){
+        opacity: 1;
+        padding-left: 20px;
+        background: transparent;
+        justify-content: flex-end;
+        align-items: flex-start;
+      }
       a{
         text-decoration: none;
       }
@@ -98,6 +118,9 @@
         color: #FFFFFF;
         opacity: 0.6;
         margin-bottom: 40px;
+        @media(max-width: 768px){
+          margin-bottom: 20px;
+        }
       }
       .HoveredArrow{
         width: 85%;
@@ -107,6 +130,9 @@
         ransition: all .5s;
         transform: rotateY(-90deg);
         transform-origin: 0 100%;
+        @media(max-width: 768px){
+          display: none;
+        }
         &:before{
           content: '';
           display: block;

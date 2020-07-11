@@ -18,7 +18,7 @@ function FaqAccordion() {
     <section className={classes.FaqAccordion}>
       <Container fixed className={classes.Container}>
         <Grid container>
-          <Grid item container sm={4} xs={12} alignItems="flex-start">
+          <Grid item container sm={4} xs={12} alignItems="flex-start" className={classes.HeaddingBox}>
             <Grid item>
               <h2 className={classes.Headding}>Больше, чем просто работа</h2>
               <p className={classes.Text}>Внезапно, представители современных социальных резервов неоднозначны и будут рассмотрены исключительно в разрезе маркетинговых и финансовых предпосылок.</p>

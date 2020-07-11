@@ -7,20 +7,20 @@ import InputLabel from "@material-ui/core/InputLabel";
 import Input from "@material-ui/core/Input";
 import Container from "@material-ui/core/Container";
 import vacancieFormImg from "../../../assets/img/vacancie-form.jpg"
+import {Link} from "@material-ui/core";
 
 function VacancieForm() {
   return (
     <section className={classes.VacancieForm}>
       <Container fixed className={classes.Container}>
+        <h2 className={classes.Headding}>Вашей вакансии нет в списке?</h2>
         <Grid container>
-          <Grid item container sm className={classes.FormBlock}>
-            <form action=""  autoComplete="off">
+          <Grid item container sm={6} xs={12} className={classes.FormBlock}>
+            <form action=""  autoComplete="off" className={classes.VacancieForm}>
               <Grid item container
                     direction="column"
-                    style={{
-                      background: `url(${vacancieFormImg}) no-repeat`,
-                      padding: '130px 180px'
-                    }}
+                    className={classes.VacancieFormBox}
+                    style={{background: `url(${vacancieFormImg}) no-repeat`}}
               >
                 <Grid item>
                   <TextField
@@ -42,7 +42,7 @@ function VacancieForm() {
                     label="Email" />
                 </Grid>
                 <Grid item>
-                  <FormControl>
+                  <FormControl className={classes.FormControlCv}>
                     <InputLabel className={classes.InputCv} htmlFor="input-cv">Прикрепить резюме</InputLabel>
                     <Input type="file" id="input-cv" label="Прикрепить резюме" style={{visibility: 'hidden'}} />
                   </FormControl>
@@ -53,11 +53,11 @@ function VacancieForm() {
               </Grid>
             </form>
           </Grid>
-          <Grid item container sm alignItems="center">
+          <Grid item container sm={6} xs={12} alignItems="center">
             <Grid item container direction="column" alignItems="center">
               <h3 className={classes.Title}>Что дальше?</h3>
               <Grid item container className={classes.Gridlist}>
-                <Grid item className={classes.GridlistItem}>Мы с вами свяжемся в течении 24 часов. Пока посмотрите порфтолио</Grid>
+                <Grid item className={classes.GridlistItem}>Мы с вами свяжемся в течении 24 часов. Пока посмотрите <Link href={'/portfolio'}>порфтолио</Link></Grid>
                 <Grid item className={classes.GridlistItem}>Если разговор пройдет хорошо - мы пригласим вас на собеседовние</Grid>
                 <Grid item className={classes.GridlistItem}>В случае позитивного ответа - вы станете частью нашей команды!</Grid>
               </Grid>

@@ -26,7 +26,7 @@ function CompetentDesign() {
             <p className={classes.ActionText}>Если вам нужны услуги профессионалов по разработке веб-дизайна, давайте обсудим возможные варианты сотрудничества!</p>
           </Grid>
           <Grid item container sm={5} xs={12} justify="flex-end">
-            <ButtonLink title={'Обсудить проект'} />
+            <ButtonLink classNames={classes.CompetentDesignBtn} title={'Обсудить проект'} />
           </Grid>
         </Grid>
       </Container>

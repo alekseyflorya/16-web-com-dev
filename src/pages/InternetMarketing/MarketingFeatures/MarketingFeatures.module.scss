@@ -1,7 +1,7 @@
 .MarketingFeatures{
   margin-bottom: 220px;
-  .Container{
-
+  @media(max-width: 768px){
+    margin-bottom: 120px;
   }
   .Headding{
     font-family: Ubuntu;
@@ -11,12 +11,23 @@
     line-height: 52px;
     color: #393939;
     margin-bottom: 120px;
+    @media(max-width: 768px){
+      font-size: 28px;
+      line-height: 120%;
+      margin-bottom: 60px;
+    }
   }
   .MarketingFeaturesBox{
     margin-bottom: 220px;
+    @media(max-width: 768px){
+      margin-bottom: 120px;
+    }
   }
   .Image{
-
+    @media(max-width: 768px){
+      max-width: 100%;
+      margin-bottom: 40px;
+    }
   }
   .SubTitle{
     font-family: Ubuntu;
@@ -28,6 +39,11 @@
     margin-top: 40px;
     margin-bottom: 40px;
     margin-left: 120px;
+    @media(max-width: 768px){
+      font-size: 16px;
+      line-height: 140%;
+      margin-left: 0;
+    }
   }
   .Text{
     font-family: Inter;
@@ -38,6 +54,9 @@
     color: #8B8B8B;
     margin-bottom: 20px;
     margin-left: 120px;
+    @media(max-width: 768px){
+      margin-left: 0;
+    }
   }
   .ActionText{
     font-family: Ubuntu;

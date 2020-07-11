@@ -20,13 +20,13 @@ function OpenedVacancies() {
   return (
     <section className={classes.OpenedVacancies}>
       <Container fixed className={classes.Container}>
-        <Grid container>
-          <Grid item sm className={classes.Vacancies}>
-            <h2 className={classes.Headding}>Открытые вакансии</h2>
+        <h2 className={classes.Headding}>Открытые вакансии</h2>
+        <Grid container className={classes.VacanciesBlock}>
+          <Grid item sm={6} xs={12} className={classes.Vacancies}>
             {openedVacancies}
           </Grid>
-          <Grid item sm className={classes.VacanciesImg}>
-            <img src={openedVacanciesImg} alt=""/>
+          <Grid item sm={6} xs={12} className={classes.VacanciesImg}>
+            <img className={classes.OpenedVacanciesImg} src={openedVacanciesImg} alt=""/>
           </Grid>
         </Grid>
       </Container>

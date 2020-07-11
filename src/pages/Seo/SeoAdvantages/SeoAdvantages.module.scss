@@ -10,6 +10,11 @@
     font-size: 43px;
     line-height: 52px;
     color: #393939;
+    @media(max-width: 768px){
+      font-size: 28px;
+      line-height: 120%;
+      margin-bottom: 40px;
+    }
   }
   .HeaddingText{
     font-family: Inter;
@@ -26,6 +31,10 @@
       padding-left: 30px;
       margin: 0 45px 80px 45px;
       z-index: 3;
+      @media(max-width: 768px){
+        padding-left: 25px;
+        margin: 0 0 60px 36px;
+      }
       &:before{
         counter-increment: numbers;
         content: '0' counter(numbers);
@@ -59,6 +68,9 @@
         left: 0;
         top: 0;
         z-index: -1;
+        @media(max-width: 768px){
+          left: 6px;
+        }
       }
       &:hover{
         cursor: pointer;
@@ -66,6 +78,9 @@
           bottom: 8px;
           left: -85px;
           color: #0DF0FF;
+          @media(max-width: 768px){
+            left: -75px;
+          }
         }
         &:after{
           border-left-color: #0DF0FF;

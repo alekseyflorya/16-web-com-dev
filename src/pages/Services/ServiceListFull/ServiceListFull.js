@@ -10,7 +10,7 @@ function ServiceListFull() {
     <section className={classes.ServiceListFull}>
       <Container fixed className={classes.Container}>
         <div className={classes.Cards}>
-          <Grid container spacing={10} justify="space-between">
+          <Grid container justify="space-between">
             <Grid item sm={4} className={classes.CardBox}>
               <div className={classes.Card}>
                 <Link to="/sitecreating" className={classes.CardName}>Создание сайтов</Link>
@@ -55,9 +55,6 @@ function ServiceListFull() {
               </div>
             </Grid>
           </Grid>
-        </div>
-        <div className={classes.ServiceListBtn}>
-          <ButtonLink path={'/services'} title={'Все услуги'}/>
         </div>
       </Container>
     </section>

@@ -1,17 +1,26 @@
 .LandingDesignCoast{
   margin-top: 120px;
   margin-bottom: 220px;
+  @media(max-width: 768px) {
+    margin-top: 0;
+    margin-bottom: 60px;
+  }
   .Container{
 
   }
   .TopRow{
     margin-bottom: 120px;
+    @media(max-width: 768px) {
+      margin-bottom: 60px;
+    }
   }
   .BottomRow{
     justify-content: flex-end;
   }
   .Item{
-
+    @media(max-width: 768px) {
+      margin-bottom: 60px;
+    }
   }
   .Headding{
     font-family: Ubuntu;
@@ -20,6 +29,11 @@
     font-size: 43px;
     line-height: 52px;
     color: #393939;
+    @media(max-width: 768px) {
+      font-size: 28px;
+      line-height: 120%;
+      margin-bottom: 40px;
+    }
   }
   .Title{
     font-family: Ubuntu;
@@ -29,6 +43,11 @@
     line-height: 140%;
     color: #292525;
     margin-bottom: 20px;
+    @media(max-width: 768px) {
+      font-size: 16px;
+      line-height: 140%;
+      margin-bottom: 15px;
+    }
   }
   .Text{
     font-family: Inter;

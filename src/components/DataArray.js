@@ -381,7 +381,7 @@ const DataArray = [
     component: () => <NotFound />,
     headdingtitle:'404',
     description: 'Страница отсутствует или не найдена',
-
+    exact: true
   }
 ];
 

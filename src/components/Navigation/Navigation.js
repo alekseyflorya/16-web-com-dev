@@ -1,11 +1,12 @@
 import React from 'react';
 import classes from './Navigation.module.scss';
-import {Link as SocialLink, Link} from "react-router-dom";
+import {Link} from "react-router-dom";
 import DataArray from "../DataArray";
 
 import { makeStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import Grid from "@material-ui/core/Grid";
+import {Link as SocialLink} from "@material-ui/core";
 import menuBg from '../../assets/img/menu-bg.jpg';
 import {MobileBehanceIcon, MobileDribbleIcon, MobileFbIcon, MobileInstaIcon, MobileLinkedIcon} from "../Icons";
 
@@ -199,19 +200,19 @@ function Navigation({toggleDrawer, isOpen, togglePortfolioSubmenu, toggleService
                 }
               })}
               <Grid item container xs={12} className={classes.MobileSocialGrid}>
-                <SocialLink className={classes.MobileSocialLink} href="#">
+                <SocialLink className={classes.MobileSocialLink} to="#">
                   <MobileInstaIcon width="23" height="23" viewBox="0 0 23 23" />
                 </SocialLink>
-                <SocialLink className={classes.MobileSocialLink} href="#">
+                <SocialLink className={classes.MobileSocialLink} to="#">
                   <MobileFbIcon width="11" height="23" viewBox="0 0 11 23" />
                 </SocialLink>
-                <SocialLink className={classes.MobileSocialLink} href="#">
+                <SocialLink className={classes.MobileSocialLink} to="#">
                   <MobileLinkedIcon width="23" height="23" viewBox="0 0 23 23" />
                 </SocialLink>
-                <SocialLink className={classes.MobileSocialLink} href="#">
+                <SocialLink className={classes.MobileSocialLink} to="#">
                   <MobileBehanceIcon width="31" height="19" viewBox="0 0 31 19" />
                 </SocialLink>
-                <SocialLink className={classes.MobileSocialLink} href="#">
+                <SocialLink className={classes.MobileSocialLink} to="#">
                   <MobileDribbleIcon width="27" height="27" viewBox="0 0 27 27" />
                 </SocialLink>
               </Grid>

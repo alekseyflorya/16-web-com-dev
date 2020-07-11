@@ -1,5 +1,8 @@
 .CompetentDesign{
   margin-bottom: 220px;
+  @media(max-width: 768px) {
+    margin-bottom: 120px;
+  }
   .Container{
 
   }
@@ -11,12 +14,23 @@
     line-height: 52px;
     color: #393939;
     margin-bottom: 120px;
+    @media(max-width: 768px) {
+      font-size: 28px;
+      line-height: 140%;
+      margin-bottom: 60px;
+    }
   }
   .CompetentDesignBox{
     margin-bottom: 220px;
+    @media(max-width: 768px) {
+      margin-bottom: 120px;
+    }
   }
   .Image{
-
+    @media(max-width: 768px) {
+      max-width: 100%;
+      margin-bottom: 40px;
+    }
   }
   .Text{
     font-family: Inter;
@@ -27,6 +41,9 @@
     color: #8B8B8B;
     margin-bottom: 20px;
     margin-left: 100px;
+    @media(max-width: 768px) {
+      margin-left: 0;
+    }
   }
   .ActionText{
     font-family: Ubuntu;
@@ -35,5 +52,13 @@
     font-size: 24px;
     line-height: 140%;
     color: #292525;
+    @media(max-width: 768px) {
+      font-size: 20px;
+      line-height: 140%;
+      margin-bottom: 40px;
+    }
+  }
+  .CompetentDesignBtn{
+    width: 100%;
   }
 }

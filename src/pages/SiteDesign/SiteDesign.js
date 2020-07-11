@@ -13,7 +13,7 @@ function SiteDesign(){
     <div className={classes.SitePrototype}>
       <Header />
       <SiteDesignProcess />
-      <SiteDesignCost /> />
+      <SiteDesignCost />
       <PortfolioShort />
       <Reviews />
       <ServiceListSort />

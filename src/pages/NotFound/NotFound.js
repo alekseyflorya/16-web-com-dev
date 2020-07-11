@@ -18,7 +18,7 @@ function NotFound() {
         <Grid item container sm={6} className={classes.NotFoundRight}>
           <Grid item container className={classes.HeaddingBox}>
             <h1 className={classes.Headding}>Упсс, 404!</h1>
-            <p className={classes.Text}>Скорее всего этой больше нет или Вам просто нравится изучать 404 страницы :) Переходите на главную страницу или вернитесь назад.</p>
+            <p className={classes.Text}>Скорее всего этой страницы больше нет или Вам просто нравится изучать 404 страницы :) Переходите на главную страницу или вернитесь назад.</p>
           </Grid>
           <Grid item container justify="space-between">
             <ButtonLink title={'Подробнее о нас'} path={'/about'} />

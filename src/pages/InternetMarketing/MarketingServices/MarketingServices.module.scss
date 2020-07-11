@@ -1,5 +1,8 @@
 .MarketingServices{
   margin-bottom: 220px;
+  @media(max-width: 768px){
+    margin-bottom: 40px;
+  }
   .Container{
 
   }
@@ -11,9 +14,17 @@
     line-height: 52px;
     color: #393939;
     margin-bottom: 120px;
+    @media(max-width: 768px){
+      font-size: 28px;
+      line-height: 120%;
+      margin-bottom: 60px;
+    }
   }
   .Cards{
     margin-bottom: 120px;
+    @media(max-width: 768px){
+      margin-bottom: 60px;
+    }
   }
   .CardBox{
 
@@ -21,6 +32,10 @@
   .Card{
     padding: 32px;
     transition: all .5s;
+    @media(max-width: 768px){
+      padding: 16px;
+      margin: -16px -16px 40px -16px;
+    }
     &:hover{
       border-color: transparent;
       transform: translateY(-5px);
@@ -40,6 +55,11 @@
     align-items: center;
     margin-bottom: 20px;
     text-decoration: none;
+    @media(max-width: 768px){
+      font-size: 22px;
+      line-height: 140%;
+      margin-bottom: 10px;
+    }
     &:after{
       content: '';
       position: absolute;
@@ -50,7 +70,12 @@
       border-right: 2px solid black;
       right: 0;
       transform: rotate(45deg);
-      top: calc(50% - 6px)
+      top: calc(50% - 6px);
+      @media(max-width: 768px){
+        right: 10px;
+        width: 8px;
+        height: 8px;
+      }
     }
   }
   .CardText{

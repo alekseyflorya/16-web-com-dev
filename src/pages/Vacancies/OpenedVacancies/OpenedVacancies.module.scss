@@ -1,5 +1,8 @@
 .OpenedVacancies{
   margin-bottom: 300px;
+  @media(max-width: 768px){
+    margin-bottom: 120px;
+  }
   .Container{
 
   }
@@ -11,6 +14,10 @@
     line-height: 52px;
     color: #393939;
     margin-bottom: 45px;
+    @media(max-width: 768px){
+      font-size: 28px;
+      line-height: 120%;
+    }
   }
   .Description{
     font-family: Inter;
@@ -22,11 +29,24 @@
     margin-bottom: 90px;
     max-width: 550px;
   }
+  .VacanciesBlock{
+
+  }
   .Vacancies{
     padding-right: 60px;
+    @media(max-width: 768px){
+      padding-right: 0;
+      margin-bottom: 40px;
+    }
   }
   .VacanciesImg{
     padding-left: 60px;
+    @media(max-width: 768px){
+      padding-left: 0;
+    }
+  }
+  .OpenedVacanciesImg{
+    max-width: 100%;
   }
   .Vacancy{
     border: 2px solid #E9E9E9;
@@ -36,6 +56,10 @@
     margin-bottom: 40px;
     text-decoration: none;
     transition: all .5s;
+    @media(max-width: 768px) {
+      margin-bottom: 20px;
+      padding: 15px;
+    }
     &:last-child{
       margin-bottom: 0;
     }
@@ -51,7 +75,10 @@
       font-size: 22px;
       line-height: 31px;
       color: #292525;
-
+      @media(max-width: 768px) {
+        font-size: 16px;
+        line-height: 140%;
+      }
     }
     .CityTime{
       font-family: Ubuntu;
@@ -61,6 +88,10 @@
       line-height: 28px;
       color: #D5D5D5;
       position: relative;
+      @media(max-width: 768px) {
+        font-size: 14px;
+        line-height: 140%;
+      }
       &:after{
         content: '';
         display: inline-block;
@@ -70,6 +101,11 @@
         border-right: 2px solid #D5D5D5;
         transform: rotate(45deg);
         margin-left: 35px;
+        @media(max-width: 768px) {
+          width: 8px;
+          height: 8px;
+          margin-left: 5px;
+        }
       }
     }
   }

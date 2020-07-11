@@ -11,6 +11,7 @@ import philosophyImage2 from "../../../assets/img/philosophy-2.jpg";
 import philosophyImage3 from "../../../assets/img/philosophy-3.jpg";
 import philosophyImage4 from "../../../assets/img/philosophy-4.jpg";
 import philosophyImage5 from "../../../assets/img/philosophy-5.jpg";
+import {Hidden} from "@material-ui/core";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -24,7 +25,7 @@ function TabPanel(props) {
       {...other}
     >
       {value === index && (
-        <Box>
+        <Box className={classes.TabPanelBox}>
           {children}
         </Box>
       )}
@@ -43,21 +44,25 @@ function Philosophy() {
   return (
     <section className={classes.Philosophy}>
       <Container fixed className={classes.Container}>
-        <Grid container>
-
-          <Grid item container sm={6} className={classes.LeftColumn}>
-            <h2 className={classes.Headding}>Наша филисофия</h2>
+        <Hidden smUp>
+          <h2 className={classes.Headding}>Наша филисофия</h2>
+        </Hidden>
+        <Grid container className={classes.PhilosophyBox}>
+          <Grid item container sm={6} xs={12} className={classes.LeftColumn}>
+            <Hidden only="xs">
+              <h2 className={classes.Headding}>Наша филисофия</h2>
+            </Hidden>
             <p className={classes.Text}>Ясность нашей позиции очевидна: выбранный нами инновационный путь способствует повышению качества переосмысления внешнеэкономических политик. С учётом сложившейся международной обстановки.</p>
             <p className={classes.Text}>Ясность нашей позиции очевидна: выбранный нами инновационный путь способствует повышению качества переосмысления внешнеэкономических политик. С учётом сложившейся международной обстановки.</p>
-            <Grid item container sm={8} className={classes.GridList}>
-              <Grid item container sm={6} className={classes.GridListItem}>Инновацион</Grid>
-              <Grid item container sm={6} className={classes.GridListItem}>Инновацион</Grid>
-              <Grid item container sm={6} className={classes.GridListItem}>Инновацион</Grid>
-              <Grid item container sm={6} className={classes.GridListItem}>Инновацион</Grid>
+            <Grid item container sm={8} xs={12} className={classes.GridList}>
+              <Grid item container sm={6} xs={6} className={classes.GridListItem}>Инновацион</Grid>
+              <Grid item container sm={6} xs={6} className={classes.GridListItem}>Инновацион</Grid>
+              <Grid item container sm={6} xs={6} className={classes.GridListItem}>Инновацион</Grid>
+              <Grid item container sm={6} xs={6} className={classes.GridListItem}>Инновацион</Grid>
             </Grid>
           </Grid>
 
-          <Grid item container sm={6} className={classes.RightColumn}>
+          <Grid item container sm={6} xs={12} className={classes.RightColumn}>
             <div className={classes.PhilosophyTabsBox}>
 
               <TabPanel

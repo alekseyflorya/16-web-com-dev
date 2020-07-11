@@ -1,5 +1,8 @@
 .FineQuality{
   margin-bottom: 220px;
+  @media(max-width: 768px){
+    margin-bottom: 120px;
+  }
   .Headding{
     font-family: Ubuntu;
     font-style: normal;
@@ -8,12 +11,22 @@
     line-height: 52px;
     color: #393939;
     margin-bottom: 120px;
+    @media(max-width: 768px){
+      font-size: 28px;
+      line-height: 120%;
+      margin-bottom: 60px;
+    }
   }
   .Advantages{
     counter-reset: numbers;
     .Item{
-      margin: 20px;
-      margin-bottom: 80px;
+      padding: 20px;
+      margin-bottom: 60px;
+      @media(max-width: 768px){
+        padding: 0 10px 20px 0;
+        margin-bottom: 20px;
+        min-height: 86px;
+      }
     }
   }
   .Text{

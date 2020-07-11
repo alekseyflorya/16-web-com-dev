@@ -23,7 +23,7 @@ function PricesList() {
                   <Grid item sm={3}>
                     <img className={classes.PriceLogo} src={tildaLogo} alt=""/>
                   </Grid>
-                  <Grid item sm={9} direction="column">
+                  <Grid item sm={9} direction="column" className={classes.TitlePriceBox}>
                     <h3 className={classes.Title}>Сайт на Tilda</h3>
                     <p className={classes.Price}>от 100 $</p>
                   </Grid>
@@ -45,7 +45,7 @@ function PricesList() {
                   <Grid item sm={3}>
                     <img className={classes.PriceLogo} src={landingLogo} alt=""/>
                   </Grid>
-                  <Grid item sm={9} direction="column">
+                  <Grid item sm={9} direction="column" className={classes.TitlePriceBox}>
                     <h3 className={classes.Title}>Landing page</h3>
                     <p className={classes.Price}>от 500 $</p>
                   </Grid>
@@ -67,7 +67,7 @@ function PricesList() {
                   <Grid item sm={3}>
                     <img className={classes.PriceLogo} src={visitkaLogo} alt=""/>
                   </Grid>
-                  <Grid item sm={9} direction="column">
+                  <Grid item sm={9} direction="column" className={classes.TitlePriceBox}>
                     <h3 className={classes.Title}>Cайт-визитка</h3>
                     <p className={classes.Price}>от 500 $</p>
                   </Grid>
@@ -89,7 +89,7 @@ function PricesList() {
                   <Grid item sm={3}>
                     <img className={classes.PriceLogo} src={portalLogo} alt=""/>
                   </Grid>
-                  <Grid item sm={9} direction="column">
+                  <Grid item sm={9} direction="column" className={classes.TitlePriceBox}>
                     <h3 className={classes.Title}>Портал</h3>
                     <p className={classes.Price}>от 600 $</p>
                   </Grid>
@@ -111,7 +111,7 @@ function PricesList() {
                   <Grid item sm={3}>
                     <img className={classes.PriceLogo} src={corporateLogo} alt=""/>
                   </Grid>
-                  <Grid item sm={9} direction="column">
+                  <Grid item sm={9} direction="column" className={classes.TitlePriceBox}>
                     <h3 className={classes.Title}>Корпоративный сайт</h3>
                     <p className={classes.Price}>от 600 $</p>
                   </Grid>
@@ -133,7 +133,7 @@ function PricesList() {
                   <Grid item sm={3}>
                     <img className={classes.PriceLogo} src={storeLogo} alt=""/>
                   </Grid>
-                  <Grid item sm={9} direction="column">
+                  <Grid item sm={9} direction="column" className={classes.TitlePriceBox}>
                     <h3 className={classes.Title}>Интернет-магазин</h3>
                     <p className={classes.Price}>от 1500 $</p>
                   </Grid>
@@ -158,7 +158,7 @@ function PricesList() {
                   <Grid item sm={3}>
                     <img className={classes.PriceLogo} src={tildaLogo} alt=""/>
                   </Grid>
-                  <Grid item sm={9} direction="column">
+                  <Grid item sm={9} direction="column" className={classes.TitlePriceBox}>
                     <h3 className={classes.Title}>SEO</h3>
                     <p className={classes.Price}>от 600 $</p>
                   </Grid>
@@ -180,7 +180,7 @@ function PricesList() {
                   <Grid item sm={3}>
                     <img className={classes.PriceLogo} src={landingLogo} alt=""/>
                   </Grid>
-                  <Grid item sm={9} direction="column">
+                  <Grid item sm={9} direction="column" className={classes.TitlePriceBox}>
                     <h3 className={classes.Title}>SMM</h3>
                     <p className={classes.Price}>от 1500 $</p>
                   </Grid>

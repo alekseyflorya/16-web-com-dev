@@ -1,5 +1,8 @@
 .SitePrototypeCost{
   margin-bottom: 220px;
+  @media(max-width: 768px) {
+    margin-bottom: 120px;
+  }
   .Headding{
     font-family: Ubuntu;
     font-style: normal;
@@ -9,6 +12,12 @@
     color: #393939;
     max-width: 80%;
     margin-bottom: 100px;
+    @media(max-width: 768px) {
+      font-size: 28px;
+      line-height: 120%;
+      margin-bottom: 60px;
+      max-width: none;
+    }
   }
   .Text{
     font-family: Inter;
@@ -21,6 +30,9 @@
   .FactorsBox{
     .FactorsLeft{
       padding-right: 100px;
+      @media(max-width: 768px) {
+        padding-right: 0;
+      }
     }
     .Text{
       margin-bottom: 20px;
