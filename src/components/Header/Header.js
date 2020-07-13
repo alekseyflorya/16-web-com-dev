@@ -22,7 +22,7 @@ import TextField from '@material-ui/core/TextField';
 import Breef from '../Breef'
 
 export default function Header({notFound}) {
-  const {headdingtitle, description, bgimage } = DataArray.find(page => page.path === window.location.pathname);
+  const {headdingtitle, description, bgimage} = DataArray.find(page => page.path === window.location.pathname);
 
   const [state, setState] = React.useState({
     navOpen: false,
@@ -173,10 +173,10 @@ export default function Header({notFound}) {
                 </Grid>
               </>
             ):''}
-            {(window.location.pathname === '/404') ? (
+            {(window.location.pathname === '/not-found') ? (
               notFound
             ) : '' }
-            {(window.location.pathname !== '/404' && window.location.pathname !== '/contact') ? (
+            {(window.location.pathname !== '/not-found' && window.location.pathname !== '/contact') ? (
           <Grid item container sm={11} xs={12} style={{marginBottom: -80}}>
             <Grid item container sm={9} sx={12} justify="center" alignItems="center" className={classes.HeaddingBox}
             >

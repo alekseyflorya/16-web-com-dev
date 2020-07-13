@@ -1,7 +1,7 @@
-.PpcCost{
+.EmailMarketingFeatures{
   margin-bottom: 220px;
-  @media(max-width: 768px){
-    margin-bottom: 120px;
+  .HeaddingBox{
+    margin-bottom: 100px;
   }
   .Headding{
     font-family: Ubuntu;
@@ -10,14 +10,6 @@
     font-size: 43px;
     line-height: 52px;
     color: #393939;
-    max-width: 80%;
-    margin-bottom: 100px;
-    @media(max-width: 768px){
-      max-width: 100%;
-      margin-bottom: 50px;
-      font-size: 28px;
-      line-height: 120%;
-    }
   }
   .Text{
     font-family: Inter;
@@ -27,41 +19,29 @@
     line-height: 22px;
     color: #8B8B8B;
   }
-  .FactorsBox{
-    .FactorsLeft{
-      padding-right: 100px;
-      @media(max-width: 768px){
-        padding-right: 0;
-      }
-    }
-    .Text{
-      margin-bottom: 20px;
-    }
-  }
   .GridList{
-    .Text{
-      margin-bottom: 30px;
-    }
+    padding-left: 80px;
     .GridListItem{
       font-family: Inter;
       font-style: normal;
-      font-weight: normal;
+      font-weight: 700;
       font-size: 16px;
       line-height: 140%;
-      color: #8B8B8B;
+      color: #292525;
       position: relative;
       padding-left: 30px;
-      margin-bottom: 20px;
+      margin-top: 30px;
+      padding-right: 180px;
       &:before{
         content: '';
         display: inline-block;
         box-sizing: border-box;
         position: absolute;
-        width: 8px;
-        height: 8px;
-        background: #0DF0FF;
+        width: 10px;
+        height: 100%;
+        border: 1px solid #0DF0FF;
         left: 0;
-        top: 6px;
+        top: 0;
       }
     }
   }

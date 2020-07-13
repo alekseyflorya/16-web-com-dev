@@ -8,6 +8,11 @@
     line-height: 52px;
     color: #393939;
     margin-bottom: 120px;
+    @media(max-width: 768px){
+      font-size: 28px;
+      line-height: 120%;
+      margin-bottom: 60px;
+    }
   }
   .HeaddingText{
     font-family: Inter;
@@ -16,11 +21,17 @@
     font-size: 16px;
     line-height: 140%;
     color: #8B8B8B;
+    @media(max-width: 768px){
+      margin-bottom: 40px;
+    }
   }
   .PpcProcessList{
     counter-reset: numbers;
     .Card{
       height: 230px;
+      @media(max-width: 768px){
+        height: 260px;
+      }
     }
     .Item{
       position: relative;
@@ -30,6 +41,10 @@
       z-index: 3;
       overflow: hidden;
       transition: all .5s ease;
+      @media(max-width: 768px){
+        padding: 40px 35px;
+        margin: 0 0px 50px;
+      }
       &:before{
         counter-increment: numbers;
         content: '0' counter(numbers);
@@ -65,7 +80,7 @@
         }
         &:before{
           color: #0df0ff;
-          bottom: -10px;
+          bottom: -20px;
         }
       }
     }
@@ -81,6 +96,11 @@
     transform-origin: top;
     transform: rotateX(0deg);
     transition: all .4s .2s ease;
+    @media(max-width: 768px){
+      font-size: 20px;
+      line-height: 140%;
+      min-height: 127px;
+    }
   }
   .Text{
     font-family: Inter;
@@ -97,11 +117,22 @@
     transform-origin: bottom;
     transform: rotateX(90deg);
     transition: all .4s ease;
+    @media(max-width: 768px){
+      padding: 20px 20px;
+      font-size: 14px;
+      line-height: 140%;
+    }
   }
 }
 .PpcResult{
   margin-bottom: 220px;
+  @media(max-width: 768px){
+    margin-bottom: 120px;
+  }
   .HeaddingText{
     padding-right: 80px;
+    @media(max-width: 768px){
+      padding-right: 0;
+    }
   }
 }

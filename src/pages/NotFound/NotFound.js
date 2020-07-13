@@ -5,9 +5,6 @@ import notFoundImg from "../../assets/img/404.jpg";
 import Grid from "@material-ui/core/Grid";
 import {ButtonLink} from "../../components/UI/ButtonLink";
 
-
-
-
 function NotFound() {
   const NotFoundContent = () =>  {
     return (

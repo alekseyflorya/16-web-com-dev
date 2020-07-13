@@ -1,16 +1,26 @@
 .SmmCoast{
   margin-bottom: 220px;
+  @media(max-width: 768px){
+    margin-bottom: 120px;
+  }
   .Container{
 
   }
   .LeftColumn{
     padding-right: 100px;
+    @media(max-width: 768px){
+      padding-right: 0;
+    }
   }
   .RightColumn{
-    img{
-      display: block;
-      max-width: 100%;
-      height: auto;
+
+  }
+  .SmmCoastImg{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    @media(max-width: 768px){
+      margin-bottom: 40px;
     }
   }
   .Headding{
@@ -21,6 +31,10 @@
     line-height: 52px;
     color: #393939;
     margin-bottom: 60px;
+    @media(max-width: 768px){
+      font-size: 28px;
+      line-height: 120%;
+    }
   }
   .Text{
     font-family: Inter;
@@ -56,6 +70,9 @@
 }
 .SmmAction{
   margin-bottom: 220px;
+  @media(max-width: 768px){
+    margin-bottom: 120px;
+  }
   .Headding{
     font-family: Ubuntu;
     font-style: normal;
@@ -64,6 +81,10 @@
     line-height: 52px;
     color: #393939;
     margin-bottom: 60px;
+    @media(max-width: 768px){
+      font-size: 28px;
+      line-height: 120%;
+    }
   }
   .Text{
     font-family: Inter;
@@ -73,9 +94,18 @@
     line-height: 22px;
     color: #8B8B8B;
   }
+  .SmmActionBtn{
+    @media(max-width: 768px){
+      margin-top: 60px;
+      width: 100%;
+    }
+  }
 }
 .ComplexSmm{
   margin-bottom: 220px;
+  @media(max-width: 768px){
+    margin-bottom: 120px;
+  }
   .Headding{
     font-family: Ubuntu;
     font-style: normal;
@@ -84,6 +114,10 @@
     line-height: 52px;
     color: #393939;
     margin-bottom: 60px;
+    @media(max-width: 768px){
+      font-size: 28px;
+      line-height: 120%;
+    }
   }
   .Text{
     font-family: Inter;
@@ -93,6 +127,10 @@
     line-height: 22px;
     color: #8B8B8B;
     padding-left: 70px;
+    @media(max-width: 768px){
+      padding-left: 0;
+      margin-bottom: 10px;
+    }
   }
   .GridList{
     .GridListItem{
@@ -106,6 +144,10 @@
       padding-left: 30px;
       margin-top: 30px;
       padding-right: 120px;
+      @media(max-width: 768px){
+        padding-right: 0;
+        margin-top: 50px;
+      }
       &:before{
         content: '';
         display: inline-block;
@@ -119,8 +161,14 @@
       }
       &:nth-child(even){
         padding-left: 100px;
+        @media(max-width: 768px){
+          padding-left: 30px;
+        }
         &:before{
           left: 70px;
+          @media(max-width: 768px){
+            left: 0;
+          }
         }
       }
     }

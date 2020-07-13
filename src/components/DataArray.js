@@ -52,6 +52,8 @@ import smmImg from "../assets/img/smm.jpg";
 import pricesImg from "../assets/img/prices.jpg";
 import uniqueServicesImg from "../assets/img/unique-services.jpg"
 import brandingImg from "../assets/img/branding.jpg"
+import emailMarketingImg from "../assets/img/email-marketing.jpg"
+import EmailMarketingSteps from "../pages/EmailMarketing";
 import NotFound from "../pages/NotFound";
 
 const DataArray = [
@@ -373,15 +375,25 @@ const DataArray = [
     description: 'В ходе разработки концепции сайта создаётся прототип, по которому заказчик может себе представить общий вид будущего интернет-ресурса.',
     bgimage: SitePrototypeImg
   },
+  {//E-mail маркетинг
+    id: 25,
+    name: 'emailMarketing',
+    label: 'E-mail-маркетинг',
+    path: '/email-marketing',
+    parent: 'services',
+    component: () => <EmailMarketingSteps />,
+    headdingtitle:'E-mail маркетинг',
+    description: 'Мы поможем вам запустить e-mail-маркетинг с нуля и позаботимся о том, чтобы сделать его максимально эффективным.',
+    bgimage: emailMarketingImg
+  },
   {//404
     id: 404,
     name: 'notFound',
     label: '404',
-    path: '/404',
+    path: '/not-found',
     component: () => <NotFound />,
     headdingtitle:'404',
     description: 'Страница отсутствует или не найдена',
-    exact: true
   }
 ];
 

@@ -29,6 +29,12 @@ function MarketingServices() {
                 <p className={classes.CardText}>Большинство людей используют для общения и получения информации социальные сети вроде Facebook или Telegram. Именно поэтому продвижение в соцсетях помогает очень быстро и эффективно сделать популярным бренд, товар или услугу.</p>
               </div>
             </Grid>
+            <Grid item sm={4} xs={12} className={classes.CardBox}>
+              <div className={classes.Card}>
+                <Link to="/email-marketing" className={classes.CardName}>E-mail маркетинг</Link>
+                <p className={classes.CardText}>Веб-студия 16.web предлагает свои услуги в сфере e-mail-маркетинга, как по отдельности, так и комплексно. Последний вариант является более выгодным и эффективным – комплексный проект, реализуемый одним исполнителем, имеет гораздо больше шансов на успех.</p>
+              </div>
+            </Grid>
           </Grid>
         </div>
       </Container>

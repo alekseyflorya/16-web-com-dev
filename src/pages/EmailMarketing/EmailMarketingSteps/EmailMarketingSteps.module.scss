@@ -1,8 +1,5 @@
-.SmmServices{
+.EmailMarketingSteps{
   margin-bottom: 220px;
-  @media(max-width: 768px){
-    margin-bottom: 80px;
-  }
   .Container{
     counter-reset: number3;
   }
@@ -14,32 +11,19 @@
     line-height: 52px;
     color: #393939;
     margin-bottom: 80px;
-    @media(max-width: 768px){
-      font-size: 28px;
-      line-height: 120%;
-      margin-bottom: 40px;
-    }
   }
-  .SubHeadding{
+  .HeaddingBox{
     margin-bottom: 60px;
-    @media(max-width: 768px){
-      margin-bottom: 30px;
-    }
   }
   .Cards{
     margin-bottom: 150px;
-    @media(max-width: 768px){
-      margin-bottom: 60px;
-    }
+    margin-left: -30px;
+    margin-right: -30px;
   }
   .Card{
-    padding: 40px;
+    padding: 30px 75px 30px 25px;
     position: relative;
     transition: all .5s ease;
-    @media(max-width: 768px){
-      padding: 0;
-      margin-bottom: 40px;
-    }
     &:hover{
       transform: translateY(-5px);
       box-shadow: 5px 20px 30px rgba(128, 128, 128, 0.15);
@@ -47,6 +31,18 @@
         &:after{
           color: #0DF0FF;
         }
+      }
+    }
+    &:last-child{
+      padding: 0;
+      .Text{
+        max-width: 380px;
+        padding: 30px 35px;
+        border: 1px solid #0df0ff;
+      }
+      &:hover{
+        transform: none;
+        box-shadow: none;
       }
     }
   }
@@ -57,17 +53,14 @@
     font-size: 20px;
     line-height: 140%;
     color: #292525;
-    margin-bottom: 40px;
-    @media(max-width: 768px){
-      margin-bottom: 30px;
-    }
+    margin-bottom: 20px;
     &:after{
       counter-increment: number3;
       content: '0' counter(number3);
       display: block;
       position: absolute;
-      right: 40px;
-      top: 40px;
+      right: 50px;
+      top: 30px;
       font-family: Ubuntu;
       font-style: normal;
       font-weight: bold;
@@ -76,10 +69,6 @@
       color: #DADADA;
       transform: rotate(-90deg);
       transition: all .4s ease;
-      @media(max-width: 768px){
-        top: 0;
-        right: 5px;
-      }
     }
   }
   .Text{
@@ -90,13 +79,5 @@
     line-height: 140%;
     color: #8B8B8B;
     margin-bottom: 20px;
-  }
-  .ActionText{
-    font-family: Ubuntu;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 140%;
-    color: #292525;
   }
 }

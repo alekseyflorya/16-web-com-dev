@@ -4,6 +4,7 @@ import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import smmCoastImg from "../../../assets/img/smm-coast.jpg";
 import {OrderButton} from "../../../components/UI/ButtonLink";
+import {Hidden} from "@material-ui/core";
 
 function SmmCoast() {
   return (
@@ -13,6 +14,9 @@ function SmmCoast() {
           <Grid container>
             <Grid item container sm={7} className={classes.LeftColumn}>
               <h2 className={classes.Headding}>SMM-продвижение – принцип формирования стоимости услуг</h2>
+              <Hidden smUp>
+                <img className={classes.SmmCoastImg} src={smmCoastImg} alt=""/>
+              </Hidden>
               <p className={classes.Text}>Если вы планируете заказать SMM-продвижение в веб-студии 16.web, стоит разобраться, каким образом рассчитать бюджет. На услуги по SMM-продвижению цена формируется с учётом следующих факторов:</p>
               <Grid item container className={classes.GridList}>
                 <Grid item container className={classes.GridListItem}>цели и задачи вашего проекта</Grid>
@@ -23,7 +27,11 @@ function SmmCoast() {
               </Grid>
             </Grid>
             <Grid item container sm={5} className={classes.RightColumn}>
-              <img src={smmCoastImg} alt=""/>
+              <Hidden only="xs">
+                <img src={smmCoastImg} alt=""/>
+              </Hidden>
+
+
             </Grid>
           </Grid>
         </Container>
@@ -35,17 +43,24 @@ function SmmCoast() {
               <Grid item sm>
                 <h2 className={classes.Headding}>Реклама в соцсетях – путь к успешному бизнесу</h2>
               </Grid>
-              <Grid item container sm justify="flex-end">
+              <Hidden only="xs">
+                <Grid item container sm justify="flex-end">
                   <OrderButton title={'Заказать рекламу'}/>
-              </Grid>
+                </Grid>
+              </Hidden>
             </Grid>
             <Grid item container>
-              <Grid item sm>
+              <Grid item sm={6} xs={12}>
                 <p className={classes.Text}>В настоящее время львиная доля активности пользователей интернета приходится именно на социальные платформы, поэтому SMM-реклама является эффективным способом донести информацию о своём бренде до широкого круга заинтересованных потребителей.</p>
               </Grid>
-              <Grid item sm>
+              <Grid item sm={6} xs={12}>
                 <p className={classes.Text}>Наша веб-студия готова предложить вам все имеющиеся возможности для того, чтобы сделать ваш бизнес высоко востребованным среди владельцев профилей в Фейсбук, Телеграм, Инстаграм и других соцсетей, обеспечив при этом существенное увеличение продаж и рост дохода.</p>
               </Grid>
+              <Hidden smUp>
+                <Grid item container xs={12} justify="center">
+                  <OrderButton classNames={classes.SmmActionBtn} title={'Заказать рекламу'}/>
+                </Grid>
+              </Hidden>
             </Grid>
           </Grid>
         </Container>
