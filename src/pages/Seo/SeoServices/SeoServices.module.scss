@@ -41,6 +41,10 @@
     line-height: 140%;
     color: #292525;
     margin-bottom: 20px;
+    text-decoration: none;
+    &:hover{
+      color: #0df0ff;
+    }
   }
   .Text{
     font-family: Inter;

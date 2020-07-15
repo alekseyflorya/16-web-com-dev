@@ -28,6 +28,16 @@ import CorporateSite from "../pages/CorporateSite";
 import SitePrototype from "../pages/SitePrototype";
 import LandingDesign from "../pages/LandingDesign";
 import SiteDesign from "../pages/SiteDesign";
+import EmailMarketingSteps from "../pages/EmailMarketing";
+import NotFound from "../pages/NotFound";
+import Autoprostavka from "../pages/Projects/Autoprostavka";
+import Sharova from "../pages/Projects/Sharova"
+import Bronex from "../pages/Projects/Bronex";
+import SeoAudit from "../pages/SeoAudit";
+import SemanticCore from "../pages/SemanticCore";
+import InternalOptimization from "../pages/InternalOptimization"
+import ExternalOptimization from "../pages/ExternalOptimization"
+import Remarketing from "../pages/Remarketing";
 
 import homeBgImage from '../assets/img/main.jpg';
 import portfolioBgImage from '../assets/img/portfolio.jpg';
@@ -50,11 +60,17 @@ import seoImg from "../assets/img/SEO.jpg";
 import ppcImg from "../assets/img/ppc.jpg";
 import smmImg from "../assets/img/smm.jpg";
 import pricesImg from "../assets/img/prices.jpg";
-import uniqueServicesImg from "../assets/img/unique-services.jpg"
-import brandingImg from "../assets/img/branding.jpg"
-import emailMarketingImg from "../assets/img/email-marketing.jpg"
-import EmailMarketingSteps from "../pages/EmailMarketing";
-import NotFound from "../pages/NotFound";
+import uniqueServicesImg from "../assets/img/unique-services.jpg";
+import brandingImg from "../assets/img/branding.jpg";
+import emailMarketingImg from "../assets/img/email-marketing.jpg";
+import autoprostavkaImg from "../assets/img/autoprostavka.jpg";
+import seoAuditImg from "../assets/img/seo-audit.jpg";
+import semanticCoreImg from "../assets/img/semantic-core.jpg";
+import bronexImg from "../assets/img/bronex.jpg";
+import sharovaImg from "../assets/img/sharova.jpg"
+import internalOptimizationImg from "../assets/img/internal-optimization.jpg"
+import externalOptimizationImg from "../assets/img/external-optimization.jpg"
+import remarketingImg from "../assets/img/remarketing.jpg"
 
 const DataArray = [
 
@@ -473,88 +489,121 @@ const DataArray = [
     bgimage: remarketingImg,
     exact: true
   },
-  {//
-    id: 31,
-    name: 'googleShopping',
-    label: 'Настройка Гугл Шопинг',
-    path: '/google-shopping',
-    parent: 'ppc',
-    component: () => <GoogleShopping />,
-    headdingtitle:'Настройка Гугл Шопинг для активных продаж',
-    description: 'Google Shopping считается крупнейшим сервисом товарной рекламы. Грамотная настройка Гугл Шопинг — это недорогой целевой трафик.',
-    bgimage: googleShoppingImg,
+  // {//
+  //   id: 31,
+  //   name: 'googleShopping',
+  //   label: 'Настройка Гугл Шопинг',
+  //   path: '/google-shopping',
+  //   parent: 'ppc',
+  //   component: () => <GoogleShopping />,
+  //   headdingtitle:'Настройка Гугл Шопинг для активных продаж',
+  //   description: 'Google Shopping считается крупнейшим сервисом товарной рекламы. Грамотная настройка Гугл Шопинг — это недорогой целевой трафик.',
+  //   bgimage: googleShoppingImg,
+  //   exact: true
+  // },
+  // {//
+  //   id: 32,
+  //   name: 'ppcAudit',
+  //   label: 'Аудит контекстной рекламы',
+  //   path: '/ppc-audit',
+  //   parent: 'ppc',
+  //   component: () => <PpcAudit />,
+  //   headdingtitle:'Аудит контекстной рекламы',
+  //   description: 'Уверены в том, что контекстная реклама работает на максимум? Аудит контекстной рекламы даст точный ответ на этот, всегда актуальный, вопрос.',
+  //   bgimage: ppcAuditImg,
+  //   exact: true
+  // },
+  // {//
+  //   id: 33,
+  //   name: 'ppcSetting',
+  //   label: 'Настройка контекстной рекламы',
+  //   path: '/ppc-setting',
+  //   parent: 'ppc',
+  //   component: () => <PpcSetting />,
+  //   headdingtitle:'Настройка контекстной рекламы',
+  //   description: 'Контекстная реклама — это быстрый и надежный старт бизнеса в интернете. Закажите контекстную рекламу и почувствуйте все ее преимущества.',
+  //   bgimage: ppcSettingImg,
+  //   exact: true
+  // },
+  // {//
+  //   id: 34,
+  //   name: 'facebookSmm',
+  //   label: 'Продвижение в Фейсбуке',
+  //   path: '/facebook-smm',
+  //   parent: 'smm',
+  //   component: () => <FacebookSmm />,
+  //   headdingtitle:'Продвижение в Фейсбуке: позвольте бизнесу взлететь',
+  //   description: 'Facebook уже давно превратился из соцсети в мощный бизнес-инструмент. Продвижение в Facebook способствует эффективному росту вашего бизнеса.',
+  //   bgimage: facebookSmmImg,
+  //   exact: true
+  // },
+  // {//
+  //   id: 35,
+  //   name: 'instagramSmm',
+  //   label: 'Продвижение в Instagram',
+  //   path: '/instagram-smm',
+  //   parent: 'smm',
+  //   component: () => <InstagramSmm />,
+  //   headdingtitle:'Продвижение в Instagram',
+  //   description: 'Instagram — это одна из самых популярных социальных сетей. А SMM в Инстаграм — это услуга, которая сделает из этой платформы мощный инструмент для развития бизнеса.',
+  //   bgimage: instagramSmmImg,
+  //   exact: true
+  // },
+  // {//
+  //   id: 36,
+  //   name: 'otherSmm',
+  //   label: 'Продвижение в других социальных сетях',
+  //   path: '/other-smm',
+  //   parent: 'smm',
+  //   component: () => <OtherSmm />,
+  //   headdingtitle:'Продвижение в других социальных сетях',
+  //   description: 'Сегодня активное продвижение в TikTok, Twitter, Behance и Telegram — это стратегическое конкурентное преимущество.',
+  //   bgimage: otherSmmImg,
+  //   exact: true
+  // },
+  // {//
+  //   id: 37,
+  //   name: 'smmAds',
+  //   label: 'Реклама в социальных сетях',
+  //   path: '/smm-ads',
+  //   parent: 'smm',
+  //   component: () => <SmmAds />,
+  //   headdingtitle:'Реклама в социальных сетях',
+  //   description: 'Продвижение в социальных сетях — это комбинация классического SMM и таргетированной рекламы. Комплексный подход дает лучший результат.',
+  //   bgimage: smmAdsImg,
+  //   exact: true
+  // },
+  {//Autoprostavka
+    id: 38,
+    name: 'autoprostavka',
+    label: 'autoprostavka',
+    path: '/autoprostavka',
+    component: () => <Autoprostavka />,
+    headdingtitle: 'autoprostavka.com',
+    description: 'Компания “Автопроставка” специализируется на изготовлении и установке разных видов проставок и защит двигателей, а также предлагают свои услуги по восстановлению шаровых опор, замене пыльников и изготовлению металлоконструкций.',
+    bgimage: autoprostavkaImg,
     exact: true
   },
-  {//
-    id: 32,
-    name: 'ppcAudit',
-    label: 'Аудит контекстной рекламы',
-    path: '/ppc-audit',
-    parent: 'ppc',
-    component: () => <PpcAudit />,
-    headdingtitle:'Аудит контекстной рекламы',
-    description: 'Уверены в том, что контекстная реклама работает на максимум? Аудит контекстной рекламы даст точный ответ на этот, всегда актуальный, вопрос.',
-    bgimage: ppcAuditImg,
+  {//Bronex
+    id: 39,
+    name: 'bronex',
+    label: 'bronex',
+    path: '/bronex',
+    component: () => <Bronex />,
+    headdingtitle: 'Bronex',
+    description: 'Компания “Bronex” специализируется на изготовлении и установке разных видов защит двигателей',
+    bgimage: bronexImg,
     exact: true
   },
-  {//
-    id: 33,
-    name: 'ppcSetting',
-    label: 'Настройка контекстной рекламы',
-    path: '/ppc-setting',
-    parent: 'ppc',
-    component: () => <PpcSetting />,
-    headdingtitle:'Настройка контекстной рекламы',
-    description: 'Контекстная реклама — это быстрый и надежный старт бизнеса в интернете. Закажите контекстную рекламу и почувствуйте все ее преимущества.',
-    bgimage: ppcSettingImg,
-    exact: true
-  },
-  {//
-    id: 34,
-    name: 'facebookSmm',
-    label: 'Продвижение в Фейсбуке',
-    path: '/facebook-smm',
-    parent: 'smm',
-    component: () => <FacebookSmm />,
-    headdingtitle:'Продвижение в Фейсбуке: позвольте бизнесу взлететь',
-    description: 'Facebook уже давно превратился из соцсети в мощный бизнес-инструмент. Продвижение в Facebook способствует эффективному росту вашего бизнеса.',
-    bgimage: facebookSmmImg,
-    exact: true
-  },
-  {//
-    id: 35,
-    name: 'instagramSmm',
-    label: 'Продвижение в Instagram',
-    path: '/instagram-smm',
-    parent: 'smm',
-    component: () => <InstagramSmm />,
-    headdingtitle:'Продвижение в Instagram',
-    description: 'Instagram — это одна из самых популярных социальных сетей. А SMM в Инстаграм — это услуга, которая сделает из этой платформы мощный инструмент для развития бизнеса.',
-    bgimage: instagramSmmImg,
-    exact: true
-  },
-  {//
-    id: 36,
-    name: 'otherSmm',
-    label: 'Продвижение в других социальных сетях',
-    path: '/other-smm',
-    parent: 'smm',
-    component: () => <OtherSmm />,
-    headdingtitle:'Продвижение в других социальных сетях',
-    description: 'Сегодня активное продвижение в TikTok, Twitter, Behance и Telegram — это стратегическое конкурентное преимущество.',
-    bgimage: otherSmmImg,
-    exact: true
-  },
-  {//
-    id: 37,
-    name: 'smmAds',
-    label: 'Реклама в социальных сетях',
-    path: '/smm-ads',
-    parent: 'smm',
-    component: () => <SmmAds />,
-    headdingtitle:'Реклама в социальных сетях',
-    description: 'Продвижение в социальных сетях — это комбинация классического SMM и таргетированной рекламы. Комплексный подход дает лучший результат.',
-    bgimage: smmAdsImg,
+  {//Sharova
+    id: 39,
+    name: 'sharova',
+    label: 'sharova',
+    path: '/sharova',
+    component: () => <Sharova />,
+    headdingtitle: 'Восстановление шаровых опор',
+    description: 'специализируется по восстановлению шаровых опор',
+    bgimage: sharovaImg,
     exact: true
   },
   {//404

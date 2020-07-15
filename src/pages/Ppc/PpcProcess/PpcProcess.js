@@ -2,6 +2,7 @@ import React from "react";
 import classes from './PpcProcess.module.scss';
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
+import {Link} from "react-router-dom";
 
 function PpcProcess() {
   return (
@@ -37,8 +38,10 @@ function PpcProcess() {
             </Grid>
             <Grid item sm={6} xs={12} className={classes.Card}>
               <div className={classes.Item}>
+                <a href="/remarketing" className={classes.Link}>
                 <h3 className={classes.Title}>Поисковый ремаркетинг</h3>
                 <p className={classes.Text}>Поисковый ремаркетинг Google Ads охватывает тех пользователей, которые уже побывали на вашем сайте – используя специальные настройки, можно снова показать им вашу рекламу, чтобы напомнить о бренде или предлагаемом продукте.</p>
+                </a>
               </div>
             </Grid>
             <Grid item sm={6} xs={12} className={classes.Card}>

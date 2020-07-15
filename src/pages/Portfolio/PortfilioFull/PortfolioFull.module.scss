@@ -58,9 +58,11 @@
       transform: translateY(-5px);
       box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
       .HoveredBlock{
-        opacity: 1;
-        backdrop-filter: blur(0);
+        opacity: 0.8;
         transition: all .5s;
+        @media(max-width: 768px){
+          background: rgba(0,0,0,0.1);
+        }
         .HoveredArrow{
           transition: all .7s;
           transform: rotateY(0);
@@ -70,15 +72,15 @@
 
       .gridImg{
         transition: all .5s;
-        transform: scale(1.2);
+        transform: scale(1.05);
       }
     }
     .gridImg{
       transition: all .5s;
+      width: 100%;
     }
     .HoveredBlock{
       background: #292525;
-      backdrop-filter: blur(2px);
       position: absolute;
       width: 100%;
       height: 100%;
@@ -86,15 +88,14 @@
       z-index: 3;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      padding-left: 20%;
+      justify-content: flex-end;
+      padding: 60px;
       transition: all .5s;
       opacity: 0;
       @media(max-width: 768px){
         opacity: 1;
-        padding-left: 20px;
-        background: transparent;
-        justify-content: flex-end;
+        padding: 20px;
+        background: rgba(0,0,0,0.3);
         align-items: flex-start;
       }
       a{
@@ -119,11 +120,11 @@
         opacity: 0.6;
         margin-bottom: 40px;
         @media(max-width: 768px){
-          margin-bottom: 20px;
+          margin-bottom: 0;
         }
       }
       .HoveredArrow{
-        width: 85%;
+        width: calc(100% - 22px);
         height: 2px;
         background: #FFFFFF;
         position: relative;

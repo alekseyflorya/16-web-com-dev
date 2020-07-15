@@ -1,30 +1,30 @@
 import classes from './PortfilioShort/PortfolioShort.module.scss';
-import portfolioImage1 from '../assets/img/portfolio-image1.png';
-import portfolioImage2 from '../assets/img/portfolio-image2.png';
-import portfolioImage3 from '../assets/img/portfolio-image3.png';
+import portfolioImage1 from '../assets/img/sharova-portfolioshort.jpg';
+import portfolioImage2 from '../assets/img/pragma-portfolioshort.jpg';
+import portfolioImage3 from '../assets/img/autoprostavka-portfolioshort.jpg';
 
 const PortfolioData = [
   {
     img: portfolioImage1,
-    title: 'Портфолио 1',
-    type: 'Интернет-магазин',
+    title: 'Восстановление шаровых опор',
+    type: 'Лендинг-пейдж',
     position: classes.gridItem1,
-    path: '/portfolio'
+    path: '/sharova'
   },
   {
     img: portfolioImage2,
-    title: 'Портфолио 2',
-    type: 'Лендинг-пейдж',
+    title: 'Прагма',
+    type: 'Корпоративный сайт',
     position: classes.gridItem2,
-    path: '/portfolio'
+    path: '/pragma'
   },
   {
     img: portfolioImage3,
-    title: 'Портфолио 3',
-    type: 'Корпоративный сайт',
+    title: 'Автопроставка',
+    type: 'Интернет-магазин',
     position: classes.gridItem3,
-    path: '/portfolio'
-  },
+    path: '/autoprostavka'
+  }
 ];
 
 export default PortfolioData

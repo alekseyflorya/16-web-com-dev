@@ -15,10 +15,10 @@ function PortfolioFull() {
     setPage(page + 1);
   };
 
-  const Projects = FullPortfolioData.map(({img, title, type, position}, index) => (
+  const Projects = FullPortfolioData.map(({img, title, type, path, position}, index) => (
     <div className={`${classes.gridItem} ${position}`} key={index}>
       <div className={classes.HoveredBlock}>
-        <Link to='/portfolio'>
+        <Link to={path}>
           <h3 className={classes.HoveredTitle}>{title}</h3>
           <p className={classes.HoveredType}>{type}</p>
           <div className={classes.HoveredArrow}></div>
