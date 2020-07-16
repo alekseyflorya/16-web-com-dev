@@ -1,9 +1,11 @@
 import React from 'react';
+import { createBrowserHistory } from "history";
 import {BrowserRouter as Router, Route, Switch, Redirect} from 'react-router-dom';
 
 import './App.scss';
 import DataArray from './components/DataArray';
-import NotFound from "./pages/NotFound";
+
+const hist = createBrowserHistory();
 
 export default function App() {
 
@@ -12,7 +14,7 @@ export default function App() {
     });
 
   return (
-    <Router>
+    <Router history={hist}>
       <Switch>
         {Routes}
         <Redirect to="/not-found" />

@@ -6,11 +6,17 @@ import Interested from "../../components/Interested";
 import PortfolioShort from "../../components/PortfilioShort";
 import Reviews from "../../components/Reviews";
 import ServiceListSort from "../../components/ServiceListSort";
+import SeoAuditAdvantages from "./SeoAuditAdvantages";
+import SeoAuditIncludes from "./SeoAuditIncludes";
+import SeoAuditInfo from "./SeoAuditInfo";
 
 function SeoAudit() {
   return (
     <div className={classes.SeoAudit}>
       <Header />
+      <SeoAuditInfo />
+      <SeoAuditIncludes />
+      <SeoAuditAdvantages />
       <Interested />
       <PortfolioShort />
       <Reviews />
