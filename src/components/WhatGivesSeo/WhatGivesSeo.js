@@ -1,11 +1,11 @@
 import React from "react";
-import classes from './SeoAdvantages.module.scss';
+import classes from "./WhatGivesSeo.module.scss"
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 
-function SeoAdvantages() {
+function WhatGivesSeo() {
   return (
-    <section className={classes.SeoAdvantages}>
+    <section className={classes.WhatGivesSeo}>
       <Container fixed className={classes.Container}>
         <Grid container className={classes.HeaddingBlock}>
           <Grid item sm={7} xs={12}>
@@ -37,7 +37,7 @@ function SeoAdvantages() {
         </Grid>
       </Container>
     </section>
-  )
+  );
 }
 
-export default SeoAdvantages
+export default WhatGivesSeo;

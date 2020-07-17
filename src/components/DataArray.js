@@ -34,10 +34,13 @@ import Autoprostavka from "../pages/Projects/Autoprostavka";
 import Sharova from "../pages/Projects/Sharova"
 import Bronex from "../pages/Projects/Bronex";
 import SeoAudit from "../pages/SeoAudit";
-import SemanticCore from "../pages/SemanticCore";
+import OrderInfoSemanticCore from "../pages/SemanticCore";
 import InternalOptimization from "../pages/InternalOptimization"
 import ExternalOptimization from "../pages/ExternalOptimization"
 import Remarketing from "../pages/Remarketing";
+import PpcSetting from "../pages/PpcSetting";
+import GoogleShopping from "../pages/GoogleShopping";
+import PpcAudit from "../pages/PpcAudit";
 
 import homeBgImage from '../assets/img/main.jpg';
 import portfolioBgImage from '../assets/img/portfolio.jpg';
@@ -70,7 +73,10 @@ import bronexImg from "../assets/img/bronex.jpg";
 import sharovaImg from "../assets/img/sharova.jpg"
 import internalOptimizationImg from "../assets/img/internal-optimization.jpg"
 import externalOptimizationImg from "../assets/img/external-optimization.jpg"
-import remarketingImg from "../assets/img/remarketing.jpg"
+import remarketingImg from "../assets/img/remarketing.jpg";
+import ppcSettingImg from "../assets/img/ppc-setting.jpg";
+import googleShoppingImg from "../assets/img/google-shopping.jpg";
+import ppcAuditImg from "../assets/img/ppc-audit.jpg"
 
 const DataArray = [
 
@@ -132,7 +138,7 @@ const DataArray = [
     component: () => <Prices />,
     headdingtitle:'Цены',
     description: '16.web studio специализируется на веб-дизайне, создании адаптивных интернет-проектов, брендинге и рекламной фотографии.',
-    bgimage: homeBgImage,
+    bgimage: pricesImg,
     exact: true
   },
 
@@ -447,7 +453,7 @@ const DataArray = [
     label: 'Семантика сайта для продвижения',
     path: '/semantic-core',
     parent: 'seo',
-    component: () => <SemanticCore />,
+    component: () => <OrderInfoSemanticCore />,
     headdingtitle:'Семантика сайта для продвижения',
     description: 'Разработку семантического ядра сайта нужно заказать обязательно, если планируется его продвижение. Команда 16.web справиться с этой задачей.',
     bgimage: semanticCoreImg,
@@ -477,7 +483,7 @@ const DataArray = [
     bgimage: externalOptimizationImg,
     exact: true
   },
-  {//
+  {//Поисковый ремаркетинг
     id: 30,
     name: 'remarketing',
     label: 'Поисковый ремаркетинг',
@@ -489,42 +495,42 @@ const DataArray = [
     bgimage: remarketingImg,
     exact: true
   },
-  // {//
-  //   id: 31,
-  //   name: 'googleShopping',
-  //   label: 'Настройка Гугл Шопинг',
-  //   path: '/google-shopping',
-  //   parent: 'ppc',
-  //   component: () => <GoogleShopping />,
-  //   headdingtitle:'Настройка Гугл Шопинг для активных продаж',
-  //   description: 'Google Shopping считается крупнейшим сервисом товарной рекламы. Грамотная настройка Гугл Шопинг — это недорогой целевой трафик.',
-  //   bgimage: googleShoppingImg,
-  //   exact: true
-  // },
-  // {//
-  //   id: 32,
-  //   name: 'ppcAudit',
-  //   label: 'Аудит контекстной рекламы',
-  //   path: '/ppc-audit',
-  //   parent: 'ppc',
-  //   component: () => <PpcAudit />,
-  //   headdingtitle:'Аудит контекстной рекламы',
-  //   description: 'Уверены в том, что контекстная реклама работает на максимум? Аудит контекстной рекламы даст точный ответ на этот, всегда актуальный, вопрос.',
-  //   bgimage: ppcAuditImg,
-  //   exact: true
-  // },
-  // {//
-  //   id: 33,
-  //   name: 'ppcSetting',
-  //   label: 'Настройка контекстной рекламы',
-  //   path: '/ppc-setting',
-  //   parent: 'ppc',
-  //   component: () => <PpcSetting />,
-  //   headdingtitle:'Настройка контекстной рекламы',
-  //   description: 'Контекстная реклама — это быстрый и надежный старт бизнеса в интернете. Закажите контекстную рекламу и почувствуйте все ее преимущества.',
-  //   bgimage: ppcSettingImg,
-  //   exact: true
-  // },
+  {//Настройка Гугл Шопинг
+    id: 31,
+    name: 'googleShopping',
+    label: 'Настройка Гугл Шопинг',
+    path: '/google-shopping',
+    parent: 'ppc',
+    component: () => <GoogleShopping />,
+    headdingtitle:'Настройка Гугл Шопинг для активных продаж',
+    description: 'Google Shopping считается крупнейшим сервисом товарной рекламы. Грамотная настройка Гугл Шопинг — это недорогой целевой трафик.',
+    bgimage: googleShoppingImg,
+    exact: true
+  },
+  {//Аудит контекстной рекламы
+    id: 32,
+    name: 'ppcAudit',
+    label: 'Аудит контекстной рекламы',
+    path: '/ppc-audit',
+    parent: 'ppc',
+    component: () => <PpcAudit />,
+    headdingtitle:'Аудит контекстной рекламы',
+    description: 'Уверены в том, что контекстная реклама работает на максимум? Аудит контекстной рекламы даст точный ответ на этот, всегда актуальный, вопрос.',
+    bgimage: ppcAuditImg,
+    exact: true
+  },
+  {//Настройка контекстной рекламы
+    id: 33,
+    name: 'ppcSetting',
+    label: 'Настройка контекстной рекламы',
+    path: '/ppc-setting',
+    parent: 'ppc',
+    component: () => <PpcSetting />,
+    headdingtitle:'Настройка контекстной рекламы',
+    description: 'Контекстная реклама — это быстрый и надежный старт бизнеса в интернете. Закажите контекстную рекламу и почувствуйте все ее преимущества.',
+    bgimage: ppcSettingImg,
+    exact: true
+  },
   // {//
   //   id: 34,
   //   name: 'facebookSmm',
@@ -579,7 +585,7 @@ const DataArray = [
     label: 'autoprostavka',
     path: '/autoprostavka',
     component: () => <Autoprostavka />,
-    headdingtitle: 'autoprostavka.com',
+    headdingtitle: 'Автопроставка',
     description: 'Компания “Автопроставка” специализируется на изготовлении и установке разных видов проставок и защит двигателей, а также предлагают свои услуги по восстановлению шаровых опор, замене пыльников и изготовлению металлоконструкций.',
     bgimage: autoprostavkaImg,
     exact: true

@@ -6,11 +6,15 @@ import Interested from "../../components/Interested";
 import PortfolioShort from "../../components/PortfilioShort";
 import Reviews from "../../components/Reviews";
 import ServiceListSort from "../../components/ServiceListSort";
+import OrderInfoInternalOptimization from "./OrderInfoInternalOptimization";
+import InternalOptimizationIncludes from "./InternalOptimizationIncludes";
 
 function InternalOptimization() {
   return (
     <div className={classes.InternalOptimization}>
       <Header />
+      <InternalOptimizationIncludes />
+      <OrderInfoInternalOptimization />
       <Interested />
       <PortfolioShort />
       <Reviews />

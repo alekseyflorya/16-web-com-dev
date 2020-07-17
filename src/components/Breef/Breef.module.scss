@@ -54,6 +54,7 @@
       position: relative;
       right: auto;
       left: calc(100% - 70px);
+      margin-bottom: 40px;
     }
   }
   .sendBreefLabel{
@@ -206,7 +207,7 @@
   &:hover{
     background-color: #FFFFFF;
     transform: translateY(-5px);
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    box-shadow: 5px 20px 30px rgba(72, 75, 246, 0.15);
 
     & .OrderProjectLabel{
       color: #292525;
@@ -216,8 +217,15 @@
 }
 .SuccessBox{
   height: 100%;
+  @media(max-width: 768px) {
+    height: 100vh;
+    padding: 16px;
+  }
   .SuccessTop{
     margin-bottom: 120px;
+    @media(max-width: 768px) {
+      margin-bottom: 60px;
+    }
   }
   .Headding{
     font-family: Ubuntu;
@@ -227,6 +235,11 @@
     line-height: 120%;
     color: #FFFFFF;
     margin-bottom: 40px;
+    @media(max-width: 768px) {
+      font-size: 22px;
+      line-height: 140%;
+      margin-bottom: 30px;
+    }
   }
   .SuccessText{
     font-family: Ubuntu;
@@ -236,6 +249,11 @@
     line-height: 120%;
     color: #FFFFFF;
     margin-bottom: 40px;
+    @media(max-width: 768px) {
+      font-size: 16px;
+      line-height: 140%;
+      margin-bottom: 30px;
+    }
   }
   .Link{
     font-family: Ubuntu;
@@ -245,5 +263,27 @@
     line-height: 120%;
     text-decoration-line: underline;
     color: #0DF0FF;
+    @media(max-width: 768px) {
+      font-size: 16px;
+      line-height: 140%;
+    }
+  }
+  .SuccessHomeBtn{
+    @media(max-width: 768px){
+      width: 100%;
+      margin-bottom: 30px;
+      height: 70px;
+      background: #FFFFFF;
+      color: #000000;
+    }
+  }
+  .SuccessAboutBtn{
+    @media(max-width: 768px){
+      width: 100%;
+      height: 70px;
+      box-sizing: border-box;
+      background: transparent;
+      border: 2px solid #FFFFFF;
+    }
   }
 }

@@ -330,14 +330,14 @@ export default function Breef() {
         </IconButton>
         <Grid container className={classes.SuccessBox} justify="center" alignItems="center">
           <Grid item container sm={6}>
-            <Grid item sm={12} className={classes.SuccessTop}>
+            <Grid item sm={12} xs={12} className={classes.SuccessTop}>
               <h2 className={classes.Headding}>Спасибо, что заполнили бриф!</h2>
               <p className={classes.SuccessText}>Скоро с вами свяжется наш Project Manager для обсуждения всех деталей</p>
               <Link to="/portfolio" className={classes.Link}>Можете посмотреть наше портфолио</Link>
             </Grid>
-            <Grid item container sm={12} justify="space-between">
-              <ButtonLink title={'Подробнее о нас'} path={'/about'} />
-              <ButtonLink title={'На главную'} path={'/'} />
+            <Grid item container sm={12} xs={12} justify="space-between">
+              <ButtonLink classNames={classes.SuccessHomeBtn} title={'Подробнее о нас'} path={'/about'} />
+              <ButtonLink classNames={classes.SuccessAboutBtn} title={'На главную'} path={'/'} />
             </Grid>
           </Grid>
         </Grid>

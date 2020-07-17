@@ -1,0 +1,127 @@
+.OrderInfoExternalOptimization{
+  margin-top: 120px;
+  margin-bottom: 220px;
+  @media(max-width: 768px) {
+    margin-bottom: 120px;
+    margin-top: 40px;
+  }
+  .LeftColumn{
+    justify-content: flex-start;
+    padding-right: 80px;
+    @media(max-width: 768px) {
+      padding-right: 0;
+    }
+  }
+  .RightColumn{
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-bottom: 60px;
+    padding-top: 20px;
+    padding-right: 100px;
+    @media(max-width: 768px){
+      padding: 0;
+    }
+  }
+  .Headding{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 43px;
+    line-height: 52px;
+    color: #393939;
+    margin-bottom: 60px;
+    @media(max-width: 768px) {
+      font-size: 28px;
+      line-height: 120%;
+    }
+  }
+  .Text{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #8B8B8B;
+    margin-top: 40px;
+    @media(max-width: 768px) {
+      margin-bottom: 20px;
+      margin-top: 0;
+    }
+  }
+  .OrderInfoExternalOptimizationImg{
+    max-width: 100%;
+    @media(max-width: 768px) {
+      margin-bottom: 40px;
+    }
+  }
+}
+.ExternalOptimizationInfo{
+  margin-top: 120px;
+  margin-bottom: 220px;
+  @media(max-width: 768px){
+    margin-top: 60px;
+    margin-bottom: 120px;
+  }
+  .Container{
+
+  }
+  .LeftColumn{
+    justify-content: flex-start;
+    padding-right: 120px;
+    @media(max-width: 768px){
+      padding-right: 0;
+    }
+  }
+  .RightColumn{
+
+  }
+  .Headding{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 43px;
+    line-height: 52px;
+    color: #393939;
+    margin-bottom: 120px;
+    @media(max-width: 768px){
+      font-size: 28px;
+      line-height: 120%;
+      margin-bottom: 40px;
+    }
+  }
+  .Text{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #8B8B8B;
+    @media(max-width: 768px){
+      margin-bottom: 20px;
+    }
+  }
+  .GridList{
+    margin-bottom: 30px;
+    .GridListItem{
+      font-family: Inter;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 22px;
+      color: #8B8B8B;
+      position: relative;
+      padding-left: 30px;
+      margin-top: 20px;
+      &:before{
+        content: '';
+        display: inline-block;
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        background: #0DF0FF;
+        left: 0;
+        top: 6px;
+      }
+    }
+  }
+}

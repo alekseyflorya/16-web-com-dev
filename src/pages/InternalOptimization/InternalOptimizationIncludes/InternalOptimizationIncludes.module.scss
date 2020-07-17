@@ -1,0 +1,106 @@
+.SmmServices{
+  margin-bottom: 220px;
+  @media(max-width: 768px){
+    margin-bottom: 80px;
+  }
+  .Container{
+    counter-reset: number3;
+  }
+  .Headding{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 43px;
+    line-height: 52px;
+    color: #393939;
+    margin-bottom: 80px;
+    @media(max-width: 768px){
+      font-size: 28px;
+      line-height: 120%;
+      margin-bottom: 40px;
+    }
+  }
+  .SubHeadding{
+    margin-bottom: 60px;
+    @media(max-width: 768px){
+      margin-bottom: 30px;
+    }
+  }
+  .Cards{
+    margin-bottom: 150px;
+    @media(max-width: 768px){
+      margin-bottom: 60px;
+      margin-top: 40px;
+    }
+  }
+  .Card{
+    padding: 40px;
+    position: relative;
+    transition: all .5s ease;
+    @media(max-width: 768px){
+      padding: 0;
+      margin-bottom: 20px;
+    }
+    &:hover{
+      transform: translateY(-5px);
+      box-shadow: 5px 20px 30px rgba(128, 128, 128, 0.15);
+      .Title{
+        &:after{
+          color: #0DF0FF;
+        }
+      }
+    }
+  }
+  .Title{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 140%;
+    color: #292525;
+    margin-bottom: 40px;
+    padding-right: 40px;
+    @media(max-width: 768px){
+      margin-bottom: 30px;
+      font-size: 16px;
+      line-height: 140%;
+    }
+    &:after{
+      counter-increment: number3;
+      content: '0' counter(number3);
+      display: block;
+      position: absolute;
+      right: 40px;
+      top: 40px;
+      font-family: Ubuntu;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 140%;
+      color: #DADADA;
+      transform: rotate(-90deg);
+      transition: all .4s ease;
+      @media(max-width: 768px){
+        top: 0;
+        right: 5px;
+      }
+    }
+  }
+  .Text{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 140%;
+    color: #8B8B8B;
+    margin-bottom: 20px;
+  }
+  .ActionText{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 140%;
+    color: #292525;
+  }
+}

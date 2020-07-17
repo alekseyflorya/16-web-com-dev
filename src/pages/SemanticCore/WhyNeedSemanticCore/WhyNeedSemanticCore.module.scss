@@ -1,0 +1,35 @@
+.WhyNeedSemanticCore{
+  margin-bottom: 220px;
+  @media(max-width: 768px) {
+    margin-bottom: 120px;
+  }
+  .Headding{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 43px;
+    line-height: 52px;
+    color: #393939;
+    padding-right: 60px;
+    @media(max-width: 768px){
+      font-size: 28px;
+      line-height: 120%;
+      margin-bottom: 40px;
+      padding-right: 0;
+    }
+  }
+  .Text{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #8B8B8B;
+    padding-left: 60px;
+    padding-right: 100px;
+    @media(max-width: 768px){
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}

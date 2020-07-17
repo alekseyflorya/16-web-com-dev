@@ -1,0 +1,75 @@
+.ProjectingSiteInterface{
+  margin-bottom: 220px;
+  @media(max-width: 768px){
+    margin-bottom: 120px;
+  }
+  .HeaddingBox{
+    margin-bottom: 50px;
+    @media(max-width: 768px) {
+      margin-bottom: 20px;
+    }
+    .Text{
+      padding-right: 60px;
+      @media(max-width: 768px) {
+        padding-right: 0;
+      }
+    }
+  }
+  .Headding{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 43px;
+    line-height: 52px;
+    color: #393939;
+    margin-bottom: 40px;
+    @media(max-width: 768px){
+      font-size: 28px;
+      line-height: 120%;
+      margin-bottom: 30px;
+    }
+  }
+  .Text{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #8B8B8B;
+  }
+  .GridList{
+    padding-left: 80px;
+    @media(max-width: 768px){
+      padding-left: 0;
+    }
+    .GridListItem{
+      font-family: Inter;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 140%;
+      color: #292525;
+      position: relative;
+      padding-left: 30px;
+      margin-top: 30px;
+      padding-right: 120px;
+      min-height: 66px;
+      display: flex;
+      align-items: center;
+      @media(max-width: 768px){
+        padding-right: 0;
+      }
+      &:before{
+        content: '';
+        display: inline-block;
+        box-sizing: border-box;
+        position: absolute;
+        width: 10px;
+        height: 100%;
+        border: 1px solid #0DF0FF;
+        left: 0;
+        top: 0;
+      }
+    }
+  }
+}

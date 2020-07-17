@@ -1,0 +1,51 @@
+.SeoAuditAdvantages{
+  margin-top: 120px;
+  margin-bottom: 220px;
+  @media(max-width: 768px) {
+    margin-top: 60px;
+    margin-bottom: 120px;
+  }
+  .Container{
+
+  }
+  .LeftColumn{
+    justify-content: flex-start;
+    padding-right: 80px;
+    @media(max-width: 768px) {
+      padding-right: 0;
+    }
+  }
+  .RightColumn{
+
+  }
+  .Headding{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 43px;
+    line-height: 52px;
+    color: #393939;
+    margin-bottom: 60px;
+    @media(max-width: 768px) {
+      font-size: 28px;
+      line-height: 120%;
+    }
+  }
+  .Text{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #8B8B8B;
+    @media(max-width: 768px) {
+      margin-bottom: 20px;
+    }
+  }
+  .SeoAuditAdvantagestImg{
+    max-width: 100%;
+    @media(max-width: 768px) {
+      margin-bottom: 40px;
+    }
+  }
+}

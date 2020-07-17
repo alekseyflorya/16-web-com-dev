@@ -9,6 +9,7 @@ import ServiceListSort from "../../components/ServiceListSort";
 import SeoAuditAdvantages from "./SeoAuditAdvantages";
 import SeoAuditIncludes from "./SeoAuditIncludes";
 import SeoAuditInfo from "./SeoAuditInfo";
+import WhatGivesSeo from "../../components/WhatGivesSeo";
 
 function SeoAudit() {
   return (
@@ -17,6 +18,7 @@ function SeoAudit() {
       <SeoAuditInfo />
       <SeoAuditIncludes />
       <SeoAuditAdvantages />
+      <WhatGivesSeo />
       <Interested />
       <PortfolioShort />
       <Reviews />
