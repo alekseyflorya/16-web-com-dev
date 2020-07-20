@@ -1,12 +1,12 @@
 import React from "react";
-import classes from "./SmmCoast.module.scss";
+import classes from "./SmmFacebookCoast.module.scss";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import smmCoastImg from "../../../assets/img/smm-coast.jpg";
 import {OrderButton} from "../../../components/UI/ButtonLink";
 import {Hidden} from "@material-ui/core";
 
-function SmmCoast() {
+function SmmFacebookCoast() {
   return (
     <>
       <section className={classes.SmmCoast}>
@@ -102,4 +102,4 @@ function SmmCoast() {
   )
 }
 
-export default SmmCoast
+export default SmmFacebookCoast

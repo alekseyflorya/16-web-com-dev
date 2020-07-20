@@ -1,17 +1,37 @@
 import React from "react";
-import classes from "./SmmCoast.module.scss";
+import classes from "./SmmAdsCoast.module.scss";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import smmCoastImg from "../../../assets/img/smm-coast.jpg";
 import {OrderButton} from "../../../components/UI/ButtonLink";
 import {Hidden} from "@material-ui/core";
 
-function SmmCoast() {
+function SmmAdsCoast() {
   return (
     <>
       <section className={classes.SmmCoast}>
         <Container fixed className={classes.Container}>
-          <Grid container>
+          <Grid container className={classes.ServicesCost}>
+            <Grid item container sm={12} xs={12} className={classes.LeftColumn}>
+              <Grid item container sm={7} xs={12}>
+                <h2 className={classes.Headding}>Преимущества динамического ретаргетинга</h2>
+              </Grid>
+              <Grid item container sm={5} xs={12}>
+                <p className={classes.Text}>Хотите получать дополнительную прибыль, а не разочароваться в перспективных маркетинговых инструментах? Тогда закажите ведение рекламы в социальных сетях и настройку ретаргетинга в веб-студии 16.web.</p>
+              </Grid>
+            </Grid>
+            <Grid item container className={classes.GridList}>
+              <Grid item container sm={4} className={classes.GridListItem}>Увеличивает конверсию многоэтапных воронок продаж</Grid>
+              <Grid item container sm={4} className={classes.GridListItem}>Контактирует с «горячими» пользователями</Grid>
+              <Grid item container sm={4} className={classes.GridListItem}>Идеально подходит для сопутствующих продаж</Grid>
+            </Grid>
+          </Grid>
+          <Grid container className={classes.PromoBlock}>
+            <Grid item container sm={8} xs={12} className={classes.PromoBox}>
+              <p className={classes.PromoText}>Заказать ретаргетинг стоит всем компаниям, которые заинтересованы в достижении максимальной эффективности от присутствия в социальных сетях.</p>
+            </Grid>
+          </Grid>
+          <Grid container className={classes.SmmPrincipeCoast}>
             <Grid item container sm={7} className={classes.LeftColumn}>
               <h2 className={classes.Headding}>SMM-продвижение – принцип формирования стоимости услуг</h2>
               <Hidden smUp>
@@ -30,7 +50,6 @@ function SmmCoast() {
               <Hidden only="xs">
                 <img src={smmCoastImg} alt=""/>
               </Hidden>
-
             </Grid>
           </Grid>
         </Container>
@@ -102,4 +121,4 @@ function SmmCoast() {
   )
 }
 
-export default SmmCoast
+export default SmmAdsCoast

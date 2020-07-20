@@ -1,16 +1,17 @@
 import React from "react";
-import classes from "./SmmCoast.module.scss";
+import classes from "./OtherSmmCoast.module.scss";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import smmCoastImg from "../../../assets/img/smm-coast.jpg";
 import {OrderButton} from "../../../components/UI/ButtonLink";
 import {Hidden} from "@material-ui/core";
 
-function SmmCoast() {
+function OtherSmmCoast() {
   return (
     <>
       <section className={classes.SmmCoast}>
         <Container fixed className={classes.Container}>
+
           <Grid container>
             <Grid item container sm={7} className={classes.LeftColumn}>
               <h2 className={classes.Headding}>SMM-продвижение – принцип формирования стоимости услуг</h2>
@@ -30,7 +31,6 @@ function SmmCoast() {
               <Hidden only="xs">
                 <img src={smmCoastImg} alt=""/>
               </Hidden>
-
             </Grid>
           </Grid>
         </Container>
@@ -102,4 +102,4 @@ function SmmCoast() {
   )
 }
 
-export default SmmCoast
+export default OtherSmmCoast

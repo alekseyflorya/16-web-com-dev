@@ -41,6 +41,10 @@ import Remarketing from "../pages/Remarketing";
 import PpcSetting from "../pages/PpcSetting";
 import GoogleShopping from "../pages/GoogleShopping";
 import PpcAudit from "../pages/PpcAudit";
+import SmmFacebook from "../pages/SmmFacebook";
+import SmmInstagram from "../pages/SmmInstagram";
+import OtherSmm from "../pages/OtherSmm";
+import SmmAds from "../pages/SmmAds";
 
 import homeBgImage from '../assets/img/main.jpg';
 import portfolioBgImage from '../assets/img/portfolio.jpg';
@@ -76,7 +80,11 @@ import externalOptimizationImg from "../assets/img/external-optimization.jpg"
 import remarketingImg from "../assets/img/remarketing.jpg";
 import ppcSettingImg from "../assets/img/ppc-setting.jpg";
 import googleShoppingImg from "../assets/img/google-shopping.jpg";
-import ppcAuditImg from "../assets/img/ppc-audit.jpg"
+import ppcAuditImg from "../assets/img/ppc-audit.jpg";
+import smmFacebookImg from "../assets/img/facebook-smm.jpg";
+import smmInstagramImg from "../assets/img/instagram-smm.jpg";
+import otherSmmImg from "../assets/img/other-smm.jpg";
+import smmAdsImg from "../assets/img/smm-ads.jpg"
 
 const DataArray = [
 
@@ -531,54 +539,54 @@ const DataArray = [
     bgimage: ppcSettingImg,
     exact: true
   },
-  // {//
-  //   id: 34,
-  //   name: 'facebookSmm',
-  //   label: 'Продвижение в Фейсбуке',
-  //   path: '/facebook-smm',
-  //   parent: 'smm',
-  //   component: () => <FacebookSmm />,
-  //   headdingtitle:'Продвижение в Фейсбуке: позвольте бизнесу взлететь',
-  //   description: 'Facebook уже давно превратился из соцсети в мощный бизнес-инструмент. Продвижение в Facebook способствует эффективному росту вашего бизнеса.',
-  //   bgimage: facebookSmmImg,
-  //   exact: true
-  // },
-  // {//
-  //   id: 35,
-  //   name: 'instagramSmm',
-  //   label: 'Продвижение в Instagram',
-  //   path: '/instagram-smm',
-  //   parent: 'smm',
-  //   component: () => <InstagramSmm />,
-  //   headdingtitle:'Продвижение в Instagram',
-  //   description: 'Instagram — это одна из самых популярных социальных сетей. А SMM в Инстаграм — это услуга, которая сделает из этой платформы мощный инструмент для развития бизнеса.',
-  //   bgimage: instagramSmmImg,
-  //   exact: true
-  // },
-  // {//
-  //   id: 36,
-  //   name: 'otherSmm',
-  //   label: 'Продвижение в других социальных сетях',
-  //   path: '/other-smm',
-  //   parent: 'smm',
-  //   component: () => <OtherSmm />,
-  //   headdingtitle:'Продвижение в других социальных сетях',
-  //   description: 'Сегодня активное продвижение в TikTok, Twitter, Behance и Telegram — это стратегическое конкурентное преимущество.',
-  //   bgimage: otherSmmImg,
-  //   exact: true
-  // },
-  // {//
-  //   id: 37,
-  //   name: 'smmAds',
-  //   label: 'Реклама в социальных сетях',
-  //   path: '/smm-ads',
-  //   parent: 'smm',
-  //   component: () => <SmmAds />,
-  //   headdingtitle:'Реклама в социальных сетях',
-  //   description: 'Продвижение в социальных сетях — это комбинация классического SMM и таргетированной рекламы. Комплексный подход дает лучший результат.',
-  //   bgimage: smmAdsImg,
-  //   exact: true
-  // },
+  {//
+    id: 34,
+    name: 'facebookSmm',
+    label: 'Продвижение в Фейсбуке',
+    path: '/facebook-smm',
+    parent: 'smm',
+    component: () => <SmmFacebook />,
+    headdingtitle:'Продвижение в Фейсбуке: позвольте бизнесу взлететь',
+    description: 'Facebook уже давно превратился из соцсети в мощный бизнес-инструмент. Продвижение в Facebook способствует эффективному росту вашего бизнеса.',
+    bgimage: smmFacebookImg,
+    exact: true
+  },
+  {//
+    id: 35,
+    name: 'instagramSmm',
+    label: 'Продвижение в Instagram',
+    path: '/instagram-smm',
+    parent: 'smm',
+    component: () => <SmmInstagram />,
+    headdingtitle:'Продвижение в Instagram',
+    description: 'Instagram — это одна из самых популярных социальных сетей. А SMM в Инстаграм — это услуга, которая сделает из этой платформы мощный инструмент для развития бизнеса.',
+    bgimage: smmInstagramImg,
+    exact: true
+  },
+  {//
+    id: 36,
+    name: 'otherSmm',
+    label: 'Продвижение в других социальных сетях',
+    path: '/other-smm',
+    parent: 'smm',
+    component: () => <OtherSmm />,
+    headdingtitle:'Продвижение в других социальных сетях',
+    description: 'Сегодня активное продвижение в TikTok, Twitter, Behance и Telegram — это стратегическое конкурентное преимущество.',
+    bgimage: otherSmmImg,
+    exact: true
+  },
+  {//
+    id: 37,
+    name: 'smmAds',
+    label: 'Реклама в социальных сетях',
+    path: '/smm-ads',
+    parent: 'smm',
+    component: () => <SmmAds />,
+    headdingtitle:'Реклама в социальных сетях',
+    description: 'Продвижение в социальных сетях — это комбинация классического SMM и таргетированной рекламы. Комплексный подход дает лучший результат.',
+    bgimage: smmAdsImg,
+    exact: true
+  },
   {//Autoprostavka
     id: 38,
     name: 'autoprostavka',

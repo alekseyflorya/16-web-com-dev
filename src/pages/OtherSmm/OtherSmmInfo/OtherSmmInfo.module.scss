@@ -1,0 +1,210 @@
+.InfoFacebookSmm{
+  margin-top: 120px;
+  margin-bottom: 220px;
+  @media(max-width: 768px) {
+    margin-top: 60px;
+    margin-bottom: 120px;
+  }
+  .Container{
+
+  }
+  .LeftColumn{
+    justify-content: flex-start;
+    padding-right: 80px;
+    @media(max-width: 768px) {
+      padding-right: 0;
+    }
+  }
+  .RightColumn{
+
+  }
+  .Headding{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 43px;
+    line-height: 52px;
+    color: #393939;
+    margin-bottom: 60px;
+    @media(max-width: 768px) {
+      font-size: 28px;
+      line-height: 120%;
+    }
+    .styled{
+      color: #0df0ff;
+    }
+  }
+  .Text{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #8B8B8B;
+    @media(max-width: 768px) {
+      margin-bottom: 20px;
+    }
+  }
+  .GridList{
+    margin-bottom: 30px;
+    @media(max-width: 768px){
+      margin-bottom: 50px;
+    }
+    .GridListItem{
+      font-family: Inter;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 22px;
+      color: #8B8B8B;
+      position: relative;
+      padding-left: 30px;
+      margin-top: 30px;
+      &:before{
+        content: '';
+        display: inline-block;
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        background: #0DF0FF;
+        left: 0;
+        top: 6px;
+      }
+    }
+  }
+  .InfoFacebookSmmImg{
+    max-width: 100%;
+    @media(max-width: 768px) {
+      margin-bottom: 40px;
+    }
+  }
+  .TikTokSmm{
+    .Text{
+      margin-bottom: 20px;
+    }
+    margin-bottom: 220px;
+    @media(max-width: 768px) {
+      margin-bottom: 120px;
+    }
+  }
+  .TikTokSmmAdvantages{
+    .Cards{
+      margin-bottom: 150px;
+      @media(max-width: 768px){
+        margin-bottom: 60px;
+      }
+    }
+    .Card{
+      padding: 40px;
+      position: relative;
+      transition: all .5s ease;
+      @media(max-width: 768px){
+        padding: 0;
+        margin-bottom: 40px;
+      }
+      &:hover{
+        transform: translateY(-5px);
+        box-shadow: 5px 20px 30px rgba(128, 128, 128, 0.15);
+        .Title{
+          &:after{
+            color: #0DF0FF;
+          }
+        }
+      }
+    }
+    .Title{
+      font-family: Ubuntu;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 140%;
+      color: #292525;
+      margin-bottom: 40px;
+      @media(max-width: 768px){
+        margin-bottom: 30px;
+      }
+      &:after{
+        counter-increment: number3;
+        content: '0' counter(number3);
+        display: block;
+        position: absolute;
+        right: 40px;
+        top: 40px;
+        font-family: Ubuntu;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 140%;
+        color: #DADADA;
+        transform: rotate(-90deg);
+        transition: all .4s ease;
+        @media(max-width: 768px){
+          top: 0;
+          right: 5px;
+        }
+      }
+    }
+    .Link{
+      text-decoration: none;
+    }
+  }
+  .TweeterSmm{
+    margin-bottom: 220px;
+    @media(max-width: 768px) {
+      margin-bottom: 120px;
+    }
+  }
+  .BehanceSmm{
+    margin-bottom: 220px;
+    @media(max-width: 768px) {
+      margin-bottom: 120px;
+    }
+    .LeftColumn{
+      justify-content: flex-end;
+      padding-right: 0;
+    }
+    .RightColumn{
+      padding-right: 60px;
+    }
+  }
+  .TelegramSmm{
+    .RightColumn{
+      padding-right: 60px;
+      .Text{
+        margin-bottom: 20px;
+      }
+      @media(max-width: 768px){
+        padding-right: 0;
+      }
+    }
+    .LeftColumn{
+      padding-left: 60px;
+      @media(max-width: 768px){
+        padding-left: 0;
+      }
+    }
+    .GridList{
+      .GridListItem{
+        font-family: Inter;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 22px;
+        color: #8B8B8B;
+        position: relative;
+        padding-left: 30px;
+        margin-top: 30px;
+        &:before{
+          content: '';
+          display: inline-block;
+          position: absolute;
+          width: 8px;
+          height: 8px;
+          background: #0DF0FF;
+          left: 0;
+          top: 6px;
+        }
+      }
+    }
+  }
+}

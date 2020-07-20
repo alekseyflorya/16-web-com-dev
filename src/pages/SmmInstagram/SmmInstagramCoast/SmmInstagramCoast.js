@@ -1,16 +1,33 @@
 import React from "react";
-import classes from "./SmmCoast.module.scss";
+import classes from "./SmmInstagramCoast.module.scss";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import smmCoastImg from "../../../assets/img/smm-coast.jpg";
 import {OrderButton} from "../../../components/UI/ButtonLink";
 import {Hidden} from "@material-ui/core";
 
-function SmmCoast() {
+function SmmInstagramCoast() {
   return (
     <>
       <section className={classes.SmmCoast}>
         <Container fixed className={classes.Container}>
+          <Grid container className={classes.ServicesCost}>
+            <Grid item container sm={12} xs={12} className={classes.LeftColumn}>
+              <Grid item container sm={7} xs={12}>
+                <h2 className={classes.Headding}>Продвижение в Инстаграм: стоимость услуги</h2>
+              </Grid>
+              <Grid item container sm={5} xs={12}>
+                <p className={classes.Text}>Веб-студия 16.web предлагает свои услуги в сфере e-mail-маркетинга, как по отдельности, так и комплексно. Последний вариант является более выгодным и эффективным – комплексный проект, реализуемый одним исполнителем, имеет гораздо больше шансов на успех. Как правило, понятие e-mail-маркетинга под ключ подразумевает следующие виды услуг:</p>
+              </Grid>
+            </Grid>
+            <Grid item container className={classes.GridList}>
+              <Grid item container sm={3} className={classes.GridListItem}>текущее состояние аккаунта</Grid>
+              <Grid item container sm={3} className={classes.GridListItem}>ниша и активность конкурентов</Grid>
+              <Grid item container sm={3} className={classes.GridListItem}>цели и задачи раскрутки</Grid>
+              <Grid item container sm={3} className={classes.GridListItem}>узнаваемость бренда</Grid>
+            </Grid>
+          </Grid>
+
           <Grid container>
             <Grid item container sm={7} className={classes.LeftColumn}>
               <h2 className={classes.Headding}>SMM-продвижение – принцип формирования стоимости услуг</h2>
@@ -30,7 +47,6 @@ function SmmCoast() {
               <Hidden only="xs">
                 <img src={smmCoastImg} alt=""/>
               </Hidden>
-
             </Grid>
           </Grid>
         </Container>
@@ -102,4 +118,4 @@ function SmmCoast() {
   )
 }
 
-export default SmmCoast
+export default SmmInstagramCoast

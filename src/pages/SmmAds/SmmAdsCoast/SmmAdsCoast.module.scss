@@ -1,0 +1,276 @@
+.SmmCoast{
+  margin-bottom: 220px;
+  @media(max-width: 768px){
+    margin-bottom: 120px;
+  }
+  .Container{
+
+  }
+  .LeftColumn{
+    padding-right: 100px;
+    .Text{
+      padding-left: 60px;
+    }
+    @media(max-width: 768px){
+      padding-right: 0;
+      .Text{
+        padding-left: 0;
+      }
+    }
+  }
+  .SmmPrincipeCoast{
+    .Text{
+      padding-left: 0;
+    }
+  }
+  .RightColumn{
+
+  }
+  .SmmCoastImg{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    @media(max-width: 768px){
+      margin-bottom: 40px;
+    }
+  }
+  .Headding{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 43px;
+    line-height: 52px;
+    color: #393939;
+    margin-bottom: 60px;
+    @media(max-width: 768px){
+      font-size: 28px;
+      line-height: 120%;
+    }
+  }
+  .Text{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #8B8B8B;
+  }
+  .ServicesCost{
+    margin-bottom: 220px;
+    @media(max-width: 768px) {
+      margin-bottom: 120px;
+    }
+  }
+  .GridList{
+    .GridListItem{
+      font-family: Inter;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 22px;
+      color: #8B8B8B;
+      position: relative;
+      padding-left: 30px;
+      padding-right: 80px;
+      margin-top: 30px;
+      @media(max-width: 768px) {
+        padding-right: 0;
+      }
+      &:before{
+        content: '';
+        display: inline-block;
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        background: #0DF0FF;
+        left: 0;
+        top: 6px;
+      }
+    }
+  }
+  .PromoBlock{
+    margin-bottom: 300px;
+    justify-content: center;
+    align-items: center;
+    @media(max-width: 768px) {
+      margin-bottom: 200px;
+    }
+    .PromoBox{
+      position: relative;
+      &:before,
+      &:after,
+      .PromoText:before,
+      .PromoText:after{
+        content: '~';
+        display: inline-block;
+        position: absolute;
+        font-family: Ubuntu;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 65px;
+        line-height: 100%;
+        color: #0DF0FF;
+        @media(max-width: 768px) {
+          font-size: 40px;
+          line-height: 120%;
+        }
+      }
+      &:before{
+        left: -60px;
+        top: -40px;
+        transform: rotate(90deg);
+        @media(max-width: 768px){
+          left: 0;
+          top: -60px;
+        }
+      }
+      &:after{
+        left: -40px;
+        top: -40px;
+        transform: rotate(90deg);
+        @media(max-width: 768px){
+          left: 20px;
+          top: -60px;
+        }
+      }
+    }
+    .PromoText{
+      font-family: Ubuntu;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 30px;
+      line-height: 120%;
+      color: #8B8B8B;
+      @media(max-width: 768px) {
+        font-size: 20px;
+        line-height: 140%;
+      }
+      &:before{
+        right: 100px;
+        bottom: -80px;
+        @media(max-width: 768px){
+          right: 60px;
+          bottom: -60px;
+        }
+      }
+      &:after{
+        right: 100px;
+        bottom: -100px;
+        @media(max-width: 768px){
+          right: 60px;
+          bottom: -80px;
+        }
+      }
+    }
+  }
+}
+.SmmAction{
+  margin-bottom: 220px;
+  @media(max-width: 768px){
+    margin-bottom: 120px;
+  }
+  .Headding{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 43px;
+    line-height: 52px;
+    color: #393939;
+    margin-bottom: 60px;
+    @media(max-width: 768px){
+      font-size: 28px;
+      line-height: 120%;
+    }
+  }
+  .Text{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #8B8B8B;
+    padding-right: 100px;
+    @media(max-width: 768px){
+      padding-right: 0;
+    }
+  }
+  .SmmActionBtn{
+    @media(max-width: 768px){
+      margin-top: 60px;
+      width: 100%;
+    }
+  }
+}
+.ComplexSmm{
+  margin-bottom: 220px;
+  @media(max-width: 768px){
+    margin-bottom: 120px;
+  }
+  .Headding{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 43px;
+    line-height: 52px;
+    color: #393939;
+    margin-bottom: 60px;
+    @media(max-width: 768px){
+      font-size: 28px;
+      line-height: 120%;
+    }
+  }
+  .Text{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #8B8B8B;
+    padding-left: 70px;
+    @media(max-width: 768px){
+      padding-left: 0;
+      margin-bottom: 10px;
+    }
+  }
+  .GridList{
+    .GridListItem{
+      font-family: Inter;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 140%;
+      color: #292525;
+      position: relative;
+      padding-left: 30px;
+      margin-top: 30px;
+      padding-right: 120px;
+      @media(max-width: 768px){
+        padding-right: 0;
+        margin-top: 50px;
+      }
+      &:before{
+        content: '';
+        display: inline-block;
+        box-sizing: border-box;
+        position: absolute;
+        width: 10px;
+        height: 100%;
+        border: 1px solid #0DF0FF;
+        left: 0;
+        top: 0;
+      }
+      &:nth-child(even){
+        padding-left: 100px;
+        @media(max-width: 768px){
+          padding-left: 30px;
+        }
+        &:before{
+          left: 70px;
+          @media(max-width: 768px){
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+}
