@@ -12,14 +12,17 @@ import {
   LogoIcon,
   InstagramIcon,
   FacebookIcon,
-  LinkedInIcon, LogoMobileIcon
+  LinkedInIcon,
+  LogoMobileIcon
 } from '../Icons';
 import Box from "@material-ui/core/Box";
 import Dialog from "@material-ui/core/Dialog";
 import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/icons/Close";
 import TextField from '@material-ui/core/TextField';
-import Breef from '../Breef'
+import Breef from '../Breef';
+import {Link} from "react-router-dom";
+import Footer from "../Footer";
 
 export default function Header({notFound}) {
   const {headdingtitle, description, bgimage} = DataArray.find(page => page.path === window.location.pathname);
@@ -38,13 +41,6 @@ export default function Header({notFound}) {
     }
     setState({ ...state, navOpen: open });
   };
-
-  // const toggleFab = (open) => (event) => {
-  //   if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
-  //     return;
-  //   }
-  //   setState({ ...state, fabOpen: !open });
-  // }
 
   const handleClickAway = () => {
     setState({ ...state, fabOpen: false });
@@ -78,7 +74,10 @@ export default function Header({notFound}) {
     setOpen(false);
   };
 
+  window.scrollTo(0, 0)
+
   return (
+    <>
     <header className={classes.Header}>
       <Grid container>
         <Grid
@@ -207,8 +206,19 @@ export default function Header({notFound}) {
         </Grid>
         <Grid item container classes={{root: classes.columnRight}}>
           <Grid item classes={{root: classes.LogoRoot}}>
-            <LogoIcon classes={{root: classes.LogoIcon}} width="85" height="54" viewBox="0 0 85 54" />
-            <LogoMobileIcon classes={{root: classes.LogoMobileIcon}} width="55" height="32" viewBox="0 0 55 32"/>
+            {
+              window.location.pathname == '/' ?(
+                <>
+                <LogoIcon classes={{root: classes.LogoIcon}} width="85" height="54" viewBox="0 0 85 54"/>
+                <LogoMobileIcon classes={{root: classes.LogoMobileIcon}} width="55" height="32" viewBox="0 0 55 32"/>
+                </>
+              ) : (
+                <Link to={'/'}>
+                  <LogoIcon classes={{root: classes.LogoIcon}} width="85" height="54" viewBox="0 0 85 54"/>
+                  <LogoMobileIcon classes={{root: classes.LogoMobileIcon}} width="55" height="32" viewBox="0 0 55 32"/>
+                </Link>
+              )
+            }
           </Grid>
           <Grid item className={classes.MenuButton}>
             <button onClick={toggleDrawer(!(state.navOpen))} className={classes.BurgerBtn}>
@@ -233,5 +243,7 @@ export default function Header({notFound}) {
         portfolioOpen={state.portfolioOpen}
       />
     </header>
+      {window.location.pathname === '/contact' ? <Footer /> : null}
+  </>
   )
 }

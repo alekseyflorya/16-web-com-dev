@@ -18,12 +18,11 @@ function NotFound() {
             <p className={classes.Text}>Скорее всего этой страницы больше нет или Вам просто нравится изучать 404 страницы :) Переходите на главную страницу или вернитесь назад.</p>
           </Grid>
           <Grid item container justify="space-between">
-            <ButtonLink title={'Подробнее о нас'} path={'/about'} />
-            <ButtonLink title={'На главную'} path={'/'} />
+            <ButtonLink classNames={classes.AboutBtn} title={'Подробнее о нас'} path={'/about'} />
+            <ButtonLink classNames={classes.HomeBtn} title={'На главную'} path={'/'} />
           </Grid>
         </Grid>
       </Grid>
-
     )
   }
   return (

@@ -1,7 +1,16 @@
 .NotFound{
-
+  position: relative;
+  width: 100vw!important;
+  max-width: none!important;
+  @media(max-width: 768px){
+    padding: 16px;
+    flex-direction: column-reverse;
+  }
   .HeaddingBox{
     margin-bottom: 100px;
+    @media(max-width: 768px){
+      margin-bottom: 60px;
+    }
   }
   .NotFoundLeft{
     padding-left: 60px;
@@ -18,6 +27,14 @@
     line-height: 140%;
     color: #292525;
     margin-bottom: 40px;
+    background: linear-gradient(#000000 59%, #0DF0FF 60%, #0DF0FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @media(max-width: 768px) {
+      font-size: 60px;
+      line-height: 140%;
+      margin-bottom: 20px;
+    }
   }
   .Text{
     font-family: Inter;
@@ -30,5 +47,22 @@
   .NotFoundImg{
     max-width: 100%;
     height: auto;
+    @media(max-width: 768px){
+      margin-top: 40px;
+    }
+  }
+  .AboutBtn{
+    @media(max-width: 768px) {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+  .HomeBtn{
+    @media(max-width: 768px){
+      width: 100%;
+      background: #FFFFFF;
+      border: 1px solid #000000;
+      color: #000000;
+    }
   }
 }

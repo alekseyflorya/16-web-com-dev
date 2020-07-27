@@ -2,6 +2,7 @@ import classes from '../../pages/Portfolio/PortfilioFull/PortfolioFull.module.sc
 import portfolioImage1 from '../../assets/img/autoprostavka-project-mini.jpg';
 import portfolioImage2 from '../../assets/img/bronex.jpg';
 import portfolioImage3 from '../../assets/img/sharova-portfolioshort.jpg';
+import portfolioImage4 from '../../assets/img/pragma-portfolioshort.jpg';
 
 const FullPortfolioData = [
   {
@@ -24,6 +25,13 @@ const FullPortfolioData = [
     type: 'Корпоративный сайт',
     position: classes.gridItem3,
     path: '/sharova'
+  },
+  {
+    img: portfolioImage4,
+    title: 'Прагма',
+    type: 'Корпоративный сайт',
+    position: classes.gridItem4,
+    path: '/pragma'
   },
 ];
 

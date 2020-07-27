@@ -55,7 +55,7 @@ export default function Reviews() {
   const TabItems = ReviewsData.map(({review_id, label}, index) => {
     return (
       <Tab
-        key={index}
+        key={`review_${review_id}`}
         label={label}
         id={`vertical-tab-${review_id}`}
         aria-controls={`vertical-tabpanel-${review_id}`}

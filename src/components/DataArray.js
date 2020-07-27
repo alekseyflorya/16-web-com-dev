@@ -33,6 +33,7 @@ import NotFound from "../pages/NotFound";
 import Autoprostavka from "../pages/Projects/Autoprostavka";
 import Sharova from "../pages/Projects/Sharova"
 import Bronex from "../pages/Projects/Bronex";
+import Pragma from "../pages/Projects/Pragma";
 import SeoAudit from "../pages/SeoAudit";
 import OrderInfoSemanticCore from "../pages/SemanticCore";
 import InternalOptimization from "../pages/InternalOptimization"
@@ -75,6 +76,7 @@ import seoAuditImg from "../assets/img/seo-audit.jpg";
 import semanticCoreImg from "../assets/img/semantic-core.jpg";
 import bronexImg from "../assets/img/bronex.jpg";
 import sharovaImg from "../assets/img/sharova.jpg"
+import pragmaImg from "../assets/img/pragma.jpg"
 import internalOptimizationImg from "../assets/img/internal-optimization.jpg"
 import externalOptimizationImg from "../assets/img/external-optimization.jpg"
 import remarketingImg from "../assets/img/remarketing.jpg";
@@ -616,8 +618,19 @@ const DataArray = [
     path: '/sharova',
     component: () => <Sharova />,
     headdingtitle: 'Восстановление шаровых опор',
-    description: 'специализируется по восстановлению шаровых опор',
+    description: 'Компания специализируется по восстановлению шаровых опор',
     bgimage: sharovaImg,
+    exact: true
+  },
+  {//Pragma
+    id: 40,
+    name: 'pragma',
+    label: 'pragma',
+    path: '/pragma',
+    component: () => <Pragma />,
+    headdingtitle: 'Прагма',
+    description: 'Компания специализируется по изготовлению металоконструкций',
+    bgimage: pragmaImg,
     exact: true
   },
   {//404

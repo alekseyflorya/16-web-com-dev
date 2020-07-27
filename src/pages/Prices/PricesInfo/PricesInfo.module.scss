@@ -1,0 +1,187 @@
+.PricesInfo{
+  margin-bottom: 120px;
+  .HeaddingBlock{
+    margin-bottom: 100px;
+  }
+  .Headding{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 43px;
+    line-height: 52px;
+    color: #393939;
+    @media(max-width: 768px){
+      font-size: 28px;
+      line-height: 120%;
+      margin-bottom: 40px;
+    }
+  }
+  .HeaddingText{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 140%;
+    color: #8B8B8B;
+  }
+  .PricesInfoList{
+    counter-reset: numbers;
+    margin-bottom: 220px;
+    @media(max-width: 768px) {
+      margin-bottom: 120px;
+    }
+    .Item{
+      position: relative;
+      padding-left: 30px;
+      margin: 0 45px 80px 45px;
+      z-index: 3;
+      @media(max-width: 768px){
+        padding-left: 25px;
+        margin: 0 0 60px 36px;
+      }
+      &:before{
+        counter-increment: numbers;
+        content: '0' counter(numbers);
+        width: 105px;
+        height: 80px;
+        display: inline-flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 80px;
+        line-height: 80px;
+        letter-spacing: 0.04em;
+        color: #E9E9E9;
+        position: absolute;
+        left: -60px;
+        bottom: 8px;
+        transform: rotate(-90deg);
+        z-index: -2;
+        transition: all .5s ease;
+      }
+      &:after{
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-left: 2px solid #E9E9E9;
+        background: #FFFFFF;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        @media(max-width: 768px){
+          left: 6px;
+        }
+      }
+      &:hover{
+        cursor: pointer;
+        &:before{
+          bottom: 8px;
+          left: -85px;
+          color: #0DF0FF;
+          @media(max-width: 768px){
+            left: -75px;
+          }
+        }
+        &:after{
+          border-left-color: #0DF0FF;
+        }
+      }
+    }
+  }
+  .Title{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 36px;
+    color: #393939;
+    padding-bottom: 25px;
+  }
+  .Text{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #8B8B8B;
+  }
+  .PromoBlock{
+    margin-bottom: 300px;
+    justify-content: center;
+    align-items: center;
+    @media(max-width: 768px) {
+      margin-bottom: 200px;
+    }
+    .PromoBox{
+      position: relative;
+      &:before,
+      &:after,
+      .PromoText:before,
+      .PromoText:after{
+        content: '~';
+        display: inline-block;
+        position: absolute;
+        font-family: Ubuntu;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 65px;
+        line-height: 100%;
+        color: #0DF0FF;
+        @media(max-width: 768px) {
+          font-size: 40px;
+          line-height: 120%;
+        }
+      }
+      &:before{
+        left: -60px;
+        top: -40px;
+        transform: rotate(90deg);
+        @media(max-width: 768px){
+          left: 0;
+          top: -60px;
+        }
+      }
+      &:after{
+        left: -40px;
+        top: -40px;
+        transform: rotate(90deg);
+        @media(max-width: 768px){
+          left: 20px;
+          top: -60px;
+        }
+      }
+    }
+    .PromoText{
+      font-family: Ubuntu;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 30px;
+      line-height: 120%;
+      color: #8B8B8B;
+      @media(max-width: 768px) {
+        font-size: 20px;
+        line-height: 140%;
+      }
+      &:before{
+        right: 100px;
+        bottom: -80px;
+        @media(max-width: 768px){
+          right: 60px;
+          bottom: -60px;
+        }
+      }
+      &:after{
+        right: 100px;
+        bottom: -100px;
+        @media(max-width: 768px){
+          right: 60px;
+          bottom: -80px;
+        }
+      }
+    }
+  }
+}

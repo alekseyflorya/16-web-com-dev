@@ -8,15 +8,17 @@ import Reviews from "../../components/Reviews";
 import Philosophy from "./Philosophy";
 import FineQuality from "./FineQuality";
 import Approach from "./Approach";
+import AboutAdvantages from "./AboutAdvantages";
 
 export default function About(){
 
   return (
     <div className={classes.AboutPage}>
       <Header />
-      <Philosophy />
-      <FineQuality />
-      <Approach />
+      <AboutAdvantages />
+      {/*<Philosophy />*/}
+      {/*<FineQuality />*/}
+      {/*<Approach />*/}
       <Reviews />
       <Clients />
       <JoinUs />

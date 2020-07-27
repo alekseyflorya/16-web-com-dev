@@ -67,7 +67,7 @@ export default function Breef() {
         }}
         onClick={handleClickOpen}
       >
-        {'Заказать проект'}
+        {'Просчитать стоимость'}
       </Button>
       <Dialog
         fullScreen

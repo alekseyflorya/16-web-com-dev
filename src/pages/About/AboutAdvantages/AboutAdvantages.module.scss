@@ -1,0 +1,218 @@
+.AboutAdvantages{
+  margin-top: 120px;
+  margin-bottom: 220px;
+  @media(max-width: 768px){
+    margin-bottom: 120px;
+  }
+  .Container{
+
+  }
+  .MainAboutHaddding{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 65px;
+    line-height: 100%;
+    color: #000000;
+    margin-bottom: 80px;
+    @media(max-width: 768px){
+      font-size: 40px;
+      line-height: 120%;
+    }
+  }
+  .Headding{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 43px;
+    line-height: 52px;
+    color: #393939;
+    margin-bottom: 80px;
+    @media(max-width: 768px){
+      font-size: 28px;
+      line-height: 120%;
+    }
+  }
+  .Text{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #8B8B8B;
+    padding: 20px 80px 20px 0;
+  }
+  .OurAdvantages{
+
+  }
+  .OurAdvantagesItem{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    &:nth-child(1) .AdvantagesIcons{
+      width: 47px;
+      height: 42px;
+    }
+    &:nth-child(2) .AdvantagesIcons{
+      width: 49px;
+      height: 42px;
+    }
+    &:nth-child(3) .AdvantagesIcons{
+      width: 38px;
+      height: 44px;
+    }
+  }
+  .AdvantagesIcons{
+    fill: none;
+  }
+  .GridList{
+    .GridListItem{
+      font-family: Inter;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 22px;
+      color: #8B8B8B;
+      position: relative;
+      padding-left: 20px;
+      margin-top: 30px;
+      &:before{
+        content: '';
+        display: inline-block;
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background: #4C1C89;
+        left: 0;
+        top: 6px;
+      }
+    }
+  }
+}
+.AboutServices{
+  margin-bottom: 220px;
+  @media(max-width: 768px){
+    margin-bottom: 120px;
+  }
+  .Headding{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 43px;
+    line-height: 52px;
+    color: #393939;
+    margin-bottom: 80px;
+    @media(max-width: 768px){
+      font-size: 28px;
+      line-height: 120%;
+    }
+  }
+  .Text{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #8B8B8B;
+    padding: 20px 80px 20px 0;
+    @media(max-width: 768px) {
+      padding: 20px 0;
+    }
+  }
+  .AboutServicesImg{
+    max-width: 100%;
+  }
+}
+.AboutWebDesign{
+  margin-bottom: 220px;
+  @media(max-width: 768px){
+    margin-bottom: 120px;
+  }
+  .AboutWebDesignHead{
+    margin-bottom: 80px;
+  }
+  .AboutWebDesignList{
+    counter-reset: number7;
+    .AboutWebDesignListItem:nth-child(3n+1){
+      padding-right: 140px;
+      @media(max-width: 768px){
+        padding-right: 40px;
+      }
+      &:after{
+        right: 80px;
+        @media(max-width: 768px){
+          right: 20px;
+        }
+      }
+    }
+    .AboutWebDesignListItem:nth-child(3n+2){
+      padding-right: 60px;
+      padding-left: 60px;
+      @media(max-width: 768px){
+        padding-right: 40px;
+        padding-left: 0;
+      }
+    }
+    .AboutWebDesignListItem:nth-child(3n+3){
+      padding-left: 140px;
+      padding-right: 40px;
+      @media(max-width: 768px){
+        padding-right: 40px;
+        padding-left: 0;
+      }
+    }
+  }
+  .AboutWebDesignListItem{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 140%;
+    color: #292525;
+    position: relative;
+    margin-bottom: 60px;
+    @media(max-width: 768px){
+
+    }
+    &:after{
+      counter-increment: number7;
+      content: '0' counter(number7);
+      font-family: Ubuntu;
+      font-size: 20px;
+      line-height: 140%;
+      color: #DADADA;
+      position: absolute;
+      right: 20px;
+      top: 0px;
+      transform: rotate(-90deg);
+      transition: all .5s ease;
+    }
+    &:hover{
+      &:after{
+        color: #0df0ff;
+      }
+    }
+  }
+  .Headding{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 43px;
+    line-height: 52px;
+    color: #393939;
+    margin-bottom: 80px;
+    @media(max-width: 768px){
+      font-size: 28px;
+      line-height: 120%;
+    }
+  }
+  .Text{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #8B8B8B;
+    padding: 20px 80px 20px 0;
+  }
+}

@@ -336,8 +336,13 @@ $blue: #0DF0FF;
 .SocialButtons{
   .SocialButton{
     border: none;
+    transition: all .4s ease;
     @media (max-width: 768px){
       display: none;
+    }
+    &:hover{
+      border-radius: 0;
+      background-color: #0C95A8;
     }
   }
 }
