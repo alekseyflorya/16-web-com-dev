@@ -4,7 +4,7 @@ const VacanciesData = [
     id: 1,
     label: '01',
     title: 'UI/UX Designer',
-    path: '',
+    path: '/ui-ux-designer',
     city: 'Oдесса',
     time: 'Full time'
   },

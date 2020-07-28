@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import classes from './Header.module.scss';
 import Navigation from "../Navigation";
 import ButtonGroup from "@material-ui/core/ButtonGroup";
@@ -74,7 +74,9 @@ export default function Header({notFound}) {
     setOpen(false);
   };
 
-  window.scrollTo(0, 0)
+  useEffect(() => {
+      window.scrollTo(0, 0);
+  }, [window.location.pathname]);
 
   return (
     <>
@@ -188,7 +190,7 @@ export default function Header({notFound}) {
             <Grid item sm={9} xs={4} container alignItems="center" style={{backgroundColor: '#0DF0FF', paddingLeft: '14%',}}>
               <ButtonGroup classes={{root: classes.SocialButtons}}>
                 <Button classes={{root: classes.SocialButton}}>
-                  <InstagramIcon width="24" height="24" viewBox="0 0 24 24" />
+                  <InstagramIcon className={classes.InstagramIcon} width="24" height="24" viewBox="0 0 24 24" />
                 </Button>
                 <Button classes={{root: classes.SocialButton}}>
                   <FacebookIcon width="10" height="24" viewBox="0 0 10 24" />

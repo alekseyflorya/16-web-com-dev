@@ -37,7 +37,7 @@ export default function Breef() {
   };
 
   const [state, setState] = React.useState({
-    siteCreating: false,
+    siteCreating: true,
     webDesign: false,
     marketing: false,
     qaTesting: false,

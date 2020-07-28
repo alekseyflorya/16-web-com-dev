@@ -46,6 +46,7 @@ import SmmFacebook from "../pages/SmmFacebook";
 import SmmInstagram from "../pages/SmmInstagram";
 import OtherSmm from "../pages/OtherSmm";
 import SmmAds from "../pages/SmmAds";
+import UiUxDesigner from "../pages/UiUxDesigner"
 
 import homeBgImage from '../assets/img/main.jpg';
 import portfolioBgImage from '../assets/img/portfolio.jpg';
@@ -86,10 +87,10 @@ import ppcAuditImg from "../assets/img/ppc-audit.jpg";
 import smmFacebookImg from "../assets/img/facebook-smm.jpg";
 import smmInstagramImg from "../assets/img/instagram-smm.jpg";
 import otherSmmImg from "../assets/img/other-smm.jpg";
-import smmAdsImg from "../assets/img/smm-ads.jpg"
+import smmAdsImg from "../assets/img/smm-ads.jpg";
+import uiuxdesignerImg from "../assets/img/UI-UX-Designer.jpg"
 
 const DataArray = [
-
   {//Главная
     id: 0,
     name: 'home',
@@ -101,7 +102,6 @@ const DataArray = [
     bgimage: homeBgImage,
     exact: true
   },
-
   {//О нас
     id: 1,
     name: 'about',
@@ -113,7 +113,6 @@ const DataArray = [
     bgimage: homeBgImage,
     exact: true
   },
-
   {//Портфолио
     id: 2,
     name: 'portfolio',
@@ -126,7 +125,6 @@ const DataArray = [
     bgimage: portfolioBgImage,
     exact: true
   },
-
   {//Услуги
     id: 3,
     name: 'services',
@@ -139,7 +137,6 @@ const DataArray = [
     bgimage: servicesBgImage,
     exact: true
   },
-
   {//Цены
     id: 4,
     name: 'prices',
@@ -151,7 +148,6 @@ const DataArray = [
     bgimage: pricesImg,
     exact: true
   },
-
   {//Контакты
     id: 5,
     name: 'contact',
@@ -163,7 +159,6 @@ const DataArray = [
     bgimage: homeBgImage,
     exact: true
   },
-
   {//Вакансии
     id: 6,
     name: 'vacancies',
@@ -175,7 +170,6 @@ const DataArray = [
     bgimage: vacanciesImage,
     exact: true
   },
-
   {//Новости
     id: 7,
     name: 'news',
@@ -631,6 +625,17 @@ const DataArray = [
     headdingtitle: 'Прагма',
     description: 'Компания специализируется по изготовлению металоконструкций',
     bgimage: pragmaImg,
+    exact: true
+  },
+  {//Ui-UX designer
+    id: 41,
+    name: 'uiuxdesigner',
+    label: 'uiuxdesigner',
+    path: '/ui-ux-designer',
+    component: () => <UiUxDesigner />,
+    headdingtitle: 'UI/UX designer',
+    description: '16.web studio специализируется на веб-дизайне, создании адаптивных интернет-проектов, брендинге и рекламной фотографии.',
+    bgimage: uiuxdesignerImg,
     exact: true
   },
   {//404

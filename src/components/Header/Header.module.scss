@@ -342,7 +342,12 @@ $blue: #0DF0FF;
     }
     &:hover{
       border-radius: 0;
-      background-color: #0C95A8;
+      background-color: transparent;
+    }
+  }
+  .InstagramIcon{
+    &:hover{
+      fill: #000000;
     }
   }
 }

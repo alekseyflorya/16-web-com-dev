@@ -7,7 +7,7 @@ function LandingSteps() {
   return (
     <section className={classes.LandingSteps}>
       <Container fixed className={classes.Container}>
-        <Grid>
+        <Grid container>
           <Grid item sm={7}>
             <h2 className={classes.Headding}>Этапы, из которых состоит разработка лендинга</h2>
           </Grid>
