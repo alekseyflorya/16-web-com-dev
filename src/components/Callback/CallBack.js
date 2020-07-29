@@ -23,30 +23,18 @@ const DialogTitle = (props) => {
   );
 };
 
-function CallBack() {
-  const [open, setOpen] = React.useState(false);
-
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
-  const handleClose = () => {
-    setOpen(false);
-  };
-
+function CallBack({callBackIsOpen, callBackSetOpen}) {
   return (
-    <div>
-      <Button variant="outlined" color="primary" onClick={handleClickOpen}>
-        Open dialog
-      </Button>
-      <Dialog onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
-        <DialogTitle id="customized-dialog-title" onClose={handleClose}>
+    <div className={classes.CallBack}>
+      <Dialog onClose={callBackSetOpen} aria-labelledby="customized-dialog-title" open={callBackIsOpen}>
+        <DialogTitle id="customized-dialog-title" onClose={callBackSetOpen}>
           Оставьте свои контакты и мы с вами обязательно свяжемся!
         </DialogTitle>
         <MuiDialogContent dividers>
 
         </MuiDialogContent>
         <MuiDialogActions>
-          <Button autoFocus onClick={handleClose} color="primary">
+          <Button autoFocus onClick={callBackSetOpen} color="primary">
             Save changes
           </Button>
         </MuiDialogActions>

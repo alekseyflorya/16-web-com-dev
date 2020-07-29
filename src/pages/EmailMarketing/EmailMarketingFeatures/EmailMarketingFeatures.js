@@ -1,10 +1,15 @@
-import React from "react";
+import React, {useState} from "react";
 import classes from "./EmailMarketingFeatures.module.scss"
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import {OrderButton} from "../../../components/UI/ButtonLink";
+import CallBack from "../../../components/Callback";
 
 function EmailMarketingFeatures() {
+  const [callBackIsOpen, setCallBackIsOpen] = useState(false)
+
+  const callBackSetOpen = () => setCallBackIsOpen(!callBackIsOpen)
+
   return (
     <section className={classes.EmailMarketingFeatures}>
       <Container fixed className={classes.Container}>
@@ -41,9 +46,10 @@ function EmailMarketingFeatures() {
             <p className={classes.Text}>В силу перечисленных факторов продающие рассылки широко используются в качестве эффективного инструмента, способствующего продвижению бизнеса или конкретного продукта.</p>
           </Grid>
           <Grid item container sm={5} xs={12} justify="flex-end">
-            <OrderButton classNames={classes.ActionBtn} title={'Заказать email-рассылку'} />
+            <OrderButton classNames={classes.ActionBtn} title={'Заказать email-рассылку'} onClick={callBackSetOpen} />
           </Grid>
         </Grid>
+        <CallBack callBackIsOpen={callBackIsOpen} callBackSetOpen={callBackSetOpen} />
       </Container>
     </section>
   )

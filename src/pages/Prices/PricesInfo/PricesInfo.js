@@ -6,16 +6,16 @@ import Grid from "@material-ui/core/Grid";
 function PricesInfo() {
   return (
     <section className={classes.PricesInfo}>
-      <Container fixed className={classes.Container}>
+      <Container className={classes.Container}>
         <Grid container className={classes.HeaddingBlock}>
-          <Grid item sm={7} xs={12}>
+          <Grid item sm={7} xs={12} className={classes.HeaddingBox}>
             <h2 className={classes.Headding}>Чего вы не получете?</h2>
           </Grid>
         </Grid>
         <Grid item container sm={12} xs={12} className={classes.PricesInfoList}>
           <Grid item sm={4} xs={12}>
             <div className={classes.Item}>
-              <h3 className={classes.Title}>Необоснованное повышение цены</h3>
+              <h3 className={classes.Title}>Необоснованные <br />цены</h3>
               <p className={classes.Text}>Стоимость работ, их объем и результат — все это закрепляется в договоре. Мы никогда не навязываем услуги, в которых нет необходимости.</p>
             </div>
           </Grid>
@@ -28,7 +28,7 @@ function PricesInfo() {
           <Grid item sm={4} xs={12}>
             <div className={classes.Item}>
               <h3 className={classes.Title}>Срыв сроков</h3>
-              <p className={classes.Text}>Мы всегда пунктуальны и никогда не берем в работу проекты, с которыми можем не справиться вовремя.</p>
+              <p className={classes.Text}>Мы всегдаочень пунктуальны. Время реализации проекта обязательно обговаривается при заключении договора. </p>
             </div>
           </Grid>
         </Grid>

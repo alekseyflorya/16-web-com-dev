@@ -542,7 +542,7 @@ const DataArray = [
     path: '/facebook-smm',
     parent: 'smm',
     component: () => <SmmFacebook />,
-    headdingtitle:'Продвижение в Фейсбуке: позвольте бизнесу взлететь',
+    headdingtitle:'Продвижение в Фейсбуке',
     description: 'Facebook уже давно превратился из соцсети в мощный бизнес-инструмент. Продвижение в Facebook способствует эффективному росту вашего бизнеса.',
     bgimage: smmFacebookImg,
     exact: true

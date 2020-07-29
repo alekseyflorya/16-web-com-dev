@@ -1,7 +1,4 @@
 .FaqAccordion{
-  .Container{
-
-  }
   .HeaddingBox{
     @media(max-width: 768px) {
       margin-bottom: 60px;
@@ -28,7 +25,9 @@
     padding: 12.5px 34px;
     @media(max-width: 768px){
       padding: 8px 0;
-
+    }
+    &:before{
+      opacity: 0;
     }
   }
   .AccordionDetails{

@@ -27,12 +27,11 @@ import Footer from "../Footer";
 export default function Header({notFound}) {
   const {headdingtitle, description, bgimage} = DataArray.find(page => page.path === window.location.pathname);
 
-  const [state, setState] = React.useState({
+  const [state, setState] = useState({
     navOpen: false,
     fabOpen: false,
     servicesOpen: false,
-    portfolioOpen: false,
-    scrollTop: 0
+    portfolioOpen: false
   });
 
   const toggleDrawer = (open) => (event) => {
@@ -209,7 +208,7 @@ export default function Header({notFound}) {
         <Grid item container classes={{root: classes.columnRight}}>
           <Grid item classes={{root: classes.LogoRoot}}>
             {
-              window.location.pathname == '/' ?(
+              window.location.pathname === '/' ?(
                 <>
                 <LogoIcon classes={{root: classes.LogoIcon}} width="85" height="54" viewBox="0 0 85 54"/>
                 <LogoMobileIcon classes={{root: classes.LogoMobileIcon}} width="55" height="32" viewBox="0 0 55 32"/>

@@ -85,21 +85,7 @@ $btnColor: #ffffff;
     margin-bottom: 20px;
   }
   .CardLink{
-    font-family: Inter;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 140%;
-    color: #292525;
     text-decoration: none;
-
-    &:after{
-      content: '+';
-      color: #D5D5D5;
-      font-size: 18px;
-      font-weight: bold;
-      margin-left: 10px;
-    }
   }
   .ServiceListBtn{
     display: flex;

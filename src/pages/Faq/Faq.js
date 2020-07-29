@@ -5,7 +5,6 @@ import Footer from "../../components/Footer";
 import FaqAccordion from "./FaqAccordion";
 
 export default function Faq(){
-
   return (
     <div className={classes.FaqPage}>
       <Header />

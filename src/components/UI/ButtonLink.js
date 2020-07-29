@@ -9,9 +9,9 @@ const ButtonLink = ({path, title, classNames}) => {
   )
 }
 
-const OrderButton = ({title, classNames}) => {
+const OrderButton = ({title, classNames, onClick}) => {
   return (
-    <button className={`${classes.OrderButton} ${classNames ? classNames : ''}`}>{title}</button>
+    <button className={`${classes.OrderButton} ${classNames ? classNames : ''}`} onClick={onClick}>{title}</button>
   )
 }
 

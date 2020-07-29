@@ -16,7 +16,7 @@ function FaqAccordion() {
 
   return (
     <section className={classes.FaqAccordion}>
-      <Container fixed className={classes.Container}>
+      <Container fixed>
         <Grid container>
           <Grid item container sm={4} xs={12} alignItems="flex-start" className={classes.HeaddingBox}>
             <Grid item>

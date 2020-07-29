@@ -1,12 +1,17 @@
-import React from "react";
+import React, {useState} from "react";
 import classes from "./SmmInstagramCoast.module.scss";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import smmCoastImg from "../../../assets/img/smm-coast.jpg";
 import {OrderButton} from "../../../components/UI/ButtonLink";
 import {Hidden} from "@material-ui/core";
+import CallBack from "../../../components/Callback";
 
 function SmmInstagramCoast() {
+  const [callBackIsOpen, setCallBackIsOpen] = useState(false)
+
+  const callBackSetOpen = () => setCallBackIsOpen(!callBackIsOpen)
+
   return (
     <>
       <section className={classes.SmmCoast}>
@@ -60,11 +65,11 @@ function SmmInstagramCoast() {
               </Grid>
               <Hidden only="xs">
                 <Grid item container sm justify="flex-end">
-                  <OrderButton title={'Заказать рекламу'}/>
+                  <OrderButton title={'Заказать рекламу'} onClick={callBackSetOpen} />
                 </Grid>
               </Hidden>
             </Grid>
-            <Grid item container>
+            <Grid item container className={classes.TextBlock}>
               <Grid item sm={6} xs={12}>
                 <p className={classes.Text}>В настоящее время львиная доля активности пользователей интернета приходится именно на социальные платформы, поэтому SMM-реклама является эффективным способом донести информацию о своём бренде до широкого круга заинтересованных потребителей.</p>
               </Grid>
@@ -73,11 +78,12 @@ function SmmInstagramCoast() {
               </Grid>
               <Hidden smUp>
                 <Grid item container xs={12} justify="center">
-                  <OrderButton classNames={classes.SmmActionBtn} title={'Заказать рекламу'}/>
+                  <OrderButton classNames={classes.SmmActionBtn} title={'Заказать рекламу'} onClick={callBackSetOpen} />
                 </Grid>
               </Hidden>
             </Grid>
           </Grid>
+          <CallBack callBackIsOpen={callBackIsOpen} callBackSetOpen={callBackSetOpen} />
         </Container>
       </section>
       <section className={classes.ComplexSmm}>

@@ -20,22 +20,22 @@ function SmmInstagramServices() {
             создание положительного имиджа
           </Grid>
           <Grid item container sm={4} xs={12} className={classes.GridListItem}>
-            рост продаж
-          </Grid>
-          <Grid item container sm={4} xs={12} className={classes.GridListItem}>
             генерация целевого трафика на сайт
           </Grid>
           <Grid item container sm={4} xs={12} className={classes.GridListItem}>
-            привлечение внимания новой аудитории
+            улучшение узнаваемости
           </Grid>
           <Grid item container sm={4} xs={12} className={classes.GridListItem}>
-            улучшение узнаваемости
+            привлечение внимания новой аудитории
           </Grid>
           <Grid item container sm={4} xs={12} className={classes.GridListItem}>
             получение нового канала обратной связи
           </Grid>
           <Grid item container sm={4} xs={12} className={classes.GridListItem}>
             формирование базы заинтересованных потенциальных клиентов
+          </Grid>
+          <Grid item container sm={4} xs={12} className={classes.GridListItem}>
+            рост продаж
           </Grid>
         </Grid>
       </Container>

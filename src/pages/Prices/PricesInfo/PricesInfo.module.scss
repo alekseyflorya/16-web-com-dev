@@ -3,6 +3,11 @@
   .HeaddingBlock{
     margin-bottom: 100px;
   }
+  .Container{
+    @media(min-width: 1560px){
+      max-width: 1560px;
+    }
+  }
   .Headding{
     font-family: Ubuntu;
     font-style: normal;
@@ -10,6 +15,9 @@
     font-size: 43px;
     line-height: 52px;
     color: #393939;
+    @media(min-width: 1560px){
+      max-width: 1280px;
+    }
     @media(max-width: 768px){
       font-size: 28px;
       line-height: 120%;
@@ -30,10 +38,20 @@
     @media(max-width: 768px) {
       margin-bottom: 120px;
     }
+    & :nth-child(2) .Item{
+      @media(min-width: 1560px){
+        padding-right: 50px;
+      }
+    }
+    & :nth-child(3) .Item{
+      @media(min-width: 1560px){
+        padding-right: 50px;
+      }
+    }
     .Item{
       position: relative;
       padding-left: 30px;
-      margin: 0 45px 80px 45px;
+      margin: 0 50px 80px;
       z-index: 3;
       @media(max-width: 768px){
         padding-left: 25px;
@@ -96,10 +114,11 @@
     font-family: Ubuntu;
     font-style: normal;
     font-weight: bold;
-    font-size: 20px;
-    line-height: 36px;
+    font-size: 30px;
+    line-height: 120%;
     color: #393939;
     padding-bottom: 25px;
+    min-height: 72px;
   }
   .Text{
     font-family: Inter;
@@ -118,6 +137,7 @@
     }
     .PromoBox{
       position: relative;
+      max-width: 810px;
       &:before,
       &:after,
       .PromoText:before,
@@ -137,7 +157,7 @@
         }
       }
       &:before{
-        left: -60px;
+        left: -100px;
         top: -40px;
         transform: rotate(90deg);
         @media(max-width: 768px){
@@ -146,7 +166,7 @@
         }
       }
       &:after{
-        left: -40px;
+        left: -80px;
         top: -40px;
         transform: rotate(90deg);
         @media(max-width: 768px){
@@ -161,13 +181,13 @@
       font-weight: bold;
       font-size: 30px;
       line-height: 120%;
-      color: #8B8B8B;
+      color: #393939;
       @media(max-width: 768px) {
         font-size: 20px;
         line-height: 140%;
       }
       &:before{
-        right: 100px;
+        right: 250px;
         bottom: -80px;
         @media(max-width: 768px){
           right: 60px;
@@ -175,7 +195,7 @@
         }
       }
       &:after{
-        right: 100px;
+        right: 250px;
         bottom: -100px;
         @media(max-width: 768px){
           right: 60px;

@@ -80,10 +80,17 @@
     font-size: 43px;
     line-height: 52px;
     color: #393939;
-    margin-bottom: 60px;
+    margin-bottom: 80px;
     @media(max-width: 768px){
       font-size: 28px;
       line-height: 120%;
+      margin-bottom: 60px;
+    }
+  }
+  .TextBlock :last-child .Text{
+    padding-left: 70px;
+    @media(max-width: 768px) {
+      padding-left: 0;
     }
   }
   .Text{
@@ -142,7 +149,7 @@
       color: #292525;
       position: relative;
       padding-left: 30px;
-      margin-top: 30px;
+      margin-top: 80px;
       padding-right: 120px;
       @media(max-width: 768px){
         padding-right: 0;

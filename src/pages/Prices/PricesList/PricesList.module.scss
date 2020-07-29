@@ -4,7 +4,9 @@
     margin-bottom: 120px;
   }
   .Container{
-
+    @media(min-width: 1560px){
+      max-width: 1560px;
+    }
   }
   .SiteCreatingPrices{
     margin-bottom: 160px;
@@ -38,6 +40,10 @@
     &:nth-child(3n-1) {
       padding-left: 10px;
       padding-right: 10px;
+      @media(min-width: 1560px){
+        padding-left: 30px;
+        padding-right: 30px;
+      }
       @media(max-width: 768px){
         padding-left: 0;
         padding-right: 0;
@@ -45,12 +51,18 @@
     }
     &:nth-child(3n-2) {
       padding-right: 10px;
+      @media(min-width: 1560px){
+        padding-right: 30px;
+      }
       @media(max-width: 768px){
         padding-right: 0;
       }
     }
     &:nth-child(3n) {
       padding-left: 10px;
+      @media(min-width: 1560px){
+        padding-left: 30px;
+      }
       @media(max-width: 768px){
         padding-left: 0;
       }
@@ -104,9 +116,12 @@
     font-family: Ubuntu;
     font-style: normal;
     font-weight: bold;
-    font-size: 50px;
+    font-size: 42px;
     line-height: 100%;
     color: #4C1C89;
+    @media(min-width: 1560px) {
+      font-size: 50px;
+    }
     @media(max-width: 768px) {
       font-size: 45px;
       line-height: 100%;
