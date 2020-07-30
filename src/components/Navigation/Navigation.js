@@ -170,6 +170,7 @@ function Navigation({toggleDrawer, isOpen, togglePortfolioSubmenu, toggleService
       <Drawer
         open={isOpen}
         elevation={1}
+        anchor={'right'}
         onClose={toggleDrawer(false)}
         classes={{paper: classesnames.paper, root: classesnames.backdrop,}}
         ModalProps={{hideBackdrop: true}}

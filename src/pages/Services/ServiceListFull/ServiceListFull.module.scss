@@ -14,9 +14,7 @@ $btnColor: #ffffff;
     padding: 30px;
     transition: all .5s;
     &:hover{
-      border-color: transparent;
-      transform: translateY(-5px);
-      box-shadow: 5px 20px 30px rgba(128, 128, 128, 0.15);
+
     }
     @media(max-width: 768px){
       padding: 15px 10px;
@@ -38,6 +36,8 @@ $btnColor: #ffffff;
     align-items: center;
     margin-bottom: 20px;
     text-decoration: none;
+    padding-right: 35px;
+    transition: all .5s ease;
     @media(max-width: 768px){
       font-size: 22px;
       line-height: 140%;
@@ -50,11 +50,20 @@ $btnColor: #ffffff;
       display: inline-block;
       border-top: 2px solid black;
       border-right: 2px solid black;
-      right: 0;
+      right: 15px;
+      transition: all .5s ease;
       transform: rotate(45deg);
       top: calc(50% - 6px);
       @media(max-width: 768px){
         right: 20px;
+      }
+    }
+    &:hover{
+     transform: scale(1.05);
+      color: #0df0ff;
+      &:after{
+        border-color: #0df0ff;
+        transform: rotateY(180deg) rotateZ(45deg);
       }
     }
   }
@@ -66,6 +75,7 @@ $btnColor: #ffffff;
     line-height: 22px;
     color: #8B8B8B;
     margin-bottom: 20px;
+    min-height: 65px;
   }
   .CardLink{
     font-family: Inter;
@@ -75,12 +85,27 @@ $btnColor: #ffffff;
     line-height: 22px;
     color: #292525;
     text-decoration: none;
-    &:after{
-      content: '+';
-      color: #D5D5D5;
-      font-size: 18px;
-      font-weight: bold;
-      margin-left: 10px;
+  }
+  .SubCategoriesLinks{
+    margin-top: 30px;
+  }
+  .SubCategoriesItem{
+    padding-top: 5px;
+    padding-bottom: 15px;
+  }
+  .SubCategoriesLink{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 140%;
+    color: #393939;
+    text-decoration: none;
+    transition: all .4s ease;
+    padding-top: 5px;
+    padding-bottom: 15px;
+    &:hover{
+      color: #0DF0FF;
     }
   }
 }

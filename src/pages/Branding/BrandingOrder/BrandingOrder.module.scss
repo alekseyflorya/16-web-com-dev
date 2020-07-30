@@ -1,6 +1,10 @@
 .BrandingOrder{
   margin-top: 120px;
   margin-bottom: 220px;
+  @media(max-width: 768px){
+    margin-top: 0;
+    margin-bottom: 120px;
+  }
   .Container{
 
   }
@@ -17,7 +21,18 @@
     font-size: 43px;
     line-height: 52px;
     color: #393939;
-    margin-bottom: 60px;
+    margin-bottom: 80px;
+    @media(max-width: 768px){
+      font-size: 28px;
+      line-height: 120%;
+      margin-bottom: 60px;
+    }
+  }
+  .TextBlock :last-child .Text{
+    padding-left: 70px;
+    @media(max-width: 768px) {
+      padding-left: 0;
+    }
   }
   .Text{
     font-family: Inter;
@@ -49,6 +64,12 @@
         left: 0;
         top: 6px;
       }
+    }
+  }
+  .BrandingOrderBtn{
+    @media(max-width: 768px){
+      margin-top: 60px;
+      width: 100%;
     }
   }
 }

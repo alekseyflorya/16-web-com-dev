@@ -15,10 +15,9 @@ function BrandingAdvantages() {
               <h2 className={classes.Headding}>Закажите услуги по бренд-маркетингу у нас!</h2>
             </Grid>
             <Grid item container>
-              <img src={BrandingAdvantagesImg} alt=""/>
+              <img className={classes.BrandingAdvantagesImg} src={BrandingAdvantagesImg} alt=""/>
             </Grid>
           </Grid>
-
           <Grid item container sm={6} className={classes.RightColumn}>
             <p className={classes.Text}>Выработку основной концепции продвижения, поиск целевой аудитории, дизайн бренда и другие факторы вы можете смело доверить нам – в пользу такого решения говорят наши преимущества:</p>
             <Grid item container className={classes.GridList}>
@@ -30,7 +29,6 @@ function BrandingAdvantages() {
               <Grid item container sm={12} className={classes.GridListItem}>разумные цены</Grid>
             </Grid>
           </Grid>
-
         </Grid>
       </Container>
     </section>

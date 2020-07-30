@@ -1,11 +1,16 @@
-import React from "react";
+import React, {useState} from "react";
 import classes from "./CompetentDesign.module.scss"
 import Container from "@material-ui/core/Container";
 import CompetentDesignImg from "../../../assets/img/competentdesign.jpg"
 import Grid from "@material-ui/core/Grid";
-import {ButtonLink} from "../../../components/UI/ButtonLink";
+import {OrderButton} from "../../../components/UI/ButtonLink";
+import CallBack from "../../../components/Callback";
 
 function CompetentDesign() {
+  const [callBackIsOpen, setCallBackIsOpen] = useState(false)
+
+  const callBackSetOpen = () => setCallBackIsOpen(!callBackIsOpen)
+
   return (
     <section className={classes.CompetentDesign}>
       <Container fixed className={classes.Container}>
@@ -22,13 +27,14 @@ function CompetentDesign() {
           </Grid>
         </Grid>
         <Grid container alignItems="center">
-          <Grid item sm={7} xs={12}>
+          <Grid item sm={6} xs={12}>
             <p className={classes.ActionText}>Если вам нужны услуги профессионалов по разработке веб-дизайна, давайте обсудим возможные варианты сотрудничества!</p>
           </Grid>
-          <Grid item container sm={5} xs={12} justify="flex-end">
-            <ButtonLink classNames={classes.CompetentDesignBtn} title={'Обсудить проект'} />
+          <Grid item container sm={6} xs={12} justify="flex-end">
+            <OrderButton classNames={classes.CompetentDesignBtn} title={'Обсудить проект'} onClick={callBackSetOpen} />
           </Grid>
         </Grid>
+        <CallBack callBackIsOpen={callBackIsOpen} callBackSetOpen={callBackSetOpen} />
       </Container>
     </section>
   )

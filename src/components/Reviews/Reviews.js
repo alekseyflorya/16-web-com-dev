@@ -30,7 +30,7 @@ function TabPanel(props) {
 export default function Reviews() {
   const [value, setValue] = React.useState(0);
 
-  const TabPanels = ReviewsData.map(({review_id, label, title, avatar, reviewText, dateAdded}, index) => {
+  const TabPanels = ReviewsData.map(({review_id, label, title, company, avatar, reviewText, dateAdded}, index) => {
     return (
       <TabPanel
         key={index}
@@ -41,7 +41,10 @@ export default function Reviews() {
         <div className={classes.TabPanelItem}>
           <div className={classes.AvatarBox}>
             <img className={classes.Avatar} src={avatar} alt={title} />
-            <p className={classes.AvatarName}>{title}</p>
+            <div className={classes.AvatarNameBox}>
+              <p className={classes.AvatarNameTitle}>{title}</p>
+              <p className={classes.AvatarNameCompany}>{company}</p>
+            </div>
           </div>
           <div className={classes.TextBox}>
             <p className={classes.Text}>{reviewText}</p>
@@ -52,10 +55,10 @@ export default function Reviews() {
     )
   });
 
-  const TabItems = ReviewsData.map(({review_id, label}, index) => {
+  const TabItems = ReviewsData.map(({review_id, label}) => {
     return (
       <Tab
-        key={`review_${review_id}`}
+        key={`review_${review_id} `}
         label={label}
         id={`vertical-tab-${review_id}`}
         aria-controls={`vertical-tabpanel-${review_id}`}

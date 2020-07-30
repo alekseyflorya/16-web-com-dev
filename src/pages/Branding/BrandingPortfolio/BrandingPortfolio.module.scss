@@ -1,5 +1,8 @@
 .BrandingPortfolio{
   margin-bottom: 200px;
+  @media(max-width: 768px){
+    margin-bottom: 120px;
+  }
   .Headding{
     font-family: Ubuntu;
     font-style: normal;
@@ -8,12 +11,18 @@
     line-height: 52px;
     color: #393939;
     margin-bottom: 120px;
+    @media(max-width: 768px){
+      margin-bottom: 60px;
+    }
   }
   .DescriptionBlock{
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     margin-bottom: 80px;
+    @media(max-width: 768px){
+      margin-bottom: 60px;
+    }
   }
   .Description{
     font-family: Inter;
@@ -28,14 +37,23 @@
     display: flex;
     justify-content: center;
     margin-bottom: 100px;
+    @media(max-width: 768px){
+      margin-bottom: 60px;
+    }
   }
-  .gridContainer {
+  .gridContainer{
     display: grid;
     grid-template-areas: "gridItem1 gridItem2 gridItem2 gridItem5"
                        "gridItem1 gridItem3 gridItem4 gridItem6";
     grid-template-rows: 250px 250px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 50px;
+    @media(max-width: 768px){
+      grid-template-areas: "gridItem1""gridItem2""gridItem3""gridItem4""gridItem5""gridItem6";
+      grid-template-rows: 180px 180px 180px 180px 180px;
+      grid-template-columns: 4fr;
+      grid-gap: 50px;
+    }
   }
   .gridItem{
     position: relative;
@@ -45,7 +63,7 @@
       transition: all .5s;
       border-color: transparent;
       transform: translateY(-5px);
-      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+      box-shadow: 5px 20px 30px rgba(128, 128, 128, 0.15);
       .HoveredBlock{
         opacity: .9;
         transition: all .5s;
@@ -55,7 +73,6 @@
           transform-origin: 0 100%;
         }
       }
-
       .gridImg{
         transition: all .5s;
         transform: scale(1.2);
