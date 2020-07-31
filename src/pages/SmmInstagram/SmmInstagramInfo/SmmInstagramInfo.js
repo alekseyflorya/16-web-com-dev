@@ -2,7 +2,7 @@ import React from "react";
 import classes from "./SmmInstagramInfo.module.scss";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
-import InfoFacebookSmmImg from "../../../assets/img/seo-audit-advantages.jpg";
+import InfoFacebookSmmImg from "../../../assets/img/instagram-smm-advantages.jpg";
 
 function SmmInstagramInfo() {
   return (

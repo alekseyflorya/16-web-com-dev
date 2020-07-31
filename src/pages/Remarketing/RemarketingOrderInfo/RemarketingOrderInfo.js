@@ -2,7 +2,7 @@ import React from "react";
 import classes from "./RemarketingOrderInfo.module.scss";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
-import RemarketingOrderInfoImg from "../../../assets/img/order-info-internal-optimization.jpg";
+import RemarketingOrderInfoImg from "../../../assets/img/remarketing-order-info.jpg";
 
 function RemarketingOrderInfo() {
   return (

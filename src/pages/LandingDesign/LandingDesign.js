@@ -8,6 +8,7 @@ import Reviews from "../../components/Reviews";
 import ServiceListSort from "../../components/ServiceListSort";
 import LandingDesignProcess from "./LandingDesignProcess";
 import LandingDesignCoast from "./LandingDesignCoast";
+import interestedImage from "../../assets/img/landingdesign-interested.jpg"
 
 export default function LandingDesign(){
 
@@ -16,7 +17,7 @@ export default function LandingDesign(){
       <Header />
       <LandingDesignProcess />
       <LandingDesignCoast />
-      <Interested />
+      <Interested interestedImage={interestedImage}/>
       <PortfolioShort />
       <Reviews />
       <ServiceListSort />

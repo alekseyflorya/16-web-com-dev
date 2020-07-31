@@ -2,7 +2,7 @@ import React from "react";
 import classes from "./PpcSettingServices.module.scss";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
-import RemarketingOrderInfoImg from "../../../assets/img/ppc-setting-services.jpg";
+import RemarketingOrderInfoImg from "../../../assets/img/ppcsetting-services.jpg";
 
 function PpcSettingServices() {
   return (

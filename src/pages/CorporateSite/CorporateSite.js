@@ -8,15 +8,16 @@ import ServiceListSort from "../../components/ServiceListSort";
 import Reviews from "../../components/Reviews";
 import CorporateFeatures from "./CorporateFeatures";
 import CorporateCost from "./CorporateCost";
+import interestedImage from "../../assets/img/corporatesite-interested.jpg"
 
-export default function CorporateSite(){
+export default function CorporateSite() {
 
   return (
     <div className={classes.CorporateSitePage}>
       <Header />
       <CorporateFeatures />
       <CorporateCost />
-      <Interested />
+      <Interested interestedImage={interestedImage}/>
       <PortfolioShort />
       <Reviews />
       <ServiceListSort />

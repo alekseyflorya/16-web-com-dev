@@ -2,7 +2,7 @@ import React from "react";
 import classes from "./SeoCost.module.scss"
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
-import OnlineStoreCoastImg from "../../../assets/img/online-store-coast.jpg";
+import OnlineStoreCoastImg from "../../../assets/img/seo-coast.jpg";
 import {Hidden} from "@material-ui/core";
 
 function SeoCost() {

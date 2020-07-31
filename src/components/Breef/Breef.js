@@ -55,28 +55,14 @@ export default function Breef() {
     setState({ ...state, [event.target.name]: event.target.checked });
   };
 
-  const { siteCreating, webDesign, marketing, qaTesting, branding, photography, fast, slow, success } = state;
+  const { siteCreating, webDesign, marketing, qaTesting, branding, photography, success } = state;
 
   return (
     <>
-      <Button
-        classes={{
-          root: classes.OrderProjectRoot,
-          label :classes.OrderProjectLabel,
-          text :classes.OrderProjectText
-        }}
-        onClick={handleClickOpen}
-      >
+      <Button classes={{root: classes.OrderProjectRoot, label :classes.OrderProjectLabel, text :classes.OrderProjectText}} onClick={handleClickOpen}>
         {'Просчитать стоимость'}
       </Button>
-      <Dialog
-        fullScreen
-        open={open}
-        onClose={handleClose}
-        TransitionComponent={Transition}
-        PaperProps={{classes: {root: classes.BreefDialog}}}
-        classes={{root: classes.Breef, paper: classes.BreefModal}}
-      >
+      <Dialog fullScreen open={open} onClose={handleClose} TransitionComponent={Transition} PaperProps={{classes: {root: classes.BreefDialog}}} classes={{root: classes.Breef, paper: classes.BreefModal}}>
         <Hidden smUp>
           <LogoMobileIcon width="55" height="32" viewBox="0 0 55 32" classes={{root: classes.LogoIcon}}/>
         </Hidden>
@@ -84,229 +70,159 @@ export default function Breef() {
           <LogoInvertIcon width="95" height="60" viewBox="0 0 95 60" classes={{root: classes.LogoIcon}}/>
         </Hidden>
 
-        <IconButton
-          edge="start"
-          color="inherit"
-          onClick={handleClose}
-          aria-label="close"
-          className={classes.CloseBtn}
-        >
+        <IconButton edge="start" color="inherit" onClick={handleClose} aria-label="close" className={classes.CloseBtn}>
           <CloseIcon classes={{root: classes.CloseBtnIcon}}/>
         </IconButton>
-        <form className={classes.BreefForm}>
-          <Grid container justify="center" alignItems="center" className={classes.BreefFormContainer}>
-            <Grid item container>
-            <Grid item container sm={6} xs={12}>
-            <Grid item container>
-              <FormControl component="fieldset" classes={{root: classes.FormControl}}>
-                <FormLabel component="legend" classes={{root: classes.FormLabel, focused: classes.FormLabelFocused}}>Какая услуга вас интересует?</FormLabel>
-                <FormGroup>
-                  <FormControlLabel
-                    control={
-                      <Checkbox
-                        checked={siteCreating}
-                        onChange={handleChange}
-                        classes={{root: classes.Checkbox, checked: classes.CheckboxChecked}}
-                        name="siteCreating"
-                      />
-                    }
-                    classes={{label: classes.FormControlLabel}}
-                    label="Создание сайтов"
-                  />
-                  <FormControlLabel
-                    control={
-                      <Checkbox
-                        checked={webDesign}
-                        onChange={handleChange}
-                        classes={{root: classes.Checkbox, checked: classes.CheckboxChecked}}
-                        name="webDesign"
-                      />
-                    }
-                    classes={{label: classes.FormControlLabel}}
-                    label="Веб-дизайн"
-                  />
-                  <FormControlLabel
-                    control={
-                      <Checkbox
-                        checked={marketing}
-                        onChange={handleChange}
-                        classes={{root: classes.Checkbox, checked: classes.CheckboxChecked}}
-                        name="marketing"
-                      />
-                    }
-                    classes={{label: classes.FormControlLabel}}
-                    label="Интернет-маркетинг (SEO, PPC, SMM)"
-                  />
-                  <FormControlLabel
-                    control={
-                      <Checkbox
-                        checked={qaTesting}
-                        onChange={handleChange}
-                        classes={{root: classes.Checkbox, checked: classes.CheckboxChecked}}
-                        name="qaTesting"
-                      />
-                    }
-                    classes={{label: classes.FormControlLabel}}
-                    label="QA"
-                  />
-                  <FormControlLabel
-                    control={
-                      <Checkbox
-                        checked={branding}
-                        onChange={handleChange}
-                        classes={{root: classes.Checkbox, checked: classes.CheckboxChecked}}
-                        name="branding"
-                      />
-                    }
-                    classes={{label: classes.FormControlLabel}}
-                    label="Брендинг"
-                  />
-                  <FormControlLabel
-                    control={
-                      <Checkbox
-                        checked={photography}
-                        onChange={handleChange}
-                        classes={{root: classes.Checkbox, checked: classes.CheckboxChecked}}
-                        name="photography"
-                      />
-                    }
-                    classes={{label: classes.FormControlLabel}}
-                    label="Фотосъемка"
-                  />
-                </FormGroup>
-              </FormControl>
-            </Grid>
-            <Grid item container>
-              <FormControl component="fieldset" classes={{root: classes.FormControl}}>
-                <FormLabel
-                  component="legend"
-                  classes={{root: classes.FormLabel, focused: classes.FormLabelFocused}}>Техническое задание (если есть)</FormLabel>
-                <FormGroup>
-                  <InputLabel className={classes.InputCv} htmlFor="input-cv">Прикрепить файл</InputLabel>
-                  <Input type="file" id="input-cv" label="Прикрепить файл" style={{visibility: 'hidden'}} />
-                  <TextField
-                      id="standard-required"
-                      classes={{root: classes.TextField}}
-                      InputProps={{classes: {input: classes.InputBase, underline: classes.InputBaseUnderline}}}
-                      InputLabelProps={{classes: {root: classes.InputLabel, focused: classes.InputLabelFocused}}}
-                      label="Комментарий" />
-                </FormGroup>
-              </FormControl>
-            </Grid>
-              </Grid>
-            <Grid item container sm={6} xs={12}>
-            <Grid item container>
-              <FormControl required component="fieldset" classes={{root: classes.FormControl}}>
-                <FormLabel
-                  component="legend"
-                  classes={{root: classes.FormLabel, focused: classes.FormLabelFocused}}>Бюджет проекта ($)</FormLabel>
-                <FormGroup>
-                  <FormControlLabel
-                    className={classes.BudgetFields}
-                    control={
-                      <>
-                      <TextField
-                        id="standard-required"
-                        classes={{root: classes.TextField}}
-                        InputProps={{classes: {input: classes.InputBase, underline: classes.InputBaseUnderline}}}
-                        InputLabelProps={{classes: {root: classes.InputLabel, focused: classes.InputLabelFocused}}}
-                        label="От" />
-                      <TextField
-                        id="standard-required"
-                        InputProps={{classes: {input: classes.InputBase, underline: classes.InputBaseUnderline}}}
-                        InputLabelProps={{classes: {root: classes.InputLabel, focused: classes.InputLabelFocused}}}
-                        label="До" />
-                        </>
-                    }
-                    classes={{root: classes.FormControlLabelRoot,label: classes.FormControlLabel}}
-                  />
-                </FormGroup>
-              </FormControl>
-            </Grid>
-            <Grid item container>
-              <FormControl required classes={{root: classes.FormControlTime}}>
-                <Grid container justify="flex-start">
-                  <Grid item container sm>
-                    <FormLabel component="legend" classes={{root: classes.FormLabel, focused: classes.FormLabelFocused}}>Сроки</FormLabel>
-                  </Grid>
-                  <Grid item container sm>
-                    <FormControlLabel
-                      control={
-                        <Checkbox
-                          checked={slow}
-                          onChange={handleChange}
-                          classes={{root: classes.Checkbox, checked: classes.CheckboxChecked}}
-                          name="slow"
+        <form>
+          <Grid className={classes.BreefForm}>
+            <Grid item container justify="center" alignItems="center" className={classes.BreefFormContainer}>
+              <Grid item container>
+                <Grid item container sm={6} xs={12}>
+                  <Grid item container>
+                    <FormControl component="fieldset" classes={{root: classes.FormControl}}>
+                      <FormLabel component="legend" classes={{root: classes.FormLabel, focused: classes.FormLabelFocused}}>Какая услуга вас интересует?</FormLabel>
+                      <FormGroup>
+                        <FormControlLabel
+                          control={
+                            <Checkbox
+                              checked={siteCreating}
+                              onChange={handleChange}
+                              classes={{root: classes.Checkbox, checked: classes.CheckboxChecked}}
+                              name="siteCreating"
+                            />
+                          }
+                          classes={{label: classes.FormControlLabel}}
+                          label="Создание сайтов"
                         />
-                      }
-                      classes={{label: classes.FormControlLabel}}
-                      label="Не срочно"
-                    />
-                  </Grid>
-                  <Grid item container sm>
-                    <FormControlLabel
-                      control={
-                        <Checkbox
-                          checked={fast}
-                          onChange={handleChange}
-                          classes={{root: classes.Checkbox, checked: classes.CheckboxChecked}}
-                          name="fast"
+                        <FormControlLabel
+                          control={
+                            <Checkbox
+                              checked={webDesign}
+                              onChange={handleChange}
+                              classes={{root: classes.Checkbox, checked: classes.CheckboxChecked}}
+                              name="webDesign"
+                            />
+                          }
+                          classes={{label: classes.FormControlLabel}}
+                          label="Веб-дизайн"
                         />
-                      }
-                      classes={{label: classes.FormControlLabel}}
-                      label="Срочно"
-                    />
+                        <FormControlLabel
+                          control={
+                            <Checkbox
+                              checked={marketing}
+                              onChange={handleChange}
+                              classes={{root: classes.Checkbox, checked: classes.CheckboxChecked}}
+                              name="marketing"
+                            />
+                          }
+                          classes={{label: classes.FormControlLabel}}
+                          label="Интернет-маркетинг (SEO, PPC, SMM)"
+                        />
+                        <FormControlLabel
+                          control={
+                            <Checkbox
+                              checked={qaTesting}
+                              onChange={handleChange}
+                              classes={{root: classes.Checkbox, checked: classes.CheckboxChecked}}
+                              name="qaTesting"
+                            />
+                          }
+                          classes={{label: classes.FormControlLabel}}
+                          label="QA"
+                        />
+                        <FormControlLabel
+                          control={
+                            <Checkbox
+                              checked={branding}
+                              onChange={handleChange}
+                              classes={{root: classes.Checkbox, checked: classes.CheckboxChecked}}
+                              name="branding"
+                            />
+                          }
+                          classes={{label: classes.FormControlLabel}}
+                          label="Брендинг"
+                        />
+                        <FormControlLabel
+                          control={
+                            <Checkbox
+                              checked={photography}
+                              onChange={handleChange}
+                              classes={{root: classes.Checkbox, checked: classes.CheckboxChecked}}
+                              name="photography"
+                            />
+                          }
+                          classes={{label: classes.FormControlLabel}}
+                          label="Фотосъемка"
+                        />
+                      </FormGroup>
+                    </FormControl>
                   </Grid>
-                 </Grid>
-              </FormControl>
-            </Grid>
-            <Grid item container>
-              <FormControl required component="fieldset">
-                <FormLabel
-                  component="legend"
-                  classes={{root: classes.FormLabel, focused: classes.FormLabelFocused}}>Контактные данные</FormLabel>
-                <FormGroup>
-                      <TextField
-                        required
-                        id="standard-required"
-                        InputProps={{classes: {input: classes.InputBase, underline: classes.InputBaseUnderline}}}
-                        InputLabelProps={{classes: {root: classes.InputLabel, focused: classes.InputLabelFocused}}}
-                        label="Ваше имя" />
-                      <TextField
-                        required
-                        id="standard-required"
-                        InputProps={{classes: {input: classes.InputBase, underline: classes.InputBaseUnderline}}}
-                        InputLabelProps={{classes: {root: classes.InputLabel, focused: classes.InputLabelFocused}}}
-                        label="Телефон" />
-                      <TextField
-                        required
-                        id="standard-required"
-                        InputProps={{classes: {input: classes.InputBase, underline: classes.InputBaseUnderline}}}
-                        InputLabelProps={{classes: {root: classes.InputLabel, focused: classes.InputLabelFocused}}}
-                        label="E-mail" />
-                      <TextField
+                  <Grid item container>
+                    <FormControl component="fieldset" classes={{root: classes.FormControl}}>
+                      <FormLabel
+                        component="legend"
+                        classes={{root: classes.FormLabel, focused: classes.FormLabelFocused}}>Техническое задание (если есть)</FormLabel>
+                      <FormGroup>
+                        <InputLabel className={classes.InputCv} htmlFor="input-cv">Прикрепить файл</InputLabel>
+                        <Input type="file" id="input-cv" label="Прикрепить файл" style={{visibility: 'hidden'}} />
+                        <TextField
+                          id="standard-required"
+                          classes={{root: classes.TextField}}
+                          InputProps={{classes: {input: classes.InputBase, underline: classes.InputBaseUnderline}}}
+                          InputLabelProps={{classes: {root: classes.InputLabel, focused: classes.InputLabelFocused}}}
+                          label="Комментарий" />
+                      </FormGroup>
+                    </FormControl>
+                  </Grid>
+                </Grid>
+                <Grid item container sm={6} xs={12}>
+                  <Grid item container>
+                    <FormControl required component="fieldset">
+                      <FormLabel
+                        component="legend"
+                        classes={{root: classes.FormLabel, focused: classes.FormLabelFocused}}>Контактные данные</FormLabel>
+                      <FormGroup>
+                        <TextField
+                          required
+                          id="standard-required"
+                          InputProps={{classes: {input: classes.InputBase, underline: classes.InputBaseUnderline}}}
+                          InputLabelProps={{classes: {root: classes.InputLabel, focused: classes.InputLabelFocused}}}
+                          label="Ваше имя" />
+                          <TextField
+                            required
+                            id="standard-required"
+                            InputProps={{classes: {input: classes.InputBase, underline: classes.InputBaseUnderline}}}
+                            InputLabelProps={{classes: {root: classes.InputLabel, focused: classes.InputLabelFocused}}}
+                            label="Телефон" />
+                            <TextField
+                              required
+                              id="standard-required"
+                              InputProps={{classes: {input: classes.InputBase, underline: classes.InputBaseUnderline}}}
+                              InputLabelProps={{classes: {root: classes.InputLabel, focused: classes.InputLabelFocused}}}
+                              label="E-mail" />
+                              <TextField
                         required
                         id="standard-required"
                         InputProps={{classes: {input: classes.InputBase, underline: classes.InputBaseUnderline}}}
                         InputLabelProps={{classes: {root: classes.InputLabel, focused: classes.InputLabelFocused}}}
                         label="Сайт (если есть)" />
-                </FormGroup>
-              </FormControl>
-            </Grid>
+                      </FormGroup>
+                    </FormControl>
+                  </Grid>
+                  <Grid item container>
+                    <Button onClick={sendBreef} className={classes.SendBreefBtn} classes={{  root: classes.SendBreefBtn,   label :classes.sendBreefLabel,  text :classes.sendBreefText }}>
+                      <ArrowForwardIosIcon classes={{root: classes.sendBreefBtnIcon}} />
+                    </Button>
+                  </Grid>
+                </Grid>
               </Grid>
             </Grid>
+            <Grid item container>
+              <Button onClick={sendBreef} className={classes.SendBreefBtn} classes={{  root: classes.SendBreefBtn,   label :classes.sendBreefLabel,  text :classes.sendBreefText }}>
+                <ArrowForwardIosIcon classes={{root: classes.sendBreefBtnIcon}} />
+              </Button>
+            </Grid>
           </Grid>
-          <Button
-            onClick={sendBreef}
-            className={classes.SendBreefBtn}
-            classes={{
-            root: classes.SendBreefBtn,
-            label :classes.sendBreefLabel,
-            text :classes.sendBreefText
-          }}
-          >
-            <ArrowForwardIosIcon classes={{root: classes.sendBreefBtnIcon}}/>
-          </Button>
         </form>
       </Dialog>
 

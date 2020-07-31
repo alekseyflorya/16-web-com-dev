@@ -2,7 +2,7 @@ import React from "react";
 import classes from "./OrderInfoInternalOptimization.module.scss";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
-import OrderInfoInternalOptimizationImg from "../../../assets/img/seo-audit-advantages.jpg";
+import OrderInfoInternalOptimizationImg from "../../../assets/img/order-info-internal-optimization.jpg";
 
 function OrderInfoInternalOptimization() {
   return (

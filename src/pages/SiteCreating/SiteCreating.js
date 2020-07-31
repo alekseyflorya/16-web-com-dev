@@ -8,6 +8,7 @@ import Interested from "../../components/Interested";
 import SiteCreatingList from "./SiteCreatingList";
 import StudioAdvantages from "../../components/StudioAdvantages";
 import Technologies from "./Technilogies";
+import interestedImage from "../../assets/img/sitecreating-interested.jpg"
 
 export default function SiteCreating(){
 
@@ -20,7 +21,7 @@ export default function SiteCreating(){
       <SiteCreatingList />
       <StudioAdvantages />
       <Technologies />
-      <Interested title={title} interestedDescription={interestedDescription}/>
+      <Interested title={title} interestedDescription={interestedDescription} interestedImage={interestedImage}/>
       <PortfolioShort />
       <ServiceListSort />
       <Footer />

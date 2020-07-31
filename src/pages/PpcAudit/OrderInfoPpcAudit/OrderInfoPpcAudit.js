@@ -2,7 +2,7 @@ import React from "react";
 import classes from "./OrderInfoPpcAudit.module.scss";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
-import OrderInfoExternalOptimizationImg from "../../../assets/img/competentdesign.jpg";
+import OrderInfoExternalOptimizationImg from "../../../assets/img/order-info-ppc-audit.jpg";
 
 function OrderInfoPpcAudit() {
   return (

@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./EmailMarketingCost.module.scss";
 import Grid from "@material-ui/core/Grid";
-import EmailMarketingCostImg from "../../../assets/img/business-card-coast.jpg";
+import EmailMarketingCostImg from "../../../assets/img/email-marketing-cost.jpg";
 import Container from "@material-ui/core/Container";
 
 function EmailMarketingCost() {

@@ -2,8 +2,7 @@ import React from "react";
 import classes from "./SmmAdsInfo.module.scss";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
-import InfoFacebookSmmImg from "../../../assets/img/competentdesign.jpg";
-import whyNeedFacebookSmmImg from "../../../assets/img/why-need-facebook-smm.jpg"
+import InfoFacebookSmmImg from "../../../assets/img/smm-ads-info.jpg";
 
 function SmmAdsInfo() {
   return (

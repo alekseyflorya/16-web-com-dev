@@ -6,7 +6,7 @@ import PortfolioShort from "../../components/PortfilioShort";
 import Reviews from "../../components/Reviews";
 import ServiceListSort from "../../components/ServiceListSort";
 import Interested from "../../components/Interested";
-import interestedImage from "../../assets/img/interested-image.jpg"
+import interestedImage from "../../assets/img/siteprototype-interested.jpg"
 import SitePrototypeFeatures from "./SitePrototypeFeatures";
 import SitePrototypeCost from "./SitePrototypeCost";
 

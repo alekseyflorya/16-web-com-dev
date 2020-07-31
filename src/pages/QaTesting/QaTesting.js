@@ -5,7 +5,8 @@ import Footer from "../../components/Footer";
 import Interested from "../../components/Interested";
 import PortfolioShort from "../../components/PortfilioShort";
 import ServiceListSort from "../../components/ServiceListSort";
-import QaTypes from "./QaTypes"
+import QaTypes from "./QaTypes";
+import interestedImage from "../../assets/img/qatesting-interested.jpg"
 
 export default function QaTesting(){
 
@@ -13,7 +14,7 @@ export default function QaTesting(){
     <div className={classes.QaTestingPage}>
       <Header />
       <QaTypes />
-      <Interested />
+      <Interested interestedImage={interestedImage}/>
       <PortfolioShort />
       <ServiceListSort />
       <Footer />

@@ -2,8 +2,8 @@ import React from "react";
 import classes from "./OtherSmmInfo.module.scss";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
-import InfoFacebookSmmImg from "../../../assets/img/seo-audit-advantages.jpg";
-import whyNeedFacebookSmmImg from "../../../assets/img/why-need-facebook-smm.jpg"
+import InfoTwiterSmmImg from "../../../assets/img/twitter-pluses.jpg";
+import behanceSmmImg from "../../../assets/img/behance-pluses.jpg";
 
 function OtherSmmInfo() {
   return (
@@ -48,7 +48,7 @@ function OtherSmmInfo() {
         <h2 className={classes.Headding}>Плюсы продвижения в <span className={classes.styled}>Твиттере</span></h2>
         <Grid container>
           <Grid item container sm={6} xs={12} className={classes.LeftColumn}>
-            <img className={classes.InfoFacebookSmmImg} src={InfoFacebookSmmImg} alt=""/>
+            <img className={classes.InfoFacebookSmmImg} src={InfoTwiterSmmImg} alt=""/>
           </Grid>
           <Grid item container sm={6} xs={12} className={classes.RightColumn}>
             <p className={classes.Text}>Несмотря на аудиторию в 30+ млн. пользователей, это платформа незаслуженно продолжает оставаться практически незаметной для бизнеса. Этот факт мы можем превратить в стратегическое преимущество вашей компании.</p>
@@ -77,7 +77,7 @@ function OtherSmmInfo() {
             <p className={classes.Text}>Продвижение на этой площадке подойдет не только фрилансерам. Здесь многие компании находят клиентов, которым требуется разработка дизайна и подобные услуги.</p>
           </Grid>
           <Grid item container sm={6} xs={12} className={classes.LeftColumn}>
-            <img className={classes.InfoFacebookSmmImg} src={whyNeedFacebookSmmImg} alt=""/>
+            <img className={classes.InfoFacebookSmmImg} src={behanceSmmImg} alt=""/>
           </Grid>
         </Grid>
       </Container>

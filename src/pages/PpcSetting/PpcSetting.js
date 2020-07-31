@@ -8,6 +8,7 @@ import Reviews from "../../components/Reviews";
 import ServiceListSort from "../../components/ServiceListSort";
 import PpcSettingServices from "./PpcSettingServices";
 import PpcSettingCost from "./PpcSettingCost";
+import interestedImage from "../../assets/img/ppcsetting-interested.jpg"
 
 function PpcSetting() {
   return (
@@ -15,7 +16,7 @@ function PpcSetting() {
       <Header />
       <PpcSettingServices />
       <PpcSettingCost />
-      <Interested />
+      <Interested interestedImage={interestedImage}/>
       <PortfolioShort />
       <Reviews />
       <ServiceListSort />

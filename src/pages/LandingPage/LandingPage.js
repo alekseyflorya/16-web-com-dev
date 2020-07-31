@@ -6,6 +6,7 @@ import Interested from "../../components/Interested";
 import PortfolioShort from "../../components/PortfilioShort";
 import LandingSteps from "./LandingSteps"
 import LandingCoast from "./LandingCoast";
+import interestedImage from "../../assets/img/landingpage-interested.jpg"
 
 export default function LandingPage(){
 
@@ -14,7 +15,7 @@ export default function LandingPage(){
       <Header />
       <LandingSteps />
       <LandingCoast />
-      <Interested />
+      <Interested interestedImage={interestedImage}/>
       <PortfolioShort />
       <Footer />
     </div>

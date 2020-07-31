@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import classes from "./PricesList.module.scss";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
@@ -8,8 +8,13 @@ import landingLogo from "../../../assets/img/landing-logo.png";
 import visitkaLogo from "../../../assets/img/visitka-logo.png";
 import corporateLogo from "../../../assets/img/corporate-logo.png";
 import storeLogo from "../../../assets/img/store-logo.png";
+import CallBack from "../../../components/Callback";
 
 function PricesList() {
+  const [callBackIsOpen, setCallBackIsOpen] = useState(false)
+
+  const callBackSetOpen = () => setCallBackIsOpen(!callBackIsOpen)
+
   return (
     <>
       <section className={classes.PricesList}>
@@ -37,7 +42,7 @@ function PricesList() {
                 </Grid>
                 <Grid item container className={classes.CardFooter}>
                   <p className={classes.CardFooterText}>Цена на разработку сайта на Tilda варьируется в зависимости от сложности дизайна, пакета функциональных элементов и анимации.</p>
-                  <OrderButton title={'Заказать проект'}/>
+                  <OrderButton title={'Заказать проект'} onClick={callBackSetOpen} />
                 </Grid>
               </Grid>
             </Grid>
@@ -62,7 +67,7 @@ function PricesList() {
                 </Grid>
                 <Grid item container className={classes.CardFooter}>
                   <p className={classes.CardFooterText}>Цена на разработку лендинг пейдж варьируется в зависимости от сложности дизайна, пакета функциональных элементов и анимации.</p>
-                  <OrderButton title={'Заказать проект'} className={classes.CardButton} />
+                  <OrderButton title={'Заказать проект'} className={classes.CardButton} onClick={callBackSetOpen} />
                 </Grid>
               </Grid>
             </Grid>
@@ -88,7 +93,7 @@ function PricesList() {
                 </Grid>
                 <Grid item container className={classes.CardFooter}>
                   <p className={classes.CardFooterText}>При создании сайта визитки окончательная цена работы формируется с учетом количества страниц и необходимого набора функциональных элементов.</p>
-                  <OrderButton title={'Заказать проект'}/>
+                  <OrderButton title={'Заказать проект'} onClick={callBackSetOpen}/>
                 </Grid>
               </Grid>
             </Grid>
@@ -113,7 +118,7 @@ function PricesList() {
                 </Grid>
                 <Grid item container className={classes.CardFooter}>
                   <p className={classes.CardFooterText}>На создание корпоративного сайта цена складывается с учетом сложности структуры, пакета функциональных элементов и дизайна.</p>
-                  <OrderButton title={'Заказать проект'}/>
+                  <OrderButton title={'Заказать проект'} onClick={callBackSetOpen}/>
                 </Grid>
               </Grid>
             </Grid>
@@ -138,7 +143,7 @@ function PricesList() {
                 </Grid>
                 <Grid item container className={classes.CardFooter}>
                   <p className={classes.CardFooterText}>На создание интернет-магазинов цена складывается с учетом сложности структуры, пакета функциональных элементов и дизайна.</p>
-                  <OrderButton title={'Заказать проект'}/>
+                  <OrderButton title={'Заказать проект'} onClick={callBackSetOpen}/>
                 </Grid>
               </Grid>
             </Grid>
@@ -166,7 +171,7 @@ function PricesList() {
                 </Grid>
                 <Grid item container className={classes.CardFooter}>
                   <p className={classes.CardFooterText}>На поисковое продвижение сайта цена может варьироваться в зависимости от уровня конкуренции и текущего состояния веб-ресурса.</p>
-                  <OrderButton title={'Заказать проект'}/>
+                  <OrderButton title={'Заказать проект'} onClick={callBackSetOpen}/>
                 </Grid>
               </Grid>
             </Grid>
@@ -193,7 +198,7 @@ function PricesList() {
                 </Grid>
                 <Grid item container className={classes.CardFooter}>
                   <p className={classes.CardFooterText}>На контекстную рекламу цена зависит от активности конкурентов и объема ключевых слов.</p>
-                  <OrderButton title={'Заказать проект'} className={classes.CardButton} />
+                  <OrderButton title={'Заказать проект'} className={classes.CardButton} onClick={callBackSetOpen} />
                 </Grid>
               </Grid>
             </Grid>
@@ -218,15 +223,13 @@ function PricesList() {
                 </Grid>
                 <Grid item container className={classes.CardFooter}>
                   <p className={classes.CardFooterText}>На SMM продвижение цены варьируются с учетом целей по охвату и конкуренции в нише.</p>
-                  <OrderButton title={'Заказать проект'} className={classes.CardButton} />
+                  <OrderButton title={'Заказать проект'} className={classes.CardButton} onClick={callBackSetOpen} />
                 </Grid>
               </Grid>
             </Grid>
           </Grid>
+          <CallBack callBackIsOpen={callBackIsOpen} callBackSetOpen={callBackSetOpen} />
         </Container>
-      </section>
-      <section className={classes.WhatYouNotGet}>
-
       </section>
     </>
   )

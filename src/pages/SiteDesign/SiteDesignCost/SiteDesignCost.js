@@ -2,7 +2,7 @@ import React from "react";
 import classes from "./SiteDesignCost.module.scss"
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
-import OnlineStoreCoastImg from "../../../assets/img/online-store-coast.jpg";
+import OnlineStoreCoastImg from "../../../assets/img/sitedesign-coast.jpg";
 import {OrderButton} from "../../../components/UI/ButtonLink";
 import {Hidden} from "@material-ui/core";
 

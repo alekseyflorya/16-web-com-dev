@@ -188,15 +188,15 @@ export default function Header({notFound}) {
             <Grid item sm={3} xs={false}/>
             <Grid item sm={9} xs={4} container alignItems="center" style={{backgroundColor: '#0DF0FF', paddingLeft: '14%',}}>
               <ButtonGroup classes={{root: classes.SocialButtons}}>
-                <Button classes={{root: classes.SocialButton}}>
+                <a className={classes.SocialButton} href="https://www.instagram.com/16.web/" target="_blank">
                   <InstagramIcon className={classes.InstagramIcon} width="24" height="24" viewBox="0 0 24 24" />
-                </Button>
-                <Button classes={{root: classes.SocialButton}}>
+                </a>
+                <a className={classes.SocialButton} href="https://www.facebook.com/16.web" target="_blank">
                   <FacebookIcon width="10" height="24" viewBox="0 0 10 24" />
-                </Button>
-                <Button classes={{root: classes.SocialButton}}>
+                </a>
+                <a className={classes.SocialButton} href="#">
                   <LinkedInIcon width="24" height="24" viewBox="0 0 24 24" />
-                </Button>
+                </a>
               </ButtonGroup>
             </Grid>
             <Grid item sm={3} xs={8}>

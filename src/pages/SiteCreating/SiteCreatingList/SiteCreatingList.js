@@ -37,12 +37,6 @@ function SiteCreatingList() {
             </Grid>
             <Grid item sm={4} xs={12} className={classes.CardBox}>
               <div className={classes.Card}>
-                <Link to="/portal" className={classes.CardName}>Портал</Link>
-                <p className={classes.CardText}>Корпоративный сайт под ключ - это мощный ресурс, представляющий ваш бренд, а так же взаимодействие для сотрудников, партнёров и клиентов.</p>
-              </div>
-            </Grid>
-            <Grid item sm={4} xs={12} className={classes.CardBox}>
-              <div className={classes.Card}>
                 <Link to="/uniqueservices" className={classes.CardName}>Уникальные решения</Link>
                 <p className={classes.CardText}>Создания собственного сайта – это значит, что мы готовы подготовить предложение, которое учитывает ваши пожелания и поставленные задачи.</p>
               </div>

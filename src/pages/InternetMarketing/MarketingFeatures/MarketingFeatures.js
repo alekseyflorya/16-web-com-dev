@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./MarketingFeatures.module.scss"
 import Container from "@material-ui/core/Container";
-import MarketingFeaturesImg from "../../../assets/img/marketingfeatures.jpg"
+import MarketingFeaturesImg from "../../../assets/img/internetmarketing-features.jpg";
 import Grid from "@material-ui/core/Grid";
 
 function MarketingFeatures() {

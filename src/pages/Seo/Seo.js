@@ -9,6 +9,7 @@ import ServiceListSort from "../../components/ServiceListSort";
 import SeoCost from "./SeoCost";
 import SeoServices from "./SeoServices";
 import WhatGivesSeo from "../../components/WhatGivesSeo";
+import interestedImage from "../../assets/img/seo-interested.jpg"
 
 export default function Seo(){
   const interestedDescription = 'Ясность нашей позиции очевидна: выбранный нами инновационный путь способствует повышению качества переосмысления внешне экономических политик. С учётом сложившейся международной обстановки'
@@ -18,7 +19,7 @@ export default function Seo(){
       <SeoServices />
       <SeoCost />
       <WhatGivesSeo />
-      <Interested interestedDescription={interestedDescription} />
+      <Interested interestedDescription={interestedDescription} interestedImage={interestedImage}/>
       <PortfolioShort />
       <Reviews />
       <ServiceListSort />

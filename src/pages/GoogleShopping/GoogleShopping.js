@@ -7,13 +7,14 @@ import PortfolioShort from "../../components/PortfilioShort";
 import Reviews from "../../components/Reviews";
 import ServiceListSort from "../../components/ServiceListSort";
 import GoogleShoppingServices from "./GoogleShoppingServices";
+import interestedImage from "../../assets/img/google-shopping-interested.jpg"
 
 function GoogleShopping() {
   return (
     <div className={classes.Remarketing}>
       <Header />
       <GoogleShoppingServices />
-      <Interested />
+      <Interested interestedImage={interestedImage}/>
       <PortfolioShort />
       <Reviews />
       <ServiceListSort />

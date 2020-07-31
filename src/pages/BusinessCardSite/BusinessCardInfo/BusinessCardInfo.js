@@ -2,7 +2,7 @@ import React from "react";
 import classes from "./BusinessCardInfo.module.scss";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
-import BusinessCardCoastImg from "../../../assets/img/business-card-coast.jpg";
+import BusinessCardCoastImg from "../../../assets/img/businesscardsite-cost.jpg";
 
 function BusinessCardInfo() {
   return (

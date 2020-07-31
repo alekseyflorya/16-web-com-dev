@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './StudioAdvantages.module.scss';
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
-import StudioAdvantagesImg from "../../assets/img/studio-advantages-1.jpg";
+import StudioAdvantagesImg from "../../assets/img/studio-advantages.jpg";
 
 function StudioAdvantages() {
   return (

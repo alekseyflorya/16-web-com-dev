@@ -336,18 +336,15 @@ $blue: #0DF0FF;
 .SocialButtons{
   .SocialButton{
     border: none;
+    opacity: 0.7;
     transition: all .4s ease;
     @media (max-width: 768px){
       display: none;
     }
     &:hover{
+      opacity: 1;
       border-radius: 0;
       background-color: transparent;
-    }
-  }
-  .InstagramIcon{
-    &:hover{
-      fill: #000000;
     }
   }
 }

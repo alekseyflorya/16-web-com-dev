@@ -7,6 +7,7 @@ import PortfolioShort from "../../components/PortfilioShort";
 import Reviews from "../../components/Reviews";
 import PpcProcess from "./PpcProcess";
 import PpcCost from "./PpcCost";
+import interestedImage from "../../assets/img/ppc-interested.jpg"
 
 export default function Ppc(){
 
@@ -15,7 +16,7 @@ export default function Ppc(){
       <Header />
       <PpcProcess />
       <PpcCost />
-      <Interested />
+      <Interested interestedImage={interestedImage}/>
       <PortfolioShort />
       <Reviews />
       <Footer />

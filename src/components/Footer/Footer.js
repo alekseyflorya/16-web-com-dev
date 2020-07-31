@@ -116,12 +116,12 @@ export default function Footer() {
               <Grid item>
                 <List className={classes.LinksList}>
                   <ListItem key={Math.random()} className={classes.LinksListItem}>
-                    <SocialLink href="#" classes={{root: classes.SocialLink}}>
+                    <SocialLink href="https://dribbble.com/16web" classes={{root: classes.SocialLink}}>
                       {'Dribbble'}
                     </SocialLink>
                   </ListItem>
                   <ListItem key={Math.random()} className={classes.LinksListItem}>
-                    <SocialLink href="#" classes={{root: classes.SocialLink}}>
+                    <SocialLink href="https://www.behance.net/16web" classes={{root: classes.SocialLink}}>
                       {'Behance'}
                     </SocialLink>
                   </ListItem>
@@ -131,7 +131,7 @@ export default function Footer() {
                     </SocialLink>
                   </ListItem>
                   <ListItem key={Math.random()} className={classes.LinksListItem}>
-                    <SocialLink href="#" classes={{root: classes.SocialLink}}>
+                    <SocialLink href="https://www.facebook.com/16.web" classes={{root: classes.SocialLink}}>
                       {'Facebook'}
                     </SocialLink>
                   </ListItem>

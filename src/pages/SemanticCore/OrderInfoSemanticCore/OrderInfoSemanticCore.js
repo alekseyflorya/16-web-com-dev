@@ -2,7 +2,7 @@ import React from "react";
 import classes from "./OrderInfoSemanticCore.module.scss";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
-import SeoAuditAdvantagestImg from "../../../assets/img/seo-audit-advantages.jpg";
+import SeoAuditAdvantagestImg from "../../../assets/img/order-info-semantic-core.jpg";
 import {Hidden} from "@material-ui/core";
 
 function OrderInfoSemanticCore() {

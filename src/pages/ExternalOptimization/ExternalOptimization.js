@@ -7,13 +7,14 @@ import PortfolioShort from "../../components/PortfilioShort";
 import Reviews from "../../components/Reviews";
 import ServiceListSort from "../../components/ServiceListSort";
 import OrderInfoExternalOptimization from "./OrderInfoExternalOptimization";
+import interestedImage from "../../assets/img/external-optimization-interested.jpg"
 
 function ExternalOptimization() {
   return (
     <div className={classes.ExternalOptimization}>
       <Header />
       <OrderInfoExternalOptimization />
-      <Interested />
+      <Interested interestedImage={interestedImage}/>
       <PortfolioShort />
       <Reviews />
       <ServiceListSort />

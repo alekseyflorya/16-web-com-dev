@@ -2,8 +2,7 @@ import React from "react";
 import classes from "./OrderInfoExternalOptimization.module.scss";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
-import OrderInfoExternalOptimizationImg from "../../../assets/img/competentdesign.jpg";
-import LandingCoastImg from "../../../assets/img/landing-coast.jpg";
+import OrderInfoExternalOptimizationImg from "../../../assets/img/order-info-internaloptimization.jpg";
 
 function OrderInfoExternalOptimization() {
   return (

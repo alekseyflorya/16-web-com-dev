@@ -6,7 +6,7 @@ import BrandingSteps from "./BrandingSteps";
 import ServiceListSort from "../../components/ServiceListSort";
 import BrandingOrder from "./BrandingOrder/BrandingOrder";
 import BrandingAdvantages from "./BrandingAdvantages";
-import BrandingPortfolio from "./BrandingPortfolio";
+// import BrandingPortfolio from "./BrandingPortfolio";
 
 export default function Branding(){
 
@@ -16,7 +16,6 @@ export default function Branding(){
       <BrandingSteps />
       <BrandingOrder />
       <BrandingAdvantages />
-      <BrandingPortfolio />
       <ServiceListSort />
       <Footer />
     </div>

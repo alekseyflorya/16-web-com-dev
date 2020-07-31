@@ -8,6 +8,7 @@ import Reviews from "../../components/Reviews";
 import ServiceListSort from "../../components/ServiceListSort";
 import RemarketingHowItWorks from "./RemarketingHowItWorks";
 import RemarketingOrderInfo from "./RemarketingOrderInfo";
+import interestedImage from "../../assets/img/remarketing-interested.jpg"
 
 function Remarketing() {
   return (
@@ -15,7 +16,7 @@ function Remarketing() {
       <Header />
       <RemarketingHowItWorks />
       <RemarketingOrderInfo />
-      <Interested />
+      <Interested interestedImage={interestedImage}/>
       <PortfolioShort />
       <Reviews />
       <ServiceListSort />

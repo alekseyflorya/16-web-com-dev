@@ -6,7 +6,8 @@ import Interested from "../../components/Interested";
 import PortfolioShort from "../../components/PortfilioShort";
 import ServiceListSort from "../../components/ServiceListSort";
 import MarketingServices from "./MarketingServices";
-import MarketingFeatures from "./MarketingFeatures"
+import MarketingFeatures from "./MarketingFeatures";
+import interestedImage from "../../assets/img/internetmarketing-interested.jpg"
 
 function InternetMarketing() {
   return (
@@ -14,7 +15,7 @@ function InternetMarketing() {
       <Header />
       <MarketingServices />
       <MarketingFeatures />
-      <Interested />
+      <Interested interestedImage={interestedImage} />
       <PortfolioShort />
       <ServiceListSort />
       <Footer />

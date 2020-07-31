@@ -49,23 +49,24 @@ import SmmAds from "../pages/SmmAds";
 import UiUxDesigner from "../pages/UiUxDesigner"
 
 import homeBgImage from '../assets/img/main.jpg';
+import aboutUsImage from '../assets/img/about-us.jpg'
 import portfolioBgImage from '../assets/img/portfolio.jpg';
 import servicesBgImage from '../assets/img/uslugi.jpg';
 import vacanciesImage from  '../assets/img/career.jpg';
 import newsImage from  '../assets/img/news.jpg';
-import faqImage from '../assets/img/FAQ.jpg';
+import faqImage from '../assets/img/faq.jpg';
 import webDesignImage from '../assets/img/webdesign.jpg';
 import internetMarketingImage from '../assets/img/internet-marketing.jpg';
 import qaTestingImg from "../assets/img/qa-testing.jpg";
-import siteCreatingImage from '../assets/img/sozdanie-saitov.jpg';
+import siteCreatingImage from '../assets/img/sitecreating.jpg';
 import landingPageImg from "../assets/img/landing-page.jpg";
-import businessCardImg from "../assets/img/business-card.jpg";
+import businessCardImg from "../assets/img/businesscardsite.jpg";
 import corporateSiteImg from "../assets/img/corporate-site.jpg";
 import SitePrototypeImg from "../assets/img/site-prototype.jpg";
 import onlineStoreImg from "../assets/img/online-store.jpg";
-import landingDesignImg from "../assets/img/landing-design.jpg";
+import landingDesignImg from "../assets/img/landingdesign.jpg";
 import siteDesignImg from "../assets/img/site-design.jpg";
-import seoImg from "../assets/img/SEO.jpg";
+import seoImg from "../assets/img/seo.jpg";
 import ppcImg from "../assets/img/ppc.jpg";
 import smmImg from "../assets/img/smm.jpg";
 import pricesImg from "../assets/img/prices.jpg";
@@ -88,7 +89,8 @@ import smmFacebookImg from "../assets/img/facebook-smm.jpg";
 import smmInstagramImg from "../assets/img/instagram-smm.jpg";
 import otherSmmImg from "../assets/img/other-smm.jpg";
 import smmAdsImg from "../assets/img/smm-ads.jpg";
-import uiuxdesignerImg from "../assets/img/UI-UX-Designer.jpg"
+import uiuxdesignerImg from "../assets/img/UI-UX-Designer.jpg";
+import photographyImg from "../assets/img/photography.jpg";
 
 const DataArray = [
   {//Главная
@@ -110,7 +112,7 @@ const DataArray = [
     component: () => <About />,
     headdingtitle:'О нас',
     description: '16.web studio специализируется на веб-дизайне, создании адаптивных интернет-проектов, брендинге и рекламной фотографии.',
-    bgimage: homeBgImage,
+    bgimage: aboutUsImage,
     exact: true
   },
   {//Портфолио
@@ -240,9 +242,9 @@ const DataArray = [
     path: '/photography',
     parent: 'services',
     component: () => <Photography />,
-    headdingtitle:'Фотосьемка',
-    description: '',
-    bgimage: '',
+    headdingtitle:'Предметная фотосъёмка',
+    description: 'Предметные фотосессии помогут вам выгодно представить товары в интернет-магазине или Instagram, и увеличить посещаемость ресурса и уровень продаж.',
+    bgimage: photographyImg,
     exact: true
   },
 

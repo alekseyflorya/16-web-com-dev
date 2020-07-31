@@ -8,6 +8,7 @@ import Reviews from "../../components/Reviews";
 import ServiceListSort from "../../components/ServiceListSort";
 import OrderInfoInternalOptimization from "./OrderInfoInternalOptimization";
 import InternalOptimizationIncludes from "./InternalOptimizationIncludes";
+import interestedImage from "../../assets/img/internal-optimization-interested.jpg"
 
 function InternalOptimization() {
   return (
@@ -15,7 +16,7 @@ function InternalOptimization() {
       <Header />
       <InternalOptimizationIncludes />
       <OrderInfoInternalOptimization />
-      <Interested />
+      <Interested interestedImage={interestedImage}/>
       <PortfolioShort />
       <Reviews />
       <ServiceListSort />

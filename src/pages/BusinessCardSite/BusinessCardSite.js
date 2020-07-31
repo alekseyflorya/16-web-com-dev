@@ -7,6 +7,7 @@ import Interested from "../../components/Interested";
 import PortfolioShort from "../../components/PortfilioShort";
 import Reviews from "../../components/Reviews";
 import ServiceListSort from "../../components/ServiceListSort";
+import interestedImage from "../../assets/img/businesscardsite-interested.jpg"
 
 export default function BusinessCardSite(){
 
@@ -14,7 +15,7 @@ export default function BusinessCardSite(){
     <div className={classes.BusinessCardSitePage}>
       <Header />
       <BusinessCardInfo />
-      <Interested />
+      <Interested interestedImage={interestedImage} />
       <PortfolioShort />
       <Reviews />
       <ServiceListSort />

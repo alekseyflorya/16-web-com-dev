@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import classes from "./OtherSmmCoast.module.scss";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
-import smmCoastImg from "../../../assets/img/smm-coast.jpg";
+import smmCoastImg from "../../../assets/img/other-smm-coast.jpg";
 import {OrderButton} from "../../../components/UI/ButtonLink";
 import {Hidden} from "@material-ui/core";
 import CallBack from "../../../components/Callback";

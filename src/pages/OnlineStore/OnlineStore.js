@@ -7,6 +7,7 @@ import PortfolioShort from "../../components/PortfilioShort";
 import OnlineStoreProcess from "./OnlineStoreProcess";
 import OnlineStoreCoast from "./OnlineStoreCoast";
 import OnlineStoreSteps from "./OnlineStoreSteps";
+import interestedImage from "../../assets/img/online-store-interested.jpg"
 
 export default function OnlineStore(){
 
@@ -16,7 +17,7 @@ export default function OnlineStore(){
       <OnlineStoreProcess />
       <OnlineStoreCoast />
       <OnlineStoreSteps />
-      <Interested />
+      <Interested interestedImage={interestedImage}/>
       <PortfolioShort />
       <Footer />
     </div>
