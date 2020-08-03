@@ -12,7 +12,7 @@ export default function ServiceListFull() {
           <Grid container justify="space-between">
             <Grid item sm={4} className={classes.CardBox}>
               <div className={classes.Card}>
-                <Link className={classes.CardLink} to="/sitecreating">
+                <Link className={classes.CardLink} to="/services/sitecreating">
                   <h3 className={classes.CardName}>Создание сайтов</h3>
                   <p className={classes.CardText}>Профессиональная разработа сайтов, которая позволяет выгодно и эффектно представить любую услугу.</p>
                 </Link>
@@ -21,7 +21,7 @@ export default function ServiceListFull() {
             </Grid>
             <Grid item sm={4} className={classes.CardBox}>
               <div className={classes.Card}>
-                <Link className={classes.CardLink} to="/webdesign">
+                <Link className={classes.CardLink} to="/services/webdesign">
                   <h3 className={classes.CardName}>Веб-дизайн</h3>
                   <p className={classes.CardText}>Современные и эффективные решения в плане композиции, типографики, цветоведения и юзабилити.</p>
                 </Link>
@@ -30,7 +30,7 @@ export default function ServiceListFull() {
             </Grid>
             <Grid item sm={4} className={classes.CardBox}>
               <div className={classes.Card}>
-                <Link className={classes.CardLink} to="/internetmarketing">
+                <Link className={classes.CardLink} to="/services/internetmarketing">
                   <h3 className={classes.CardName}>Интернет - маркетинг</h3>
                   <p className={classes.CardText}>Максимальная востребованость бренда и вывод в топ результатов поисковых систем.</p>
                 </Link>
@@ -39,7 +39,7 @@ export default function ServiceListFull() {
             </Grid>
             <Grid item sm={4} className={classes.CardBox}>
               <div className={classes.Card}>
-                <Link className={classes.CardLink} to="/qatesting">
+                <Link className={classes.CardLink} to="/services/qatesting">
                   <h3 className={classes.CardName}>QA</h3>
                   <p className={classes.CardText}>Проверка корректности работы сайта, соответствие актуальным стандартам и требованиям.</p>
                 </Link>
@@ -47,7 +47,7 @@ export default function ServiceListFull() {
             </Grid>
             <Grid item sm={4} className={classes.CardBox}>
               <div className={classes.Card}>
-                <Link className={classes.CardLink} to="/branding">
+                <Link className={classes.CardLink} to="/services/branding">
                   <h3 className={classes.CardName}>Брендинг</h3>
                   <p className={classes.CardText}>Современные и эффективные решения в плане композиции, типографики, цветоведения и юзабилити.</p>
                 </Link>
@@ -55,7 +55,7 @@ export default function ServiceListFull() {
             </Grid>
             <Grid item sm={4} className={classes.CardBox}>
               <div className={classes.Card}>
-                <Link className={classes.CardLink} to="/photography">
+                <Link className={classes.CardLink} to="/services/photography">
                   <h3 className={classes.CardName}>Фотосьемка</h3>
                   <p className={classes.CardText}>Максимальная востребованость бренда и вывод в топ результатов поисковых систем.</p>
                 </Link>
@@ -69,18 +69,18 @@ export default function ServiceListFull() {
 }
 
 const subCategoriesLinksData = [
-  {id: 0, title: 'Лендинг', path: '/landingpage', parent: 'sitecreating'},
-  {id: 1, title: 'Сайт-визитка', path: '/businesscardsite', parent: 'sitecreating'},
-  {id: 2, title: 'Интернет-магазин', path: '/onlinestore', parent: 'sitecreating'},
-  {id: 3, title: 'Корпоративный сайт', path: '/corporatesite', parent: 'sitecreating'},
-  {id: 4, title: 'Уникальные решения', path: '/uniqueservices', parent: 'sitecreating'},
-  {id: 5, title: 'Дизайн лендинга', path: '/landingdesign', parent: 'webdesign'},
-  {id: 6, title: 'Дизайн сайта', path: '/sitedesign', parent: 'webdesign'},
-  {id: 7, title: 'Прототип сайта', path: '/siteprototype', parent: 'webdesign'},
-  {id: 8, title: 'SEO', path: '/seo', parent: 'internetmarketing'},
-  {id: 9, title: 'PPC', path: '/ppc', parent: 'internetmarketing'},
-  {id: 10, title: 'SMM', path: '/smm', parent: 'internetmarketing'},
-  {id: 11, title: 'E-mail маркетинг', path: '/email-marketing', parent: 'internetmarketing'}
+  {id: 0, title: 'Лендинг', path: '/services/sitecreating/landingpage', parent: 'sitecreating'},
+  {id: 1, title: 'Сайт-визитка', path: '/services/sitecreating/businesscardsite', parent: 'sitecreating'},
+  {id: 2, title: 'Интернет-магазин', path: '/services/sitecreating/onlinestore', parent: 'sitecreating'},
+  {id: 3, title: 'Корпоративный сайт', path: '/services/sitecreating/corporatesite', parent: 'sitecreating'},
+  {id: 4, title: 'Уникальные решения', path: '/services/sitecreating/uniqueservices', parent: 'sitecreating'},
+  {id: 5, title: 'Дизайн лендинга', path: '/services/webdesign/landingdesign', parent: 'webdesign'},
+  {id: 6, title: 'Дизайн сайта', path: '/services/webdesign/sitedesign', parent: 'webdesign'},
+  {id: 7, title: 'Прототип сайта', path: '/services/webdesign/siteprototype', parent: 'webdesign'},
+  {id: 8, title: 'SEO', path: '/services/internetmarketing/seo', parent: 'internetmarketing'},
+  {id: 9, title: 'PPC', path: '/services/internetmarketing/ppc', parent: 'internetmarketing'},
+  {id: 10, title: 'SMM', path: '/services/internetmarketing/smm', parent: 'internetmarketing'},
+  {id: 11, title: 'E-mail маркетинг', path: '/services/internetmarketing/email-marketing', parent: 'internetmarketing'}
   ];
 
 function SubCategoriesLinks({subCategories, parentName}) {

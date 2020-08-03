@@ -39,7 +39,6 @@
 }
 .MenuLinks{
   &:nth-child(5){
-    margin-bottom: 40px;
     @media(max-width: 768px){
       margin-bottom: 0;
     }
@@ -50,8 +49,8 @@
   text-decoration: none;
   font-style: normal;
   font-weight: bold;
-  font-size: 30px;
-  line-height: 36px;
+  font-size: 24px;
+  line-height: 140%;
   display: inline-flex;
   position: relative;
   justify-content: flex-start;
@@ -68,13 +67,38 @@
     justify-content: flex-start;
     align-items: center;
     background: transparent;
+    position: relative;
+    transition: all .4s ease;
+    &:before{
+      content: '';
+      display: block;
+      width: 0%;
+      height: 100%;
+      background: #4C1C89;
+      padding: 0;
+      position: absolute;
+      top: -10px;
+      left: -12.5px;
+      z-index: -1;
+      transition: all .4s ease;
+    }
+    &:hover{
+      transform: scale3d(1.05,1.05,1.05);
+      &:before{
+        width: 100%;
+        padding: 10px 15px;
+        background: #4C1C89;
+      }
+    }
   }
+
   &:hover,&:active{
     color: #0DF0FF;
+    //&:before{
+    //  width: 100%;
+    //  background: #4C1C89;
+    //}
   }
-  //&.active{
-  //  color: #0DF0FF;
-  //}
 }
 .InfoLinks{
   @media(max-width: 768px){
@@ -84,7 +108,6 @@
     margin-bottom: 10px;
   }
 }
-
 .opened{
   display: flex;
 }
@@ -98,160 +121,4 @@
   @media(max-width: 768px){
     padding: 0;
   }
-  span{
-    &:before{
-      content: '';
-      display: block;
-      position: absolute;
-      right: 0;
-      top: 0;
-      width: 20px;
-      height: 20px;
-      border-right: 2px solid #0DF0FF;
-      border-top: 2px solid #0DF0FF;
-      transition: all .4s ease;
-      z-index: -1;
-      @media(max-width: 768px){
-        display: none;
-      }
-    }
-    &:after{
-      content: '';
-      display: block;
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      width: 20px;
-      height: 20px;
-      border-right: 2px solid #0DF0FF;
-      border-bottom: 2px solid #0DF0FF;
-      transition: all .4s ease;
-      z-index: -1;
-      @media(max-width: 768px){
-        display: none;
-      }
-    }
-    &:hover{
-      &:before{
-        width: 100%;
-        height: 100%;
-        transition: all .4s ease;
-      }
-      &:after{
-        width: 100%;
-        height: 100%;
-        transition: all .4s ease;
-      }
-    }
-  }
-  &:before{
-    content: '';
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 20px;
-    height: 20px;
-    border-left: 2px solid #0DF0FF;
-    border-top: 2px solid #0DF0FF;
-    z-index: -1;
-    @media(max-width: 768px){
-      display: none;
-    }
-  }
-  &:after{
-    content: '';
-    display: block;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 20px;
-    height: 20px;
-    border-left: 2px solid #0DF0FF;
-    border-bottom: 2px solid #0DF0FF;
-    transition: all .4s ease;
-    z-index: -1;
-    @media(max-width: 768px){
-      display: none;
-    }
-  }
-  &:hover{
-    &:before{
-      width: 100%;
-      height: 100%;
-      transition: all .4s ease;
-    }
-    &:after{
-      width: 100%;
-      height: 100%;
-      transition: all .4s ease;
-    }
-  }
 }
-
-
-//.Navigation {
-//  background: url("../../assets/img/menu-bg.jpg");
-//  background-repeat: no-repeat;
-//  background-size: 100% 100%;
-//}
-//.MenuList{
-//  background: transparent;
-//  border: none;
-//}
-//.LinksTop{
-//  min-height: 415px;
-//  .LinkItem{
-//    display: flex;
-//    align-items: baseline;
-//  }
-//}
-//.LinksBottom{
-//  .Link{
-//    font-style: normal;
-//    font-weight: bold;
-//    font-size: 24px;
-//    line-height: 34px;
-//    color: #E9E9E9;
-//  }
-//}
-//.LinksChildren{
-//  .Link{
-//    font-style: normal;
-//    font-weight: normal;
-//    font-size: 20px;
-//    line-height: 28px;
-//    color: #ffffff;
-//  }
-//}
-//.Link {
-//  color: #ffffff;
-//  text-decoration: none;
-//  font-style: normal;
-//  font-weight: bold;
-//  font-size: 30px;
-//  line-height: 36px;
-//  &:hover,&:active{
-//    color: #0DF0FF;
-//  }
-//  &.active,&.active + .ButtonPlus{
-//    color: #0DF0FF;
-//  }
-//}
-//.ButtonPlus{
-//  font-style: normal;
-//  font-weight: bold;
-//  font-size: 30px;
-//  line-height: 30px;
-//  color: #FFFFFF;
-//  background: transparent;
-//  border: none;
-//  margin-left: 10px;
-//}
-//
-//.opened{
-//  display: flex;
-//}
-//.closed{
-//  display: none;
-//}

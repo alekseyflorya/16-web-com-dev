@@ -10,28 +10,28 @@ const FullPortfolioData = [
     title: 'Автопроставка',
     type: 'Интернет-магазин',
     position: classes.gridItem1,
-    path: '/autoprostavka'
+    path: '/portfolio/autoprostavka'
   },
   {
     img: portfolioImage2,
     title: 'Bronex',
     type: 'Интернет-магазин',
     position: classes.gridItem2,
-    path: '/bronex'
+    path: '/portfolio/bronex'
   },
   {
     img: portfolioImage3,
     title: 'Восстановление шаровых опор',
     type: 'Корпоративный сайт',
     position: classes.gridItem3,
-    path: '/sharova'
+    path: '/portfolio/sharova'
   },
   {
     img: portfolioImage4,
     title: 'Прагма',
     type: 'Корпоративный сайт',
     position: classes.gridItem4,
-    path: '/pragma'
+    path: '/portfolio/pragma'
   },
 ];
 

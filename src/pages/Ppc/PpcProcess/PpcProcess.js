@@ -20,7 +20,7 @@ function PpcProcess() {
           <Grid item container sm={12} className={classes.PpcProcessList}>
             <Grid item sm={6} xs={12} className={classes.Card}>
               <div className={classes.Item}>
-                <a href="/ppc-setting" className={classes.Link}>
+                <a href="/services/internetmarketing/ppc/ppc-setting" className={classes.Link}>
                   <h3 className={classes.Title}>Контекстная реклама</h3>
                   <p className={classes.Text}>Настройка контекстной рекламы в Google приводит к тому, что сервис анализирует активность конкретного человека в сети и выдаёт в результатах поиска объявления и рекламные ролики, соответствующие его последним запросам.</p>
                 </a>
@@ -44,7 +44,7 @@ function PpcProcess() {
             </Grid>
             <Grid item sm={6} xs={12} className={classes.Card}>
               <div className={classes.Item}>
-                <a href="/remarketing" className={classes.Link}>
+                <a href="/services/internetmarketing/ppc/remarketing" className={classes.Link}>
                   <h3 className={classes.Title}>Поисковый ремаркетинг</h3>
                   <p className={classes.Text}>Поисковый ремаркетинг Google Ads охватывает тех пользователей, которые уже побывали на вашем сайте – используя специальные настройки, можно снова показать им вашу рекламу, чтобы напомнить о бренде или предлагаемом продукте.</p>
                 </a>
@@ -68,7 +68,7 @@ function PpcProcess() {
             </Grid>
             <Grid item sm={6} xs={12} className={classes.Card}>
               <div className={classes.Item}>
-                <a href="/google-shopping" className={classes.Link}>
+                <a href="/services/internetmarketing/ppc/google-shopping" className={classes.Link}>
                   <h3 className={classes.Title}>Google Shopping</h3>
                   <p className={classes.Text}>Можно использовать настройку товарной рекламы, чтобы ваши товары появлялись в результатах поиска у потенциальных покупателей, которые хотят сравнить ассортимент и цены разных интернет-магазинов, не заходя на их сайты.</p>
                 </a>
@@ -76,7 +76,7 @@ function PpcProcess() {
             </Grid>
             <Grid item sm={6} xs={12} className={classes.Card}>
               <div className={classes.Item}>
-                <a href="/ppc-audit" className={classes.Link}>
+                <a href="/services/internetmarketing/ppc/ppc-audit" className={classes.Link}>
                   <h3 className={classes.Title}>Аудит контекстной рекламы</h3>
                   <p className={classes.Text}>Аудит рекламной компании позволяет определить её качество и эффективность – это оптимальный способ обнаружить недоработки в настройках рекламных кампаний, запущенных в Google Ads и Яндекс Директ.</p>
                 </a>

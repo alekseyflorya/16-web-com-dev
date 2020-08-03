@@ -9,21 +9,21 @@ const PortfolioData = [
     title: 'Восстановление шаровых опор',
     type: 'Лендинг-пейдж',
     position: classes.gridItem1,
-    path: '/sharova'
+    path: '/portfolio/sharova'
   },
   {
     img: portfolioImage2,
     title: 'Прагма',
     type: 'Корпоративный сайт',
     position: classes.gridItem2,
-    path: '/pragma'
+    path: '/portfolio/pragma'
   },
   {
     img: portfolioImage3,
     title: 'Автопроставка',
     type: 'Интернет-магазин',
     position: classes.gridItem3,
-    path: '/autoprostavka'
+    path: '/portfolio/autoprostavka'
   }
 ];
 
