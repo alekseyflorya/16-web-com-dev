@@ -6,6 +6,7 @@ import AccordionDetails from '@material-ui/core/AccordionDetails';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Grid from "@material-ui/core/Grid";
+import Fade from 'react-reveal/Fade'
 
 function FaqAccordion() {
   const [expanded, setExpanded] = React.useState(false);
@@ -20,12 +21,15 @@ function FaqAccordion() {
         <Grid container>
           <Grid item container sm={4} xs={12} alignItems="flex-start" className={classes.HeaddingBox}>
             <Grid item>
+              <Fade up>
               <h2 className={classes.Headding}>Больше, чем просто работа</h2>
               <p className={classes.Text}>Внезапно, представители современных социальных резервов неоднозначны и будут рассмотрены исключительно в разрезе маркетинговых и финансовых предпосылок.</p>
+              </Fade>
             </Grid>
           </Grid>
           <Grid item sm={1} xs={12} />
           <Grid item container sm={7} xs={12}>
+            <Fade up>
             <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')} classes={{root: classes.Accordion}}>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
@@ -40,6 +44,8 @@ function FaqAccordion() {
                 </p>
               </AccordionDetails>
             </Accordion>
+            </Fade>
+            <Fade up>
             <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')} classes={{root: classes.Accordion}}>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
@@ -54,6 +60,8 @@ function FaqAccordion() {
                 </p>
               </AccordionDetails>
             </Accordion>
+            </Fade>
+            <Fade up>
             <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')} classes={{root: classes.Accordion}}>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
@@ -77,6 +85,8 @@ function FaqAccordion() {
                   <p className={classes.Text}>Доверив нам разработать сайт под ключ, вы получите отлично работающий интернет-ресурс, способный привлечь множество новых клиентов!</p>
               </AccordionDetails>
             </Accordion>
+            </Fade>
+            <Fade up>
             <Accordion expanded={expanded === 'panel4'} onChange={handleChange('panel4')} classes={{root: classes.Accordion}}>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
@@ -89,6 +99,8 @@ function FaqAccordion() {
                 <p className={classes.Text}>Комплексное продвижение в интернете от нашей компании – это уникальная возможность повысить узнаваемость бренда и увеличить поток клиентов. Мы задействуем весь комплекс эффективных инструментов – от контекстной и таргетированной рекламы до SEO-оптимизации ресурса, чтобы вывести ваш ресурс на лидирующие позиции поисковых систем.</p>
               </AccordionDetails>
             </Accordion>
+            </Fade>
+            <Fade up>
             <Accordion expanded={expanded === 'panel5'} onChange={handleChange('panel5')} classes={{root: classes.Accordion}}>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
@@ -108,6 +120,8 @@ function FaqAccordion() {
                 </ol>
               </AccordionDetails>
             </Accordion>
+            </Fade>
+            <Fade up>
             <Accordion expanded={expanded === 'panel6'} onChange={handleChange('panel6')} classes={{root: classes.Accordion}}>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
@@ -120,6 +134,8 @@ function FaqAccordion() {
                 <p className={classes.Text}>Контекстная реклама – это объявления, появляющиеся на странице в поисковой системе после введения клиентом запроса. Важно, чтобы реклама была релевантной, отвечала на запросы пользователя и выглядела привлекательно. Поэтому стоит доверить настройку и ведение контекстной рекламы профессионалам, которые проведут эффективную рекламную кампанию любого продукта.</p>
               </AccordionDetails>
             </Accordion>
+            </Fade>
+            <Fade up>
             <Accordion expanded={expanded === 'panel7'} onChange={handleChange('panel7')} classes={{root: classes.Accordion}}>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
@@ -132,6 +148,8 @@ function FaqAccordion() {
                 <p className={classes.Text}>Эффективные площадки для продаж в интернете – социальные сети. Но для привлечения клиентов мало создать страничку продукта. Нужно организовать продвижение через социальные сети, известное как SMM-маркетинг. Оно заключается в разработке портрета предлагаемого продукта, подборе подходящего и привлекающего внимание контента и организации рекламной компании.</p>
               </AccordionDetails>
             </Accordion>
+            </Fade>
+            <Fade up>
             <Accordion expanded={expanded === 'panel8'} onChange={handleChange('panel8')} classes={{root: classes.Accordion}}>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
@@ -144,6 +162,8 @@ function FaqAccordion() {
                 <p className={classes.Text}>Лучший способ заинтересовать клиента – пообщаться с ним. Мы предлагаем сделать это через электронную почту и готовы взять на себя организацию email-рассылки. Специалисты не просто составят текст писем и отправят их адресату, но проведут комплексную работу по исследованию аудитории. Это поможет вашей компании привлечь новых клиентов и получить еще больше прибыли.</p>
               </AccordionDetails>
             </Accordion>
+            </Fade>
+            <Fade up>
             <Accordion expanded={expanded === 'panel9'} onChange={handleChange('panel9')} classes={{root: classes.Accordion}}>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
@@ -156,6 +176,8 @@ function FaqAccordion() {
                 <p className={classes.Text}>Внешний вид интернет-страницы – первое, на что обращают внимание его посетители. Чтобы люди надолго задержались на вашем ресурсе, мы разработаем привлекательный и одновременно эффектный дизайн для сайта. Ведь чем больше времени клиент проведет на странице, тем выше вероятность, что он сделает покупку!</p>
               </AccordionDetails>
             </Accordion>
+            </Fade>
+            <Fade up>
             <Accordion expanded={expanded === 'panel10'} onChange={handleChange('panel10')} classes={{root: classes.Accordion}}>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
@@ -168,6 +190,8 @@ function FaqAccordion() {
                 <p className={classes.Text}>Цены на веб-дизайн зависят от множества факторов, но в первую очередь от сложности и объема работ. Покажите интернет-страницу вашего бизнеса нашим дизайнерам, и мы рассчитаем для вас индивидуальную стоимость работ. Не ориентируйтесь на «усредненные» цены, лучше сразу узнайте конкретную стоимость услуг профессионалов для вашего сайта!</p>
               </AccordionDetails>
             </Accordion>
+            </Fade>
+            <Fade up>
             <Accordion expanded={expanded === 'panel11'} onChange={handleChange('panel11')} classes={{root: classes.Accordion}}>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
@@ -180,6 +204,8 @@ function FaqAccordion() {
                 <p className={classes.Text}>Разработка бренда – это не только создание логотипа и подбор красивого шрифта для названия компании. Это особая стратегия продвижения бизнеса, включающая в себя формирование ассоциаций и мнения людей при помощи различных инструментов, создания фирменного стиля и имиджа компании. Придайте индивидуальность образу вашей компании вместе с нами!</p>
               </AccordionDetails>
             </Accordion>
+            </Fade>
+            <Fade up>
             <Accordion expanded={expanded === 'panel12'} onChange={handleChange('panel12')} classes={{root: classes.Accordion}}>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
@@ -192,6 +218,8 @@ function FaqAccordion() {
                 <p className={classes.Text}>При заказе брендинга цена зависит от потребностей конкретного клиента. Для определения цены требуется проконсультироваться с нашими специалистами и определить предполагаемый фронт работ. Мы можем провести полноценную медиакомпанию по созданию имиджа фирмы, либо ограничиться созданием логотипа - все зависит только от пожеланий заказчика!</p>
               </AccordionDetails>
             </Accordion>
+            </Fade>
+            <Fade up>
             <Accordion expanded={expanded === 'panel13'} onChange={handleChange('panel13')} classes={{root: classes.Accordion}}>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
@@ -204,6 +232,8 @@ function FaqAccordion() {
                 <p className={classes.Text}>При проведении рекламной компании продукта или создании посвященного ему сайта не обойтись без изображений предлагаемого товара. Представить последний с выгодной стороны поможет предметная фотосессия, выполненная профессионалами. Она позволяет получить подчеркивающие достоинства продукта фото, которые обязательно привлекут внимание потенциальных клиентов.</p>
               </AccordionDetails>
             </Accordion>
+            </Fade>
+            <Fade up>
             <Accordion expanded={expanded === 'panel14'} onChange={handleChange('panel14')} classes={{root: classes.Accordion}}>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
@@ -216,6 +246,8 @@ function FaqAccordion() {
                 <p className={classes.Text}>Цена рассчитывается индивидуально и зависит от требуемого количества изображений, типа предметов, а также необходимости проведения обработки готовых снимков. Поэтому узнать стоимость предметной фотосъемки до ознакомления специалистов с продукцией сложно. Но можно узнать точную цену сразу во время консультации с нашими менеджерами.</p>
               </AccordionDetails>
             </Accordion>
+            </Fade>
+            <Fade up>
             <Accordion expanded={expanded === 'panel15'} onChange={handleChange('panel15')} classes={{root: classes.Accordion}}>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
@@ -228,6 +260,7 @@ function FaqAccordion() {
                 <p className={classes.Text}>Если сайт долго загружается или неправильно отображается контент – это отпугнет клиента еще на этапе знакомства с продуктом. Чтобы избавиться от проблем и предотвратить появление новых, проводят особую проверку – тест сайта на ошибки. С его помощью можно оценить мобильность и функциональность ресурса, а затем настроить интернет-страницу и сделать ее более удобной для клиента.</p>
               </AccordionDetails>
             </Accordion>
+            </Fade>
           </Grid>
         </Grid>
       </Container>

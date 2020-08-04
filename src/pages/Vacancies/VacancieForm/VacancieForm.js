@@ -8,6 +8,7 @@ import Input from "@material-ui/core/Input";
 import Container from "@material-ui/core/Container";
 import vacancieFormImg from "../../../assets/img/vacancie-form.jpg"
 import {Link} from "@material-ui/core";
+import Fade from 'react-reveal/Fade'
 
 function VacancieForm() {
   return (
@@ -16,7 +17,8 @@ function VacancieForm() {
         <h2 className={classes.Headding}>Вашей вакансии нет в списке?</h2>
         <Grid container>
           <Grid item container sm={6} xs={12} className={classes.FormBlock}>
-            <form action=""  autoComplete="off" className={classes.VacancieForm}>
+            <Fade up>
+            <form action=""  autoComplete="off" className={classes.Form}>
               <Grid item container
                     direction="column"
                     className={classes.VacancieFormBox}
@@ -52,15 +54,18 @@ function VacancieForm() {
                 </Grid>
               </Grid>
             </form>
+            </Fade>
           </Grid>
           <Grid item container sm={6} xs={12} alignItems="center">
             <Grid item container direction="column" alignItems="center">
+              <Fade up>
               <h3 className={classes.Title}>Что дальше?</h3>
               <Grid item container className={classes.Gridlist}>
                 <Grid item className={classes.GridlistItem}>Мы с вами свяжемся в течении 24 часов. Пока посмотрите <Link href={'/portfolio'}>порфтолио</Link></Grid>
                 <Grid item className={classes.GridlistItem}>Если разговор пройдет хорошо - мы пригласим вас на собеседовние</Grid>
                 <Grid item className={classes.GridlistItem}>В случае позитивного ответа - вы станете частью нашей команды!</Grid>
               </Grid>
+              </Fade>
             </Grid>
           </Grid>
         </Grid>

@@ -23,6 +23,7 @@ import TextField from '@material-ui/core/TextField';
 import Breef from '../Breef';
 import {Link} from "react-router-dom";
 import Footer from "../Footer";
+import Fade from 'react-reveal/Fade'
 
 export default function Header({notFound}) {
   const {headdingtitle, description, bgimage} = DataArray.find(page => page.path === window.location.pathname);
@@ -178,11 +179,10 @@ export default function Header({notFound}) {
             ) : '' }
             {(window.location.pathname !== '/not-found' && window.location.pathname !== '/contact') ? (
           <Grid item container sm={11} xs={12} style={{marginBottom: -80}}>
-            <Grid item container sm={9} sx={12} justify="center" alignItems="center" className={classes.HeaddingBox}
-            >
+            <Grid item container sm={9} sx={12} justify="center" alignItems="center" className={classes.HeaddingBox}>
               <Box style={{maxWidth: 575}} className={classes.TitleDescriptionBox}>
-                <h1 className={classes.HeaddingTitle}>{headdingtitle}</h1>
-                <p className={classes.HeaddingDescription}>{description}</p>
+                <Fade down delay={300}><h1 className={classes.HeaddingTitle}>{headdingtitle}</h1></Fade>
+                <Fade up delay={500}><p className={classes.HeaddingDescription}>{description}</p></Fade>
               </Box>
             </Grid>
             <Grid item sm={3} xs={false}/>
@@ -210,27 +210,31 @@ export default function Header({notFound}) {
             {
               window.location.pathname === '/' ?(
                 <>
-                <LogoIcon classes={{root: classes.LogoIcon}} width="85" height="54" viewBox="0 0 85 54"/>
-                <LogoMobileIcon classes={{root: classes.LogoMobileIcon}} width="55" height="32" viewBox="0 0 55 32"/>
+                  <Fade right delay={1000}><LogoIcon classes={{root: classes.LogoIcon}} width="85" height="54" viewBox="0 0 85 54"/></Fade>
+                  <Fade left delay={1000}><LogoMobileIcon classes={{root: classes.LogoMobileIcon}} width="55" height="32" viewBox="0 0 55 32"/></Fade>
                 </>
               ) : (
-                <Link to={'/'}>
-                  <LogoIcon classes={{root: classes.LogoIcon}} width="85" height="54" viewBox="0 0 85 54"/>
-                  <LogoMobileIcon classes={{root: classes.LogoMobileIcon}} width="55" height="32" viewBox="0 0 55 32"/>
-                </Link>
+                <Fade right delay={1000}>
+                  <Link to={'/'}>
+                    <Fade right delay={1000}><LogoIcon classes={{root: classes.LogoIcon}} width="85" height="54" viewBox="0 0 85 54"/></Fade>
+                    <Fade left delay={1000}><LogoMobileIcon classes={{root: classes.LogoMobileIcon}} width="55" height="32" viewBox="0 0 55 32"/></Fade>
+                  </Link>
+                </Fade>
               )
             }
           </Grid>
           <Grid item className={classes.MenuButton}>
+            <Fade right delay={1000}>
             <button onClick={toggleDrawer(!(state.navOpen))} className={classes.BurgerBtn}>
               <span className={state.navOpen ? classes.BurgerActive : classes.Burger}></span>
             </button>
+            </Fade>
           </Grid>
           <Grid item style={{width: 66, height: 0, }}>
           </Grid>
           <ClickAwayListener onClickAway={handleClickAway}>
             <Grid className={classes.Fab} classes={{root: classes.fabGridRoot}}>
-              <FabComponent />
+              <Fade right delay={1000}><FabComponent /></Fade>
             </Grid>
           </ClickAwayListener>
         </Grid>

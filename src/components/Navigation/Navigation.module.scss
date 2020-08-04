@@ -2,6 +2,8 @@
   background: url("../../assets/img/menu-bg.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  width: 100vw;
+  height: 100vh;
 }
 .MenuList{
   background: transparent;
@@ -9,6 +11,7 @@
 }
 .LinksTop{
   justify-content: space-between;
+  overflow: hidden;
   .MobileSocialGrid{
     max-width: 50%;
     position: absolute;
@@ -94,10 +97,6 @@
 
   &:hover,&:active{
     color: #0DF0FF;
-    //&:before{
-    //  width: 100%;
-    //  background: #4C1C89;
-    //}
   }
 }
 .InfoLinks{

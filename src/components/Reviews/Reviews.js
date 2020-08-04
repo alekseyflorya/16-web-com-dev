@@ -6,6 +6,7 @@ import classes from './Reviews.module.scss';
 import ReviewsData from '../ReviewsArray';
 import Container from "@material-ui/core/Container";
 import tabPanelBg from '../../assets/img/tabpanel-bg.jpg';
+import Fade from 'react-reveal/Fade';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -38,7 +39,9 @@ export default function Reviews() {
         index={index}
         className={classes.TabPanel}
       >
+
         <div className={classes.TabPanelItem}>
+          <Fade left>
           <div className={classes.AvatarBox}>
             <img className={classes.Avatar} src={avatar} alt={title} />
             <div className={classes.AvatarNameBox}>
@@ -46,10 +49,13 @@ export default function Reviews() {
               <p className={classes.AvatarNameCompany}>{company}</p>
             </div>
           </div>
+          </Fade>
+          <Fade right>
           <div className={classes.TextBox}>
             <p className={classes.Text}>{reviewText}</p>
             <span className={classes.DateAdded}>{dateAdded}</span>
           </div>
+          </Fade>
         </div>
       </TabPanel>
     )

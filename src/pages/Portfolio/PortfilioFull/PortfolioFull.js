@@ -5,6 +5,7 @@ import {Link} from "react-router-dom";
 import {ButtonLoadMore} from '../../../components/UI/ButtonLink';
 import FullPortfolioData from "../FullPortfolioArray";
 import Pagination from "@material-ui/lab/Pagination";
+import Fade from 'react-reveal/Fade'
 
 function PortfolioFull() {
   const [page, setPage] = React.useState(1);
@@ -24,7 +25,7 @@ function PortfolioFull() {
           <div className={classes.HoveredArrow}></div>
         </Link>
       </div>
-      <img className={classes.gridImg} src={img} alt={type} title={title}/>
+      <Fade up><img className={classes.gridImg} src={img} alt={type} title={title}/></Fade>
     </div>
   ))
 

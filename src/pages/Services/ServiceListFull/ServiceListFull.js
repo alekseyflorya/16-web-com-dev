@@ -3,6 +3,7 @@ import classes from './ServiceListFull.module.scss';
 import {Link} from 'react-router-dom';
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
+import Fade from 'react-reveal/Fade'
 
 export default function ServiceListFull() {
   return (
@@ -12,53 +13,65 @@ export default function ServiceListFull() {
           <Grid container justify="space-between">
             <Grid item sm={4} className={classes.CardBox}>
               <div className={classes.Card}>
+                <Fade up>
                 <Link className={classes.CardLink} to="/services/sitecreating">
                   <h3 className={classes.CardName}>Создание сайтов</h3>
                   <p className={classes.CardText}>Профессиональная разработа сайтов, которая позволяет выгодно и эффектно представить любую услугу.</p>
                 </Link>
+                </Fade>
                 <SubCategoriesLinks subCategories={subCategoriesLinksData} parentName={'sitecreating'}/>
               </div>
             </Grid>
             <Grid item sm={4} className={classes.CardBox}>
               <div className={classes.Card}>
+                <Fade up>
                 <Link className={classes.CardLink} to="/services/webdesign">
                   <h3 className={classes.CardName}>Веб-дизайн</h3>
                   <p className={classes.CardText}>Современные и эффективные решения в плане композиции, типографики, цветоведения и юзабилити.</p>
                 </Link>
+                </Fade>
                 <SubCategoriesLinks subCategories={subCategoriesLinksData} parentName={'webdesign'}/>
               </div>
             </Grid>
             <Grid item sm={4} className={classes.CardBox}>
               <div className={classes.Card}>
+                <Fade up>
                 <Link className={classes.CardLink} to="/services/internetmarketing">
                   <h3 className={classes.CardName}>Интернет - маркетинг</h3>
                   <p className={classes.CardText}>Максимальная востребованость бренда и вывод в топ результатов поисковых систем.</p>
                 </Link>
+                </Fade>
                 <SubCategoriesLinks subCategories={subCategoriesLinksData} parentName={'internetmarketing'}/>
               </div>
             </Grid>
             <Grid item sm={4} className={classes.CardBox}>
               <div className={classes.Card}>
+                <Fade up>
                 <Link className={classes.CardLink} to="/services/qatesting">
                   <h3 className={classes.CardName}>QA</h3>
                   <p className={classes.CardText}>Проверка корректности работы сайта, соответствие актуальным стандартам и требованиям.</p>
                 </Link>
+                </Fade>
               </div>
             </Grid>
             <Grid item sm={4} className={classes.CardBox}>
               <div className={classes.Card}>
+                <Fade up>
                 <Link className={classes.CardLink} to="/services/branding">
                   <h3 className={classes.CardName}>Брендинг</h3>
                   <p className={classes.CardText}>Современные и эффективные решения в плане композиции, типографики, цветоведения и юзабилити.</p>
                 </Link>
+                </Fade>
               </div>
             </Grid>
             <Grid item sm={4} className={classes.CardBox}>
               <div className={classes.Card}>
+                <Fade up>
                 <Link className={classes.CardLink} to="/services/photography">
                   <h3 className={classes.CardName}>Фотосьемка</h3>
                   <p className={classes.CardText}>Максимальная востребованость бренда и вывод в топ результатов поисковых систем.</p>
                 </Link>
+                </Fade>
               </div>
             </Grid>
           </Grid>
@@ -90,7 +103,15 @@ function SubCategoriesLinks({subCategories, parentName}) {
   const subCategoriesLinks = subCategoriesFiltered.map(({id, path, title}) => {
     return (
       <li className={classes.SubCategoriesItem} key={`subCategoriesLinksData_${id}`}>
-        <Link to={path} className={classes.SubCategoriesLink}>{title}</Link>
+        {window.outerWidth < 768 ?(
+          <Fade right delay={id * 100} >
+            <Link to={path} className={classes.SubCategoriesLink}>{title}</Link>
+          </Fade>
+          ):(
+            <Fade up delay={id * 100}>
+              <Link to={path} className={classes.SubCategoriesLink}>{title}</Link>
+            </Fade>
+        )}
       </li>
     )
   })

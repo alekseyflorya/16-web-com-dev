@@ -9,6 +9,7 @@ import Grid from "@material-ui/core/Grid";
 import {Link as SocialLink} from "@material-ui/core";
 import menuBg from '../../assets/img/menu-bg.jpg';
 import {MobileBehanceIcon, MobileDribbleIcon, MobileFbIcon, MobileInstaIcon, MobileLinkedIcon} from "../Icons";
+import Fade from 'react-reveal/Fade'
 
 const useStyles = makeStyles({
   list: {
@@ -71,31 +72,33 @@ function Navigation({toggleDrawer, isOpen}) {
                 if (id <= 8) {
                   return (
                     <Grid item sm={4} xs={12} key={index} className={classes.MenuLinks}>
-                      <Link
-                        to={path}
-                        label={label}
-                        className={`${classes.Link} ${id > 4 ? classes.InfoLinks: ''} ${activeLink}`}
-                      >
-                        <span>{label}</span>
-                      </Link>
+                      <Fade right duration={400} delay={110+(id * 110)}>
+                        <Link
+                          to={path}
+                          label={label}
+                          className={`${classes.Link} ${id > 4 ? classes.InfoLinks: ''} ${activeLink}`}
+                        >
+                          <span>{label}</span>
+                        </Link>
+                      </Fade>
                     </Grid>
                   );
                 }
               })}
               <Grid item container xs={12} className={classes.MobileSocialGrid}>
-                <SocialLink className={classes.MobileSocialLink} to="#">
+                <SocialLink className={classes.MobileSocialLink} to="https://www.instagram.com/16.web/">
                   <MobileInstaIcon width="23" height="23" viewBox="0 0 23 23" />
                 </SocialLink>
-                <SocialLink className={classes.MobileSocialLink} to="#">
+                <SocialLink className={classes.MobileSocialLink} to="https://www.facebook.com/16.web">
                   <MobileFbIcon width="11" height="23" viewBox="0 0 11 23" />
                 </SocialLink>
                 <SocialLink className={classes.MobileSocialLink} to="#">
                   <MobileLinkedIcon width="23" height="23" viewBox="0 0 23 23" />
                 </SocialLink>
-                <SocialLink className={classes.MobileSocialLink} to="#">
+                <SocialLink className={classes.MobileSocialLink} to="https://www.behance.net/16web">
                   <MobileBehanceIcon width="31" height="19" viewBox="0 0 31 19" />
                 </SocialLink>
-                <SocialLink className={classes.MobileSocialLink} to="#">
+                <SocialLink className={classes.MobileSocialLink} to="https://dribbble.com/16web">
                   <MobileDribbleIcon width="27" height="27" viewBox="0 0 27 27" />
                 </SocialLink>
               </Grid>

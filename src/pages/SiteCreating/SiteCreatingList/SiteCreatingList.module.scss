@@ -4,6 +4,10 @@ $btnColor: #ffffff;
 .SiteCreatingList{
   margin-top: 120px;
   margin-bottom: 220px;
+  @media(max-width: 768px) {
+    margin-bottom: 120px;
+    margin-top: 60px;
+  }
   .Container{
 
   }
@@ -15,20 +19,36 @@ $btnColor: #ffffff;
     line-height: 52px;
     color: #393939;
     margin-bottom: 120px;
+    @media(max-width: 768px) {
+      font-size: 28px;
+      line-height: 120%;
+      margin-bottom: 60px;
+    }
+  }
+  .CardsBox{
+    .CardBox:nth-child(3n-2){
+      .Card{
+        padding-left: 0;
+      }
+    }
+    .CardBox:nth-child(3n){
+      .Card{
+        padding-right: 0;
+      }
+    }
   }
   .Cards{
     margin-bottom: 120px;
+
   }
   .CardBox{
 
   }
   .Card{
-    padding: 30px 40px;
+    padding: 0 50px 60px;
     transition: all .5s;
-    &:hover{
-      border-color: transparent;
-      transform: translateY(-5px);
-      box-shadow: 5px 20px 30px rgba(128, 128, 128, 0.15);
+    @media(max-width: 768px) {
+      padding: 20px 0;
     }
   }
   .CardName{
@@ -43,18 +63,34 @@ $btnColor: #ffffff;
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+    padding-right: 20px;
     text-decoration: none;
+    transition: all .4s ease;
+    @media(max-width: 768px) {
+      font-size: 22px;
+      line-height: 140%;
+      padding-right: 40px;
+      margin-bottom: 10px;
+    }
     &:after{
       content: '';
       position: absolute;
       width: 12px;
       height: 12px;
       display: inline-block;
-      border-top: 2px solid black;
-      border-right: 2px solid black;
-      right: 0;
+      border-top: 2px solid #393939;
+      border-right: 2px solid #393939;
+      right: 10px;
       transform: rotate(45deg);
-      top: calc(50% - 6px)
+      top: calc(50% - 6px);
+      transition: all .4s ease;
+    }
+    &:hover{
+      color: #0df0ff;
+      &:after{
+        border-top: 2px solid #0df0ff;
+        border-right: 2px solid #0df0ff;
+      }
     }
   }
   .CardText{
@@ -65,6 +101,9 @@ $btnColor: #ffffff;
     line-height: 22px;
     color: #8B8B8B;
     margin-bottom: 20px;
+    @media(max-width: 768px) {
+      padding-right: 20px;
+    }
   }
   .CardLink{
     font-family: Inter;
@@ -74,17 +113,6 @@ $btnColor: #ffffff;
     line-height: 22px;
     color: #292525;
     text-decoration: none;
-    &:after{
-      content: '+';
-      color: #D5D5D5;
-      font-size: 18px;
-      font-weight: bold;
-      margin-left: 10px;
-    }
-  }
-  .ServiceListBtn{
-    display: flex;
-    justify-content: center;
   }
 }
 

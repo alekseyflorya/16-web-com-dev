@@ -6,11 +6,13 @@ import Icon from '@material-ui/core/Icon';
 import {Link} from 'react-router-dom';
 import NewsData from '../NewsArray';
 import {ButtonLink} from "../UI/ButtonLink";
+import Fade from 'react-reveal/Fade'
 
 function LastNews() {
   const Posts = NewsData.map(({id, postPath, image, title, blogCategory, dateAdded, description, views}, index) => {
     return (
       <Grid item container sm={4} xs={12} direction="column" key={index} className={classes.NewsItem}>
+        <Fade up>
           <img className={classes.Image} src={image} alt=""/>
           <Link to={`/post${id}`} className={classes.LinkToPost}>
             <h3 className={classes.PostTitle}>{title}</h3>
@@ -25,6 +27,7 @@ function LastNews() {
               <span className={classes.Go}></span>
             </Link>
           </div>
+        </Fade>
       </Grid>
     )
   });

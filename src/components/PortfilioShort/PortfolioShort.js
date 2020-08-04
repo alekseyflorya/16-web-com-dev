@@ -4,6 +4,7 @@ import PortfolioData from '../PortfolioArray';
 import Container from "@material-ui/core/Container";
 import {Link} from "react-router-dom";
 import {ButtonLink, PricesButton} from '../../components/UI/ButtonLink'
+import Fade from 'react-reveal/Fade';
 
 function PortfolioShort(){
   return (
@@ -12,8 +13,8 @@ function PortfolioShort(){
         <div>
           <h2 className={classes.Headding}>Наше портфолио</h2>
           <div className={classes.DescriptionBlock}>
-            <p className={classes.Description}>У нас немало выполненных проектов – отзывы клиентов красноречиво говорят о том, что мы умеем эффективно и быстро решать самые сложные задачи.</p>
-            <PricesButton classNames={classes.PricesButton} path={'/prices'} title={'Узнать цены'} />
+            <Fade up><p className={classes.Description}>У нас немало выполненных проектов – отзывы клиентов красноречиво говорят о том, что мы умеем эффективно и быстро решать самые сложные задачи.</p></Fade>
+            <Fade right><PricesButton classNames={classes.PricesButton} path={'/prices'} title={'Узнать цены'} /></Fade>
           </div>
           <div className={classes.ProjectsGrid}>
             <div className={classes.gridContainer}>
@@ -26,7 +27,9 @@ function PortfolioShort(){
                       <div className={classes.HoveredArrow}></div>
                     </Link>
                   </div>
+                  <Fade up>
                   <img className={classes.gridImg} src={img} alt={type} title={title}/>
+                  </Fade>
                 </div>
               ))}
             </div>

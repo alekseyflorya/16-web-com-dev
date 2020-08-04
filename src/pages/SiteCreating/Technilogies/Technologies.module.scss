@@ -11,6 +11,10 @@
     line-height: 52px;
     color: #393939;
     margin-bottom: 120px;
+    @media(max-width: 768px) {
+      font-size: 28px;
+      line-height: 120%;
+    }
   }
   .TechnologiesList{
 
@@ -21,15 +25,18 @@
     margin-bottom: 100px;
   }
   .LogoImgBox{
-    width: 115px;
-    height: 115px;
     display: flex;
     justify-content: center;
     align-items: center;
+    @media(max-width: 768px){
+      width: 40px;
+      height: 40px;
+    }
   }
   .LogoImg{
     display: block;
     max-width: 100%;
+    height: auto;
   }
   .CaptionBox{
 
@@ -42,6 +49,10 @@
     line-height: 120%;
     color: #393939;
     margin-bottom: 15px;
+    @media(max-width: 768px){
+      font-size: 22px;
+      line-height: 140%;
+    }
   }
   .Description{
     font-family: Inter;
@@ -50,5 +61,53 @@
     font-size: 16px;
     line-height: 140%;
     color: #8B8B8B;
+  }
+}
+.CmsFrameworks{
+  @media(max-width: 768px){
+    margin-bottom: 60px;
+  }
+  .Headding{
+    @media(max-width: 768px) {
+      font-size: 28px;
+      line-height: 120%;
+      margin-bottom: 80px;
+    }
+  }
+  .TechnologiesItem{
+    justify-content: flex-start;
+    align-items: center;
+    @media(max-width: 768px){
+      justify-content: flex-start;
+      align-items: center;
+      margin-bottom: 60px;
+    }
+  }
+  .LogoImgBox{
+    justify-content: flex-start;
+    @media(max-width: 768px) {
+      margin-right: 20px;
+    }
+  }
+  .TitleBox{
+
+  }
+  .CaptionBox{
+    margin-top: 40px;
+    @media(max-width: 768px){
+      margin-top: 20px;
+    }
+  }
+  .LogoImg{
+    @media(max-width: 768px){
+      max-width: 40px;
+    }
+  }
+  .Title{
+    margin-bottom: 0;
+    @media(max-width: 768px) {
+      font-size: 22px;
+      line-height: 140%;
+    }
   }
 }
