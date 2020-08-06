@@ -6,7 +6,7 @@
   .HeaddingBox{
     margin-bottom: 100px;
     @media(max-width: 768px){
-      margin-bottom: 50px;
+      margin-bottom: 10px;
     }
   }
   .Headding{
@@ -19,6 +19,7 @@
     @media(max-width: 768px){
       font-size: 28px;
       line-height: 120%;
+      margin-bottom: 40px;
     }
   }
   .Text{
@@ -32,7 +33,7 @@
   .GridList{
     margin-bottom: 120px;
     @media(max-width: 768px){
-
+      margin-bottom: 60px;
     }
     .GridListItem{
       font-family: Inter;
@@ -45,6 +46,9 @@
       padding-left: 30px;
       margin-top: 50px;
       padding-right: 75px;
+      @media(max-width: 768px){
+        padding-right: 0;
+      }
       &:before{
         content: '';
         display: inline-block;

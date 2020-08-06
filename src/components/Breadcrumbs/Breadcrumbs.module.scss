@@ -1,0 +1,27 @@
+.Breadcrumbs{
+  margin-bottom: 60px;
+  @media(max-width: 768px) {
+    margin-bottom: 60px;
+  }
+  .HomeIcon{
+    width: 24px;
+    height: 24px;
+    margin-top: 5px;
+    fill: #DADADA;
+  }
+  .Link,.CurrentPageLabel{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 140%;
+    color: #DADADA;
+    text-decoration: none;
+  }
+  .CurrentPageLabel{
+
+  }
+  .Separator{
+    fill: #DADADA;
+  }
+}

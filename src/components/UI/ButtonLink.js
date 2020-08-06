@@ -2,7 +2,6 @@ import React from "react";
 import classes from "./ButtonLink.module.scss";
 import {Link} from "react-router-dom";
 import RefreshIcon from '@material-ui/icons/Refresh';
-import Fade from 'react-reveal/Fade'
 
 const ButtonLink = ({path, title, classNames}) => {
   return (

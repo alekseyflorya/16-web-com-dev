@@ -17,29 +17,46 @@
     }
   }
   .TechnologiesList{
-
+    & :nth-child(2n-1){
+      padding-right: 30px;
+      @media(max-width: 768px){
+        padding-right: 0;
+      }
+    }
+    & :nth-child(2n){
+      padding-left: 30px;
+      @media(max-width: 768px){
+        padding-left: 0;
+      }
+    }
   }
   .TechnologiesItem{
-    display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
+    align-items: center;
     margin-bottom: 100px;
+    @media(max-width: 768px){
+      justify-content: flex-start;
+      align-items: center;
+      margin-bottom: 60px;
+    }
   }
   .LogoImgBox{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    @media(max-width: 768px){
-      width: 40px;
-      height: 40px;
+    justify-content: flex-start;
+    @media(max-width: 768px) {
+      margin-right: 20px;
     }
   }
   .LogoImg{
-    display: block;
-    max-width: 100%;
-    height: auto;
+    max-width: 60px;
+    @media(max-width: 768px){
+      max-width: 40px;
+    }
   }
   .CaptionBox{
-
+    margin-top: 40px;
+    @media(max-width: 768px){
+      margin-top: 20px;
+    }
   }
   .Title{
     font-family: Ubuntu;
@@ -74,9 +91,24 @@
       margin-bottom: 80px;
     }
   }
+  .TechnologiesList{
+    & > .TechnologiesItem:nth-child(2n-1){
+      padding-right: 30px;
+      @media(max-width: 768px) {
+        padding-right: 0;
+      }
+    }
+    & > .TechnologiesItem:nth-child(2n){
+      padding-left: 30px;
+      @media(max-width: 768px){
+        padding-left: 0;
+      }
+    }
+  }
   .TechnologiesItem{
     justify-content: flex-start;
     align-items: center;
+    margin-bottom: 100px;
     @media(max-width: 768px){
       justify-content: flex-start;
       align-items: center;
@@ -99,6 +131,7 @@
     }
   }
   .LogoImg{
+    max-width: 60px;
     @media(max-width: 768px){
       max-width: 40px;
     }

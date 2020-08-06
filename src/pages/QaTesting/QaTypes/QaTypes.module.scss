@@ -1,5 +1,8 @@
 .QaTypes{
   margin-bottom: 220px;
+  @media(max-width: 768px) {
+    margin-bottom: 50px;
+  }
   .Container{
     counter-reset: number2;
   }
@@ -11,20 +14,39 @@
     line-height: 52px;
     color: #393939;
     margin-bottom: 80px;
+    @media(max-width: 768px){
+      font-size: 28px;
+      line-height: 120%;
+    }
   }
   .SubHeadding{
     margin-bottom: 60px;
   }
   .Cards{
     margin-bottom: 150px;
+    @media(max-width: 768px) {
+      margin-bottom: 0;
+    }
+    .Card:nth-child(2n-1){
+      padding-left: 0;
+      @media(max-width: 768px) {
+        padding-left: 0;
+        padding-right: 16px;
+      }
+    }
+    .Card:nth-child(2n){
+      padding-right: 0;
+      @media(max-width: 768px) {
+        padding-left: 0;
+        padding-right: 16px;
+      }
+    }
   }
   .Card{
-    padding: 70px;
+    padding: 30px 70px 70px;
     position: relative;
-    transition: all .5s ease;
+    transition: all .4s ease;
     &:hover{
-      transform: translateY(-5px);
-      box-shadow: 5px 20px 30px rgba(128, 128, 128, 0.15);
       .Title{
         &:after{
           color: #0DF0FF;
@@ -40,13 +62,14 @@
     line-height: 140%;
     color: #292525;
     margin-bottom: 40px;
+    transition: all .4s ease;
     &:after{
       counter-increment: number2;
       content: '0' counter(number2);
       display: block;
       position: absolute;
       right: 70px;
-      top: 70px;
+      top: 30px;
       font-family: Ubuntu;
       font-style: normal;
       font-weight: bold;
@@ -55,6 +78,9 @@
       color: #DADADA;
       transform: rotate(-90deg);
       transition: all .4s ease;
+      @media(max-width: 768px) {
+        right: 16px;
+      }
     }
   }
   .Text{

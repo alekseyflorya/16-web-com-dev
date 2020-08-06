@@ -1,7 +1,13 @@
 .CorporateFeatures{
   margin-bottom: 220px;
+  @media(max-width: 768px) {
+    margin-bottom: 120px;
+  }
   .HeaddingBox{
     margin-bottom: 100px;
+    @media(max-width: 768px) {
+      margin-bottom: 50px;
+    }
   }
   .Headding{
     font-family: Ubuntu;
@@ -10,6 +16,11 @@
     font-size: 43px;
     line-height: 52px;
     color: #393939;
+    @media(max-width: 768px) {
+      font-size: 28px;
+      line-height: 120%;
+      margin-bottom: 40px;
+    }
   }
   .Text{
     font-family: Inter;
@@ -21,6 +32,9 @@
   }
   .GridList{
     padding-left: 80px;
+    @media(max-width: 768px) {
+      padding-left: 0;
+    }
     .GridListItem{
       font-family: Inter;
       font-style: normal;
@@ -32,6 +46,9 @@
       padding-left: 30px;
       margin-top: 30px;
       padding-right: 180px;
+      @media(max-width: 768px) {
+        padding-right: 0;
+      }
       &:before{
         content: '';
         display: inline-block;

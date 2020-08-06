@@ -3,6 +3,7 @@ import classes from "./SeoServices.module.scss";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import {Link} from "react-router-dom"
+import Fade from 'react-reveal/Fade'
 
 function SeoServices() {
   return (
@@ -11,13 +12,14 @@ function SeoServices() {
         <Grid container>
           <Grid item container className={classes.TopRow} alignItems="center">
             <Grid item sm={7} xs={12}>
-              <h2 className={classes.Headding}>Продвижение сайтов на поисковых ресурсах</h2>
+              <Fade up><h2 className={classes.Headding}>Продвижение сайтов на поисковых ресурсах</h2></Fade>
             </Grid>
             <Grid item sm={5} xs={12}>
-              <p className={classes.Text}>Наши специалисты знают все нюансы белого SEO- продвижения и готовы использовать весь арсенал средств.</p>
+              <Fade up><p className={classes.Text}>Наши специалисты знают все нюансы белого SEO- продвижения и готовы использовать весь арсенал средств.</p></Fade>
             </Grid>
           </Grid>
-          <Grid item container className={classes.BottomRow}>
+          <Fade up>
+          <Grid item container sm={12} className={classes.BottomRow}>
             <Grid item container sm={6} xs={12} className={classes.Item}>
               <Link to="/services/internetmarketing/seo/seo-audit" className={classes.Title}>SEO-аудит сайта</Link>
               <p className={classes.Text}>Комплексный анализ сайта позволяет выявить внутренние ошибки и проверить, насколько ресурс соответствует требованиям поисковиков – этот этап реализуется в первую очередь.</p>
@@ -35,6 +37,7 @@ function SeoServices() {
               <p className={classes.Text}>Суть внешней оптимизации – это ссылочное продвижение, в ходе которого идёт работа над наращиванием количества ссылок, размещённых на других ресурсах. По факту, это рекомендации, и чем их больше, тем выше рейтинг сайта в поисковых системах.</p>
             </Grid>
           </Grid>
+          </Fade>
         </Grid>
       </Container>
     </section>

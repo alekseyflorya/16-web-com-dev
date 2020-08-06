@@ -26,20 +26,27 @@
       margin-bottom: 60px;
     }
   }
+  .CardsBox{
+    .CardBox:nth-child(3n-2){
+      .Card{
+        padding-left: 0;
+      }
+    }
+    .CardBox:nth-child(3n){
+      .Card{
+        padding-right: 0;
+      }
+    }
+  }
   .CardBox{
 
   }
   .Card{
-    padding: 32px;
+    padding: 0 60px 60px;
     transition: all .5s;
     @media(max-width: 768px){
       padding: 16px;
       margin: -16px -16px 40px -16px;
-    }
-    &:hover{
-      border-color: transparent;
-      transform: translateY(-5px);
-      box-shadow: 5px 20px 30px rgba(128, 128, 128, 0.15);
     }
   }
   .CardName{

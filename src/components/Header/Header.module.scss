@@ -4,10 +4,9 @@ $blue: #0DF0FF;
 
 .Header{
   position: relative;
-  margin-bottom: 220px;
+  margin-bottom: 120px;
   @media (max-width: 768px){
-    margin-bottom: 160px;
-
+    margin-bottom: 120px;
   }
   .ColumnLeftBox{
     @media (max-width: 768px){
@@ -338,6 +337,7 @@ $blue: #0DF0FF;
     border: none;
     opacity: 0.7;
     transition: all .4s ease;
+    margin-right: 10px;
     @media (max-width: 768px){
       display: none;
     }

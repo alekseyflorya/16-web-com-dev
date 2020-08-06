@@ -1,5 +1,8 @@
 .OnlineStoreProcess{
   margin-bottom: 120px;
+  @media(max-width: 768px){
+    margin-bottom: 60px;
+  }
   .Headding{
     font-family: Ubuntu;
     font-style: normal;
@@ -8,6 +11,11 @@
     line-height: 52px;
     color: #393939;
     margin-bottom: 120px;
+    @media(max-width: 768px){
+      font-size: 28px;
+      line-height: 120%;
+      margin-bottom: 60px;
+    }
   }
   .HeaddingText{
     font-family: Inter;
@@ -16,6 +24,9 @@
     font-size: 16px;
     line-height: 140%;
     color: #8B8B8B;
+    @media(max-width: 768px){
+      margin-bottom: 40px;
+    }
   }
   .OnlineStoreProcessList{
     counter-reset: numbers;
@@ -27,6 +38,9 @@
       z-index: 3;
       overflow: hidden;
       transition: all .5s ease;
+      @media(max-width: 768px){
+        margin: 0 0 50px;
+      }
       &:before{
         counter-increment: numbers;
         content: '0' counter(numbers);
@@ -109,6 +123,11 @@
     font-size: 43px;
     line-height: 52px;
     color: #393939;
+    @media(max-width: 768px){
+      font-size: 28px;
+      line-height: 120%;
+      margin-bottom: 40px;
+    }
   }
   .Text{
     font-family: Inter;

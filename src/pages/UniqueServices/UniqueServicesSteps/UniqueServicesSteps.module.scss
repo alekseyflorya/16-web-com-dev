@@ -1,5 +1,8 @@
 .UniqueServicesSteps{
   margin-bottom: 180px;
+  @media(max-width: 768px) {
+    margin-bottom: 60px;
+  }
   .Container{
     counter-reset: number3;
   }
@@ -11,20 +14,51 @@
     line-height: 52px;
     color: #393939;
     margin-bottom: 80px;
+    @media(max-width: 768px) {
+      font-size: 28px;
+      line-height: 120%;
+      margin-bottom: 60px;
+    }
   }
   .SubHeadding{
     margin-bottom: 60px;
+    @media(max-width: 768px) {
+      margin-bottom: 40px;
+    }
   }
   .Cards{
     margin-bottom: 150px;
+    @media(max-width: 768px) {
+      margin-bottom: 60px;
+    }
+    .Card:nth-child(2n){
+      padding-right: 0;
+      .Title{
+        &:after{
+          right: 0;
+        }
+      }
+    }
+    .Card:nth-child(2n-1){
+      padding-left: 0;
+      .Title{
+        &:after{
+          right: 80px;
+          @media(max-width: 768px){
+            right: 0;
+          }
+        }
+      }
+    }
   }
   .Card{
-    padding: 40px;
+    padding: 40px 80px;
     position: relative;
     transition: all .5s ease;
+    @media(max-width: 768px) {
+      padding: 30px 0;
+    }
     &:hover{
-      transform: translateY(-5px);
-      box-shadow: 5px 20px 30px rgba(128, 128, 128, 0.15);
       .Title{
         &:after{
           color: #0DF0FF;
@@ -40,6 +74,9 @@
     line-height: 140%;
     color: #292525;
     margin-bottom: 40px;
+    @media(max-width: 768px){
+      margin-bottom: 30px;
+    }
     &:after{
       counter-increment: number3;
       content: '0' counter(number3);
@@ -55,6 +92,10 @@
       color: #DADADA;
       transform: rotate(-90deg);
       transition: all .4s ease;
+      @media(max-width: 768px) {
+        top: 30px;
+        right: 10px;
+      }
     }
   }
   .Text{

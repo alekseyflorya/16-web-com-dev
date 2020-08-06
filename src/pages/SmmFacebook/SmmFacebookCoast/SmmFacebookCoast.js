@@ -6,6 +6,7 @@ import smmCoastImg from "../../../assets/img/facebook-smm-coast.jpg";
 import {OrderButton} from "../../../components/UI/ButtonLink";
 import {Hidden} from "@material-ui/core";
 import CallBack from "../../../components/Callback";
+import Fade from 'react-reveal/Fade'
 
 function SmmFacebookCoast() {
   const [callBackIsOpen, setCallBackIsOpen] = useState(false)
@@ -18,22 +19,32 @@ function SmmFacebookCoast() {
         <Container fixed className={classes.Container}>
           <Grid container>
             <Grid item container sm={7} className={classes.LeftColumn}>
-              <h2 className={classes.Headding}>SMM-продвижение – принцип формирования стоимости услуг</h2>
+              <Fade up><h2 className={classes.Headding}>SMM-продвижение – принцип формирования стоимости услуг</h2></Fade>
               <Hidden smUp>
-                <img className={classes.SmmCoastImg} src={smmCoastImg} alt=""/>
+                <Fade up><img className={classes.SmmCoastImg} src={smmCoastImg} alt=""/></Fade>
               </Hidden>
-              <p className={classes.Text}>Если вы планируете заказать SMM-продвижение в веб-студии 16.web, стоит разобраться, каким образом рассчитать бюджет. На услуги по SMM-продвижению цена формируется с учётом следующих факторов:</p>
+              <Fade up><p className={classes.Text}>Если вы планируете заказать SMM-продвижение в веб-студии 16.web, стоит разобраться, каким образом рассчитать бюджет. На услуги по SMM-продвижению цена формируется с учётом следующих факторов:</p></Fade>
               <Grid item container className={classes.GridList}>
-                <Grid item container className={classes.GridListItem}>цели и задачи вашего проекта</Grid>
-                <Grid item container className={classes.GridListItem}>масштабность рекламной кампании</Grid>
-                <Grid item container className={classes.GridListItem}>сроки выхода на конкретный результат</Grid>
-                <Grid item container className={classes.GridListItem}>количество конкурентов в вашей сфере деятельности</Grid>
-                <Grid item container className={classes.GridListItem}>наличие действующих групп и страниц в соцсетях и т.п.</Grid>
+                <Grid item container className={classes.GridListItem}>
+                  <Fade up>цели и задачи вашего проекта</Fade>
+                </Grid>
+                <Grid item container className={classes.GridListItem}>
+                  <Fade up>масштабность рекламной кампании</Fade>
+                </Grid>
+                <Grid item container className={classes.GridListItem}>
+                  <Fade up>сроки выхода на конкретный результат</Fade>
+                </Grid>
+                <Grid item container className={classes.GridListItem}>
+                  <Fade up>количество конкурентов в вашей сфере деятельности</Fade>
+                </Grid>
+                <Grid item container className={classes.GridListItem}>
+                  <Fade up>наличие действующих групп и страниц в соцсетях и т.п.</Fade>
+                </Grid>
               </Grid>
             </Grid>
             <Grid item container sm={5} className={classes.RightColumn}>
               <Hidden only="xs">
-                <img src={smmCoastImg} alt=""/>
+                <Fade up><img src={smmCoastImg} alt=""/></Fade>
               </Hidden>
             </Grid>
           </Grid>
@@ -44,7 +55,7 @@ function SmmFacebookCoast() {
           <Grid container>
             <Grid item container>
               <Grid item sm>
-                <h2 className={classes.Headding}>Реклама в соцсетях – путь к успешному бизнесу</h2>
+                <Fade up><h2 className={classes.Headding}>Реклама в соцсетях – путь к успешному бизнесу</h2></Fade>
               </Grid>
               <Hidden only="xs">
                 <Grid item container sm justify="flex-end">
@@ -54,10 +65,10 @@ function SmmFacebookCoast() {
             </Grid>
             <Grid item container className={classes.TextBlock}>
               <Grid item sm={6} xs={12}>
-                <p className={classes.Text}>В настоящее время львиная доля активности пользователей интернета приходится именно на социальные платформы, поэтому SMM-реклама является эффективным способом донести информацию о своём бренде до широкого круга заинтересованных потребителей.</p>
+                <Fade up><p className={classes.Text}>В настоящее время львиная доля активности пользователей интернета приходится именно на социальные платформы, поэтому SMM-реклама является эффективным способом донести информацию о своём бренде до широкого круга заинтересованных потребителей.</p></Fade>
               </Grid>
               <Grid item sm={6} xs={12}>
-                <p className={classes.Text}>Наша веб-студия готова предложить вам все имеющиеся возможности для того, чтобы сделать ваш бизнес высоко востребованным среди владельцев профилей в Фейсбук, Телеграм, Инстаграм и других соцсетей, обеспечив при этом существенное увеличение продаж и рост дохода.</p>
+                <Fade up><p className={classes.Text}>Наша веб-студия готова предложить вам все имеющиеся возможности для того, чтобы сделать ваш бизнес высоко востребованным среди владельцев профилей в Фейсбук, Телеграм, Инстаграм и других соцсетей, обеспечив при этом существенное увеличение продаж и рост дохода.</p></Fade>
               </Grid>
               <Hidden smUp>
                 <Grid item container xs={12} justify="center">
@@ -74,30 +85,30 @@ function SmmFacebookCoast() {
           <Grid container>
             <Grid item container>
               <Grid item sm>
-                <h2 className={classes.Headding}>Комплексное продвижение в социальных сетях</h2>
+                <Fade up><h2 className={classes.Headding}>Комплексное продвижение в социальных сетях</h2></Fade>
               </Grid>
               <Grid item sm>
-                <p className={classes.Text}>Веб-студия 16.web предлагает свою помощь в развитии вашего бизнеса посредством комплексного продвижения в соцсетях – наши специалисты подготовят и реализуют комплекс мер, благодаря которым вы сумеете привлечь внимание к своему бренду. В рамках SMM-продвижения в социальных сетях мы осуществим следующее:</p>
+                <Fade up><p className={classes.Text}>Веб-студия 16.web предлагает свою помощь в развитии вашего бизнеса посредством комплексного продвижения в соцсетях – наши специалисты подготовят и реализуют комплекс мер, благодаря которым вы сумеете привлечь внимание к своему бренду. В рамках SMM-продвижения в социальных сетях мы осуществим следующее:</p></Fade>
               </Grid>
             </Grid>
             <Grid item container className={classes.GridList}>
               <Grid item container sm={6} className={classes.GridListItem}>
-                создадим страницы на социальных платформах, которые будут наиболее перспективными для вас
+                <Fade up>создадим страницы на социальных платформах, которые будут наиболее перспективными для вас</Fade>
               </Grid>
               <Grid item container sm={6} className={classes.GridListItem}>
-                разработаем для аккаунтов фирменный стиль и наполним их контентом
+                <Fade up>разработаем для аккаунтов фирменный стиль и наполним их контентом</Fade>
               </Grid>
               <Grid item container sm={6} className={classes.GridListItem}>
-                разработаем стратегию раскрутки соцсетей, чтобы определиться с основным месседжем
+                <Fade up>разработаем стратегию раскрутки соцсетей, чтобы определиться с основным месседжем</Fade>
               </Grid>
               <Grid item container sm={6} className={classes.GridListItem}>
-                разработаем позиционирование и контент-план
+                <Fade up>разработаем позиционирование и контент-план</Fade>
               </Grid>
               <Grid item container sm={6} className={classes.GridListItem}>
-                через месяц после реализации контент-плана проведём аналитику, чтобы оценить результаты стратегии
+                <Fade up>через месяц после реализации контент-плана проведём аналитику, чтобы оценить результаты стратегии</Fade>
               </Grid>
               <Grid item container sm={6} className={classes.GridListItem}>
-                работа над трафиком и дорабатывание стратегии с учётом данных аналитики
+                <Fade up>работа над трафиком и дорабатывание стратегии с учётом данных аналитики</Fade>
               </Grid>
             </Grid>
           </Grid>

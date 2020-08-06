@@ -1,6 +1,9 @@
 .BusinessCardInfo{
   margin-top: 120px;
   margin-bottom: 220px;
+  @media(max-width: 768px) {
+    margin-bottom: 120px;
+  }
   .Container{
 
   }
@@ -8,10 +11,26 @@
     justify-content: flex-start;
   }
   .RightColumn{
-    padding-left: 120px;
+    &>:first-child{
+      padding-right: 50px;
+    }
+    &>:last-child{
+      padding-left: 50px;
+    }
+    @media(max-width: 768px) {
+      &>:first-child{
+        padding-right: 0;
+      }
+      &>:last-child{
+        padding-left: 0;
+      }
+    }
   }
   .InfoBox{
     margin-bottom: 220px;
+    @media(max-width: 768px) {
+      margin-bottom: 120px;
+    }
   }
   .Headding{
     font-family: Ubuntu;
@@ -21,6 +40,11 @@
     line-height: 52px;
     color: #393939;
     margin-bottom: 120px;
+    @media(max-width: 768px){
+      font-size: 28px;
+      line-height: 120%;
+      margin-bottom: 60px;
+    }
   }
   .Text{
     font-family: Inter;
@@ -32,6 +56,18 @@
   }
   .GridList{
     margin-bottom: 30px;
+    & .GridListItem:nth-child(even){
+      padding-left: 80px;
+      @media(max-width: 768px){
+        padding-left: 30px;
+      }
+      &:before{
+        left: 50px;
+        @media(max-width: 768px){
+          left: 0;
+        }
+      }
+    }
     .GridListItem{
       font-family: Inter;
       font-style: normal;
@@ -61,16 +97,45 @@
   }
   .BusinessCardFunctionsBox{
     margin-bottom: 220px;
+    @media(max-width: 768px) {
+      margin-bottom: 120px;
+    }
     .Headding{
       margin-bottom: 0;
+      @media(max-width: 768px) {
+        margin-bottom: 60px;
+      }
     }
     .Text{
       padding-left: 120px;
+      @media(max-width: 768px) {
+        padding-left: 0;
+      }
     }
   }
   .BusinessCardCoastBox{
     .RightColumn{
       padding-left: 0;
+      &>:last-child{
+        padding-left: 0;
+      }
+    }
+    .GridList{
+      & .GridListItem:nth-child(even){
+        padding-left: 30px;
+        &:before{
+          left: 0;
+        }
+      }
+    }
+    .GridListItem{
+
+    }
+    .BusinessCardCoastImg{
+      @media(max-width: 768px) {
+        max-width: 100%;
+        margin-bottom: 40px;
+      }
     }
   }
 }

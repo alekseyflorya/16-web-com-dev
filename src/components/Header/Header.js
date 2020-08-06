@@ -1,8 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import classes from './Header.module.scss';
 import Navigation from "../Navigation";
-import ButtonGroup from "@material-ui/core/ButtonGroup";
-import Button from "@material-ui/core/Button";
 import FabComponent from "../FabComponent";
 import Grid from "@material-ui/core/Grid";
 import ClickAwayListener from '@material-ui/core/ClickAwayListener';
@@ -24,6 +22,7 @@ import Breef from '../Breef';
 import {Link} from "react-router-dom";
 import Footer from "../Footer";
 import Fade from 'react-reveal/Fade'
+import Breadcrumbs from "../../components/Breadcrumbs";
 
 export default function Header({notFound}) {
   const {headdingtitle, description, bgimage} = DataArray.find(page => page.path === window.location.pathname);
@@ -32,8 +31,10 @@ export default function Header({notFound}) {
     navOpen: false,
     fabOpen: false,
     servicesOpen: false,
-    portfolioOpen: false
+    portfolioOpen: false,
   });
+
+  const [pagePath, setPagePath] =useState(window.location.pathname)
 
   const toggleDrawer = (open) => (event) => {
     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
@@ -76,7 +77,8 @@ export default function Header({notFound}) {
 
   useEffect(() => {
       window.scrollTo(0, 0);
-  }, [window.location.pathname]);
+      setPagePath(window.location.pathname)
+  }, [pagePath]);
 
   return (
     <>
@@ -91,7 +93,7 @@ export default function Header({notFound}) {
           classes={{root: classes.ColumnLeft}}
           style={{
             background: `url(${bgimage})`,
-            paddingTop: (window.location.pathname === '/contact') ? 0 : 120,
+            paddingTop: (pagePath === '/contact') ? 0 : 120,
 
           }}
         >
@@ -187,17 +189,17 @@ export default function Header({notFound}) {
             </Grid>
             <Grid item sm={3} xs={false}/>
             <Grid item sm={9} xs={4} container alignItems="center" style={{backgroundColor: '#0DF0FF', paddingLeft: '14%',}}>
-              <ButtonGroup classes={{root: classes.SocialButtons}}>
-                <a className={classes.SocialButton} href="https://www.instagram.com/16.web/" target="_blank">
+              <div className={classes.SocialButtons}>
+                <a className={classes.SocialButton} href="https://www.instagram.com/16.web/" target="_blank" rel="noopener noreferrer">
                   <InstagramIcon className={classes.InstagramIcon} width="24" height="24" viewBox="0 0 24 24" />
                 </a>
-                <a className={classes.SocialButton} href="https://www.facebook.com/16.web" target="_blank">
+                <a className={classes.SocialButton} href="https://www.facebook.com/16.web" target="_blank" rel="noopener noreferrer">
                   <FacebookIcon width="10" height="24" viewBox="0 0 10 24" />
                 </a>
-                <a className={classes.SocialButton} href="#">
+                <a className={classes.SocialButton} href="#" rel="noopener noreferrer">
                   <LinkedInIcon width="24" height="24" viewBox="0 0 24 24" />
                 </a>
-              </ButtonGroup>
+              </div>
             </Grid>
             <Grid item sm={3} xs={8}>
               <Breef />
@@ -248,7 +250,8 @@ export default function Header({notFound}) {
         portfolioOpen={state.portfolioOpen}
       />
     </header>
-      {window.location.pathname === '/contact' ? <Footer /> : null}
+      {pagePath !== '/' && pagePath !== '/contact' ? <Breadcrumbs pagePath={pagePath} /> : null}
+      {pagePath === '/contact' ? <Footer /> : null}
   </>
   )
 }

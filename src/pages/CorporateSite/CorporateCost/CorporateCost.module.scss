@@ -1,9 +1,18 @@
 .CorporateCost{
   margin-bottom: 220px;
+  @media(max-width: 768px) {
+    margin-bottom: 120px;
+  }
   .HeaddingBox{
     margin-bottom: 100px;
+    @media(max-width: 768px) {
+      margin-bottom: 20px;
+    }
     .Text{
       padding-left: 120px;
+      @media(max-width: 768px) {
+        padding-left: 0;
+      }
     }
   }
   .Headding{
@@ -13,6 +22,11 @@
     font-size: 43px;
     line-height: 52px;
     color: #393939;
+    @media(max-width: 768px) {
+      font-size: 28px;
+      line-height: 120%;
+      margin-bottom: 40px;
+    }
   }
   .Text{
     font-family: Inter;
@@ -25,6 +39,9 @@
   .FactorsBox{
     .FactorsLeft{
       padding-right: 100px;
+      @media(max-width: 768px) {
+        padding-right: 0;
+      }
     }
     .Text{
       margin-bottom: 20px;
@@ -40,6 +57,9 @@
       color: #8B8B8B;
       position: relative;
       padding-left: 30px;
+      @media(max-width: 768px) {
+        margin-bottom: 10px;
+      }
       &:before{
         content: '';
         display: inline-block;

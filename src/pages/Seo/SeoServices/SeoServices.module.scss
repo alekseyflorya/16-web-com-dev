@@ -16,6 +16,18 @@
   }
   .BottomRow{
     justify-content: flex-end;
+    .Item:nth-child(even){
+      padding-left: 60px;
+      @media(max-width: 768px){
+        padding-left: 0;
+      }
+    }
+    .Item:nth-child(odd){
+      padding-right: 60px;
+      @media(max-width: 768px){
+        padding-right: 0;
+      }
+    }
   }
   .Item{
     margin-bottom: 60px;
