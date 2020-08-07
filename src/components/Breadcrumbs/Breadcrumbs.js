@@ -6,6 +6,7 @@ import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import Container from "@material-ui/core/Container";
 import HomeIcon from '@material-ui/icons/Home';
 import DataArray from '../DataArray'
+import {NewsListArray} from '../BlogArray'
 import {Link} from 'react-router-dom'
 
 export default function CustomBreadcrumbs({pagePath}) {
@@ -19,7 +20,8 @@ export default function CustomBreadcrumbs({pagePath}) {
       label: DataArray.find(item => item.path === path).label
     })
   }
-  const currentPageLabel = DataArray.find(item => item.path === pagePath).label
+
+  const currentPageLabel = DataArray.find(item => item.path === pagePath) ? DataArray.find(item => item.path === pagePath).label : NewsListArray.find(item => '/news/' + item.postPath === pagePath).title
 
   return (
     <section className={classes.Breadcrumbs}>
@@ -33,7 +35,7 @@ export default function CustomBreadcrumbs({pagePath}) {
               {label}
             </Link>
           ))}
-          <Typography className={classes.CurrentPageLabel}>{currentPageLabel}</Typography>
+          <Typography className={classes.CurrentPageLabel}>{currentPageLabel ? currentPageLabel : ''}</Typography>
         </Breadcrumbs>
       </Container>
     </section>

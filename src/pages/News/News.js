@@ -1,14 +1,15 @@
 import React from 'react';
 import classes from './News.module.scss';
 import Header from "../../components/Header";
-import Navigation from "../../components/Navigation";
 import Footer from "../../components/Footer";
+import NewsList from "./NewsList";
 
 export default function News(){
 
   return (
     <div className={classes.NewsPage}>
-      <Header rightLinks={<Navigation />} />
+      <Header />
+      <NewsList />
       <Footer />
     </div>
   )

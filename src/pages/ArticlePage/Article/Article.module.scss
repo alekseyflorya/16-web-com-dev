@@ -1,0 +1,87 @@
+.Article{
+  .LeftColumn{
+
+  }
+  .RightColumn{
+
+  }
+  .Content{
+
+  }
+  .AsideRight{
+
+  }
+  .Head2{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 120%;
+    color: #292525;
+  }
+  .Head3{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 140%;
+    color: #292525;
+  }
+  .Head4{
+
+  }
+  .Paragraph{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 140%;
+    color: #8B8B8B;
+    margin-bottom: 20px;
+  }
+  .LItem{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 140%;
+    color: #8B8B8B;
+  }
+  .UList{
+    .LItem{
+      display: flex;
+      justify-content: flex-start;
+      align-items: baseline;
+      &:before{
+        content: '';
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background: #4C1C89;
+      }
+    }
+  }
+  .OList{
+    .LItem{
+      &:before{
+
+      }
+    }
+  }
+  .Link{
+
+  }
+  .ImageBox{
+
+  }
+  .Image{
+    max-width: 100%;
+    height: auto;
+  }
+  .TagsBox{
+
+  }
+  .Tag{
+
+  }
+}

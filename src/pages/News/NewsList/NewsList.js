@@ -1,14 +1,15 @@
 import React from "react";
-import classes from './LastNews.module.scss';
+import classes from "./NewsList.module.scss"
+import {BlogArray} from "../../../components/BlogArray"
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
-import Icon from '@material-ui/core/Icon';
-import {Link} from 'react-router-dom';
-import {NewsListArray} from '../BlogArray';
-import {ButtonLink} from "../UI/ButtonLink";
-import Fade from 'react-reveal/Fade'
+import {ButtonLink} from "../../../components/UI/ButtonLink";
+import {NewsListArray} from "../../../components/BlogArray";
+import Fade from "react-reveal/Fade";
+import {Link} from "react-router-dom";
+import Icon from "@material-ui/core/Icon";
 
-function LastNews() {
+function NewsList() {
   const Posts = NewsListArray.map(({id, postPath, image, title, blogCategory, dateAdded, description, views}, index) => {
     return (
       <Grid item container sm={4} xs={12} direction="column" key={index} className={classes.NewsItem}>
@@ -31,22 +32,20 @@ function LastNews() {
       </Grid>
     )
   });
-
   return (
-    <section className={classes.LastNews}>
-      <Container fixed className={classes.Container}>
-        <h2 className={classes.Headding}>Популярные статьи</h2>
+    <section className={classes.NewsList}>
+      <Container fixed>
         <div className={classes.News}>
           <Grid container className={classes.NewsBox}>
             {Posts}
           </Grid>
         </div>
-        <div className={classes.LastNewsBtn}>
-          <ButtonLink classNames={classes.LastNewsButton} path={'/news'} title={'Все статьи'}/>
-        </div>
+        {/*<div className={classes.LastNewsBtn}>*/}
+        {/*  <ButtonLink classNames={classes.LastNewsButton} path={'/blog'} title={'Все статьи'}/>*/}
+        {/*</div>*/}
       </Container>
     </section>
   )
 }
 
-export default LastNews
+export default NewsList

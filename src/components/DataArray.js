@@ -91,6 +91,8 @@ import otherSmmImg from "../assets/img/other-smm.jpg";
 import smmAdsImg from "../assets/img/smm-ads.jpg";
 import uiuxdesignerImg from "../assets/img/UI-UX-Designer.jpg";
 import photographyImg from "../assets/img/photography.jpg";
+import Sitemap from "../pages/Sitemap";
+import ArticlePage from "../pages/ArticlePage";
 
 const DataArray = [
   {//Главная
@@ -638,6 +640,16 @@ const DataArray = [
     headdingtitle: 'UI/UX designer',
     description: '16.web studio специализируется на веб-дизайне, создании адаптивных интернет-проектов, брендинге и рекламной фотографии.',
     bgimage: uiuxdesignerImg,
+    exact: true
+  },
+  {//Карта сайта
+    id: 42,
+    name: 'sitemap',
+    label: 'Карта сайта',
+    path: '/sitemap',
+    component: () => <Sitemap />,
+    headdingtitle:'Карта сайта',
+    description: '',
     exact: true
   },
   {//404

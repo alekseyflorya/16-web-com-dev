@@ -1,0 +1,65 @@
+.Sitemap{
+  background: #292525;
+  .Headding{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 65px;
+    line-height: 100%;
+    color: #FFFFFF;
+    margin-bottom: 60px;
+    @media(max-width: 768px) {
+      font-size: 40px;
+      margin-bottom: 50px;
+    }
+  }
+  .List{
+    padding-left: 45px;
+    @media(max-width: 768px) {
+      padding-left: 0;
+    }
+  }
+  .MainList{
+    padding-left: 0;
+  }
+  .ListItem{
+    margin-bottom: 20px;
+    color: #0df0ff;
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    &:before{
+      content: '';
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background: transparent;
+      border: 1px solid #0df0ff;
+      margin-right: 30px;
+    }
+  }
+  .Link{
+    font-family: Ubuntu;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 140%;
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+  .IsParent{
+    &:before{
+      background: #0df0ff;
+    }
+  }
+  .ListBox{
+    &:before{
+      display: none;
+    }
+  }
+  .HasChild{
+    color: #0df0ff;
+  }
+  .Child{
+    font-weight: normal;
+  }
+}

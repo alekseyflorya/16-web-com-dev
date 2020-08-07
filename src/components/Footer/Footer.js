@@ -125,11 +125,11 @@ export default function Footer() {
                       {'Behance'}
                     </SocialLink>
                   </ListItem>
-                  <ListItem key={Math.random()} className={classes.LinksListItem}>
-                    <SocialLink href="#" classes={{root: classes.SocialLink}}>
-                      {'Linkedin'}
-                    </SocialLink>
-                  </ListItem>
+                  {/*<ListItem key={Math.random()} className={classes.LinksListItem}>*/}
+                  {/*  <SocialLink href="#" classes={{root: classes.SocialLink}}>*/}
+                  {/*    {'Linkedin'}*/}
+                  {/*  </SocialLink>*/}
+                  {/*</ListItem>*/}
                   <ListItem key={Math.random()} className={classes.LinksListItem}>
                     <SocialLink href="https://www.facebook.com/16.web" classes={{root: classes.SocialLink}}>
                       {'Facebook'}
@@ -155,19 +155,19 @@ export default function Footer() {
               <address className={classes.Address} >г.Одесса, ул.Балковская 130а</address>
             </Grid>
             <Grid item container xs={12} className={classes.MobileSocialGrid}>
-              <SocialLink className={classes.MobileSocialLink} href="">
+              <SocialLink className={classes.MobileSocialLink} href="https://www.instagram.com/16.web/" target="_blank" rel="noopener noreferrer">
                 <MobileInstaIcon width="23" height="23" viewBox="0 0 23 23" />
               </SocialLink>
-              <SocialLink className={classes.MobileSocialLink} href="">
+              <SocialLink className={classes.MobileSocialLink} href="https://www.facebook.com/16.web" target="_blank" rel="noopener noreferrer">
                 <MobileFbIcon width="11" height="23" viewBox="0 0 11 23" />
               </SocialLink>
-              <SocialLink className={classes.MobileSocialLink} href="">
-                <MobileLinkedIcon width="23" height="23" viewBox="0 0 23 23" />
-              </SocialLink>
-              <SocialLink className={classes.MobileSocialLink} href="">
+              {/*<SocialLink className={classes.MobileSocialLink} href="">*/}
+              {/*  <MobileLinkedIcon width="23" height="23" viewBox="0 0 23 23" />*/}
+              {/*</SocialLink>*/}
+              <SocialLink className={classes.MobileSocialLink} href="https://www.behance.net/16web" target="_blank" rel="noopener noreferrer">
                 <MobileBehanceIcon width="31" height="19" viewBox="0 0 31 19" />
               </SocialLink>
-              <SocialLink className={classes.MobileSocialLink} href="">
+              <SocialLink className={classes.MobileSocialLink} href="https://dribbble.com/16web" target="_blank" rel="noopener noreferrer">
                 <MobileDribbleIcon width="27" height="27" viewBox="0 0 27 27" />
               </SocialLink>
             </Grid>

@@ -125,6 +125,22 @@ function TelegramIcon(props) {
   );
 }
 
+function TelephoneIcon(props) {
+
+ // <svg width="36" height="31" viewBox="0 0 36 31" fill="none" xmlns="http://www.w3.org/2000/svg"></svg>
+
+
+  return (
+    <SvgIcon {...props}>
+      <path d="M18.2226 0.974606L8.29139 4.8668C7.63291 5.12486 7.10136 5.6274 6.81366 6.26386C6.52597 6.90032 6.5057 7.61856 6.75731 8.26057L14.3471 27.6264C14.5987 28.2684 15.1016 28.7816 15.7451 29.0531C16.3887 29.3246 17.1201 29.3322 17.7786 29.0741L27.7098 25.1819C28.3683 24.9238 28.8998 24.4213 29.1875 23.7848C29.4752 23.1484 29.4955 22.4301 29.2439 21.7881L21.6541 2.42229C21.4025 1.78027 20.8996 1.26707 20.2561 0.995573C19.6125 0.72408 18.8811 0.716538 18.2226 0.974606ZM23.5112 25.4311L21.0284 26.4041L20.5541 25.1938L23.0369 24.2207L23.5112 25.4311ZM26.2867 21.5508L16.3555 25.443L9.71447 8.49789L19.6457 4.6057L26.2867 21.5508Z" fill="white"/>
+      <path d="M9.5 27.0234L4 13.0234" stroke="white" strokeWidth="2" strokeLinecap="round"/>
+      <path d="M4.5 26.0234L1 16.5234" stroke="white" strokeWidth="2" strokeLinecap="round"/>
+      <path d="M26 3.02344L31.5 17.0234" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+      <path d="M31 4.02344L34.5 13.5234" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    </SvgIcon>
+  );
+}
+
 function MobileInstaIcon(props) {
 
   // <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg"></svg>
@@ -236,6 +252,7 @@ export {
   ViberIcon,
   MessengerIcon,
   TelegramIcon,
+  TelephoneIcon,
   MobileInstaIcon,
   MobileFbIcon,
   MobileLinkedIcon,

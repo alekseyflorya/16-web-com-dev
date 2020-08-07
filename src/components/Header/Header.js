@@ -23,9 +23,14 @@ import {Link} from "react-router-dom";
 import Footer from "../Footer";
 import Fade from 'react-reveal/Fade'
 import Breadcrumbs from "../../components/Breadcrumbs";
+import {NewsListArray} from "../BlogArray";
+import NewsImg from "../../assets/img/news.jpg"
 
-export default function Header({notFound}) {
-  const {headdingtitle, description, bgimage} = DataArray.find(page => page.path === window.location.pathname);
+export default function Header({notFound, notHeader}) {
+  const pageData = DataArray.find(page => page.path === window.location.pathname);
+  const headdingtitle = pageData ? pageData.headdingtitle : NewsListArray.find(item => '/news/' + item.postPath === window.location.pathname).title;
+  const description = pageData ? pageData.description : '';
+  const bgimage = pageData ? pageData.bgimage : NewsImg;
 
   const [state, setState] = useState({
     navOpen: false,
@@ -82,7 +87,7 @@ export default function Header({notFound}) {
 
   return (
     <>
-    <header className={classes.Header}>
+    <header className={`${classes.Header} ${notHeader && classes.NotHeader}`}>
       <Grid container>
         <Grid
           item
@@ -179,7 +184,7 @@ export default function Header({notFound}) {
             {(window.location.pathname === '/not-found') ? (
               notFound
             ) : '' }
-            {(window.location.pathname !== '/not-found' && window.location.pathname !== '/contact') ? (
+            {(window.location.pathname !== '/not-found' && window.location.pathname !== '/contact' && window.location.pathname !== '/sitemap') ? (
           <Grid item container sm={11} xs={12} style={{marginBottom: -80}}>
             <Grid item container sm={9} sx={12} justify="center" alignItems="center" className={classes.HeaddingBox}>
               <Box style={{maxWidth: 575}} className={classes.TitleDescriptionBox}>
@@ -196,9 +201,9 @@ export default function Header({notFound}) {
                 <a className={classes.SocialButton} href="https://www.facebook.com/16.web" target="_blank" rel="noopener noreferrer">
                   <FacebookIcon width="10" height="24" viewBox="0 0 10 24" />
                 </a>
-                <a className={classes.SocialButton} href="#" rel="noopener noreferrer">
-                  <LinkedInIcon width="24" height="24" viewBox="0 0 24 24" />
-                </a>
+                {/*<a className={classes.SocialButton} href="#" rel="noopener noreferrer">*/}
+                {/*  <LinkedInIcon width="24" height="24" viewBox="0 0 24 24" />*/}
+                {/*</a>*/}
               </div>
             </Grid>
             <Grid item sm={3} xs={8}>
@@ -218,7 +223,11 @@ export default function Header({notFound}) {
               ) : (
                 <Fade right delay={1000}>
                   <Link to={'/'}>
-                    <Fade right delay={1000}><LogoIcon classes={{root: classes.LogoIcon}} width="85" height="54" viewBox="0 0 85 54"/></Fade>
+                    {notHeader ? (
+                      <Fade right delay={1000}><LogoMobileIcon classes={{root: classes.LogoIcon}} width="55" height="32" viewBox="0 0 55 32"/></Fade>
+                    ) : (
+                      <Fade right delay={1000}><LogoIcon classes={{root: classes.LogoIcon}} width="85" height="54" viewBox="0 0 85 54"/></Fade>
+                    )}
                     <Fade left delay={1000}><LogoMobileIcon classes={{root: classes.LogoMobileIcon}} width="55" height="32" viewBox="0 0 55 32"/></Fade>
                   </Link>
                 </Fade>
@@ -251,6 +260,7 @@ export default function Header({notFound}) {
       />
     </header>
       {pagePath !== '/' && pagePath !== '/contact' ? <Breadcrumbs pagePath={pagePath} /> : null}
+      {}
       {pagePath === '/contact' ? <Footer /> : null}
   </>
   )
