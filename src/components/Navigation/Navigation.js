@@ -77,6 +77,7 @@ function Navigation({toggleDrawer, isOpen}) {
                           to={path}
                           label={label}
                           className={`${classes.Link} ${id > 4 ? classes.InfoLinks: ''} ${activeLink}`}
+                          onClick={activeLink ? toggleDrawer(false) : null}
                         >
                           <span>{label}</span>
                         </Link>

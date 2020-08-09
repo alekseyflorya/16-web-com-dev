@@ -9,10 +9,10 @@ import Fade from 'react-reveal/Fade'
 import openedVacanciesImg from "../../../assets/img/opened-vacancies.jpg"
 
 function OpenedVacancies() {
-  const openedVacancies = VacanciesData.map(({title, path, city, time}, index) => {
+  const openedVacancies = VacanciesData.map(({title, path, city, time}) => {
     return (
 
-      <Link to={path} key={index} className={classes.Vacancy}>
+      <Link to={path} key={path} className={classes.Vacancy}>
         <Fade up>
         <p className={classes.Title}>{title}</p>
         <p className={classes.CityTime}>{city} | {time}</p>

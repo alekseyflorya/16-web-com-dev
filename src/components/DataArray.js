@@ -46,7 +46,8 @@ import SmmFacebook from "../pages/SmmFacebook";
 import SmmInstagram from "../pages/SmmInstagram";
 import OtherSmm from "../pages/OtherSmm";
 import SmmAds from "../pages/SmmAds";
-import UiUxDesigner from "../pages/UiUxDesigner"
+import UiUxDesigner from "../pages/UiUxDesigner";
+import SeoSpecialist from "../pages/SeoSpecialist"
 
 import homeBgImage from '../assets/img/main.jpg';
 import aboutUsImage from '../assets/img/about-us.jpg'
@@ -92,7 +93,6 @@ import smmAdsImg from "../assets/img/smm-ads.jpg";
 import uiuxdesignerImg from "../assets/img/UI-UX-Designer.jpg";
 import photographyImg from "../assets/img/photography.jpg";
 import Sitemap from "../pages/Sitemap";
-import ArticlePage from "../pages/ArticlePage";
 
 const DataArray = [
   {//Главная
@@ -635,9 +635,20 @@ const DataArray = [
     id: 41,
     name: 'uiuxdesigner',
     label: 'uiuxdesigner',
-    path: '/ui-ux-designer',
+    path: 'vacancies/ui-ux-designer',
     component: () => <UiUxDesigner />,
     headdingtitle: 'UI/UX designer',
+    description: '16.web studio специализируется на веб-дизайне, создании адаптивных интернет-проектов, брендинге и рекламной фотографии.',
+    bgimage: uiuxdesignerImg,
+    exact: true
+  },
+  {//SEO специалист
+    id: 41,
+    name: 'seospecialist',
+    label: 'seoSpecialist',
+    path: '/vacancies/seo-specialist',
+    component: () => <SeoSpecialist />,
+    headdingtitle: 'SEO специалист',
     description: '16.web studio специализируется на веб-дизайне, создании адаптивных интернет-проектов, брендинге и рекламной фотографии.',
     bgimage: uiuxdesignerImg,
     exact: true

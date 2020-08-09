@@ -14,7 +14,7 @@ function VacancieFeatures() {
             <Fade up>
             <div className={classes.Item}>
               <h3 className={classes.Title}>Самореализация</h3>
-              <p className={classes.Text}>Внезапно, представители современных социальных резервов неоднозначны и будут рассмотрены исключительно в разрезе маркетинговых и финансовых предпосылок.</p>
+              <p className={classes.Text}></p>
             </div>
             </Fade>
           </Grid>
@@ -22,7 +22,7 @@ function VacancieFeatures() {
             <Fade up>
             <div className={classes.Item}>
               <h3 className={classes.Title}>Гибкость</h3>
-              <p className={classes.Text}>Внезапно, представители современных социальных резервов неоднозначны и будут рассмотрены исключительно в разрезе маркетинговых и финансовых предпосылок.</p>
+              <p className={classes.Text}></p>
             </div>
             </Fade>
           </Grid>
@@ -30,7 +30,7 @@ function VacancieFeatures() {
             <Fade up>
             <div className={classes.Item}>
               <h3 className={classes.Title}>Профессионализм</h3>
-              <p className={classes.Text}>Внезапно, представители современных социальных резервов неоднозначны и будут рассмотрены исключительно в разрезе маркетинговых и финансовых предпосылок.</p>
+              <p className={classes.Text}></p>
             </div>
             </Fade>
           </Grid>
@@ -38,7 +38,7 @@ function VacancieFeatures() {
             <Fade up>
             <div className={classes.Item}>
               <h3 className={classes.Title}>Чесность</h3>
-              <p className={classes.Text}>Внезапно, представители современных социальных резервов неоднозначны и будут рассмотрены исключительно в разрезе маркетинговых и финансовых предпосылок.</p>
+              <p className={classes.Text}></p>
             </div>
             </Fade>
           </Grid>
