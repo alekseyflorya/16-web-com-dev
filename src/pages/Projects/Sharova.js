@@ -4,12 +4,14 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Container from "@material-ui/core/Container";
 import sharovaFullImg from "../../assets/img/sharovaopora.jpg"
+import PortfolioPagination from "../../components/PortfolioPagination";
 
 function Sharova() {
   return(
     <div className={classes.Sharova}>
       <Header />
       <SharovaHeaderDesign />
+      <PortfolioPagination />
       <Footer />
     </div>
   )

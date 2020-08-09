@@ -4,12 +4,14 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Container from "@material-ui/core/Container";
 import bronexFullImg from "../../assets/img/bronex-full.jpg"
+import PortfolioPagination from "../../components/PortfolioPagination";
 
 function Bronex() {
   return(
     <div className={classes.Bronex}>
       <Header />
       <BronexHeaderDesign />
+      <PortfolioPagination />
       <Footer />
     </div>
   )

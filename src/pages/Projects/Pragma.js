@@ -4,12 +4,14 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Container from "@material-ui/core/Container";
 import pragmaFullImg from "../../assets/img/pragma-full.jpg"
+import PortfolioPagination from "../../components/PortfolioPagination";
 
 function Pragma() {
   return(
     <div className={classes.Bronex}>
       <Header />
       <PragmaHeaderDesign />
+      <PortfolioPagination />
       <Footer />
     </div>
   )

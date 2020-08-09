@@ -47,7 +47,8 @@ import SmmInstagram from "../pages/SmmInstagram";
 import OtherSmm from "../pages/OtherSmm";
 import SmmAds from "../pages/SmmAds";
 import UiUxDesigner from "../pages/UiUxDesigner";
-import SeoSpecialist from "../pages/SeoSpecialist"
+import SeoSpecialist from "../pages/SeoSpecialist";
+import Developer1c from "../pages/Developer1c"
 
 import homeBgImage from '../assets/img/main.jpg';
 import aboutUsImage from '../assets/img/about-us.jpg'
@@ -643,7 +644,7 @@ const DataArray = [
     exact: true
   },
   {//SEO специалист
-    id: 41,
+    id: 42,
     name: 'seospecialist',
     label: 'seoSpecialist',
     path: '/vacancies/seo-specialist',
@@ -653,8 +654,19 @@ const DataArray = [
     bgimage: uiuxdesignerImg,
     exact: true
   },
+  {//SEO специалист
+    id: 43,
+    name: 'developer1c',
+    label: 'developer1c',
+    path: '/vacancies/1c-developer',
+    component: () => <Developer1c />,
+    headdingtitle: 'Разработчик 1С',
+    description: '16.web studio специализируется на веб-дизайне, создании адаптивных интернет-проектов, брендинге и рекламной фотографии.',
+    bgimage: uiuxdesignerImg,
+    exact: true
+  },
   {//Карта сайта
-    id: 42,
+    id: 44,
     name: 'sitemap',
     label: 'Карта сайта',
     path: '/sitemap',

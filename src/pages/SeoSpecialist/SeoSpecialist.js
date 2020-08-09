@@ -32,7 +32,7 @@ function Requirements() {
         <Grid container>
           <Grid item container sm={8} xs={12} className={classes.LeftColumn}>
             <Grid item sm={12} xs={12} className={classes.Items}>
-              <h3 className={classes.Title}>Обязаности</h3>
+              <h3 className={classes.Title}>Описание</h3>
               <p className={classes.Text}>На работу в Web студию требуется SEO специалист. Мы ищем специалиста, который мог бы вместе с нашей командой работать над интересными проектами и развивать направление SEO.</p>
             </Grid>
             <Grid item sm={12} xs={12} className={classes.Items}>
