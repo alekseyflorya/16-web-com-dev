@@ -12,7 +12,9 @@ function Article({item}) {
         <Grid container>
           <Grid sm={9} className={classes.LeftColumn}>
             <main className={classes.Content}>
-              {content}
+              {content.map(item => (
+                <p className={classes.Paragraph}>{item}</p>
+              ))}
             </main>
           </Grid>
           <Grid sm={3} className={classes.RightColumn}>
