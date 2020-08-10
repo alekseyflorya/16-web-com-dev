@@ -32,12 +32,22 @@ function VacancieForm() {
   }
 
   const onSubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
+    let formData = new FormData();
+    formData.append('name', formValues.name);
+    formData.append('tel', formValues.email);
+    formData.append('myfile', formValues.myfile);
+    fetch('sendVacancy.php', {
+      method: "POST",
+      body: formData
+    })
+      .then(response => response.json());
+
     handleCallBackSuccess();
     setFormValues({
       name: "",
       email: "",
-      myfile: ""
+      myfile: "Файл"
     });
   };
 

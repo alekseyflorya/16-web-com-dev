@@ -7,8 +7,8 @@ import TextField from "@material-ui/core/TextField";
 
 function CallBack({callBackIsOpen, callBackSetOpen}) {
   const [formValues, setFormValues] = useState({
-    name: "",
-    tel: ""
+    name: '',
+    tel: ''
   })
 
   const [callBackSuccessIsOpen, setCallBackSuccessIsOpen] = useState(false)
@@ -22,22 +22,17 @@ function CallBack({callBackIsOpen, callBackSetOpen}) {
     setCallBackSuccessIsOpen(!callBackSuccessIsOpen)
   }
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault()
     let formData = new FormData();
-    formData.append("name", formValues.name);
-    formData.append("tel", formValues.tel);
-    fetch("send.php", {
+    formData.append('name', formValues.name);
+    formData.append('tel', formValues.tel);
+    fetch('sendCallback.php', {
       method: "POST",
-      body: formData,
-      headers: {
-        "Content-Type": "multipart/form-data"
-      }
-    }).then(response => {
-      response.json().then(data => {
-        console.log("Successful" + data);
-      });
-    });
+      body: formData
+    })
+      .then(response => response.json());
+
     if (formValues.name && formValues.tel) {
       callBackSetOpen();
       handleCallBackSuccess();
@@ -60,8 +55,7 @@ function CallBack({callBackIsOpen, callBackSetOpen}) {
 
         <form
           className={classes.Form}
-          encType="multipart/form-data"
-          method="post"
+          id="callback-form"
           onSubmit={onSubmit}
         >
           <TextField
