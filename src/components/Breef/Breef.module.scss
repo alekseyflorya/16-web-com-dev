@@ -43,44 +43,16 @@
     }
   }
   .SendBreefBtn{
-    width: 120px;
-    height: 115px;
-    position: absolute;
-    right: 100px;
-    bottom: 0;
+    width: 50%;
+    height: 70px;
+    border: 1px solid #0df0ff;
+    color: #FFFFFF;
+    border-radius: 0;
     @media(max-width: 768px){
-      width: 70px;
+      width: 100%;
       height: 70px;
-      position: relative;
-      right: auto;
-      left: calc(100% - 70px);
       margin-bottom: 40px;
     }
-  }
-  .sendBreefLabel{
-    width: 100%;
-    height: 100%;
-    background: #4c1c89;
-    position: relative;
-    &:before{
-      content: '';
-      display: inline-block;
-      width: 26px;
-      height: 26px;
-      background: #0df0ff;
-      position: absolute;
-      top: -11px;
-      left: -26px;
-      @media(max-width: 768px){
-        width: 20px;
-        height: 20px;
-        top: -9px;
-        left: -20px;
-      }
-    }
-  }
-  .sendBreefText{
-    color: #FFFFFF;
   }
   .FormLabel{
     font-family: Ubuntu;
@@ -131,6 +103,7 @@
     color: #FFFFFF;
   }
   .InputBaseUnderline{
+    margin-bottom: 16px;
     &:before{
       border-bottom: 1px solid #E9E9E9;
     }
@@ -150,22 +123,37 @@
     }
   }
   .InputCv{
-    font-family: Inter;
+    font-family: Ubuntu;
     font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
+    font-weight: bold;
+    font-size: 24px;
     line-height: 140%;
-    color: #FFFFFF;
-    padding-left: 30px;
+    color: #0DF0FF;
     position: relative;
-    &:before{
+    padding-right: 100px;
+    max-width: 50%;
+    @media(max-width: 768px){
+      font-size: 20px;
+      line-height: 140%;
+    }
+    &:after {
       content: '+';
+      display: inline-block;
       position: absolute;
-      left: 0;
+      right: 0;
+      top: 0;
       color: #0df0ff;
-      font-size: 22px;
-      font-weight: bold;
-      line-height: 22px;
+      border: 2px solid #E9E9E9;
+      padding: 25px;
+      font-size: 32px;
+      font-weight: normal;
+      line-height: 16px;
+      vertical-align: middle;
+    }
+    &:hover{
+      &:after{
+        cursor: pointer;
+      }
     }
   }
 }

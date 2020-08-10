@@ -636,7 +636,7 @@ const DataArray = [
     id: 41,
     name: 'uiuxdesigner',
     label: 'uiuxdesigner',
-    path: 'vacancies/ui-ux-designer',
+    path: '/vacancies/ui-ux-designer',
     component: () => <UiUxDesigner />,
     headdingtitle: 'UI/UX designer',
     description: '16.web studio специализируется на веб-дизайне, создании адаптивных интернет-проектов, брендинге и рекламной фотографии.',

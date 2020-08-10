@@ -159,18 +159,9 @@ export default function Breef() {
                   </Grid>
                   <Grid item container>
                     <FormControl component="fieldset" classes={{root: classes.FormControl}}>
-                      <FormLabel
-                        component="legend"
-                        classes={{root: classes.FormLabel, focused: classes.FormLabelFocused}}>Техническое задание (если есть)</FormLabel>
                       <FormGroup>
-                        <InputLabel className={classes.InputCv} htmlFor="input-cv">Прикрепить файл</InputLabel>
+                        <InputLabel className={classes.InputCv} htmlFor="input-cv">Техническое задание (если есть)</InputLabel>
                         <Input type="file" id="input-cv" label="Прикрепить файл" style={{visibility: 'hidden'}} />
-                        <TextField
-                          id="standard-required"
-                          classes={{root: classes.TextField}}
-                          InputProps={{classes: {input: classes.InputBase, underline: classes.InputBaseUnderline}}}
-                          InputLabelProps={{classes: {root: classes.InputLabel, focused: classes.InputLabelFocused}}}
-                          label="Комментарий" />
                       </FormGroup>
                     </FormControl>
                   </Grid>
@@ -210,17 +201,20 @@ export default function Breef() {
                     </FormControl>
                   </Grid>
                   <Grid item container>
-                    <Button onClick={sendBreef} className={classes.SendBreefBtn} classes={{  root: classes.SendBreefBtn,   label :classes.sendBreefLabel,  text :classes.sendBreefText }}>
-                      <ArrowForwardIosIcon classes={{root: classes.sendBreefBtnIcon}} />
+                    <Button
+                      onClick={sendBreef}
+                      className={classes.SendBreefBtn}
+                    >
+                      Отправить
                     </Button>
                   </Grid>
                 </Grid>
               </Grid>
             </Grid>
             <Grid item container>
-              <Button onClick={sendBreef} className={classes.SendBreefBtn} classes={{  root: classes.SendBreefBtn,   label :classes.sendBreefLabel,  text :classes.sendBreefText }}>
-                <ArrowForwardIosIcon classes={{root: classes.sendBreefBtnIcon}} />
-              </Button>
+              {/*<Button onClick={sendBreef} className={classes.SendBreefBtn} classes={{  root: classes.SendBreefBtn,   label :classes.sendBreefLabel,  text :classes.sendBreefText }}>*/}
+              {/*  <ArrowForwardIosIcon classes={{root: classes.sendBreefBtnIcon}} />*/}
+              {/*</Button>*/}
             </Grid>
           </Grid>
         </form>

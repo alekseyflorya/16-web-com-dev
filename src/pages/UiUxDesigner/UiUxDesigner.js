@@ -67,9 +67,9 @@ function OtherVacancies() {
       <Grid item container className={classes.OtherVacanciesBlock}>
         <h4 className={classes.AsideTitle}>Другие вакансии</h4>
         <Grid item container className={classes.LinksToVacancyBlock}>
-          <Link to={'/vacancies'} className={classes.LinkToVacancy} >UI/UX Designer</Link>
-          <Link to={'/vacancies'} className={classes.LinkToVacancy} >Frontend Developer</Link>
-          <Link to={'/vacancies'} className={classes.LinkToVacancy} >SMM</Link>
+          <Link to={'/vacancies/ui-ux-designer'} className={classes.LinkToVacancy} >UI/UX Designer</Link>
+          <Link to={'/vacancies/1c-developer'} className={classes.LinkToVacancy} >Разработчик 1С</Link>
+          <Link to={'/vacancies/seo-specialist'} className={classes.LinkToVacancy} >SEO специалист</Link>
         </Grid>
         <Grid item container className={classes.LinkToAllVacanciesBox}>
           <PricesButton title={'Все вакансии'} path={'/vacancies'}/>

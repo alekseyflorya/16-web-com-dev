@@ -3,7 +3,8 @@ import classes from "./AboutAdvantages.module.scss";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import {AdvantageOneIcon, AdvantageTwoIcon, AdvantageThreeIcon} from "../../../components/Icons";
-import siteCreatingDataImg from "../../../assets/img/why-need-facebook-smm.jpg"
+import siteCreatingDataImg from "../../../assets/img/why-need-internet-marketing.jpg";
+import aboutUsSiteCreatingImg from "../../../assets/img/about-us-site-creating.jpg"
 import {Hidden} from "@material-ui/core";
 import Fade from 'react-reveal/Fade'
 
@@ -13,7 +14,7 @@ const siteCreatingData = {
     'Мы разрабатываем стильные и результативные интернет-магазины, , лендинги, корпоративные сайты и сайты визитки. Наши проекты отличаются высокой скоростью работы, глубокой технической проработкой и качеством исполнения всех функциональных элементов. Они функциональны, адаптированы под мобильные устройства и удобны для пользователей. ',
     'При создании сайтов используются только актуальные технологии программирования, верстки и технической оптимизации. Мы готовы реализовать любой функционал от самого простого до сложных интеграций.'
   ],
-  image: siteCreatingDataImg
+  image: aboutUsSiteCreatingImg
 }
 
 const internetMarketingData = {
