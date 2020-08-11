@@ -6,7 +6,6 @@ import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/icons/Close";
 import Slide from "@material-ui/core/Slide";
 import {LogoInvertIcon, LogoMobileIcon} from '../Icons';
-import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import FormLabel from '@material-ui/core/FormLabel';
 import FormControl from '@material-ui/core/FormControl';
 import FormGroup from '@material-ui/core/FormGroup';
@@ -19,6 +18,7 @@ import Grid from "@material-ui/core/Grid";
 import {Link} from "react-router-dom";
 import {ButtonLink} from "../UI/ButtonLink";
 import {Hidden} from "@material-ui/core";
+import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos"
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="right" ref={ref} {...props} />;
@@ -37,23 +37,67 @@ export default function Breef() {
   };
 
   const [state, setState] = React.useState({
-    siteCreating: true,
+    siteCreating: false,
     webDesign: false,
     marketing: false,
     qaTesting: false,
     branding: false,
     photography: false,
-    fast: false,
-    slow: false,
     success: false
   });
 
-  const sendBreef = () => {
-    setState({ ...state, success:  true});
-  }
+  const [client, setClient] = React.useState({
+    name: '',
+    tel: '',
+    email: '',
+    site: '',
+    siteCreating: '',
+    webDesign: '',
+    marketing: '',
+    qaTesting: '',
+    branding: '',
+    photography: ''
+  })
+
   const handleChange = (event) => {
+    const { id, value } = event.currentTarget;
+    setClient({...client, [id]: value});
     setState({ ...state, [event.target.name]: event.target.checked });
   };
+
+  const sendBreef = async (e) => {
+    e.preventDefault();
+    let files = document.getElementById('input-cv');
+    let checkedService = [
+      client.siteCreating,
+      client.webDesign,
+      client.marketing,
+      client.qaTesting,
+      client.branding,
+      client.photography
+    ];
+    let service = (checkedService.filter(item => (item ? item : ''))).join(', ');
+    console.log('service: ', service)
+    let formData = new FormData();
+    if (files.files.length){
+      for (let i = 0; i < files.files.length; i++){
+        formData.append('files', files.files[i]);
+      }
+    }
+    formData.append('name', client.name);
+    formData.append('tel', client.tel);
+    formData.append('email', client.email);
+    formData.append('site', client.site);
+    formData.append('service', service)
+    fetch('sendBreef.php', {
+      method: "POST",
+      body: formData
+    })
+      .then(response => response.json());
+    setState({ ...state, success:  true});
+
+    console.log('ClientData: ', client, 'stateData', state)
+  }
 
   const { siteCreating, webDesign, marketing, qaTesting, branding, photography, success } = state;
 
@@ -73,7 +117,7 @@ export default function Breef() {
         <IconButton edge="start" color="inherit" onClick={handleClose} aria-label="close" className={classes.CloseBtn}>
           <CloseIcon classes={{root: classes.CloseBtnIcon}}/>
         </IconButton>
-        <form>
+        <form id="breef-form" onSubmit={sendBreef}>
           <Grid className={classes.BreefForm}>
             <Grid item container justify="center" alignItems="center" className={classes.BreefFormContainer}>
               <Grid item container>
@@ -87,8 +131,10 @@ export default function Breef() {
                             <Checkbox
                               checked={siteCreating}
                               onChange={handleChange}
+                              value="Создание сайтов"
                               classes={{root: classes.Checkbox, checked: classes.CheckboxChecked}}
                               name="siteCreating"
+                              id="siteCreating"
                             />
                           }
                           classes={{label: classes.FormControlLabel}}
@@ -99,8 +145,10 @@ export default function Breef() {
                             <Checkbox
                               checked={webDesign}
                               onChange={handleChange}
+                              value="Веб-дизайн"
                               classes={{root: classes.Checkbox, checked: classes.CheckboxChecked}}
                               name="webDesign"
+                              id="webDesign"
                             />
                           }
                           classes={{label: classes.FormControlLabel}}
@@ -111,8 +159,10 @@ export default function Breef() {
                             <Checkbox
                               checked={marketing}
                               onChange={handleChange}
+                              value="Интернет-маркетинг (SEO, PPC, SMM)"
                               classes={{root: classes.Checkbox, checked: classes.CheckboxChecked}}
                               name="marketing"
+                              id="marketing"
                             />
                           }
                           classes={{label: classes.FormControlLabel}}
@@ -123,8 +173,10 @@ export default function Breef() {
                             <Checkbox
                               checked={qaTesting}
                               onChange={handleChange}
+                              value="QA"
                               classes={{root: classes.Checkbox, checked: classes.CheckboxChecked}}
                               name="qaTesting"
+                              id="qaTesting"
                             />
                           }
                           classes={{label: classes.FormControlLabel}}
@@ -135,8 +187,10 @@ export default function Breef() {
                             <Checkbox
                               checked={branding}
                               onChange={handleChange}
+                              value="Брендинг"
                               classes={{root: classes.Checkbox, checked: classes.CheckboxChecked}}
                               name="branding"
+                              id="branding"
                             />
                           }
                           classes={{label: classes.FormControlLabel}}
@@ -147,8 +201,10 @@ export default function Breef() {
                             <Checkbox
                               checked={photography}
                               onChange={handleChange}
+                              value="Фотосъемка"
                               classes={{root: classes.Checkbox, checked: classes.CheckboxChecked}}
                               name="photography"
+                              id="photography"
                             />
                           }
                           classes={{label: classes.FormControlLabel}}
@@ -161,7 +217,7 @@ export default function Breef() {
                     <FormControl component="fieldset" classes={{root: classes.FormControl}}>
                       <FormGroup>
                         <InputLabel className={classes.InputCv} htmlFor="input-cv">Техническое задание (если есть)</InputLabel>
-                        <Input type="file" id="input-cv" label="Прикрепить файл" style={{visibility: 'hidden'}} />
+                        <Input type="file" id="input-cv" name="file" label="Прикрепить файл" multiple style={{visibility: 'hidden'}} />
                       </FormGroup>
                     </FormControl>
                   </Grid>
@@ -174,47 +230,82 @@ export default function Breef() {
                         classes={{root: classes.FormLabel, focused: classes.FormLabelFocused}}>Контактные данные</FormLabel>
                       <FormGroup>
                         <TextField
-                          required
-                          id="standard-required"
+                          id="name"
+                          name="name"
+                          onChange={handleChange}
                           InputProps={{classes: {input: classes.InputBase, underline: classes.InputBaseUnderline}}}
                           InputLabelProps={{classes: {root: classes.InputLabel, focused: classes.InputLabelFocused}}}
-                          label="Ваше имя" />
-                          <TextField
-                            required
-                            id="standard-required"
-                            InputProps={{classes: {input: classes.InputBase, underline: classes.InputBaseUnderline}}}
-                            InputLabelProps={{classes: {root: classes.InputLabel, focused: classes.InputLabelFocused}}}
-                            label="Телефон" />
-                            <TextField
-                              required
-                              id="standard-required"
-                              InputProps={{classes: {input: classes.InputBase, underline: classes.InputBaseUnderline}}}
-                              InputLabelProps={{classes: {root: classes.InputLabel, focused: classes.InputLabelFocused}}}
-                              label="E-mail" />
-                              <TextField
-                        required
-                        id="standard-required"
-                        InputProps={{classes: {input: classes.InputBase, underline: classes.InputBaseUnderline}}}
-                        InputLabelProps={{classes: {root: classes.InputLabel, focused: classes.InputLabelFocused}}}
-                        label="Сайт (если есть)" />
+                          label="Ваше имя"
+                        />
+                        <TextField
+                          id="tel"
+                          name="tel"
+                          value={client.tel}
+                          onChange={handleChange}
+                          InputProps={{classes: {input: classes.InputBase, underline: classes.InputBaseUnderline}}}
+                          InputLabelProps={{classes: {root: classes.InputLabel, focused: classes.InputLabelFocused}}}
+                          label="Телефон"
+                        />
+                        <TextField
+                          id="email"
+                          name="email"
+                          onChange={handleChange}
+                          InputProps={{classes: {input: classes.InputBase, underline: classes.InputBaseUnderline}}}
+                          InputLabelProps={{classes: {root: classes.InputLabel, focused: classes.InputLabelFocused}}}
+                          label="E-mail"
+                        />
+                        <TextField
+                          id="site"
+                          name="site"
+                          onChange={handleChange}
+                          InputProps={{classes: {input: classes.InputBase, underline: classes.InputBaseUnderline}}}
+                          InputLabelProps={{classes: {root: classes.InputLabel, focused: classes.InputLabelFocused}}}
+                          label="Сайт (если есть)"
+                        />
                       </FormGroup>
                     </FormControl>
                   </Grid>
                   <Grid item container>
                     <Button
-                      onClick={sendBreef}
                       className={classes.SendBreefBtn}
+                      type="submit"
                     >
                       Отправить
                     </Button>
                   </Grid>
                 </Grid>
               </Grid>
-            </Grid>
-            <Grid item container>
-              {/*<Button onClick={sendBreef} className={classes.SendBreefBtn} classes={{  root: classes.SendBreefBtn,   label :classes.sendBreefLabel,  text :classes.sendBreefText }}>*/}
-              {/*  <ArrowForwardIosIcon classes={{root: classes.sendBreefBtnIcon}} />*/}
-              {/*</Button>*/}
+              <Grid item container className={classes.DeviderBlock}>
+                <Grid item sm={12} className={classes.DeviderText}>
+                  ИЛИ
+                </Grid>
+              </Grid>
+              <Grid item container className={classes.BreefOneClick}>
+                <Grid item container sm={9} className={classes.BreefOneClickBlock}>
+                  <Grid item container sm={6} className={classes.BreefOneClickLabelBlock}>
+                    <label className={classes.BreefOneClickLabel}>Хотите обсудить проект?</label>
+                  </Grid>
+                  <Grid item container sm={6} className={classes.BreefOneClickInputBlock}>
+                    <TextField
+                      id="tel"
+                      name="tel"
+                      onChange={handleChange}
+                      value={client.tel}
+                      className={classes.InputField}
+                      InputProps={{classes: {input: classes.InputBase, underline: classes.InputBaseUnderline}}}
+                      InputLabelProps={{classes: {root: classes.InputLabel, focused: classes.InputLabelFocused}}}
+                      label="+38 (000) 000 000 00"
+                    />
+                    <Button
+                      className={classes.SendBreefBtn}
+                      classes={{root:classes.SendBreefBtn}}
+                      type="submit"
+                    >
+                      <ArrowForwardIosIcon classes={{root: classes.sendBreefBtnIcon}} />
+                    </Button>
+                  </Grid>
+                </Grid>
+              </Grid>
             </Grid>
           </Grid>
         </form>
@@ -239,15 +330,15 @@ export default function Breef() {
           <CloseIcon classes={{root: classes.CloseBtnIcon}}/>
         </IconButton>
         <Grid container className={classes.SuccessBox} justify="center" alignItems="center">
-          <Grid item container sm={6}>
+          <Grid item container sm={4} >
             <Grid item sm={12} xs={12} className={classes.SuccessTop}>
               <h2 className={classes.Headding}>Спасибо, что заполнили бриф!</h2>
               <p className={classes.SuccessText}>Скоро с вами свяжется наш Project Manager для обсуждения всех деталей</p>
               <Link to="/portfolio" className={classes.Link}>Можете посмотреть наше портфолио</Link>
             </Grid>
             <Grid item container sm={12} xs={12} justify="space-between">
-              <ButtonLink classNames={classes.SuccessHomeBtn} title={'Подробнее о нас'} path={'/about'} />
-              <ButtonLink classNames={classes.SuccessAboutBtn} title={'На главную'} path={'/'} />
+              <ButtonLink classNames={classes.SuccessHomeBtn} title={'На главную'} path={'/'} />
+              <ButtonLink classNames={classes.SuccessAboutBtn} title={'Подробнее о нас'} path={'/about'} />
             </Grid>
           </Grid>
         </Grid>

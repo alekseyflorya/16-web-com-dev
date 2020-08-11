@@ -4,12 +4,12 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Article from "./Article";
 
-function ArticlePage({item}) {
+function ArticlePage() {
 
   return (
     <div className={classes.ArticlePage}>
       <Header />
-      <Article item={item} />
+      <Article />
       <Footer />
     </div>
   )

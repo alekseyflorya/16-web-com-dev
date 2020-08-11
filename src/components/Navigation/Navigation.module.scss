@@ -11,7 +11,6 @@
 }
 .LinksTop{
   justify-content: space-between;
-  overflow: hidden;
   .MobileSocialGrid{
     max-width: 50%;
     position: absolute;
@@ -74,25 +73,22 @@
     &:before{
       content: '';
       display: block;
-      //width: 0%;
+      width: 0%;
       height: 100%;
       background: #4C1C89;
-      //padding: 0;
       position: absolute;
-      //top: -10px;
-      //left: -12.5px;
       z-index: -1;
+      margin-left: -45px;
       transition: all .4s ease;
     }
     &:hover{
       transform: scale3d(1.05,1.05,1.05);
       &:before{
         width: 100%;
-        padding: 15px 25px;
+        padding: 15px 45px 15px 45px;
       }
     }
   }
-
   &:hover,&:active{
     color: #0DF0FF;
   }

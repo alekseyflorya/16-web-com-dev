@@ -64,26 +64,25 @@ function CallBack({callBackIsOpen, callBackSetOpen}) {
             id="name"
             value={formValues.name}
             label="Имя"
+            required
             type="text"
             fullWidth
             className={classes.InputName}
             onChange={handleChange}
           />
           <TextField
-            autoFocus
             margin="dense"
             id="tel"
             value={formValues.tel}
             label="Телефон"
             type="tel"
+            required
             fullWidth
             onChange={handleChange}
           />
           <button type="submit" className={classes.SubmitButton}>Свяжитесь со мной</button>
         </form>
-
       </Dialog>
-
       <Dialog
         onClose={handleCallBackSuccess}
         aria-labelledby="customized-dialog-title"

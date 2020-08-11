@@ -15,9 +15,8 @@ import Dialog from "@material-ui/core/Dialog";
 
 function VacancieForm() {
   const [formValues, setFormValues] = useState({
-    name: "",
-    email: "",
-    myfile: ""
+    name: '',
+    email: ''
   })
 
   const [callBackSuccessIsOpen, setCallBackSuccessIsOpen] = useState(false)
@@ -25,18 +24,24 @@ function VacancieForm() {
   const handleChange = (e) => {
     const { id, value } = e.currentTarget;
     setFormValues({...formValues, [id]: value});
+    console.log(formValues);
   }
 
   const handleCallBackSuccess = () => {
     setCallBackSuccessIsOpen(!callBackSuccessIsOpen)
   }
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
+    let file = document.getElementById('input-cv');
+
     let formData = new FormData();
+    if (file.files.length){
+      formData.append('file', file.files[0]);
+    }
     formData.append('name', formValues.name);
-    formData.append('tel', formValues.email);
-    formData.append('myfile', formValues.myfile);
+    formData.append('email', formValues.email);
+
     fetch('sendVacancy.php', {
       method: "POST",
       body: formData
@@ -44,11 +49,6 @@ function VacancieForm() {
       .then(response => response.json());
 
     handleCallBackSuccess();
-    setFormValues({
-      name: "",
-      email: "",
-      myfile: "Файл"
-    });
   };
 
   return (
@@ -60,9 +60,8 @@ function VacancieForm() {
             <Fade up>
             <form
               autoComplete="off"
+              id="vacancy-form"
               className={classes.Form}
-              encType="multipart/form-data"
-              method="post"
               onSubmit={onSubmit}
             >
               <Grid item container
@@ -76,8 +75,10 @@ function VacancieForm() {
                     InputLabelProps={{classes: {root: classes.InputLabel, focused: classes.InputFocused}}}
                     InputProps={{classes: {underline: classes.InputUnderline}}}
                     required
-                    id="input-name"
+                    id="name"
                     name="name"
+                    type="text"
+                    value={formValues.name}
                     onChange={handleChange}
                     label="Имя" />
                 </Grid>
@@ -88,8 +89,9 @@ function VacancieForm() {
                     InputProps={{classes: {underline: classes.InputUnderline}}}
                     required
                     type="email"
-                    id="input-email"
+                    id="email"
                     name="email"
+                    value={formValues.email}
                     onChange={handleChange}
                     label="Email" />
                 </Grid>
@@ -100,7 +102,7 @@ function VacancieForm() {
                   </FormControl>
                 </Grid>
                 <Grid item>
-                  <input className={classes.SubmitBtn} type="submit"/>
+                  <button className={classes.SubmitBtn} type="submit">Отправить</button>
                 </Grid>
               </Grid>
             </form>
