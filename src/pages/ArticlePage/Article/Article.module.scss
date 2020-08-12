@@ -28,9 +28,17 @@
     font-size: 20px;
     line-height: 140%;
     color: #292525;
+    margin-top: 40px;
+    margin-bottom: 20px;
   }
   .Head4{
-
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 140%;
+    color: #292525;
+    margin-bottom: 10px;
   }
   .Paragraph{
     font-family: Inter;
@@ -54,11 +62,15 @@
     margin-bottom: 20px;
     .LItem{
       display: flex;
-      justify-content: flex-start;
       align-items: baseline;
+      position: relative;
+      padding-left: 30px;
       &:before{
         content: '';
         display: inline-block;
+        position: absolute;
+        left: 0;
+        top: 5px;
         width: 10px;
         height: 10px;
         background: #4C1C89;
@@ -80,8 +92,10 @@
 
   }
   .Image{
+    display: block;
     max-width: 100%;
     height: auto;
+    margin: 40px auto;
   }
   .TagsBox{
 

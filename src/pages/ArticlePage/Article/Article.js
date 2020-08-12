@@ -7,24 +7,29 @@ import ArticlesContent from "./ArticlesContent"
 function Article() {
   const {content} = ArticlesContent.find(post => '/news/'+post.id === window.location.pathname);
   const items = content.map(item => {
+    item = item.trim();
+    if(item.startsWith('<img src="') && item.endsWith('" />')) {
+      let slicedItem = item.slice(10,-4);
+      return (<img className={classes.Image} src={`${slicedItem}`}/>)
+    }
     if(item.startsWith('<h2>') && item.endsWith('</h2>')) {
-      let slicedItem = item.trim().slice(4,-5);
+      let slicedItem = item.slice(4,-5);
       return (<h2 className={classes.Head2}>{slicedItem}</h2>)
     }
     if(item.startsWith('<h3>') && item.endsWith('</h3>')) {
-      let slicedItem = item.trim().slice(4,-5);
+      let slicedItem = item.slice(4,-5);
       return (<h3 className={classes.Head3}>{slicedItem}</h3>)
     }
     if(item.startsWith('<h4>') && item.endsWith('</h4>')) {
-      let slicedItem = item.trim().slice(4,-5);
+      let slicedItem = item.slice(4,-5);
       return (<h4 className={classes.Head4}>{slicedItem}</h4>)
     }
     if(item.startsWith('<p>') && item.endsWith('</p>')) {
-      let slicedItem = item.trim().slice(3,-4);
+      let slicedItem = item.slice(3,-4);
       return (<p className={classes.Paragraph}>{slicedItem}</p>)
     }
     if(item.startsWith('<ul>') && item.endsWith('</ul>')) {
-      let slicedItem = item.trim().slice(4,-5);
+      let slicedItem = item.slice(4,-5);
       let posArr =[]
       let liItems = [];
       let pos = -1;
@@ -41,7 +46,7 @@ function Article() {
 
       return (
         <ul className={classes.UList}>
-          {liItems.map(item => <li className={classes.LItem}>{item.trim().slice(4, -5)}</li>)}
+          {liItems.map(item => <li className={classes.LItem}>{item.slice(4, -5)}</li>)}
         </ul>
       )
     }
