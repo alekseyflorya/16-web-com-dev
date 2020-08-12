@@ -1,6 +1,7 @@
 import imageNews1 from "../assets/img/news1.png";
 import imageNews2 from "../assets/img/news2.png";
 import imageNews3 from "../assets/img/news3.png";
+import imageNews4 from "../assets/img/news4.jpg";
 
 export const BlogArray = [
   {
@@ -49,6 +50,18 @@ export const NewsListArray = [
     blogCategory: 'SEO',
     dateAdded: '23.05.19',
     views: 203,
+    content: 'Реклама, которая настолько естественна, что не раздр'
+  },
+  {
+    id: 3,
+    label: '04',
+    title: 'Облегчаем жизнь дизайнеру - полезные плагины для Figma',
+    image: imageNews4,
+    postPath: 'oblegchaem-zhizn-dizajneru-poleznye-plaginy-dlya-figma',
+    description: 'Идеальный дизайн сайта не прощает неточностей. Бывало ли у Вас так, что создавая свой идеальный макет, стоило изменить всего лишь один символ по требованию заказчика и вся идеальная картина, выстраиваемая несколькими месяцами превращалась в работу, которую пытаешься забыть как страшный сон.',
+    blogCategory: 'Дизайн',
+    dateAdded: '23.07.20',
+    views: 23,
     content: 'Реклама, которая настолько естественна, что не раздр'
   }
 ];

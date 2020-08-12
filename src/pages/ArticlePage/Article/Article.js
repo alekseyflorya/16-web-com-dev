@@ -29,25 +29,55 @@ function Article() {
       return (<p className={classes.Paragraph}>{slicedItem}</p>)
     }
     if(item.startsWith('<ul>') && item.endsWith('</ul>')) {
-      let slicedItem = item.slice(4,-5);
-      let posArr =[]
+      let slicedItem = item.trim().slice(4,-5);
+      let posStartArr = [];
+      let posEndArr = [];
       let liItems = [];
-      let pos = -1;
-      while ((pos = slicedItem.indexOf('<li>', pos + 1)) !== -1) {
-        posArr.push(pos-1);
+      let posStart = -1;
+      let posEnd = -1;
+      while ((posStart = slicedItem.indexOf('<li>', posStart + 1)) !== -1) {
+        posStartArr.push(posStart-1);
       }
-      console.log(posArr);
-      if(posArr.length > 1){
-        for(let i = 0; i < posArr.length; i++){
-          liItems.push(slicedItem.slice(posArr[i],posArr[i+1]));
+      while ((posEnd = slicedItem.indexOf('</li>', posEnd + 1)) !== -1) {
+        posEndArr.push(posEnd-1);
+      }
+      if(posStartArr.length > 1 && posEndArr.length > 1){
+        for(let i = 0; i < posStartArr.length && i < posEndArr.length; i++){
+          liItems.push(slicedItem.trim().slice(posStartArr[i],posEndArr[i]));
         };
         console.log(liItems);
       }
 
       return (
         <ul className={classes.UList}>
-          {liItems.map(item => <li className={classes.LItem}>{item.slice(4, -5)}</li>)}
+          {liItems.map(item => <li className={classes.LItem}>{item.slice(4)}</li>)}
         </ul>
+      )
+    }
+    if(item.startsWith('<ol>') && item.endsWith('</ol>')) {
+      let slicedItem = item.trim().slice(4,-5);
+      let posStartArr = [];
+      let posEndArr = [];
+      let liItems = [];
+      let posStart = -1;
+      let posEnd = -1;
+      while ((posStart = slicedItem.indexOf('<li>', posStart + 1)) !== -1) {
+        posStartArr.push(posStart-1);
+      }
+      while ((posEnd = slicedItem.indexOf('</li>', posEnd + 1)) !== -1) {
+        posEndArr.push(posEnd-1);
+      }
+      if(posStartArr.length > 1 && posEndArr.length > 1){
+        for(let i = 0; i < posStartArr.length && i < posEndArr.length; i++){
+          liItems.push(slicedItem.trim().slice(posStartArr[i],posEndArr[i]));
+        };
+        console.log(liItems);
+      }
+
+      return (
+        <ol className={classes.OList}>
+          {liItems.map(item => <li className={classes.LItem}>{item.slice(4)}</li>)}
+        </ol>
       )
     }
     return (<p className={classes.Paragraph}>{item}</p>)
