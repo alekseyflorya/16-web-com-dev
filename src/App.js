@@ -1,6 +1,6 @@
 import React from 'react';
 import {BrowserRouter as Router, Route, Switch, Redirect} from 'react-router-dom';
-
+import Analytics from 'react-router-ga';
 import './App.scss';
 import DataArray from './components/DataArray';
 import {NewsListArray} from './components/BlogArray'
@@ -18,11 +18,13 @@ export default function App() {
 
   return (
     <Router>
-      <Switch>
-        {Routes}
-        {BlogRoutes}
-        <Redirect to="/not-found" />
-      </Switch>
+      <Analytics id="UA-174264799-1" debug>
+        <Switch>
+          {Routes}
+          {BlogRoutes}
+          <Redirect to="/not-found" />
+        </Switch>
+      </Analytics>
     </Router>
   );
 }

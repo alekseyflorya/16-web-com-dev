@@ -26,6 +26,7 @@ export const NewsListArray = [
     blogCategory: 'Новости SEO',
     dateAdded: '21.03.19',
     views: 201,
+    tags: ['SEO','контекстнаяреклама','PPC'],
     content: 'Медленная скорость загрузки сайта убивает продажи, вреди'
   },
   {
@@ -38,6 +39,7 @@ export const NewsListArray = [
     blogCategory: 'Новости',
     dateAdded: '22.04.19',
     views: 202,
+    tags: ['веб-разработка','SEO','брендинг'],
     content: 'Встал вопрос с выбором CMS? Мы провели небольшое исследовани'
   },
   {
@@ -50,6 +52,7 @@ export const NewsListArray = [
     blogCategory: 'SEO',
     dateAdded: '23.05.19',
     views: 203,
+    tags: ['SEO','Linkbuilding','веб-разработка'],
     content: 'Реклама, которая настолько естественна, что не раздр'
   },
   {
@@ -62,6 +65,7 @@ export const NewsListArray = [
     blogCategory: 'Дизайн',
     dateAdded: '23.07.20',
     views: 23,
+    tags: ['веб-дизайн','брендинг','UI/UX'],
     content: 'Реклама, которая настолько естественна, что не раздр'
   }
 ];

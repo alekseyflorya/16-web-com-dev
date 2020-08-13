@@ -4,6 +4,9 @@ import Dialog from '@material-ui/core/Dialog';
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 import TextField from "@material-ui/core/TextField";
+import Grid from "@material-ui/core/Grid";
+import {Link as SocialLink} from "react-router-dom";
+import {CallbackInstaIcon, CallbackFbIcon, CallbackBehanceIcon, CallbackDribbleIcon} from "../Icons";
 
 function CallBack({callBackIsOpen, callBackSetOpen}) {
   const [formValues, setFormValues] = useState({
@@ -96,6 +99,24 @@ function CallBack({callBackIsOpen, callBackSetOpen}) {
         <h3 className={classes.Headding}><span className={classes.Back}>Спасибо, </span>что оставили свои контакты!</h3>
 
         <p className={classes.Text}>Мы скоро вам перезвоним, а пока можете посмотреть наши работы в разделе портфолио</p>
+
+        <Grid item container xs={12} className={classes.MobileSocialGrid}>
+          <SocialLink className={classes.MobileSocialLink} href="https://www.instagram.com/16.web/" target="_blank" rel="noopener noreferrer">
+            <CallbackInstaIcon width="25" height="26" viewBox="0 0 25 26" />
+          </SocialLink>
+          <SocialLink className={classes.MobileSocialLink} href="https://www.facebook.com/16.web" target="_blank" rel="noopener noreferrer">
+            <CallbackFbIcon width="13" height="24" viewBox="0 0 13 24" />
+          </SocialLink>
+          {/*<SocialLink className={classes.MobileSocialLink} href="">*/}
+          {/*  <MobileLinkedIcon width="23" height="23" viewBox="0 0 23 23" />*/}
+          {/*</SocialLink>*/}
+          <SocialLink className={classes.MobileSocialLink} href="https://www.behance.net/16web" target="_blank" rel="noopener noreferrer">
+            <CallbackBehanceIcon width="34" height="20" viewBox="0 0 34 20" />
+          </SocialLink>
+          <SocialLink className={classes.MobileSocialLink} href="https://dribbble.com/16web" target="_blank" rel="noopener noreferrer">
+            <CallbackDribbleIcon width="29" height="29" viewBox="0 0 29 29" />
+          </SocialLink>
+        </Grid>
       </Dialog>
     </div>
   );

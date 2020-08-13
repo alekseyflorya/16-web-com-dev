@@ -10,7 +10,7 @@ function Article() {
     item = item.trim();
     if(item.startsWith('<img src="') && item.endsWith('" />')) {
       let slicedItem = item.slice(10,-4);
-      return (<img className={classes.Image} src={`${slicedItem}`}/>)
+      return (<img className={classes.Image} src={`${slicedItem}`} alt="" />)
     }
     if(item.startsWith('<h2>') && item.endsWith('</h2>')) {
       let slicedItem = item.slice(4,-5);
@@ -45,7 +45,6 @@ function Article() {
         for(let i = 0; i < posStartArr.length && i < posEndArr.length; i++){
           liItems.push(slicedItem.trim().slice(posStartArr[i],posEndArr[i]));
         };
-        console.log(liItems);
       }
 
       return (

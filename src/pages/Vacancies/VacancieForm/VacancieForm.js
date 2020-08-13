@@ -54,7 +54,7 @@ function VacancieForm() {
   return (
     <section className={classes.VacancieForm}>
       <Container fixed className={classes.Container}>
-        <h2 className={classes.Headding}>Вашей вакансии нет в списке?</h2>
+        <h2 className={classes.Headding}>{'Хочешь присоединиться к нашей команде?'}</h2>
         <Grid container>
           <Grid item container sm={6} xs={12} className={classes.FormBlock}>
             <Fade up>

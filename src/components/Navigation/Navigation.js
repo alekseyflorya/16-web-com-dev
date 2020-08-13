@@ -67,9 +67,8 @@ function Navigation({toggleDrawer, isOpen}) {
         >
           <Grid item container sm={12}>
             <Grid item container sm={12} xs={12} className={classes.LinksTop}>
-              {newLinks.map(({id, name, label, path, parent, children, headdingtitle}, index) => {
+              {newLinks.filter(({id}) => id <= 8).map(({id, name, label, path, parent, children, headdingtitle}, index) => {
                 let activeLink = (window.location.pathname === path) ? classes.active : '';
-                if (id <= 8) {
                   return (
                     <Grid item sm={4} xs={12} key={index} className={classes.MenuLinks}>
                       <Fade right duration={400} delay={110+(id * 110)}>
@@ -84,22 +83,21 @@ function Navigation({toggleDrawer, isOpen}) {
                       </Fade>
                     </Grid>
                   );
-                }
               })}
               <Grid item container xs={12} className={classes.MobileSocialGrid}>
-                <SocialLink className={classes.MobileSocialLink} to="https://www.instagram.com/16.web/">
+                <SocialLink className={classes.MobileSocialLink} href="https://www.instagram.com/16.web/" target="_blank" rel="noopener noreferrer">
                   <MobileInstaIcon width="23" height="23" viewBox="0 0 23 23" />
                 </SocialLink>
-                <SocialLink className={classes.MobileSocialLink} to="https://www.facebook.com/16.web">
+                <SocialLink className={classes.MobileSocialLink} href="https://www.facebook.com/16.web" target="_blank" rel="noopener noreferrer">
                   <MobileFbIcon width="11" height="23" viewBox="0 0 11 23" />
                 </SocialLink>
-                <SocialLink className={classes.MobileSocialLink} to="#">
-                  <MobileLinkedIcon width="23" height="23" viewBox="0 0 23 23" />
-                </SocialLink>
-                <SocialLink className={classes.MobileSocialLink} to="https://www.behance.net/16web">
+                {/*<SocialLink className={classes.MobileSocialLink} href="#">*/}
+                {/*  <MobileLinkedIcon width="23" height="23" viewBox="0 0 23 23" />*/}
+                {/*</SocialLink>*/}
+                <SocialLink className={classes.MobileSocialLink} href="https://www.behance.net/16web" target="_blank" rel="noopener noreferrer">
                   <MobileBehanceIcon width="31" height="19" viewBox="0 0 31 19" />
                 </SocialLink>
-                <SocialLink className={classes.MobileSocialLink} to="https://dribbble.com/16web">
+                <SocialLink className={classes.MobileSocialLink} href="https://dribbble.com/16web" target="_blank" rel="noopener noreferrer">
                   <MobileDribbleIcon width="27" height="27" viewBox="0 0 27 27" />
                 </SocialLink>
               </Grid>

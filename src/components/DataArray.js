@@ -639,7 +639,7 @@ const DataArray = [
     path: '/vacancies/ui-ux-designer',
     component: () => <UiUxDesigner />,
     headdingtitle: 'UI/UX designer',
-    description: '16.web studio специализируется на веб-дизайне, создании адаптивных интернет-проектов, брендинге и рекламной фотографии.',
+    description: 'Мы ищем специалиста, который мог бы вместе с нашей командой работать над интересными проектами и развиваться в направлении IT',
     bgimage: uiuxdesignerImg,
     exact: true
   },
@@ -650,7 +650,7 @@ const DataArray = [
     path: '/vacancies/seo-specialist',
     component: () => <SeoSpecialist />,
     headdingtitle: 'SEO специалист',
-    description: '16.web studio специализируется на веб-дизайне, создании адаптивных интернет-проектов, брендинге и рекламной фотографии.',
+    description: 'Мы ищем специалиста, который мог бы вместе с нашей командой работать над интересными проектами и развиваться в направлении IT',
     bgimage: uiuxdesignerImg,
     exact: true
   },
@@ -661,7 +661,7 @@ const DataArray = [
     path: '/vacancies/1c-developer',
     component: () => <Developer1c />,
     headdingtitle: 'Разработчик 1С',
-    description: '16.web studio специализируется на веб-дизайне, создании адаптивных интернет-проектов, брендинге и рекламной фотографии.',
+    description: 'Мы ищем специалиста, который мог бы вместе с нашей командой работать над интересными проектами и развиваться в направлении IT',
     bgimage: uiuxdesignerImg,
     exact: true
   },

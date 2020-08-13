@@ -5,9 +5,6 @@ import Footer from "../../components/Footer";
 import Clients from "../../components/Clients";
 import JoinUs from "../../components/JoinUs";
 import Reviews from "../../components/Reviews";
-import Philosophy from "./Philosophy";
-import FineQuality from "./FineQuality";
-import Approach from "./Approach";
 import AboutAdvantages from "./AboutAdvantages";
 
 export default function About(){
@@ -16,9 +13,6 @@ export default function About(){
     <div className={classes.AboutPage}>
       <Header />
       <AboutAdvantages />
-      {/*<Philosophy />*/}
-      {/*<FineQuality />*/}
-      {/*<Approach />*/}
       <Reviews />
       <Clients />
       <JoinUs />

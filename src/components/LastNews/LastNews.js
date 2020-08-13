@@ -9,7 +9,7 @@ import {ButtonLink} from "../UI/ButtonLink";
 import Fade from 'react-reveal/Fade'
 
 function LastNews() {
-  const Posts = NewsListArray.map(({id, postPath, image, title, blogCategory, dateAdded, description, views}, index) => {
+  const Posts = NewsListArray.filter(({id}) => id >= NewsListArray.length-3).map(({id, postPath, image, title, blogCategory, dateAdded, description, views}, index) => {
     return (
       <Grid item container sm={4} xs={12} direction="column" key={index} className={classes.NewsItem}>
         <Fade up>

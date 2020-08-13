@@ -24,10 +24,10 @@ export default function Technologies() {
           <Fade up><h2 className={classes.Headding}>Технологии</h2></Fade>
           <Grid container className={classes.TechnologiesList}>
             <Grid item container sm={6} xs={12} className={classes.TechnologiesItem}>
-              <Grid item sm={3} className={classes.LogoImgBox}>
+              <Grid item sm={2} className={classes.LogoImgBox}>
                 <Fade up><img className={classes.LogoImg} src={htmlLogo} alt=""/></Fade>
               </Grid>
-              <Grid item sm={9} className={classes.TitleBox}>
+              <Grid item sm={10} className={classes.TitleBox}>
                 <Fade up><h3 className={classes.Title}>HTML5</h3></Fade>
               </Grid>
               <Grid item sm={12} className={classes.CaptionBox}>
@@ -35,10 +35,10 @@ export default function Technologies() {
               </Grid>
             </Grid>
             <Grid item container sm={6} xs={12} className={classes.TechnologiesItem}>
-              <Grid item sm={3} className={classes.LogoImgBox}>
+              <Grid item sm={2} className={classes.LogoImgBox}>
                 <Fade up><img className={classes.LogoImg} src={phpLogo} alt=""/></Fade>
               </Grid>
-              <Grid item sm={9} className={classes.TitleBox}>
+              <Grid item sm={10} className={classes.TitleBox}>
                 <Fade up><h3 className={classes.Title}>PHP</h3></Fade>
               </Grid>
               <Grid item sm={12} className={classes.CaptionBox}>
@@ -46,10 +46,10 @@ export default function Technologies() {
               </Grid>
             </Grid>
             <Grid item container sm={6} xs={12} className={classes.TechnologiesItem}>
-              <Grid item sm={3} className={classes.LogoImgBox}>
+              <Grid item sm={2} className={classes.LogoImgBox}>
                 <Fade up><img className={classes.LogoImg} src={cssLogo} alt=""/></Fade>
               </Grid>
-              <Grid item sm={9} className={classes.TitleBox} >
+              <Grid item sm={10} className={classes.TitleBox} >
                 <Fade up><h3 className={classes.Title}>CSS3</h3></Fade>
               </Grid>
               <Grid item sm={12} className={classes.CaptionBox} >
@@ -57,10 +57,10 @@ export default function Technologies() {
               </Grid>
             </Grid>
             <Grid item container sm={6} xs={12} className={classes.TechnologiesItem}>
-              <Grid item sm={3} className={classes.LogoImgBox}>
+              <Grid item sm={2} className={classes.LogoImgBox}>
                 <Fade up><img className={classes.LogoImg} src={mysqlLogo} alt=""/></Fade>
               </Grid>
-              <Grid item sm={9} className={classes.TitleBox}>
+              <Grid item sm={10} className={classes.TitleBox}>
                 <Fade up><h3 className={classes.Title}>MySQL</h3></Fade>
               </Grid>
               <Grid item sm={12} className={classes.CaptionBox}>
@@ -68,10 +68,10 @@ export default function Technologies() {
               </Grid>
             </Grid>
             <Grid item container sm={6} xs={12} className={classes.TechnologiesItem}>
-              <Grid item sm={3} className={classes.LogoImgBox}>
+              <Grid item sm={2} className={classes.LogoImgBox}>
                 <Fade up><img className={classes.LogoImg} src={jsLogo} alt=""/></Fade>
               </Grid>
-              <Grid item sm={9} className={classes.TitleBox}>
+              <Grid item sm={10} className={classes.TitleBox}>
                 <Fade up><h3 className={classes.Title}>ES6</h3></Fade>
               </Grid>
               <Grid item sm={12} className={classes.CaptionBox}>
@@ -79,10 +79,10 @@ export default function Technologies() {
               </Grid>
             </Grid>
             <Grid item container sm={6} xs={12} className={classes.TechnologiesItem}>
-              <Grid item sm={3} className={classes.LogoImgBox}>
+              <Grid item sm={2} className={classes.LogoImgBox}>
                 <Fade up><img className={classes.LogoImg} src={restapiLogo} alt=""/></Fade>
               </Grid>
-              <Grid item sm={9} className={classes.TitleBox}>
+              <Grid item sm={10} className={classes.TitleBox}>
                 <Fade up><h3 className={classes.Title}>REST API</h3></Fade>
               </Grid>
               <Grid item sm={12} className={classes.CaptionBox}>
@@ -97,10 +97,10 @@ export default function Technologies() {
           <h2 className={classes.Headding}>CMS и фреймворки</h2>
           <Grid container className={classes.TechnologiesList}>
             <Grid item container sm={6} xs={12} className={classes.TechnologiesItem}>
-              <Grid item sm={3} className={classes.LogoImgBox}>
+              <Grid item sm={2} className={classes.LogoImgBox}>
                 <Fade up><img className={classes.LogoImg} src={OpenCartLogo} alt="OpenCart"/></Fade>
               </Grid>
-              <Grid item sm={9} className={classes.TitleBox}>
+              <Grid item sm={10} className={classes.TitleBox}>
                 <Fade up><h3 className={classes.Title}>OpenCart</h3></Fade>
               </Grid>
               <Grid item sm={12} className={classes.CaptionBox}>
@@ -108,10 +108,10 @@ export default function Technologies() {
               </Grid>
             </Grid>
             <Grid item container sm={6} xs={12} className={classes.TechnologiesItem}>
-              <Grid item sm={3} className={classes.LogoImgBox}>
+              <Grid item sm={2} className={classes.LogoImgBox}>
                 <Fade up><img className={classes.LogoImg} src={WordPressLogo} alt=""/></Fade>
               </Grid>
-              <Grid item sm={9} className={classes.TitleBox}>
+              <Grid item sm={10} className={classes.TitleBox}>
                 <Fade up><h3 className={classes.Title}>WordPress</h3></Fade>
               </Grid>
               <Grid item sm={12} className={classes.CaptionBox}>
@@ -119,10 +119,10 @@ export default function Technologies() {
               </Grid>
             </Grid>
             <Grid item container sm={6} xs={12} className={classes.TechnologiesItem}>
-              <Grid item sm={3} className={classes.LogoImgBox}>
+              <Grid item sm={2} className={classes.LogoImgBox}>
                 <Fade up><img className={classes.LogoImg} src={laravelLogo} alt=""/></Fade>
               </Grid>
-              <Grid item sm={9} className={classes.TitleBox}>
+              <Grid item sm={10} className={classes.TitleBox}>
                 <Fade up><h3 className={classes.Title}>Laravel</h3></Fade>
               </Grid>
               <Grid item sm={12} className={classes.CaptionBox}>
@@ -130,10 +130,10 @@ export default function Technologies() {
               </Grid>
             </Grid>
             <Grid item container sm={6} xs={12} className={classes.TechnologiesItem}>
-              <Grid item sm={3} className={classes.LogoImgBox}>
+              <Grid item sm={2} className={classes.LogoImgBox}>
                 <Fade up><img className={classes.LogoImg} src={vueLogo} alt=""/></Fade>
               </Grid>
-              <Grid item sm={9} className={classes.TitleBox}>
+              <Grid item sm={10} className={classes.TitleBox}>
                 <Fade up><h3 className={classes.Title}>Vue.js</h3></Fade>
               </Grid>
               <Grid item sm={12} className={classes.CaptionBox}>
@@ -141,10 +141,10 @@ export default function Technologies() {
               </Grid>
             </Grid>
             <Grid item container sm={6} xs={12} className={classes.TechnologiesItem}>
-              <Grid item sm={3} className={classes.LogoImgBox}>
+              <Grid item sm={2} className={classes.LogoImgBox}>
                 <Fade up><img className={classes.LogoImg} src={tildaLogo} alt=""/></Fade>
               </Grid>
-              <Grid item sm={9} className={classes.TitleBox}>
+              <Grid item sm={10} className={classes.TitleBox}>
                 <Fade up><h3 className={classes.Title}>Tilda</h3></Fade>
               </Grid>
               <Grid item sm={12} className={classes.CaptionBox}>
@@ -152,10 +152,10 @@ export default function Technologies() {
               </Grid>
             </Grid>
             <Grid item container sm={6} xs={12} className={classes.TechnologiesItem}>
-              <Grid item sm={3} className={classes.LogoImgBox}>
+              <Grid item sm={2} className={classes.LogoImgBox}>
                 <Fade up><img className={classes.LogoImg} src={reactLogo} alt=""/></Fade>
               </Grid>
-              <Grid item sm={9} className={classes.TitleBox}>
+              <Grid item sm={10} className={classes.TitleBox}>
                 <Fade up><h3 className={classes.Title}>React</h3></Fade>
               </Grid>
               <Grid item sm={12} className={classes.CaptionBox}>

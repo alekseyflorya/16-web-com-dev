@@ -1,38 +1,13 @@
-.NewsList{
-  margin-bottom: 220px;
-  @media(max-width: 768px){
-    margin-bottom: 120px;
-  }
-  .Container{
-
-  }
-  .Headding{
-    font-family: Ubuntu;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 43px;
-    line-height: 52px;
-    color: #393939;
-    margin-bottom: 120px;
-    @media(max-width: 768px){
-      font-size: 28px;
-      line-height: 120%;
-      margin-bottom: 60px;
-
+.LastPost{
+  margin-bottom: 120px;
+  .LastPostBlock{
+    padding-bottom: 120px;
+    border-bottom: 1px solid #E9E9E9;
+    @media(max-width: 768px) {
+      border-bottom: none;
     }
   }
-  .LastNewsButton{
-    @media(max-width: 768px){
-      width: 100%;
-    }
-  }
-  .News{
-    margin-bottom: 120px;
-    @media(max-width: 768px){
-      margin-bottom: 0;
-    }
-  }
-  .NewsBox{
+  .LastPostBox{
 
   }
   .NewsItem{
@@ -40,11 +15,7 @@
     transition: all .5s;
     @media(max-width: 768px){
       padding: 0;
-      margin-bottom: 80px;
-    }
-    &:hover{
-      transform: translateY(-5px);
-      box-shadow: 5px 20px 30px rgba(128, 128, 128, 0.15);
+      margin-bottom: 60px;
     }
     .Image{
       max-width: 100%;
@@ -57,11 +28,10 @@
       font-family: Ubuntu;
       font-style: normal;
       font-weight: bold;
-      font-size: 20px;
-      line-height: 28px;
+      font-size: 30px;
+      line-height: 120%;
       color: #292525;
-      margin-bottom: 10px;
-      min-height: 84px;
+      margin-bottom: 15px;
     }
     .CategoryDate{
       font-family: Ubuntu;
@@ -70,17 +40,16 @@
       font-size: 14px;
       line-height: 20px;
       color: #DADADA;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
     }
     .Description{
       font-family: Inter;
       font-style: normal;
       font-weight: normal;
       font-size: 16px;
-      line-height: 22px;
+      line-height: 140%;
       color: #8B8B8B;
-      margin-bottom: 35px;
-      min-height: 90px;
+      margin-bottom: 30px;
     }
     .ViewsAndGo{
       display: flex;
@@ -104,9 +73,6 @@
         height: 2px;
         background: #292525;
         position: relative;
-        @media(max-width: 768px){
-          margin-right: 10px;
-        }
         &:after{
           content: '';
           display: inline-block;
@@ -123,8 +89,50 @@
       }
     }
   }
-  .LastNewsBtn{
-    display: flex;
-    justify-content: center;
+  .TagsBlock{
+    flex-direction: column;
+    padding-right: 80px;
+    @media(max-width: 768px){
+      padding-right: 0;
+    }
+  }
+  .Tags{
+    justify-content: flex-start;
+    align-items: flex-start;
+    border: 1px solid #E9E9E9;
+    padding: 40px;
+    @media(max-width: 768px){
+      padding: 40px 15px;
+    }
+  }
+  .TagsHeadding{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 140%;
+    color: #8B8B8B;
+    margin-bottom: 40px;
+  }
+  .TagsButtons{
+
+  }
+  .TagsButton{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 140%;
+    color: #FFFFFF;
+    background: #4C1C89;
+    border: 1px solid #4C1C89;
+    transition: all .4s ease;
+    padding: 10px 15px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    &:hover{
+      color: #4C1C89;
+      background: #FFFFFF;
+    }
   }
 }

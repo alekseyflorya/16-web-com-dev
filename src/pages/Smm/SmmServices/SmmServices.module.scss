@@ -58,27 +58,31 @@
     line-height: 140%;
     color: #292525;
     margin-bottom: 40px;
+    transition: all .4s ease;
     @media(max-width: 768px){
       margin-bottom: 30px;
     }
     &:after{
-      counter-increment: number3;
-      content: '0' counter(number3);
+      content: '';
       display: block;
       position: absolute;
       right: 40px;
       top: 40px;
-      font-family: Ubuntu;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 20px;
-      line-height: 140%;
-      color: #DADADA;
-      transform: rotate(-90deg);
+      width: 10px;
+      height: 10px;
+      border-top: 1px solid #292525;
+      border-right: 1px solid #292525;
+      transform: rotate(45deg);
       transition: all .4s ease;
       @media(max-width: 768px){
         top: 0;
         right: 5px;
+      }
+    }
+    &:hover{
+      color: #0df0ff;
+      &:after{
+        border-color: #0df0ff;
       }
     }
   }
