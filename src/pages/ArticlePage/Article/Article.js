@@ -41,7 +41,7 @@ function Article() {
       while ((posEnd = slicedItem.indexOf('</li>', posEnd + 1)) !== -1) {
         posEndArr.push(posEnd-1);
       }
-      if(posStartArr.length > 1 && posEndArr.length > 1){
+      if(posStartArr.length > 0 && posEndArr.length > 0){
         for(let i = 0; i < posStartArr.length && i < posEndArr.length; i++){
           liItems.push(slicedItem.trim().slice(posStartArr[i],posEndArr[i]));
         };
@@ -67,7 +67,7 @@ function Article() {
       while ((posEnd = slicedItem.indexOf('</li>', posEnd + 1)) !== -1) {
         posEndArr.push(posEnd-1);
       }
-      if(posStartArr.length > 1 && posEndArr.length > 1){
+      if(posStartArr.length > 0 && posEndArr.length > 0){
         for(let i = 0; i < posStartArr.length && i < posEndArr.length; i++){
           liItems.push(slicedItem.trim().slice(posStartArr[i],posEndArr[i]));
         };
