@@ -3,9 +3,16 @@ import classes from "./Article.module.scss"
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import ArticlesContent from "./ArticlesContent"
+import {NewsListArray} from "../../../components/BlogArray";
+import {ButtonLink} from "../../../components/UI/ButtonLink";
+import LastNews from "../../../components/LastNews";
+import Fade from "react-reveal/Fade";
+import {Link} from "react-router-dom";
+import Icon from "@material-ui/core/Icon";
+import {Hidden} from "@material-ui/core";
 
 function Article() {
-  const {content} = ArticlesContent.find(post => '/news/'+post.id === window.location.pathname);
+  const {content, id} = ArticlesContent.find(post => '/news/'+post.id === window.location.pathname);
   const items = content.map(item => {
     item = item.trim();
     if(item.startsWith('<img src="') && item.endsWith('" />')) {
@@ -81,20 +88,60 @@ function Article() {
     }
     return (<p className={classes.Paragraph}>{item}</p>)
   })
+  const TagsItem = NewsListArray.find(item => item.postPath === id);
+  const TagsButtons = TagsItem.tags.map((tag, index) => (
+      <button
+        key={index}
+        value={tag}
+        className={classes.Tag}
+      >
+        {`#${tag}`}
+      </button>
+    )
+  );
 
   return(
     <section className={classes.Article}>
       <Container fixed>
         <Grid container>
           <Grid sm={9} className={classes.LeftColumn}>
-            <main className={classes.Content}>
+            <div className={classes.Content}>
               {items}
-            </main>
+            </div>
+            <div className={classes.TagsBox}>
+              {TagsButtons}
+            </div>
+            <div className={classes.GoToNews}>
+              <ButtonLink title={'Все новости'} path={'/news'} classNames={classes.GoToNewsBtn} />
+            </div>
           </Grid>
           <Grid sm={3} className={classes.RightColumn}>
-            <aside className={classes.AsideRight}>
-
-            </aside>
+            <Hidden only="xs">
+            <Grid container className={classes.AsideRight}>
+              {NewsListArray.filter(({id}) => id >= NewsListArray.length-3).map(({id, postPath, image, title, blogCategory, dateAdded, description, views}, index) => {
+                return (
+                <Grid item container sm={12} xs={12} direction="column" key={index} className={classes.NewsItem}>
+                <Fade up>
+                <img className={classes.Image} src={image} alt=""/>
+                <Link to={`/news/${postPath}`} className={classes.LinkToPost}>
+                <h3 className={classes.PostTitle}>{title}</h3>
+                </Link>
+                <p className={classes.CategoryDate}>{blogCategory} | {dateAdded}</p>
+                <p className={classes.Description}>{
+                description.length > 100 ? description.slice(0,96) + ' ...' : description
+              }</p>
+                <div className={classes.ViewsAndGo}>
+                <p className={classes.Views}><Icon>visibility</Icon>{views}</p>
+                <Link to={`/news/${postPath}`}>
+                <span className={classes.Go}></span>
+                </Link>
+                </div>
+                </Fade>
+                </Grid>
+                )
+              })}
+            </Grid>
+            </Hidden>
           </Grid>
         </Grid>
       </Container>

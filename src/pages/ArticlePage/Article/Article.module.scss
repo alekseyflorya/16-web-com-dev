@@ -6,10 +6,14 @@
 
   }
   .Content{
-
+    margin-bottom: 60px;
+    padding-right: 200px;
+    @media(max-width: 768px){
+      padding-right: 0;
+    }
   }
   .AsideRight{
-
+    flex-direction: column;
   }
   .Head2{
     font-family: Ubuntu;
@@ -79,9 +83,27 @@
     }
   }
   .OList{
+    counter-reset: ollist;
+    margin-bottom: 20px;
     .LItem{
+      display: flex;
+      align-items: baseline;
+      position: relative;
+      padding-left: 30px;
       &:before{
-
+        counter-increment: ollist;
+        content: counter(ollist) '.';
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        top: 1px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 140%;
+        color: #4C1C89;
+        margin-right: 20px;
       }
     }
   }
@@ -98,9 +120,119 @@
     margin: 40px auto;
   }
   .TagsBox{
-
+    margin-bottom: 180px;
+    @media(max-width: 768px) {
+      margin-bottom: 100px;
+    }
   }
   .Tag{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 140%;
+    color: #FFFFFF;
+    background: #DADADA;
+    border: 1px solid #DADADA;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    transition: all .4s ease;
+    &:hover{
+      background: #FFFFFF;
+      color: #DADADA;
+    }
+  }
+  .GoToNews{
+    display: flex;
+    justify-content: center;
+  }
+  .GoToNewsBtn{
 
+  }
+  .NewsItem{
+    padding: 30px;
+    transition: all .5s;
+    @media(max-width: 768px){
+      padding: 0;
+      margin-bottom: 60px;
+    }
+    &:hover{
+      transform: translateY(-5px);
+      box-shadow: 5px 20px 30px rgba(128, 128, 128, 0.15);
+    }
+    .Image{
+      max-width: 100%;
+      margin-bottom: 30px;
+    }
+    .LinkToPost{
+      text-decoration: none;
+    }
+    .PostTitle{
+      font-family: Ubuntu;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 28px;
+      color: #292525;
+      margin-bottom: 10px;
+      min-height: 84px;
+    }
+    .CategoryDate{
+      font-family: Ubuntu;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 20px;
+      color: #DADADA;
+      margin-bottom: 20px;
+    }
+    .Description{
+      font-family: Inter;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 22px;
+      color: #8B8B8B;
+      margin-bottom: 35px;
+      min-height: 90px;
+    }
+    .ViewsAndGo{
+      display: flex;
+      justify-content: space-between;
+      .Views{
+        font-family: Ubuntu;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 20px;
+        color: #DADADA;
+        display: inline-flex;
+        align-items: center;
+        span{
+          margin-right: 10px;
+        }
+      }
+      .Go{
+        display: inline-block;
+        width: 28px;
+        height: 2px;
+        background: #292525;
+        position: relative;
+        &:after{
+          content: '';
+          display: inline-block;
+          width: 8px;
+          height: 8px;
+          border-top: 2px solid #292525;
+          border-right: 2px solid #292525;
+          position: absolute;
+          right: 4px;
+          top: -2px;
+          transform: rotate(45deg);
+          transform-origin: 100% 100%;
+        }
+      }
+    }
   }
 }

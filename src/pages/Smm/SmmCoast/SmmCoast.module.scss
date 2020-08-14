@@ -13,7 +13,9 @@
     }
   }
   .RightColumn{
-
+    @media(min-width: 768px) {
+      justify-content: flex-end;
+    }
   }
   .SmmCoastImg{
     display: block;
@@ -157,7 +159,7 @@
       color: #292525;
       position: relative;
       padding-left: 30px;
-      margin-top: 30px;
+      margin-top: 60px;
       padding-right: 120px;
       @media(max-width: 768px){
         padding-right: 0;

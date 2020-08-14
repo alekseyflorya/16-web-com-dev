@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import classes from "./SiteDesignCost.module.scss"
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
@@ -6,8 +6,13 @@ import OnlineStoreCoastImg from "../../../assets/img/sitedesign-coast.jpg";
 import {OrderButton} from "../../../components/UI/ButtonLink";
 import {Hidden} from "@material-ui/core";
 import Fade from 'react-reveal/Fade'
+import CallBack from "../../../components/Callback";
 
 function SiteDesignCost() {
+  const [callBackIsOpen, setCallBackIsOpen] = useState(false)
+
+  const callBackSetOpen = () => setCallBackIsOpen(!callBackIsOpen)
+
   return (
     <>
       <section className={classes.SiteDesignCost}>
@@ -41,9 +46,10 @@ function SiteDesignCost() {
               </Fade>
             </Grid>
             <Grid item container sm={5} justify="flex-end">
-              <OrderButton classNames={classes.SiteDesignOrderBtn} title={'Заказать дизайн'} />
+              <OrderButton classNames={classes.SiteDesignOrderBtn} title={'Заказать дизайн'} onClick={callBackSetOpen}/>
             </Grid>
           </Grid>
+          <CallBack callBackIsOpen={callBackIsOpen} callBackSetOpen={callBackSetOpen} />
         </Container>
       </section>
     </>

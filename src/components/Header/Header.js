@@ -24,7 +24,8 @@ import Footer from "../Footer";
 import Fade from 'react-reveal/Fade'
 import Breadcrumbs from "../../components/Breadcrumbs";
 import {NewsListArray} from "../BlogArray";
-import NewsImg from "../../assets/img/news.jpg"
+import NewsImg from "../../assets/img/news.jpg";
+import CallBack from "../Callback";
 
 export default function Header({notFound, notHeader}) {
   const pageData = DataArray.find(page => page.path === window.location.pathname);
@@ -71,14 +72,9 @@ export default function Header({notFound, notHeader}) {
     console.log(state.portfolioOpen);
   }
 
-  const [open, setOpen] = React.useState(false);
+  const [callBackIsOpen, setCallBackIsOpen] = useState(false)
 
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
-  const handleClose = () => {
-    setOpen(false);
-  };
+  const callBackSetOpen = () => setCallBackIsOpen(!callBackIsOpen)
 
   useEffect(() => {
       window.scrollTo(0, 0);
@@ -131,52 +127,10 @@ export default function Header({notFound, notHeader}) {
                     </Grid>
                   </Grid>
                   <Grid item container className={classes.ContactsBtnBlock}>
-                    <button className={classes.ContactsBtn} onClick={handleClickOpen}>
-                      <span>Написать нам</span>
+                    <button className={classes.ContactsBtn} onClick={callBackSetOpen}>
+                      <span>Обратная связь</span>
                     </button>
-                    <Dialog onClose={handleClose}
-                            aria-labelledby="customized-dialog-title"
-                            open={open}
-                            classes={{root: classes.ContactFormBlock,paper: classes.CallBackBox}}
-                            PaperProps={{square: true}}
-                    >
-                      <Grid container style={{padding: 35}}>
-                        <Grid item container justify="flex-end">
-                          {open ? (
-                            <Grid item>
-                              <IconButton aria-label="close" onClick={handleClose} style={{padding: 0}}>
-                                <CloseIcon />
-                              </IconButton>
-                            </Grid>
-                          ) : null}
-                        </Grid>
-                        <Grid item container>
-                          <p className={classes.CallBackText}>Оставьте свои контакты и мы с вами обязательно свяжемся!</p>
-                          <TextField
-                            autoFocus
-                            margin="dense"
-                            id="name"
-                            label="Имя"
-                            type="text"
-                            fullWidth
-                            autoComplete="off"
-                          />
-                          <TextField
-                            margin="dense"
-                            id="phone"
-                            label="Телефон"
-                            type="tel"
-                            fullWidth
-                            autoComplete="off"
-                          />
-                        </Grid>
-                        <Grid item container>
-                          <button className={classes.CallBackBtn} onClick={handleClose}>
-                            Свяжитесь со мной
-                          </button>
-                        </Grid>
-                      </Grid>
-                    </Dialog>
+                    <CallBack callBackIsOpen={callBackIsOpen} callBackSetOpen={callBackSetOpen} />
                   </Grid>
                 </Grid>
               </>

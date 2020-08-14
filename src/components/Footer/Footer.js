@@ -98,9 +98,9 @@ export default function Footer() {
               <Grid item sm={12} container classes={{root: classes.LinksListBottomBox}}>
                 <Grid item sm={8}>
                   <ListItem className={classes.LinksListItem}>
-                    <Link to="/contact" className={classes.Link}>
-                      {'Правила конфиденциальности'}
-                    </Link>
+                    {/*<Link to="/contact" className={classes.Link}>*/}
+                    {/*  {'Правила конфиденциальности'}*/}
+                    {/*</Link>*/}
                   </ListItem>
                 </Grid>
                 <Grid item sm={4}>

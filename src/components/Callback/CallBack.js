@@ -5,7 +5,7 @@ import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 import TextField from "@material-ui/core/TextField";
 import Grid from "@material-ui/core/Grid";
-import {Link as SocialLink} from "react-router-dom";
+import {Link as SocialLink} from "@material-ui/core";
 import {CallbackInstaIcon, CallbackFbIcon, CallbackBehanceIcon, CallbackDribbleIcon} from "../Icons";
 
 function CallBack({callBackIsOpen, callBackSetOpen}) {

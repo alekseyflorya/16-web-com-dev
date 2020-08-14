@@ -99,7 +99,7 @@ function PricesList() {
                 </Grid>
                 <Grid item container className={classes.CardFooter}>
                   <p className={classes.CardFooterText}>При создании сайта визитки окончательная цена работы формируется с учетом количества страниц и необходимого набора функциональных элементов.</p>
-                  <OrderButton title={'Заказать проект'} onClick={callBackSetOpen}/>
+                  <OrderButton title={'Заказать проект'} onClick={callBackSetOpen} />
                 </Grid></>
                 </Fade>
               </Grid>

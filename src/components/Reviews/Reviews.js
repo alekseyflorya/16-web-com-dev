@@ -7,6 +7,7 @@ import ReviewsData from '../ReviewsArray';
 import Container from "@material-ui/core/Container";
 import tabPanelBg from '../../assets/img/tabpanel-bg.jpg';
 import Fade from 'react-reveal/Fade';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -61,6 +62,8 @@ export default function Reviews() {
     )
   });
 
+
+
   const TabItems = ReviewsData.map(({review_id, label}) => {
     return (
       <Tab
@@ -73,10 +76,33 @@ export default function Reviews() {
     )
   });
 
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      let newValue;
+      if (value < ReviewsData.length - 1){
+        newValue = value + 1;
+      } else {
+        newValue = 0
+      }
+      setValue(newValue);
+    }, 7000);
+    return () => clearInterval(interval);
+  });
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
+    console.log(newValue)
   };
+
+  const handleClick = () => {
+    let newValue;
+    if (value < ReviewsData.length - 1){
+      newValue = value + 1;
+    } else {
+      newValue = 0
+    }
+    setValue(newValue);
+  }
 
   return (
     <Container fixed className={classes.Reviews}>
@@ -99,8 +125,10 @@ export default function Reviews() {
         >
           {TabItems}
         </Tabs>
+        <button onClick={handleClick} className={classes.ArrowButton}>
+          <ExpandMoreIcon className={classes.ExpandMoreIcon} />
+        </button>
       </div>
     </Container>
-
   );
 }

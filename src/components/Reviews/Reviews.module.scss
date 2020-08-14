@@ -188,4 +188,16 @@
       color: #FFFFFF;
     }
   }
+  .ArrowButton{
+    width: 80px;
+    position: absolute;
+    bottom: 60px;
+    right: -80px;
+    background: transparent;
+    border: none;
+  }
+  .ExpandMoreIcon{
+    font-size: 3rem;
+    fill: #FFFFFF;
+  }
 }
