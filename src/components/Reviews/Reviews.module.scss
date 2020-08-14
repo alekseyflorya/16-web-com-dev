@@ -176,6 +176,7 @@
     .flexContainerVertical{
       @media (max-width: 768px){
         flex-direction: row;
+        justify-content: center;
       }
     }
     .Tab{
