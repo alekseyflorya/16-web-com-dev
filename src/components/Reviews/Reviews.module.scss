@@ -28,14 +28,15 @@
       width: calc(100% + 32px);
       margin-left: -16px;
       margin-right: -16px;
-      height: auto;
       padding-top: 60px;
       background-size: cover;
     }
   }
   .TabPanel{
     height: 100%;
+    overflow-y: scroll;
     background: rgba(41,37,37,0.5);
+    
     .TabPanelItem{
       width: 100%;
     }
@@ -99,6 +100,7 @@
       padding: 50px 80px;
       background: rgba(0, 0, 0, 0.6);
       backdrop-filter: blur(4px);
+      overflow-y: scroll;
       @media(max-width: 768px){
         position: inherit;
         max-width: 100%;
